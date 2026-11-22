@@ -195,6 +195,8 @@ section.sec{padding:18px 0 6px}
 .ai-pf-details summary::before{content:"+";font-size:1.1rem;font-weight:800;color:var(--teal-2);line-height:1;transition:transform .2s;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--teal-soft)}
 .ai-pf-details[open] summary::before{transform:rotate(45deg)}
 .ai-pf-details summary::after{content:"";flex:1}
+.supporting-records-body{padding:2px 16px 18px}
+.supporting-records .charts-grid{grid-template-columns:1fr;margin-top:4px}
 .ai-reader{max-height:480px;overflow-y:auto;padding:6px 18px 18px;border-top:1px solid var(--line);line-height:1.8}
 .ai-reader h4.ai-reader-h{font-size:.86rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin:16px 0 8px}
 .ai-reader p{font-size:.9rem;line-height:1.8;color:#37455c;margin:0 0 10px}
@@ -497,6 +499,9 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
 .leonie-page .chart-card .chart-sub{color:var(--l-muted)}
 .leonie-page .sheet-note{background:#FDFCF8;border-color:var(--l-line);color:#3A3A34}
 .leonie-page .sheet-note strong{color:var(--l-text)}
+.leonie-page .ai-pf-details.supporting-records{background:#FDFCF8;border-color:var(--l-line)}
+.leonie-page .ai-pf-details.supporting-records summary{color:var(--l-text);font-family:var(--l-font-b)}
+.leonie-page .ai-pf-details.supporting-records summary::before{background:#EDECE4;color:var(--l-lime)}
 .leonie-page .sheet-note b{color:var(--l-lime-hover)}
 .leonie-page .sheet-chip{color:var(--l-bg);background:var(--l-lime);border:1px solid var(--l-text)}
 .leonie-page .mini-table th{color:var(--l-text)}

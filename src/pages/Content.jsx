@@ -45,16 +45,16 @@ export default function Content() {
     >
       <SectionHead
         num="03"
-        kicker="Content · Original writing + scripts"
-        title="Original writing and client-ready scripts."
+        kicker="Content · Selected writing + scripts"
+        title="Writing and client-ready scripts."
         sub="Translation, adaptation and creative writing — plus shoot-ready Burmese voiceover scripts."
       />
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>Three original works.</h3>
-        <p>Independent writing in the original Burmese: <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> — a translation and English excerpt; <b>Carl · game lore adaptation</b> — an invoker's story, adapted from game lore; <b>RGB</b> — a creative-writing piece about a test of colour.</p>
-        <p>They show my writing — close, plain and rhythmic, in my own voice. The full PDF with the three samples is the download below.</p>
+        <h3>Selected translation, adaptation &amp; original writing.</h3>
+        <p>Writing in the original Burmese: <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> (Tim O'Brien) — a Burmese translation with an English excerpt; <b>Carl · game lore adaptation</b> — an invoker's story adapted from game lore; <b>RGB</b> — a creative-writing piece about a test of colour.</p>
+        <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. The full PDF with the three samples is the download below.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>

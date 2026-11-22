@@ -82,7 +82,7 @@ class SamplesPDF(FPDF):
         self.set_font('my', 'B', 13)
         self.set_text_color(255, 255, 255)
         self.set_xy(23, 29.5)
-        self.multi_cell(168, 7, 'Three original works — Carl, RGB and Combat Zone', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.multi_cell(168, 7, 'Selected translation, adaptation & original writing — Carl, RGB and Combat Zone', new_x=XPos.LEFT, new_y=YPos.NEXT)
 
         self.ln(36)
         self.set_font('my', '', 9.5)
@@ -142,7 +142,7 @@ class SamplesPDF(FPDF):
         self.render()
         self.set_author('Kaung Myat Thu')
         self.set_title('Kaung Myat Thu — Content of my own')
-        self.set_subject('Three original-writing samples: Carl, RGB, Combat Zone')
+        self.set_subject('Selected translation, adaptation and original writing: Carl, RGB, Combat Zone')
         self.set_creator('Kaung Myat Thu')
         self.output(OUT)
         print('PDF written to', OUT)

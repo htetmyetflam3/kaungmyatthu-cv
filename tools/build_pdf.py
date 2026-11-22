@@ -7,7 +7,7 @@ Dependencies:  pip install fpdf2 beautifulsoup4
 
 The samples section is read from tools/samples.json (the samples no
 longer live on the page; they live in the combined samples PDF). The
-built PDF lands in public/ and is served as-is by GitHub Pages / Vercel.
+built PDF lands in public/ and is served as-is by GitHub Pages.
 """
 import html.parser
 import json
@@ -613,7 +613,7 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', '', 9)
         self.set_text_color(*MUTED)
-        self.multi_cell(0, 5.5, 'Translation, adaptation and creative writing — original excerpts.')
+        self.multi_cell(0, 5.5, 'Selected translation, adaptation and original writing — excerpts.')
         self.ln(4)
 
         for i, s in enumerate(SAMPLES):
