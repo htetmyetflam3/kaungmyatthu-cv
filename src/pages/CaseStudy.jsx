@@ -16,7 +16,7 @@ export default function CaseStudy() {
     <Layout
       active="case-study"
       title="321 Ecolife · Case study — Kaung Myat Thu"
-      description="Operations Assistant Supervisor at 321 Ecolife (Nok Branch) — shop floor, staff administration and TikTok growth, 157k → 298k."
+      description="Assistant Supervisor at 321 Ecolife (Nok Branch) — shop floor, staff administration and TikTok growth, 157k → 298k."
     >
       <SectionHead
         num="01"
