@@ -378,3 +378,24 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
 .salary p.mb-3{color:#cbd5e1;line-height:1.6;margin:0 0 14px;font-size:.9rem}
 .salary .btn-ghost-light{display:inline-flex;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);font-weight:700;border-radius:10px;padding:.6rem 1.3rem;text-decoration:none}
 .salary .btn-ghost-light:hover{background:rgba(255,255,255,.1)}
+
+/* ── portfolio section index (brief lines) ─────────────────────────────── */
+.sec-index{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 22px;position:relative;z-index:1}
+.sec-index a{display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 13px 12px;text-decoration:none;color:#fff;transition:transform .15s,border-color .15s,background .15s}
+.sec-index a:hover{background:rgba(255,255,255,.12);border-color:#5eead4;transform:translateY(-2px)}
+.sec-index span{font-size:.62rem;font-weight:800;letter-spacing:.18em;color:#5eead4}
+.sec-index b{font-size:.92rem;line-height:1.25;font-weight:800;color:#fff}
+.sec-index small{font-size:.76rem;line-height:1.45;color:#c9d6e4}
+.echo-block{margin:18px 0 6px}
+.echo-lede{font-size:.8rem;color:var(--muted);margin:0 0 10px}
+.echo-lede .r{font-weight:800;letter-spacing:.04em;color:var(--navy)}
+@media (max-width:860px){.sec-index{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.sec-index{grid-template-columns:1fr}}
+
+/* echo-block sits inside the light Scripts section — keep it dark so the
+   hero-era echo-file styles still read correctly */
+.echo-block{background:linear-gradient(150deg,#131c2c 0%,#1b2c48 55%,#123a38 140%);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px 14px;margin:16px 0 20px}
+.echo-lede{font-size:.82rem;color:#c9d6e4;margin:0 0 10px}
+.echo-lede .r{font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#5eead4}
+.echo-files{margin:0}
+.echo-file{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 16px 14px}

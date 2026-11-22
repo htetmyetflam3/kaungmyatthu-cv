@@ -310,7 +310,7 @@ class PortfolioPDF(FPDF):
         self.ln(1.5)
 
         # stat tiles
-        tiles = [('33', 'customer-feedback entries in the log'),
+        tiles = [('33', 'customer-feedback entries'),
                  ('+90%', 'recorded follower growth, Oct–Dec'),
                  ('141,104', 'additional followers, Oct–Dec')]
         w = (174 - 14) / 3
@@ -356,7 +356,7 @@ class PortfolioPDF(FPDF):
         self.ln(1)
         self.set_font('my', 'I', 7.5)
         self.set_text_color(*MUTED)
-        self.cell(0, 5, 'Source: TikTok Performance worksheet. Rounded growth ~ +90%.', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'Rounded growth ~ +90%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
 
         # top-sale snapshot table
@@ -403,12 +403,12 @@ class PortfolioPDF(FPDF):
         # feedback quotes
         self.set_font('my', 'B', 10)
         self.set_text_color(*NAVY)
-        self.cell(0, 7, 'Verbatim customer feedback · surviving log', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 7, 'Customer feedback', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1)
-        quotes = [('"Good Service"', 'Customer feedback · row 2', 'my'),
-                  ('"Excellent service"', 'Customer feedback · row 10', 'my'),
-                  ('"Service အရမ်းကောင်းပါတယ်။ Size စုံစေချင်တယ်။"', 'Positive service + size request · row 28', 'my')]
-        for text, meta, lang in quotes:
+        quotes = [('"Good Service"', 'my'),
+                  ('"Excellent service"', 'my'),
+                  ('"Service အရမ်းကောင်းပါတယ်။ Size စုံစေချင်တယ်။"', 'my')]
+        for text, lang in quotes:
             self.card_top(18, self.get_y(), 174, 13, TEAL_SOFT, (205, 227, 225))
             self.set_fill_color(*TEAL)
             self.rect(18, self.get_y(), 1.4, 13, 'F')
@@ -417,10 +417,6 @@ class PortfolioPDF(FPDF):
             self.set_font('my', '', 8)
             self.set_text_color(23, 73, 79)
             self.cell(0, 4, text, new_x=XPos.LEFT, new_y=YPos.NEXT)
-            self.set_font('my', 'B', 6.5)
-            self.set_text_color(*TEAL)
-            self.set_xy(25, y + 7.6)
-            self.cell(0, 4, meta)
             self.set_xy(18, y + 14.8)
         self.ln(0.5)
 
@@ -429,12 +425,12 @@ class PortfolioPDF(FPDF):
         self.set_font('my', 'B', 8.5)
         self.set_text_color(180, 83, 9)
         self.set_xy(25, self.get_y() + 2.6)
-        self.cell(0, 4.2, 'Full case study', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 4.2, 'The full workbook', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.set_font('my', '', 7.5)
         self.set_text_color(110, 64, 10)
         self.set_xy(25, self.get_y() + 0.5)
         self.multi_cell(160, 4.0,
-            'The full workbook — 12 worksheets, customer phone numbers redacted — as reference is available on request. The charts on this page are its public summary.',
+            'Customer phone numbers redacted — as reference is available on request.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def scripts_section(self):

@@ -29,7 +29,7 @@ export default function Warehouse() {
         <div className="overview-kicker">Overview</div>
         <h3>Discipline, not software.</h3>
         <p>Two distinct operations roles, one pattern: when the system is just a ledger and a person's memory, discipline is the asset. I registered every item every day and kept both workplaces reviewable — the warehouse floor and the car-parts shelf.</p>
-        <p>This is the <b>Supervisor fallback</b> evidence for the application — brick-and-mortar retail, inventory, POS and team coordination, without hiding the marketing side of the job.</p>
+        <p>Both roles run the same pattern — keeping the work visible and right where there is no software for it. That is the honest strength of a retail floor: discipline, not systems.</p>
       </div>
 
       <div className="panel">
@@ -44,7 +44,7 @@ export default function Warehouse() {
         </ul>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span><strong>Evidence scope.</strong> Surviving working sample. Signed reference letter confirmed; warehouse detail is from my own records, not the company's internal systems.</span>
+          <span>Warehouse detail is from my own records, not the company's internal systems. Signed reference letter — confirmed.</span>
         </div>
       </div>
 
@@ -69,7 +69,7 @@ export default function Warehouse() {
         </div>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span><strong>Evidence scope.</strong> Surviving working samples, not the final inventory. The map's intended benefits are not presented as measured savings.</span>
+          <span>Working samples of the map and the POS, not the final inventory. Intended benefits are not presented as measured savings.</span>
         </div>
       </div>
 
