@@ -1,6 +1,16 @@
 import React from 'react';
 import Layout, { SectionHead, DetailsButton } from '../layout/Layout';
 
+const CHECKLIST_ID = '1EztkzxGGndfXrqhImbfm46UEDr5k0Njo';
+const PHOTO_ID = '1XSHBpjyd76gkiF0c-Dwis8Xx0oSxuN0l';
+const LETTER_ID = '1Cqm_FKQFeSKrrH5xQkIkZFm8GYzUrSoK';
+const DRIVE_VIEW = (id) => `https://drive.google.com/file/d/${id}/view`;
+const DRIVE_DL = (id) => `https://drive.google.com/uc?export=download&id=${id}`;
+const DRIVE_IMG = (id, w = 1600) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
+const WORKBOOK_ID = '1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J';
+const WORKBOOK_VIEW = `https://drive.google.com/file/d/${WORKBOOK_ID}/view`;
+const WORKBOOK_DL = `https://drive.google.com/uc?export=download&id=${WORKBOOK_ID}`;
+
 export default function CaseStudy() {
   return (
     <Layout
@@ -11,66 +21,197 @@ export default function CaseStudy() {
       <SectionHead
         num="01"
         kicker="Case study · 321 Ecolife"
-        title="From the branch floor to the social-media review."
-        sub="Operations Assistant Supervisor · 2024–2025 · North Okkalapa."
+        title="321 Ecolife — keeping branch work and social-content follow-up connected"
+        sub="Assistant Supervisor · North Okkalapa branch · 2024–2025"
       />
 
       <div className="overview-card">
-        <div className="overview-kicker">Overview</div>
-        <h3>Reporting that the branch could actually use.</h3>
-        <p>As Operations Assistant Supervisor, I ran the shop floor — frontline branch and staff administration: what sold, what customers wanted, day-to-day spend, staff coverage and incentives, and the branch's TikTok performance. The work turned raw daily records into figures the team could review, and kept social-media growth visible month after month.</p>
-        <p>On the social-media side, I coordinated with the voiceover and editing teams and reported the performance back to the branch — month-end figures plus the day-level records behind them.</p>
-        <p>Simple outcomes — followers <b>157,000 → 187,375 → 298,104</b> Oct → Dec (<b>+90%</b>), plus <b>+110,729</b> followers and <b>+938,000</b> likes (+30.41%) added in December alone. The full workbook as reference is available on request.</p>
+        <div className="overview-kicker">Role overview</div>
+        <p>My role covered frontline branch operations and staff administration as well as reporting and social-content support. I checked attendance and staff updates, followed up sales and stock records, coordinated with team leaders and cashiers, and supported TikTok work through captions, voiceover/editing coordination, posting checks and reporting.</p>
+        <p>To keep recurring responsibilities from being missed, I used my own time-based daily to-do list. It connected opening checks, scheduled follow-ups and closing controls in one place.</p>
       </div>
 
-      <div className="panel">
-        <h4>TikTok performance — month by month</h4>
+      <section className="sec" id="daily-workflow" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">02</span> Daily workflow</div>
+            <h2>My daily workflow</h2>
+          </div>
+          <p className="sub">A personal reminder system for a role with many small, recurring responsibilities.</p>
+        </div>
 
-        <div className="charts-grid">
-      <div className="chart-card">
-        <h5>Monthly follower change</h5>
-        <p className="chart-sub">Followers, Aug → Dec</p>
-<svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: monthly follower change Aug to Dec — Aug +27,000, Sep +14,000, Oct +18,000, Nov +30,375, Dec +110,729" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
-<line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
-<rect x="12.0" y="138" width="42" height="32" rx="5" fill="#cde3e1"><title>AUG: 27,000</title></rect>
-<text x="33.0" y="131" textAnchor="middle" fontSize="10.5" fontWeight="800" fill="#1b365d">+27,000</text>
-<text x="33.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">AUG</text>
-<rect x="78.0" y="153" width="42" height="17" rx="5" fill="#9fd6d3"><title>SEP: 14,000</title></rect>
-<text x="99.0" y="146" textAnchor="middle" fontSize="10.5" fontWeight="800" fill="#1b365d">+14,000</text>
-<text x="99.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">SEP</text>
-<rect x="144.0" y="149" width="42" height="21" rx="5" fill="#74c4c0"><title>OCT: 18,000</title></rect>
-<text x="165.0" y="142" textAnchor="middle" fontSize="10.5" fontWeight="800" fill="#1b365d">+18,000</text>
-<text x="165.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">OCT</text>
-<rect x="210.0" y="134" width="42" height="36" rx="5" fill="#0e9aa7"><title>NOV: 30,375</title></rect>
-<text x="231.0" y="127" textAnchor="middle" fontSize="10.5" fontWeight="800" fill="#1b365d">+30,375</text>
-<text x="231.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">NOV</text>
-<rect x="276.0" y="38" width="42" height="132" rx="5" fill="#0b7983"><title>DEC: 110,729</title></rect>
-<text x="297.0" y="31" textAnchor="middle" fontSize="10.5" fontWeight="800" fill="#1b365d">+110,729</text>
-<text x="297.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">DEC</text>
-</svg>
-      </div>
-      <div className="chart-card">
-        <h5>Monthly likes change</h5>
-        <p className="chart-sub">Likes, Aug → Dec</p>
-<svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: monthly likes change Aug to Dec — Aug +309,000, Sep +208,000, Oct +178,000, Nov +949,000, Dec +938,000" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
-<line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
-<rect x="12.0" y="127" width="42" height="43" rx="5" fill="#cde3e1"><title>AUG: 309,000</title></rect>
-<text x="33.0" y="120" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#1b365d">+309,000</text>
-<text x="33.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">AUG</text>
-<rect x="78.0" y="141" width="42" height="29" rx="5" fill="#9fd6d3"><title>SEP: 208,000</title></rect>
-<text x="99.0" y="134" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#1b365d">+208,000</text>
-<text x="99.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">SEP</text>
-<rect x="144.0" y="145" width="42" height="25" rx="5" fill="#74c4c0"><title>OCT: 178,000</title></rect>
-<text x="165.0" y="138" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#1b365d">+178,000</text>
-<text x="165.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">OCT</text>
-<rect x="210.0" y="38" width="42" height="132" rx="5" fill="#0e9aa7"><title>NOV: 949,000</title></rect>
-<text x="231.0" y="31" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#1b365d">+949,000</text>
-<text x="231.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">NOV</text>
-<rect x="276.0" y="40" width="42" height="130" rx="5" fill="#0b7983"><title>DEC: 938,000</title></rect>
-<text x="297.0" y="33" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#1b365d">+938,000</text>
-<text x="297.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">DEC</text>
-</svg>
-      </div>
+        <div className="panel">
+          <p>I made this checklist as a personal reminder system for a role with many small, recurring responsibilities. It helped me remember what to check, whom to follow up with and when to return to the same records during the day.</p>
+          <p>The original combines staff administration, cash and sales checks, stock coordination, TikTok follow-up, reporting and closing tasks. The examples below are a readable summary; the original document is shown alongside them.</p>
+
+          <h4 style={{ marginTop: 22 }}>Summary of my original checklist</h4>
+          <table className="mini-table" style={{ marginTop: 8 }}>
+            <thead><tr><th>Stage</th><th>Examples from the checklist</th></tr></thead>
+            <tbody>
+              <tr><td>Opening and information flow</td><td>9:00 attendance/check-in approval; 9:15 Viber attendance and updates; 9:20 generator-use checks; 9:30 bank transfer/change tasks.</td></tr>
+              <tr><td>Morning content and sales checks</td><td>9:45 video captions; 10:20 team-leader discussion; 10:35 deposit-slip checks; 10:40 late-sale entry checks; 10:45 stock-team pivot follow-up; 10:50 salesperson-total/net-sale comparison.</td></tr>
+              <tr><td>Posting and staff follow-up</td><td>11:00 check the scheduled 10:00 TikTok post and comment replies; closing-check follow-up with cashiers; break-book and other-floor checks.</td></tr>
+              <tr><td>Reporting and afternoon coordination</td><td>12:10–1:00 personal reporting, review and notes; 2:15 check the 1:00 TikTok post/replies; 2:20 online-sale payment follow-up; 2:50 stock-order discussion and order-list checking before signing.</td></tr>
+              <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, generator-log, returns and stock checks across the evening; 5:55 checkout approval.</td></tr>
+            </tbody>
+          </table>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The full list from the original document is reproduced below, in order.</p>
+
+          <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
+            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
+            <div style={{ maxHeight: 460, overflowY: 'auto', padding: '6px 14px' }}>
+              <table className="mini-table" style={{ marginTop: 6 }}>
+                <tbody>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:00am</td><td>Check-in approve and attendance check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:15 am</td><td>Viber group attendance and update information; share what needs following up.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:20am</td><td>Check whether the shop is running on generator power (construction), and record generator usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:30am</td><td>Check the bank transfer / payment slips received.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:45</td><td>Prepare TikTok video captions.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:15 am</td><td>Check the morning food-offering arrangement.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:20am</td><td>Discuss with the team leader.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:30am</td><td>Check the offering / meal arrangement again.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:35 am</td><td>Check that the deposit-slip amount matches.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:40 am</td><td>Check closing and late-sale entries against the sales record.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:45 am</td><td>Follow up the stock team’s pivot; check it before it goes out.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:50 am</td><td>Assign cashiers; compare salesperson totals with net sales.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:00 am</td><td>Check the 10:00 TikTok video is posted; reply to comments.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:10 am</td><td>Follow up cashier closing.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:15am</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:20 am</td><td>Check the other floor.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>12:00 pm</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>12:10pm – 1:00pm</td><td>Personal reporting; review the previous day’s notes and write today’s note.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>1:05pm</td><td>Check shop power / generator again and record usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>1:10pm – 2:10pm</td><td>Lunch break.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:10pm</td><td>Break time; check the other floor afterwards.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>02:15 pm</td><td>Check replies on the 1:00pm TikTok video.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:20pm</td><td>Follow up items owed on the online-sale channel.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:30 pm</td><td>Follow up the stock items that were asked about.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:50 pm</td><td>Discuss stock ordering with the stock team; check the order list and sign it.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>3:00pm</td><td>Check the Viber group.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:00pm</td><td>Compare salesperson totals with net sales; check the cashier pivot before it goes out.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:15 pm</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:20 pm</td><td>Prepare video captions; check edits before posting.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:45pm</td><td>Review the daily note.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:00 pm</td><td>Closing check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:05pm</td><td>Check shop power / generator and record usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:10pm</td><td>Surprise stock check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:30pm</td><td>Closing check and returns.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:35 pm</td><td>Compare the cashier pivot with salesperson totals and net sales for the month.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:30pm</td><td>Check the shop floor again.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:50pm</td><td>Sign attendance; check the break book.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:55pm</td><td>Check-out approve.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced the way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
+
+          <div className="dl-row" style={{ marginTop: 12 }}>
+            <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
+            <a className="btn-dl" href={DRIVE_DL(CHECKLIST_ID)} target="_blank" rel="noopener">Download DOCX</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec" id="sales-records" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">03</span> Working records</div>
+            <h2>Sales records and daily checking</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <p>The surviving workbook shows how branch information was recorded across payment channels, product sales, expenses and staff administration. My checklist also shows the follow-up behind the records: comparing salesperson totals with net sales, checking deposit slips and late-sale entries, and following up pivot reports with the relevant staff.</p>
+          <p>These are working records, not a claim that every figure represents a result caused by my marketing work.</p>
+
+          <table className="mini-table" style={{ marginTop: 6 }}>
+            <thead><tr><th>Sheet in the workbook</th><th>Recorded range</th><th>What it shows</th></tr></thead>
+            <tbody>
+              <tr><td><code>daily sale </code></td><td>A1:Q10 · full sheet in the workbook</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit. The trailing space in the sheet name is part of the file.</td></tr>
+              <tr><td>Top &amp; Bottom Sale</td><td>B2:K13</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. Shown in source order — the rows are not a sorted ranking.</td></tr>
+              <tr><td>Daily Expenses</td><td>A1:J12</td><td>Day-level branch expenses as entered.</td></tr>
+            </tbody>
+          </table>
+          <h4 style={{ marginTop: 22 }}>December 2024 as recorded</h4>
+          <table className="mini-table" style={{ marginTop: 8 }}>
+            <thead><tr><th>Recorded line</th><th style={{ textAlign: 'right' }}>Amount (MMK)</th></tr></thead>
+            <tbody>
+              <tr><td>Sale revenue (top-line)</td><td style={{ textAlign: 'right' }}>148,356,500</td></tr>
+              <tr><td>Discount</td><td style={{ textAlign: 'right' }}>1,068,495</td></tr>
+              <tr><td>Net amount</td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
+              <tr><td>Return amount</td><td style={{ textAlign: 'right' }}>1,081,500</td></tr>
+              <tr><td>Online-channel total</td><td style={{ textAlign: 'right' }}>579,500</td></tr>
+            </tbody>
+          </table>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '10px 0 0' }}>Thirty-one daily rows, 1–31 December 2024, summed by the sheet’s own TOTAL row. These are recorded sales, discounts and returns — not profit, and not a measure of marketing performance.</p>
+
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Source: <code>321/321NOk/321NOK-Master-Redacted.xlsx</code>. Previews preserve the source order and blank fields; they do not establish a sales period or campaign attribution beyond what each sheet records.</p>
+
+          <div className="dl-row" style={{ marginTop: 16 }}>
+            <a className="btn-dl btn-dark" href={WORKBOOK_VIEW} target="_blank" rel="noopener">Open working workbook</a>
+            <a className="btn-dl" href={WORKBOOK_DL} target="_blank" rel="noopener">Download working workbook (XLSX)</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec" id="staff-admin" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">04</span> Administration</div>
+            <h2>Staff and branch administration</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <p>My responsibilities were not limited to stock or social media. The daily checklist includes attendance approval, team-leader communication, break records, cashier follow-ups and end-of-day checks. The workbook also retains staff movement, days-off and incentive records.</p>
+
+          <table className="mini-table" style={{ marginTop: 6 }}>
+            <thead><tr><th>Record</th><th>Range</th><th>What it holds</th></tr></thead>
+            <tbody>
+              <tr><td>Staff records <span className="muted">(file sheet: <code>Stuff level up</code>)</span></td><td>B2:H10</td><td>Staff roles and movement recorded at branch level.</td></tr>
+              <tr><td>Days off</td><td>A1:C10</td><td>Recorded days off by staff member.</td></tr>
+              <tr><td>Generator usage log</td><td>A1:G10</td><td>Start and end times, with duration derived from the two.</td></tr>
+            </tbody>
+          </table>
+
+          <details className="ai-pf-details" style={{ marginTop: 16 }}>
+            <summary>Additional administration records</summary>
+            <div style={{ paddingTop: 10 }}>
+              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my Assistant Supervisor role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
+              <p><b>Days off:</b> 18 staff listed across Monday to Saturday in the weekly days-off schedule.</p>
+              <p><b>Generator log:</b> seven entries between 24 December 2024 and 15 January 2025, each with start and end times and a derived run time of between 1 and 8 hours.</p>
+              <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are retained in the same workbook. The sign-off column is not described here as proof of payment — it is a record template, not a payment confirmation.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section className="sec" id="tiktok" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">05</span> Social content</div>
+            <h2>TikTok support and account-level follower records</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <p>I supported the branch’s TikTok work alongside my operations role. The checklist includes caption preparation, checking scheduled uploads and comment replies, and later corrections. My contribution also included voiceover/editing coordination and reporting.</p>
+          <p>The confirmed month-end follower counts increased from 157,000 in October to 298,104 in December. These are account-level figures reflecting the wider team’s activity, not results attributed solely to me.</p>
+
+          <table className="mini-table" style={{ marginTop: 6 }}>
+            <thead><tr><th>Month</th><th style={{ textAlign: 'right' }}>Month-end followers</th></tr></thead>
+            <tbody>
+              <tr><td>October</td><td style={{ textAlign: 'right' }}>157,000</td></tr>
+              <tr><td>November</td><td style={{ textAlign: 'right' }}>187,375</td></tr>
+              <tr><td>December</td><td style={{ textAlign: 'right' }}><b>298,104</b></td></tr>
+            </tbody>
+          </table>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Calculated changes — November <b>+30,375</b> · December <b>+110,729</b> · October–December <b>+141,104</b>, approximately <b>+89.9%</b>.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>Source sheet: <code> follower count at the end of m</code> (B1:C6) in the redacted workbook. The sheet’s own “MONTHLY FOLLOWER GAIN” header is misleading for these cumulative values — the table above is therefore labelled “Month-end followers”. The original sheet is kept unedited.</p>
+
+          <div className="charts-grid" style={{ marginTop: 18 }}>
       <div className="chart-card">
         <h5>Month-end followers</h5>
         <p className="chart-sub">Oct → Dec</p>
@@ -89,15 +230,6 @@ export default function CaseStudy() {
       </div>
         </div>
 
-        <table className="mini-table" style={{ marginTop: 18 }}>
-          <thead><tr><th>By month</th><th>AUG</th><th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th></tr></thead>
-          <tbody>
-            <tr><td>MONTH-END FOLLOWERS</td><td>125,000</td><td>139,000</td><td>157,000</td><td>187,375</td><td><b>298,104</b></td></tr>
-            <tr><td>Change →</td><td>+27,000</td><td>+14,000</td><td>+18,000</td><td>+30,375</td><td>+110,729</td></tr>
-            <tr><td>TOTAL LIKES</td><td>1,750,000</td><td>1,958,000</td><td>2,136,000</td><td>3,085,000</td><td><b>4,023,000</b></td></tr>
-            <tr><td>Change →</td><td>+309,000</td><td>+208,000</td><td>+178,000</td><td>+949,000</td><td>+938,000</td></tr>
-          </tbody>
-        </table>
 
         <details className="ai-pf-details supporting-records">
           <summary>Supporting records — December, day by day</summary>
@@ -153,21 +285,55 @@ export default function CaseStudy() {
           </div>
         </details>
 
-        <div className="sheet-note">
-          <div><strong>December vs November</strong> — followers +110,729 (<b>+59.09%</b>) · likes +938,000 (<b>+30.41%</b>)</div>
-          <div>December’s confirmed month-end increase was <b>110,729 followers</b>. The surviving daily entries total <b>56,591</b> and do not reconcile with that increase. Both are preserved as separate records; the daily series is not presented as a complete breakdown of monthly growth.</div>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '16px 0 0' }}>The surviving daily entries do not reconcile with the confirmed December month-end increase of 110,729. They are shown as separate working records, not a complete daily breakdown of that increase. Any allocation table is a later calculation, not recovered daily analytics.</p>
         </div>
-      </div>
+      </section>
 
       <div className="panel">
         <h4>Customer feedback</h4>
+        <p>The feedback sheet preserves both service praise and requests about product availability. I show them separately so positive comments are not confused with complaints or suggestions.</p>
         <div className="row g-3 quote-row">
           <div className="quote col-md-4"><p>“Good Service”</p></div>
           <div className="quote col-md-4"><p>“Excellent service”</p></div>
           <div className="quote col-md-4"><p lang="my">“Service အရမ်းကောင်းပါတယ် ။ Size စုံစေချင်တယ်။”</p></div>
         </div>
-        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>What customers told me at the branch — kept as received.</p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>Praise rows from the branch feedback sheet, kept as received; the third entry is shown with its request for more sizes so the mixed meaning is preserved. The sheet’s cramped-shop complaint is not presented as praise. Phone numbers are redacted.</p>
       </div>
+
+      <section className="sec" id="workplace" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">06</span> Workplace context</div>
+            <h2>Team and reference</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <figure style={{ margin: 0 }}>
+            <a href={DRIVE_VIEW(PHOTO_ID)} target="_blank" rel="noopener">
+              <img
+                src={DRIVE_IMG(PHOTO_ID, 1600)}
+                alt="Team photograph at the 321 Ecolife shop"
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
+              />
+            </a>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Team photograph at the 321 workplace. The shop setting, workplace clothing and lanyards provide context alongside the working records. Individual colleagues are not identified.</figcaption>
+          </figure>
+
+          <figure style={{ margin: '22px 0 0' }}>
+            <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">
+              <img
+                src={DRIVE_IMG(LETTER_ID, 1200)}
+                alt="Employer reference letter confirming the Assistant Supervisor role"
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid var(--line, #dbe3ec)', display: 'block' }}
+              />
+            </a>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Employer reference confirming my Assistant Supervisor role. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
 
       <aside className="cert-box">
         <div>

@@ -52,8 +52,8 @@ export default function Content() {
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>Selected translation, adaptation &amp; original writing.</h3>
-        <p>Writing in the original Burmese: <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> (Tim O'Brien) — a Burmese translation with an English excerpt; <b>Carl · game lore adaptation</b> — an invoker's story adapted from game lore; <b>RGB</b> — a creative-writing piece about a test of colour.</p>
+        <h3>Three approaches to language and storytelling.</h3>
+        <p><b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> — my Burmese translation, presented alongside an English excerpt; <b>Carl</b> — my adaptation of Invoker’s game lore; <b>RGB</b> — my original creative-writing piece about a test of colour.</p>
         <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. The full PDF with the three samples is the download below.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">

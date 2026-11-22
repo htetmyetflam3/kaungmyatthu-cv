@@ -344,11 +344,13 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', 'B', 8)
         self.set_text_color(*TEAL)
-        self.cell(0, 5.5, 'OPERATIONS ASSISTANT SUPERVISOR  ·  2024 – 2025', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5.5, 'ASSISTANT SUPERVISOR  ·  NORTH OKKALAPA BRANCH  ·  2024 – 2025', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.set_font('my', '', 10)
         self.set_text_color(*INK)
-        self.multi_cell(0, 6.2, 'I coordinated branch administration and stock flow alongside voiceover and editing teams, '
-                                 'and maintained social-media performance records. Reporting turned raw daily records into figures the branch could actually review.')
+        self.multi_cell(0, 6.2, 'My role covered frontline branch operations and staff administration as well as reporting and '
+                                 'social-content support. I checked attendance and staff updates, followed up sales and stock records, '
+                                 'coordinated with team leaders and cashiers, and supported TikTok work through captions, '
+                                 'voiceover/editing coordination, posting checks and reporting.')
         self.ln(1.5)
 
         # stat tiles
@@ -398,12 +400,12 @@ class PortfolioPDF(FPDF):
         self.ln(1)
         self.set_font('my', 'I', 7.5)
         self.set_text_color(*MUTED)
-        self.cell(0, 5, 'Rounded growth ~ +90%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'Recorded growth ~ +89.9%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(0.8)
         self.multi_cell(0, 4.2,
-            'December in detail: the confirmed month-end increase was 110,729 followers. The surviving daily entries '
-            'total 56,591 and do not reconcile with that increase. Both are preserved as separate records; the daily '
-            'series is not presented as a breakdown of monthly growth.',
+            'Daily-record note — December’s confirmed month-end follower increase was 110,729. The surviving daily '
+            'entries total 56,591 and do not reconcile with that increase. Both records are preserved; the daily '
+            'series is not presented as a complete breakdown of monthly growth.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
 
@@ -470,7 +472,7 @@ class PortfolioPDF(FPDF):
 
         # reference note — the full workbook is available on request
         note_y = self.get_y()
-        self.card_top(18, note_y, 174, 24, (255, 247, 236), (252, 220, 168))
+        self.card_top(18, note_y, 174, 20, (255, 247, 236), (252, 220, 168))
         self.set_font('my', 'B', 8.5)
         self.set_text_color(180, 83, 9)
         self.set_xy(25, self.get_y() + 2.6)
@@ -479,10 +481,10 @@ class PortfolioPDF(FPDF):
         self.set_text_color(110, 64, 10)
         self.set_xy(25, self.get_y() + 0.5)
         self.multi_cell(160, 4.0,
-            'Customer phone numbers redacted — as reference is available on request.',
+            'Customer phone numbers redacted. The selected redacted workbook is linked in this PDF’s links page; the original master is kept separately.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         # certification — one compact line so the case study stays on a single page
-        self.set_xy(18, note_y + 26)
+        self.set_xy(18, note_y + 22)
         self.set_font('my', 'B', 7.2)
         self.set_text_color(*NAVY)
         label = 'Certification · '
@@ -493,6 +495,102 @@ class PortfolioPDF(FPDF):
             'Conversion Optimization Certification Exam — Skillshop · issued 30 Nov 2025 · expires 30 Nov 2026 · ID 167907950',
             link='https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
+
+    def workflow_section(self):
+        self.add_page()
+        self.header_band('Daily workflow')
+        self.ln(3.5)
+        self.kicker('01b — Daily workflow')
+        self.section_title('My daily workflow')
+        self.rule()
+        self.set_font('my', '', 9)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 5.2,
+            'I made this checklist as a personal reminder system for a role with many small, recurring '
+            'responsibilities. It helped me remember what to check, whom to follow up with and when to return '
+            'to the same records during the day.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2)
+        self.multi_cell(0, 5.2,
+            'The original combines staff administration, cash and sales checks, stock coordination, TikTok '
+            'follow-up, reporting and closing tasks. The summary below is a readable version; the original '
+            'document is linked in the index page.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(4)
+
+        self.set_font('my', 'B', 9)
+        self.set_text_color(*NAVY)
+        self.cell(0, 6, 'Summary of my original checklist', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.5)
+
+        rows = [
+            ('Opening and information flow',
+             '9:00 attendance/check-in approval; 9:15 Viber attendance and updates; 9:20 generator-use '
+             'checks; 9:30 bank transfer/change tasks.'),
+            ('Morning content and sales checks',
+             '9:45 video captions; 10:20 team-leader discussion; 10:35 deposit-slip checks; 10:40 late-sale '
+             'entry checks; 10:45 stock-team pivot follow-up; 10:50 salesperson-total/net-sale comparison.'),
+            ('Posting and staff follow-up',
+             '11:00 check the scheduled 10:00 TikTok post and comment replies; closing-check follow-up with '
+             'cashiers; break-book and other-floor checks.'),
+            ('Reporting and afternoon coordination',
+             '12:10–1:00 personal reporting, review and notes; 2:15 check the 1:00 TikTok post/replies; '
+             '2:20 online-sale payment follow-up; 2:50 stock-order discussion and order-list checking before signing.'),
+            ('End-of-day controls',
+             '4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, '
+             'generator-log, returns and stock checks across the evening; 5:55 checkout approval.'),
+        ]
+        for stage, detail in rows:
+            y = self.get_y()
+            self.set_font('my', 'B', 8.2)
+            self.set_text_color(*NAVY)
+            self.set_xy(18, y + 1.6)
+            self.multi_cell(44, 4.4, stage, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            after_left = self.get_y()
+            self.set_xy(64, y + 1.6)
+            self.set_font('my', '', 8.2)
+            self.set_text_color(*INK)
+            self.multi_cell(128, 4.4, detail, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            after_right = self.get_y()
+            self.set_y(max(after_left, after_right) + 2.2)
+
+        self.ln(2)
+        self.set_font('my', 'I', 7.6)
+        self.set_text_color(*MUTED)
+        self.multi_cell(0, 4.2,
+            'My personal working checklist, in its original Burmese/English wording and order. The timings are as I '
+            'wrote them; the generator checks appear several times because the electricity here is not on all day — it '
+            'comes in shifts, and in summer it can go and come back, so each check and log entry was a separate task. '
+            'The original DOCX is linked in the index page.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(6)
+
+        self.set_font('my', 'B', 9)
+        self.set_text_color(*NAVY)
+        self.cell(0, 6, 'Other records in the same workbook', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.5)
+        lines = [
+            ('daily sale ', '31 daily rows, 1–31 December 2024 — sale revenue 148,356,500; discount 1,068,495; '
+                            'net 147,288,005; returns 1,081,500 (MMK). Recorded sales, not profit.'),
+            ('Stuff level up', 'Staff movement: three new starters, one transfer to online sale, one resignation, '
+                               'three terminations.'),
+            ('DAYS -OFF', 'Weekly days-off schedule covering 18 staff, Monday to Saturday.'),
+            ('Generator Usage Log', 'Seven entries, 24 December 2024 – 15 January 2025, with start/end times and '
+                                    'run times of 1–8 hours.'),
+            ('customer feedback', '33 feedback rows; praise and product requests kept apart in this PDF.'),
+        ]
+        for name, detail in lines:
+            y = self.get_y()
+            self.set_font('my', 'B', 7.8)
+            self.set_text_color(*NAVY)
+            self.set_xy(18, y + 1.2)
+            self.multi_cell(38, 4.2, name, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            left = self.get_y()
+            self.set_xy(58, y + 1.2)
+            self.set_font('my', '', 8)
+            self.set_text_color(*INK)
+            self.multi_cell(134, 4.2, detail, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.set_y(max(left, self.get_y()) + 1.8)
 
     def scripts_section(self):
         self.add_page()
@@ -697,11 +795,11 @@ class PortfolioPDF(FPDF):
         self.header_band('Writing samples')
         self.ln(2)
         self.kicker('05 — Writing samples')
-        self.section_title('Language samples', 20)
+        self.section_title('Translation, adaptation & original writing', 17)
         self.rule()
         self.set_font('my', '', 9)
         self.set_text_color(*MUTED)
-        self.multi_cell(0, 5.5, 'Selected translation, adaptation and original writing — excerpts.')
+        self.multi_cell(0, 5.5, 'Three selected pieces showing Burmese translation, adaptation and creative-writing work.')
         self.ln(4)
 
         for i, s in enumerate(SAMPLES):
@@ -763,7 +861,8 @@ class PortfolioPDF(FPDF):
                 ('Echo Vibe · Full script (DOCX)', 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view'),
                 ('Echo Vibe · Script with title (PDF)', 'https://drive.google.com/file/d/12jsQB682IqyOk9PQvZ3PNDNSb8-e5yb8/view'),
             ]),
-            ('Systems & AI', [
+            ('Systems, AI & 321 working records', [
+                ('321 working workbook — redacted (XLSX)', 'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view'),
                 ('CSM shelf-map master (XLSX)', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view'),
                 ('Point of Sale (XLSM)', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view'),
                 ('Understanding Prompts · manuscript (DOCX)', 'https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view'),
@@ -797,6 +896,7 @@ class PortfolioPDF(FPDF):
         self.cover()
         self.overview_page()
         self.case_study()
+        self.workflow_section()
         self.scripts_section()
         self.csm_section()
         self.ai_section()
