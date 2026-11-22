@@ -56,7 +56,9 @@ export default function Layout({ active, title, description, children }) {
 
       <footer className="site">
         <p>© 2026 Kaung Myat Thu · North Okkalapa · <a href="tel:+959955400017">+959955400017</a></p>
-        <p><a href="index.html">← Back to home</a></p>
+        {active !== 'resume' && (
+          <p><a href="index.html">← Back to home</a></p>
+        )}
       </footer>
 
       <button

@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout, { SectionHead } from '../layout/Layout';
 
+const CERT_URL = 'https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46';
+
 const EDUCATION = [
   { school: 'Hmaw Bi Technology University', period: '2012 – 2015', line: 'Civil Engineering (3rd Year) — diploma chased and dropped, not lost' },
   { school: 'KMD Institute', period: '2015', line: 'Practical A+ & Basic Network Engineering' },
@@ -97,10 +99,13 @@ export default function Resume() {
           {EDUCATION.map((e) => (
             <div key={e.school} style={{ marginBottom: 12 }}>
               <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-                <span style={{ fontWeight: 700, color: 'var(--navy)' }}>{e.school}</span>
+                <span style={{ fontWeight: 700, color: 'var(--navy)' }}>
+                  {e.cert ? <a href={CERT_URL} target="_blank" rel="noopener">{e.school}</a> : e.school}
+                </span>
                 <span className="tl-period" style={{ marginLeft: 0 }}>{e.period}</span>
               </div>
               <div className="muted" style={{ fontSize: '.85rem' }}>{e.line}</div>
+              {e.cert && <a href={CERT_URL} target="_blank" rel="noopener" style={{ fontSize: '.82rem', fontWeight: 700, color: 'var(--teal-2)', textDecoration: 'none', marginTop: 4, display: 'inline-block' }}>Verify credential ↗</a>}
             </div>
           ))}
         </div>

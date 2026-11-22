@@ -15,7 +15,7 @@ export default function About() {
       <div className="blog-notice">
         <span className="blog-flag">Personal blog</span>
         <p>
-          The full story, in my own words — the trauma included. It is not part of the resume package.
+          Welcome to my blog. Here, you'll mostly find my personal stories—a space about simply being human.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ export default function About() {
 
           <p><span className="yr">2020</span> — Final year, before COVID — <b>BAR</b> — wrote articles and posts for lifestyle and marketing; collaborated with the marketing team to keep brand consistency.</p>
 
-          <p><span className="yr">2021–2022</span> — <b>NGO (C.D.A)</b> — Senior Logistic Officer. Backed into the job by my aunt — many people had wanted that job. Field logistics for the projects — stayed home for one, and out field the other two — one week or two between cities. Then the rotation came — a rural state — too far, too poor, undeveloped. I quit — not fired; I quit directly. It was not a bad job — the pay was good, the role genuine — but the gap between who I was asked to be there and who I was willing to be was not bridgeable by a paycheck.</p>
+          <p><span className="yr">2021–2022</span> — <b>NGO (C.D.A)</b> — Senior Logistic Officer. Backed into the job by my aunt — many people had wanted that job. Field logistics for the projects — stayed home for one, and out field the other two — one week or two between cities. Then the rotation came — a rural state — too far, too poor, undeveloped. I quit — not fired; I quit directly. It was not a bad job — the pay was good, the role genuine — but the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.</p>
 
           <p><span className="yr">2021–2022</span> — <b>Program.base</b> — Script Writer (Part-Time) — Burmese scripts for travel, infotainment and educational content.</p>
 
@@ -44,11 +44,11 @@ export default function About() {
 
           <p><span className="yr">2022</span> — <b>Canal+ Myanmar</b> — adapted media translations for the <i>Alice Adventure</i> program. The first project. A low-paid job. <span className="yr">2023</span> — the second project — the file's upload date can't lie, and it's 2023. The third project never came back — the friend who shared it died — he joined some organization for revolution.</p>
 
-          <p>I bought a <b>Persian cat</b> — decided to spend my life on the things I want to do. Back to Yangon after the last project; quit; never joined the next one. The relation with my aunt turned bad, and home turned into the opposite of what I imagined.</p>
+          <p>I bought a <b>Persian cat</b> — decided to spend my life on the things I want to do. Back home after the last project; quit; never joined the next one. The relation with my aunt turned bad, and home turned into the opposite of what I imagined.</p>
 
-          <p>I met a girl — she is from <b>Mawlamyine</b> — and fell in love. I did not want to stay in the home, so I left the cat in the home with my aunt — she takes care of him — and I moved to her city. Even though I had quit for the things I want to do, I needed a <b>safety net again</b> in Mawlamyine — <a href="warehouse.html">NPT</a>. She cheated — back to Yangon.</p>
+          <p>I met a girl — she was from a different city — and fell in love. I did not want to stay home, so I left the cat with my aunt — she takes care of him — and I moved. Even though I had quit for the things I want to do, I needed a <b>safety net again</b> — <a href="warehouse.html">NPT</a>. She cheated — back home.</p>
 
-          <p><span className="yr">Apr 2024</span> — <a href="case-study.html">321 Ecolife</a> — Operations Assistant Supervisor at the Nok Branch — 6 shops across 6 townships, two brands. Shop-floor operations, staff and TikTok: <b>157,000 → 187,375 → 298,104 followers (+90%, Oct → Dec)</b>. 321 liked my stock management — and after keeping the floor running, I quit — not for any grudge, but because I wanted out of the operations loop and expand my field into <b>coding and digital marketing</b>. That's honest: the operations handled well at 321, and this site is the application for the next step, not a grudge against the job.</p>
+          <p><span className="yr">Apr 2024</span> — <a href="case-study.html">321 Ecolife</a> — Operations Assistant Supervisor. Shop-floor operations, staff and TikTok: <b>157,000 → 187,375 → 298,104 followers (+90%, Oct → Dec)</b>. 321 liked my stock management — and after keeping the floor running, I quit — not for any grudge, but because I wanted out of the operations loop and expand into <b>coding and digital marketing</b>. The work was run well at 321; this site is the next step, not a grudge against the job.</p>
 
           <p><span className="yr">2024–2025</span> — <a href="warehouse.html">NPT Group</a> — Warehouse Supervisor — family-shared distributor, electronics/tools and raw material. No software, no shelf maps, nobody owned the stock — I registered every item every day.</p>
 
@@ -60,9 +60,9 @@ export default function About() {
 
           <p><span className="yr">Current</span> — <a href="myangustis.html">Myangustis</a> — a Burmese text engine, owned from scratch — extract text from documents, organise it, support proofreading. Not NLP. Active development, pushed 2026-11-21.</p>
 
-          <p><span className="yr">Nov 2026</span> — a short-term role — hired as a full-time content writer for one short-term contract. Four days in, I quit. Not a good fit — walk away.</p>
+          <p><span className="yr">Nov 2026</span> — a short-term role — a full-time content writer for one short-term contract. I quit after four days. It was not a good fit.</p>
 
-          <p>That is the story as far as I know it — the first-year exam fail, the MU, the repeater, the aunt and the random jobs, BAR before COVID, COVID, the coup, the NGO field, Canal+, the Persian cat, the move, the safety net, the 321, the car-parts shop, the Burmese-text engine. Everything after 321 is freelance. Everything above is personal — <b>this is my personal blog, not a CV.</b></p>
+          <p>That is the story, as far as I know — everything after 321 is freelance, and the rest is just mine.</p>
         </div>
       </article>
 

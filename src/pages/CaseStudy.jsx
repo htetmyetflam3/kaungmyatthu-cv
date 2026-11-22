@@ -19,16 +19,16 @@ export default function CaseStudy() {
         <div className="overview-kicker">Overview</div>
         <h3>Reporting that the branch could actually use.</h3>
         <p>As Operations Assistant Supervisor, I ran the shop floor — frontline branch and staff administration: what sold, what customers wanted, day-to-day spend, staff coverage and incentives, and the branch's TikTok performance. The work turned raw daily records into figures the team could review, and kept social-media growth visible month after month.</p>
-        <p>Simple outcomes — followers <b>157,000 → 187,375 → 298,104</b> Oct → Dec (<b>+90%</b>), plus <b>+110,729</b> followers and <b>+938,000</b> likes (+30.41%) added in December alone. The full workbook (12 worksheets) as reference is available on request — the charts below are its public summary.</p>
+        <p>Simple outcomes — followers <b>157,000 → 187,375 → 298,104</b> Oct → Dec (<b>+90%</b>), plus <b>+110,729</b> followers and <b>+938,000</b> likes (+30.41%) added in December alone. The full workbook as reference is available on request.</p>
       </div>
 
       <div className="panel">
-        <h4>TikTok Performance — workbook charts <span className="sheet-chip">copied from 321NOK-Master-Redacted.xlsx</span></h4>
+        <h4>TikTok performance — month by month</h4>
 
         <div className="charts-grid">
       <div className="chart-card">
         <h5>Monthly follower change</h5>
-        <p className="chart-sub">Aug → Dec · TikTok Performance · D6:D10</p>
+        <p className="chart-sub">Followers, Aug → Dec</p>
 <svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: monthly follower change Aug to Dec — Aug +27,000, Sep +14,000, Oct +18,000, Nov +30,375, Dec +110,729" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
 <line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
 <rect x="12.0" y="138" width="42" height="32" rx="5" fill="#cde3e1"><title>AUG: 27,000</title></rect>
@@ -50,7 +50,7 @@ export default function CaseStudy() {
       </div>
       <div className="chart-card">
         <h5>Monthly likes change</h5>
-        <p className="chart-sub">Aug → Dec · TikTok Performance · D19:D23</p>
+        <p className="chart-sub">Likes, Aug → Dec</p>
 <svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: monthly likes change Aug to Dec — Aug +309,000, Sep +208,000, Oct +178,000, Nov +949,000, Dec +938,000" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
 <line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
 <rect x="12.0" y="127" width="42" height="43" rx="5" fill="#cde3e1"><title>AUG: 309,000</title></rect>
@@ -71,8 +71,8 @@ export default function CaseStudy() {
 </svg>
       </div>
       <div className="chart-card">
-        <h5>Month-end followers · Oct → Dec</h5>
-        <p className="chart-sub">Follower count at end of month · C4:C6</p>
+        <h5>Month-end followers</h5>
+        <p className="chart-sub">Oct → Dec</p>
 <svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: month-end followers Oct to Dec — Oct 157,000, Nov 187,375, Dec 298,104" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
 <line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
 <rect x="26.0" y="100" width="58" height="70" rx="5" fill="#9fd6d3"><title>OCT: 157,000</title></rect>
@@ -87,8 +87,8 @@ export default function CaseStudy() {
 </svg>
       </div>
       <div className="chart-card">
-        <h5>DEC daily follower change</h5>
-        <p className="chart-sub">31 days · TikTok Performance · C43:C73</p>
+        <h5>December, day by day</h5>
+        <p className="chart-sub">Daily follower change</p>
 <svg viewBox="0 0 330 196" role="img" aria-label="Bar chart: December daily follower change, all 31 days — day 1 1,351, day 24 17,000, day 25 7,599, day 31 542" fontFamily="system-ui,-apple-system,sans-serif">
 <line x1="0" y1="168" x2="330" y2="168" stroke="#dbe3ec" strokeWidth="1.5"/>
 <rect x="1.8" y="158" width="7" height="10" rx="2" fill="#74c4c0"><title>Day 1 · 1,351 followers</title></rect>
@@ -134,7 +134,7 @@ export default function CaseStudy() {
         </div>
 
         <table className="mini-table" style={{ marginTop: 18 }}>
-          <thead><tr><th>TikTok Performance sheet</th><th>AUG</th><th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th></tr></thead>
+          <thead><tr><th>By month</th><th>AUG</th><th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th></tr></thead>
           <tbody>
             <tr><td>MONTH-END FOLLOWERS</td><td>125,000</td><td>139,000</td><td>157,000</td><td>187,375</td><td><b>298,104</b></td></tr>
             <tr><td>Change →</td><td>+27,000</td><td>+14,000</td><td>+18,000</td><td>+30,375</td><td>+110,729</td></tr>
@@ -144,26 +144,19 @@ export default function CaseStudy() {
         </table>
 
         <div className="sheet-note">
-          <div><strong>DEC VS NOV (month-end)</strong> — followers +110,729 = <b>+59.09%</b> · likes +938,000 = <b>+30.41%</b></div>
-          <div><strong>DEC daily follower change</strong> — 31 days · sum = 56,591</div>
+          <div><strong>December vs November</strong> — followers +110,729 (<b>+59.09%</b>) · likes +938,000 (<b>+30.41%</b>)</div>
+          <div><strong>December daily followers</strong> — 31 days · +56,591</div>
         </div>
-        <p className="muted" style={{ fontSize: '.78rem', margin: '14px 0 0' }}>Inline HTML/SVG versions of the four charts in the workbook — the original XLSX is authoritative.</p>
       </div>
 
       <div className="panel">
-        <h4>Verbatim customer feedback · surviving log</h4>
+        <h4>Customer feedback</h4>
         <div className="row g-3 quote-row">
-          <div className="quote col-md-4"><p>“Good Service”</p><small>Customer feedback · row 2</small></div>
-          <div className="quote col-md-4"><p>“Excellent service”</p><small>Customer feedback · row 10</small></div>
-          <div className="quote col-md-4"><p lang="my">“Service အရမ်းကောင်းပါတယ် ။ Size စုံစေချင်တယ်။”</p><small>Positive service + size request · row 28</small></div>
+          <div className="quote col-md-4"><p>“Good Service”</p></div>
+          <div className="quote col-md-4"><p>“Excellent service”</p></div>
+          <div className="quote col-md-4"><p lang="my">“Service အရမ်းကောင်းပါတယ် ။ Size စုံစေချင်တယ်။”</p></div>
         </div>
-        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>Branch-level comments from the surviving sheet — not personally attributed testimonials.</p>
-      </div>
-
-      <div className="panel">
-        <h4>Full case study</h4>
-        <p style={{ margin: '0 0 12px' }}>Daily sale, Top &amp; Bottom Sale, customer feedback (phones redacted), TikTok Performance, staff &amp; incentive records and the generator log — 12 worksheets, phone numbers removed.</p>
-        <p className="ref-on-request"><strong>The full workbook as reference is available on request.</strong></p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>What customers told me at the branch — kept as received.</p>
       </div>
 
       <aside className="cert-box">
