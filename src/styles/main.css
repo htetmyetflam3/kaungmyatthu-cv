@@ -39,6 +39,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 24px)}
   border-radius:22px;color:#fff;overflow:hidden;padding:34px 30px 30px;box-shadow:0 24px 56px rgba(18,42,74,.28)}
 .hero-card::after{content:"";position:absolute;right:-120px;bottom:-160px;width:420px;height:420px;border-radius:50%;
   background:radial-gradient(circle,rgba(14,154,167,.35),transparent 70%)}
+.hero-avatar{display:block;width:88px;height:88px;border-radius:22px;object-fit:cover;margin:0 0 16px;border:2px solid rgba(94,234,212,.45);box-shadow:0 4px 20px rgba(0,0,0,.32)}
 .hero-eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#5eead4;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .hero-eyebrow::before{content:"";width:26px;height:2px;background:#5eead4;display:inline-block}
 .hero-card h1{font-size:clamp(1.6rem,4.6vw,2.55rem);line-height:1.14;letter-spacing:-.03em;font-weight:800;margin:0 0 14px;max-width:880px;word-break:break-word}
@@ -307,3 +308,73 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
 
 /* overview card: sample section holds the download button */
 .overview-card .dl-row{margin-top:16px}
+
+/* ================= about-me timeline (linear) ================= */
+.timeline{position:relative;margin:8px 0 0;padding:4px 0 4px 44px}
+.timeline::before{content:"";position:absolute;left:16px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,var(--teal),var(--navy))}
+.tl-item{position:relative;padding:14px 0 14px 0;border-bottom:1px dashed var(--line)}
+.tl-item:last-child{border-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-32px;top:20px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--teal);box-shadow:0 0 0 4px var(--teal-soft)}
+.tl-era{font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-2)}
+.tl-period{font-size:.66rem;font-weight:700;color:var(--muted);margin-left:10px;letter-spacing:.04em;text-transform:none}
+.tl-title{font-size:1.05rem;font-weight:800;letter-spacing:-.01em;color:var(--navy);margin:8px 0 6px;line-height:1.35}
+.tl-body{font-size:.9rem;line-height:1.75;color:#37455c;margin:0 0 10px;max-width:640px}
+.tl-body p{margin:0 0 8px}
+.tl-link{display:inline-flex;align-items:center;gap:8px;background:var(--teal-soft);border:1px solid var(--teal-border);color:var(--navy);text-decoration:none;font-weight:700;font-size:.82rem;padding:8px 13px;border-radius:9px;transition:all .2s}
+.tl-link:hover{background:#d9edeb;border-color:var(--teal);color:var(--teal-2);transform:translateY(-1px)}
+.tl-link svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:640px){.timeline{padding-left:34px}.tl-item::before{left:-26px}}
+
+/* ================= personal blog (About) ================= */
+.blog-notice{display:flex;gap:14px;align-items:flex-start;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px 18px;margin:6px 0 0}
+.blog-flag{flex-shrink:0;background:var(--navy);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;padding:6px 12px;margin-top:2px}
+.blog-notice p{margin:0;font-size:.88rem;line-height:1.65;color:#7c2d12}
+.blog-post{margin:22px 0 0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 30px 32px;box-shadow:0 2px 12px rgba(15,23,42,.04)}
+.blog-post-head{margin-bottom:18px;border-bottom:1px dashed var(--line);padding-bottom:18px}
+.blog-eyebrow{font-size:.66rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-2)}
+.blog-post-head h1{font-size:clamp(1.7rem,4.2vw,2.4rem);letter-spacing:-.025em;color:var(--navy);margin:10px 0 8px;line-height:1.16}
+.blog-meta{font-size:.86rem;color:var(--muted);margin:0}
+.blog-meta .blog-post-count{color:var(--teal-2);font-weight:700}
+.blog-body{font-size:1rem;line-height:1.9;color:#333f52}
+.blog-body p{margin:0 0 18px}
+.blog-body .yr{color:var(--teal-2);font-weight:800;white-space:nowrap}
+.blog-body a{color:var(--navy);font-weight:700;text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:3px}
+.blog-body a:hover{color:var(--teal-2)}
+.blog-body strong{color:var(--navy)}
+.blog-related{display:flex;flex-wrap:wrap;gap:10px 34px;align-items:center;justify-content:space-between;margin:22px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--teal-soft)}
+.blog-related .b-rel-title{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-2);margin:0}
+.blog-related .b-rel-links{display:flex;flex-wrap:wrap;gap:10px}
+.blog-related a{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--teal-border);border-radius:9px;padding:9px 14px;font-weight:700;font-size:.84rem;color:var(--navy);text-decoration:none}
+.blog-related a:hover{border-color:var(--teal);color:var(--teal-2);transform:translateY(-1px)}
+.blog-related a svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:560px){.blog-post{padding:22px 18px}.blog-body{font-size:.95rem}}
+
+/* resume profile meta + salary/refs (restored from previous index.html static) */
+.hero-role{font-size:.95rem;font-weight:700;color:#c9d8ea;letter-spacing:.04em;margin:0 0 14px}
+.hero-contact{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;font-size:.92rem;color:#e9eff8;margin:0 0 6px;position:relative;z-index:1}
+.hero-contact a{color:#fff;font-weight:700;text-decoration:none}
+.hero-contact a:hover{color:#5eead4}
+.hero-contact .sep{color:#7d90aa}
+.hero-details{font-size:.84rem;color:#b6c7dc;margin:0 0 20px;position:relative;z-index:1}
+
+.ref-on-request{margin:0 0 14px;padding:14px 16px;background:#f8fafc;border:1px solid var(--line);border-left:4px solid var(--teal-2);border-radius:10px;color:var(--navy);font-size:.95rem}
+.ref-on-request strong{font-weight:800}
+.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}
+@media (max-width:640px){.ref-grid{grid-template-columns:1fr}}
+.ref-card{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
+.ref-avatar{width:44px;height:44px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800}
+.ref-card .job-title{font-weight:700;color:var(--navy);margin:0 0 6px;font-size:.95rem}
+.ref-card a{color:var(--teal-2);font-weight:700;font-size:.8rem;text-decoration:none}
+.ref-card a:hover{text-decoration:underline}
+
+.salary{background:var(--navy);color:#fff;border-radius:14px;padding:24px 22px;margin-top:14px}
+.salary .tag{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#93c5fd;margin-bottom:8px}
+.salary .salary-list{list-style:none;padding:0;margin:0 0 14px}
+.salary .salary-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.salary .salary-row:last-child{border-bottom:0}
+.salary .salary-row span{color:#dbeafe;font-size:.92rem;font-weight:600}
+.salary .salary-row span em{display:block;font-style:normal;font-weight:400;font-size:.75rem;color:#93c5fd;margin-top:2px}
+.salary .salary-row strong{color:#fff;font-size:1.05rem;font-weight:800;white-space:nowrap}
+.salary p.mb-3{color:#cbd5e1;line-height:1.6;margin:0 0 14px;font-size:.9rem}
+.salary .btn-ghost-light{display:inline-flex;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);font-weight:700;border-radius:10px;padding:.6rem 1.3rem;text-decoration:none}
+.salary .btn-ghost-light:hover{background:rgba(255,255,255,.1)}

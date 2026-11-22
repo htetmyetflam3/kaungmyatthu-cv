@@ -424,20 +424,18 @@ class PortfolioPDF(FPDF):
             self.set_xy(18, y + 14.8)
         self.ln(0.5)
 
-        # redaction note + download
-        self.card_top(18, self.get_y(), 174, 17, (255, 247, 236), (252, 220, 168))
+        # reference note — the full workbook is available on request
+        self.card_top(18, self.get_y(), 174, 24, (255, 247, 236), (252, 220, 168))
         self.set_font('my', 'B', 8.5)
         self.set_text_color(180, 83, 9)
         self.set_xy(25, self.get_y() + 2.6)
-        self.cell(0, 4.2, 'Phone numbers redacted', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 4.2, 'Full case study', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.set_font('my', '', 7.5)
         self.set_text_color(110, 64, 10)
         self.set_xy(25, self.get_y() + 0.5)
         self.multi_cell(160, 4.0,
-            'This copy has all 33 customer phone numbers removed (values shown as \'[redacted]\'). Customer names and other workbook records are retained — not fully anonymised. Original master stays private in Drive.',
+            'The full workbook — 12 worksheets, customer phone numbers redacted — as reference is available on request. The charts on this page are its public summary.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.set_xy(18, self.get_y() + 19.5)
-        self.link_line('Download full case study · 321NOK-Master-Redacted.xlsx (XLSX)', 'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view', show_url=False)
 
     def scripts_section(self):
         self.add_page()
@@ -676,10 +674,6 @@ class PortfolioPDF(FPDF):
             ('Portfolio & CV', [
                 ('Portfolio (web)', PORTFOLIO_URL),
                 ('CV (web)', CV_URL),
-            ]),
-            ('Case study', [
-                ('321NOK-Master-Redacted.xlsx — 321 Ecolife case study (XLSX)',
-                 'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view'),
             ]),
             ('Content scripts', [
                 ('IMB1 · Leave-in conditioner (DOCX)', 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
