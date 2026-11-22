@@ -347,7 +347,7 @@ export default function CaseStudy() {
 
       <div className="takeaway">
         <span className="ti">◆</span>
-        <p><span className="label">What this demonstrates</span>Operational range — frontline needs, people coordination, stock flow — plus the discipline to make activity reviewable. The value is bringing details into a form the branch can act on, not filling spreadsheet cells.</p>
+        <p><span className="label">What this demonstrates</span>Operational range — frontline needs, people coordination, stock flow — plus the discipline to make activity reviewable. The value is bringing details into a form the branch can act on.</p>
       </div>
 
       <div className="dl-row" style={{ marginTop: 20 }}>
