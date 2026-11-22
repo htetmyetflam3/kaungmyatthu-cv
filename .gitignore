@@ -8,3 +8,8 @@ google_drive/
 *.private.xlsx
 *.private.xls
 *.private.docx
+
+# local build tools / artifacts
+.venv-build/
+samples-build/
+__pycache__/
