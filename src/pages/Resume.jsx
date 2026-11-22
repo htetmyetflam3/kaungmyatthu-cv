@@ -177,15 +177,8 @@ export default function Resume() {
         <div className="sec-head"><div><div className="sec-kicker"><span className="num">06</span> References</div><h2>References</h2></div></div>
         <div className="panel">
           <p className="ref-on-request"><strong>Reference letter is available on request or demand.</strong></p>
-          <div className="salary">
-            <div className="tag">Expected Salary — monthly</div>
-            <ul className="salary-list">
-              <li className="salary-row"><span>Content writing</span><strong>MMK 600,000</strong></li>
-              <li className="salary-row"><span>Operations <em>(depends on responsibility)</em></span><strong>MMK 750,000+</strong></li>
-              <li className="salary-row"><span>Digital marketing <em>(depends on responsibility)</em></span><strong>MMK 850,000+</strong></li>
-            </ul>
-            <p className="mb-3">Multi-skilled, reliable, and creative professional — open to both <b>part-time and full-time</b> opportunities.</p>
-            <a className="btn-ghost-light" href="mailto:htetmyet157@gmail.com,kmt@devnovex.shop?subject=Contact">Contact</a>
+          <div className="dl-row" style={{ marginTop: 12 }}>
+            <a className="btn-dl btn-dark" href="mailto:htetmyet157@gmail.com?subject=Contact">Contact</a>
           </div>
         </div>
       </section>
