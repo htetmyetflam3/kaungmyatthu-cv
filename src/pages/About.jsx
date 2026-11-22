@@ -12,24 +12,35 @@ export default function About() {
       title="About me — Kaung Myat Thu"
       description="The full story of Kaung Myat Thu. Personal blog."
     >
-      <div className="blog-notice">
-        <span className="blog-flag">Personal blog</span>
-        <p>
-          Welcome to my blog. Here, you'll mostly find my personal stories—a space about simply being human.
-        </p>
-      </div>
-
       <article className="blog-post">
-        <header className="blog-post-head">
-          <h1>About me</h1>
+        <header className="blog-hero">
+          <span className="blog-hero-eyebrow">✦ Personal blog</span>
+          <h1>About <span className="grad">me.</span></h1>
+          <p className="blog-hero-sub">The full, unedited story of Kaung Myat Thu — operations, content and systems, from a third-year civil failure to the AI book.</p>
+          <div className="blog-hero-meta">
+            <span>North Okkalapa</span><span className="dot"></span>
+            <span>Operations · Content · Systems</span><span className="dot"></span>
+            <span>+959955400017</span>
+          </div>
         </header>
 
+        <div className="blog-stat-strip">
+          <div className="blog-stat"><div className="blog-stat-num">157K → <span className="accent">298K</span></div><p className="blog-stat-label">Followers, 321 Ecolife (+90%)</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">4 <span className="accent">months</span></div><p className="blog-stat-label">CSM car-parts POS build</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">3 <span className="accent">careers</span></div><p className="blog-stat-label">NGO · 321 Ecolife · NPT Group</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">Live <span className="accent">project</span></div><p className="blog-stat-label">Myangustis — Burmese text engine</p></div>
+        </div>
+
         <div className="blog-body">
-          <p>2012 was the start. I failed the first-year exam at a random university, and I regretted it. Not because I was stupid, but because I never earned the <i>why</i> in front of it. The medical university, MU, disqualified me on the exam. So I went to KMD with the money to join as a <b>repeater in the third year</b>.</p>
+          <p>2012 was the start. My score was high enough to apply to any university. Back then engineering university was below MU and MMU, the medical universities. I had been disqualified at MU, and at that time I did not care much about the college. So I applied to random universities by writing top down to bottom, and got civil engineering — the highest major back then (today architecture is the highest).</p>
 
-          <p>My aunt knew I had failed, and that broke the support. A short run of random jobs followed. A sales promoter. Mobile sim-card selling. A move elsewhere, then re-rolled into the first year again.</p>
+          <p>At Hmaw Bi Technology University, civil engineering. I failed in the <b>third year</b> — as it became harder, and I played <b>Dota 2</b>. I regret it — not because I was stupid, but because I was not interested in that college. If I had gone to a computer college — which was below engineering university — I would not have failed. But I wrote the college form top down to bottom, so I did not get the computer college.</p>
 
-          <p>For the next years I was at Hmaw Bi Technology University, civil engineering. I chased the diploma to the third year and dropped it, not lost. In 2015 I was at KMD Institute for Practical A+ and Basic Network Engineering. The real English never came from any certificate. It came from <b>Dota 2</b>, SEA-server IT, playing against international players.</p>
+          <p>A student who failed in the third year got an AGTI certificate. That system changed during my second year — even though I passed, it became a full 6-year program, not a batch like the first two years AGTI and then two years BTech. Engineering, medical college, and Marine university students who failed can continue from the failed year if they move to distance education — as an example, if I moved to distance education and took physics or chemistry, my education would start from the third year and I would only have the third and fourth years left — graduated. If I take math, I can also continue from the failed year like that. Yangon University and YUFL are language colleges, not like the science-branch colleges, and YUFL English is a higher-level English college — so they don't roll to the first year. Engineering and medical colleges don't have English as a major subject, so they roll to the first year unless they take math, physics, chemistry and IC.</p>
+
+          <p>At first my aunt did not know. Instead of joining as a repeater in the third year, I went to KMD. Later she found out, and broke the support, so I worked some random jobs — a sales promoter, mobile sim-card selling, a move elsewhere. Then I re-rolled into the first year again. That had nothing to do with the support — I was already good in English, so I did not need to study much. Thanks to Dota 2, which is part of the reason I failed in civil.</p>
+
+          <p>In 2015 I was at KMD Institute for Practical A+ and Basic Network Engineering. The real English never came from any certificate. It came from <span class="hl">Dota 2</span>, SEA-server IT, playing against international players.</p>
 
           <p>In 2020, final year before COVID, I worked at BAR, writing articles and posts for lifestyle and marketing, and collaborating with the marketing team to keep brand consistency.</p>
 
@@ -49,7 +60,7 @@ export default function About() {
 
           <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved. Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place. She cheated. I went back home.</p>
 
-          <p>In April 2024 I started at <a href="case-study.html">321 Ecolife</a> as Operations Assistant Supervisor. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to 298,104, a 90 percent jump from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <b>coding and digital marketing</b>.</p>
+          <p>In April 2024 I started at <a href="case-study.html">321 Ecolife</a> as Operations Assistant Supervisor. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span class="hl">298,104</span>, a <span class="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span class="hl">coding and digital marketing</span>.</p>
 
           <p>From 2024 to 2025 I was the Warehouse Supervisor at <a href="warehouse.html">NPT Group</a>. Family-shared distributor. Electronics and tools, plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
 
@@ -59,7 +70,7 @@ export default function About() {
 
           <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
 
-          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the best part of my life.</p>
+          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span class="hl">best part of my life</span>.</p>
 
           <p>Right now I am on <a href="myangustis.html">Myangustis</a>, a Burmese text engine owned from scratch. It extracts text from documents, organises it and supports proofreading. It is not NLP. Active development, pushed 2026-11-21.</p>
 

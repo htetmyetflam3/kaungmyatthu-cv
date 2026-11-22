@@ -387,17 +387,237 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
 .echo-files{margin:0}
 .echo-file{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 16px 14px}
 
-/* ── Leonie-style full-screen portfolio hero ─────────────────────────────── */
-.portfolio-hero{position:relative;min-height:100vh;min-height:calc(100vh - 66px);display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(900px 520px at 78% -10%, rgba(46,212,191,.34), transparent 62%),linear-gradient(160deg,#0f1a2e 0%,#16294b 55%,#123a38 140%);border-radius:26px;overflow:hidden;margin:0 0 34px;box-shadow:0 26px 60px rgba(18,42,74,.32)}
-.portfolio-hero .hero-eyebrow{justify-content:center;margin-bottom:22px}
-.portfolio-hero h1{font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;color:#fff;margin:0 auto 22px;max-width:20ch;text-wrap:balance}
-.portfolio-hero h1 em{font-style:normal;color:#5eead4}
-.portfolio-hero .lead{font-size:clamp(1rem,1.6vw,1.22rem);color:#c8d6e6;max-width:56ch;margin:0 auto 34px;line-height:1.55}
-.portfolio-hero .hero-ctas{justify-content:center;margin-top:6px}
-.portfolio-hero .btn-primary{background:#5eead4;border-color:#5eead4;color:#0e1f36;padding:16px 24px;font-size:1rem;border-radius:14px}
-.portfolio-hero .btn-primary:hover{background:#7cf0e0}
-.portfolio-hero .btn-ghost-hero{border-color:rgba(94,234,212,.4);color:#e6edf5;padding:16px 22px;border-radius:14px;font-size:.95rem;background:rgba(255,255,255,.06)}
-.portfolio-hero .btn-ghost-hero:hover{background:rgba(255,255,255,.12);border-color:#5eead4;color:#fff}
-.ph-inner{position:relative;z-index:2;max-width:1100px;padding:70px 32px 90px}
-.ph-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:22px;height:36px;opacity:.85}
-@media (max-width:640px){.portfolio-hero{min-height:92vh;border-radius:18px}.ph-inner{padding:44px 18px 70px}}
+/* ═══════════════════════════════════════════════════════════════════════════
+   LEONIE (real theme from Drive — lione_v1.22.0) — portfolio skin.
+   Scoped under .leonie-page so About / CV keep their own look.
+   Tokens from theme.json + skin-setup.php (AxiomThemes Leonie 1.22.0):
+     bg #F9F9F5 · border #CFCFC9 · text #1C1C1C / #9D9C9C
+     accent lime #D0E332 (hover #B7C91A) · peach #FEB6AA · taupe #C5A48E
+     fonts: Jost (body) + Playfair Display (display, stand-in for report-school)
+═══════════════════════════════════════════════════════════════════════════ */
+.leonie-page{--l-bg:#F9F9F5;--l-card:#FBFAF6;--l-line:#DCD9CC;--l-text:#1C1C1C;--l-muted:#71695E;--l-lime:#D0E332;--l-lime-hover:#B7C91A;--l-peach:#FEB6AA;--l-taupe:#C5A48E;--l-dark:#161616;--l-dark-text:#CCCCC4;--l-font-b:'Jost',sans-serif;--l-font-d:'Playfair Display',Georgia,serif}
+.leonie-page{background:var(--l-bg);color:var(--l-text);font-family:var(--l-font-b);line-height:1.65}
+.leonie-page h1,.leonie-page h2,.leonie-page h3{font-family:var(--l-font-d);color:var(--l-text);font-weight:600;letter-spacing:0}
+.leonie-page a{color:inherit}
+
+/* ── accent line / topbar ── */
+.leonie-page .accent-line{height:4px;background:var(--l-lime);border-bottom:1px solid var(--l-text)}
+.leonie-page .topbar{background:rgba(249,249,245,.92);border-bottom:1px solid var(--l-line)}
+.leonie-page .topbar-inner{max-width:1160px}
+.leonie-page .brand{color:var(--l-text);font-family:var(--l-font-d);font-weight:600;font-size:1.05rem;letter-spacing:0}
+.leonie-page .brand small{color:var(--l-muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--l-font-b);font-weight:600}
+.leonie-page .brand-mark{width:32px;height:32px;border-radius:8px;background:var(--l-text);color:var(--l-lime);font-family:var(--l-font-d);font-weight:600;font-size:.95rem}
+.leonie-page .topnav a{font-family:var(--l-font-d);font-size:.92rem;color:var(--l-muted);border-radius:8px;font-weight:500}
+.leonie-page .topnav a:hover{color:var(--l-text);background:#EDECE4}
+.leonie-page .topnav a.active{background:var(--l-text);color:var(--l-bg)}
+.leonie-page .topnav a.cta{color:var(--l-text);border:1px solid var(--l-line);background:transparent}
+.leonie-page .topnav a.cta:hover{background:var(--l-lime);color:var(--l-text);border-color:var(--l-text)}
+
+/* ── full-screen lime hero: sunburst + letter, Leonie signature ── */
+.leonie-hero{position:relative;margin:0;max-width:none;padding:0;min-height:calc(100vh - 66px);min-height:calc(100svh - 66px);background:var(--l-lime);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--l-text)}
+.leonie-hero::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px rgba(28,28,28,.16);pointer-events:none}
+.hero-sunburst{position:absolute;left:50%;top:47%;width:160vmin;height:160vmin;transform:translate(-50%,-50%);background:repeating-conic-gradient(from 0deg, var(--l-text) 0deg 2.6deg, transparent 2.6deg 13deg);}
+.hero-disc{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:54vmin;height:54vmin;border-radius:50%;background:var(--l-text);display:grid;place-items:center;z-index:1}
+.hero-disc-letter{font-family:var(--l-font-d);font-size:clamp(9rem,36vmin,26rem);line-height:.8;font-weight:600;color:var(--l-bg)}
+.leonie-hero .hero-caption{position:absolute;left:clamp(28px,5vw,72px);bottom:clamp(40px,8vh,90px);z-index:2;text-align:left;color:var(--l-text)}
+.hero-caption-kicker{display:block;font-family:var(--l-font-b);font-size:.66rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;margin-bottom:7px}
+.hero-caption-line{display:block;font-family:var(--l-font-d);font-size:clamp(.95rem,1.7vw,1.18rem);line-height:1.5;max-width:300px}
+.leonie-side-label{position:absolute;right:clamp(10px,2.2vw,26px);top:50%;transform:translateY(-50%) rotate(180deg);transform-origin:center;writing-mode:vertical-rl;z-index:2;font-family:var(--l-font-b);font-size:.64rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--l-text);opacity:.85}
+.hero-ring-btn{position:absolute;right:clamp(18px,4vw,72px);bottom:clamp(48px,9vh,96px);z-index:2;width:118px;height:118px;border-radius:50%;border:1.5px solid var(--l-text);display:grid;place-items:center;text-align:center;font-family:var(--l-font-b);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;line-height:1.5;color:var(--l-text);background:transparent;text-decoration:none;transition:all .25s}
+.hero-ring-btn:hover{background:var(--l-text);color:var(--l-lime);transform:translateY(-3px)}
+.ph-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:22px;height:36px;opacity:.9;z-index:2;animation:leonie-bounce 1.9s ease-in-out infinite}
+@keyframes leonie-bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,9px)}}
+@media (max-width:640px){
+  .leonie-hero{min-height:100svh}
+  .hero-disc{top:36%}
+  .hero-sunburst{top:36%}
+  .hero-caption{left:20px;bottom:76px;right:20px}
+  .hero-caption-line{font-size:.98rem}
+  .hero-ring-btn{width:88px;height:88px;font-size:.6rem;right:18px;bottom:100px}
+  .leonie-side-label{display:none}
+}
+
+/* ── WHO I AM — Leonie “WHO WE ARE” section ── */
+.leonie-page .leonie-who{padding:70px 0 26px;text-align:center}
+.leonie-who .sec-kicker{justify-content:center;font-family:var(--l-font-b);font-size:.68rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--l-muted)}
+.leonie-who .who-title{font-size:clamp(1.8rem,4.6vw,3.1rem);line-height:1.13;letter-spacing:-.005em;font-weight:600;color:var(--l-text);max-width:24ch;margin:18px auto 16px;text-wrap:balance}
+.leonie-who .who-title em{font-style:italic;text-decoration:underline;text-decoration-color:var(--l-lime);text-decoration-thickness:4px;text-underline-offset:6px;color:var(--l-text)}
+.leonie-who .who-sub{font-family:var(--l-font-b);font-size:1.06rem;color:var(--l-muted);max-width:54ch;margin:0 auto 30px;line-height:1.6}
+.who-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:0 auto}
+.who-cta{border-radius:999px;padding:15px 28px;font-family:var(--l-font-b);font-size:1rem;font-weight:600;letter-spacing:.02em}
+.who-cta svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-left:8px;vertical-align:-2px}
+.leonie-page .who-cta.btn-primary{background:var(--l-text);color:var(--l-bg);border-color:var(--l-text)}
+.leonie-page .who-cta.btn-primary:hover{background:var(--l-lime);color:var(--l-text);border-color:var(--l-text);transform:translateY(-2px)}
+.leonie-page .who-cta.btn-ghost{background:transparent;color:var(--l-text);border-color:var(--l-text)}
+.leonie-page .who-cta.btn-ghost:hover{background:var(--l-text);color:var(--l-bg);border-color:var(--l-text);transform:translateY(-2px)}
+
+/* ── sections ── */
+.leonie-page .sec{padding:26px 0 6px}
+.leonie-page .sec-head{align-items:flex-end}
+.leonie-page .sec-kicker{font-family:var(--l-font-b);font-size:.68rem;font-weight:700;letter-spacing:.22em;color:var(--l-muted)}
+.leonie-page .sec-kicker .num{display:inline-grid;place-items:center;height:22px;min-width:34px;padding:0 7px;background:var(--l-lime);border:1px solid var(--l-text);color:var(--l-text);border-radius:4px;font-size:.64rem;font-weight:700;letter-spacing:.08em;margin-right:4px}
+.leonie-page .sec-head h2{font-size:clamp(1.45rem,3.2vw,2rem);line-height:1.16;letter-spacing:-.01em;font-weight:600;margin:10px 0 0;color:var(--l-text)}
+.leonie-page .sec-head p.sub{color:var(--l-muted);font-size:.95rem;line-height:1.6}
+
+/* ── overview cards / panels ── */
+.leonie-page .overview-card,.leonie-page .panel,.leonie-page .ai-pf{background:var(--l-card);border:1px solid var(--l-line);border-radius:16px;box-shadow:0 1px 4px rgba(28,28,28,.05)}
+.leonie-page .overview-card{padding:24px 26px}
+.leonie-page .overview-kicker{font-family:var(--l-font-b);font-size:.64rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--l-muted);margin-bottom:10px}
+.leonie-page .overview-card h3{font-size:1.34rem;line-height:1.28;letter-spacing:-.01em;font-weight:600;margin:0 0 10px;color:var(--l-text)}
+.leonie-page .overview-card p{font-size:.93rem;line-height:1.75;color:#3A3A34;margin:0 0 12px}
+.leonie-page .panel h3,.leonie-page .panel h4{color:var(--l-text)}
+.leonie-page .panel h4{font-family:var(--l-font-b);font-size:.74rem;font-weight:700;letter-spacing:.14em;color:var(--l-muted);margin:0 0 8px}
+.leonie-page .panel p{color:#3A3A34}
+
+/* ── buttons ── */
+.leonie-page .btn-dl{font-family:var(--l-font-b);font-weight:600;font-size:.88rem;border-radius:10px;background:var(--l-card);border:1px solid var(--l-text);color:var(--l-text);padding:11px 17px}
+.leonie-page .btn-dl:hover{background:var(--l-lime);border-color:var(--l-text);color:var(--l-text);transform:translateY(-2px)}
+.leonie-page .btn-dl.btn-dark{background:var(--l-text);border-color:var(--l-text);color:var(--l-bg)}
+.leonie-page .btn-dl.btn-dark:hover{background:var(--l-lime);border-color:var(--l-text);color:var(--l-text)}
+.leonie-page .btn-dl.btn-dark svg,.leonie-page .btn-dl svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── ops / case study ── */
+.leonie-page .ops-hero{background:var(--l-dark);border-radius:18px;color:var(--l-dark-text);padding:28px 28px 24px}
+.leonie-page .ops-hero .role{color:var(--l-lime);font-size:.78rem;font-weight:700;letter-spacing:.16em}
+.leonie-page .ops-hero h3{color:#F3F4EA;font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.2;font-weight:600;margin:10px 0 6px;max-width:620px}
+.leonie-page .ops-hero p.lead{color:var(--l-dark-text);line-height:1.75}
+.leonie-page .ops-stat{background:#1F1F1E;border-color:#3A3A37;border-radius:12px;padding:18px 18px}
+.leonie-page .ops-stat strong{color:var(--l-lime);font-family:var(--l-font-d);font-weight:600;font-size:1.7rem}
+.leonie-page .ops-stat span{color:#B1B1AA}
+.leonie-page .chapter{border-left-color:var(--l-lime)}
+.leonie-page .chapter .step{color:var(--l-muted);font-size:.7rem}
+.leonie-page .chapter h4{color:var(--l-text);font-family:var(--l-font-b)}
+.leonie-page .chapter p{color:#57544B}
+
+/* ── charts ── */
+.leonie-page .chart-card{background:#FDFCF8;border:1px solid var(--l-line)}
+.leonie-page .chart-card h5{color:var(--l-text);font-size:.66rem}
+.leonie-page .chart-card .chart-sub{color:var(--l-muted)}
+.leonie-page .sheet-note{background:#FDFCF8;border-color:var(--l-line);color:#3A3A34}
+.leonie-page .sheet-note strong{color:var(--l-text)}
+.leonie-page .sheet-note b{color:var(--l-lime-hover)}
+.leonie-page .sheet-chip{color:var(--l-text);background:var(--l-lime);border:1px solid var(--l-text)}
+.leonie-page .mini-table th{color:var(--l-text)}
+.leonie-page .mini-table td:first-child{font-family:var(--l-font-b);font-weight:700}
+.leonie-page .mini-table tr:last-child td{border-color:var(--l-line)}
+.leonie-page .mini-table td,.leonie-page .mini-table th{border-bottom-color:var(--l-line)}
+.leonie-page .mini-table b{color:var(--l-text)}
+.leonie-page .quote{background:#FBF4EE;border-color:var(--l-peach)}
+.leonie-page .quote p{color:#2E2A24;font-family:var(--l-font-b);font-size:.98rem}
+.leonie-page .quote small{color:#A9796A0;color:#B07254}
+
+/* ── takeaway ── */
+.leonie-page .takeaway{background:var(--l-dark);color:var(--l-dark-text);border-radius:16px}
+.leonie-page .takeaway .label{color:var(--l-lime)}
+.leonie-page .takeaway .ti{color:var(--l-lime)}
+.leonie-page .takeaway p{color:var(--l-dark-text)}
+
+/* ── cert box ── */
+.leonie-page .cert-box{background:#FDFCF8;border:1px solid var(--l-line);border-radius:16px}
+.leonie-page .cert-label{color:var(--l-muted);font-size:.6rem;letter-spacing:.2em}
+.leonie-page .cert-title{color:var(--l-text);font-family:var(--l-font-d);font-weight:600}
+.leonie-page .cert-meta{color:#3A3A34}
+.leonie-page .cert-note{color:var(--l-muted)}
+.leonie-page .cert-link{background:var(--l-text);border-color:var(--l-text);color:var(--l-bg);font-family:var(--l-font-b)}
+.leonie-page .cert-link:hover{background:var(--l-lime);border-color:var(--l-text);color:var(--l-text)}
+
+/* ── scripts / echo block ── */
+.leonie-page .echo-block{background:var(--l-dark);border:1px solid #2C2C29;border-radius:18px}
+.leonie-page .echo-lede{color:var(--l-dark-text)}
+.leonie-page .echo-lede .r{color:var(--l-lime)}
+.leonie-page .echo-file{background:#1B1B19;border:1px solid #2E2E2B;border-radius:14px}
+.leonie-page .echo-line b{color:var(--l-lime)}
+.leonie-page .echo-line,.leonie-page .echo-note{color:var(--l-dark-text)}
+.leonie-page .echo-file-name{color:#B1B1AA}
+.leonie-page .echo-style{color:#D5D4CB}
+.leonie-page .echo-style b{color:var(--l-lime)}
+.leonie-page .echo-file .btn-dl{background:transparent;border:1px solid #2E2E2B;border-color:#3C3C38;color:#E8E7DD}
+.leonie-page .echo-file .btn-dl:hover{background:var(--l-lime);color:var(--l-text);border-color:var(--l-lime)}
+
+/* ── figures / file cards / notes ── */
+.leonie-page .figure{background:#FBFAF5;border-color:var(--l-line)}
+.leonie-page .figure figcaption{color:#3A3A34;background:var(--l-card);border-color:var(--l-line)}
+.leonie-page .figure figcaption a{color:var(--l-lime-hover)}
+.leonie-page .file-card{background:var(--l-card);border-color:var(--l-line)}
+.leonie-page .file-card:hover{border-color:var(--l-text);box-shadow:0 12px 30px rgba(28,28,28,.14)}
+.leonie-page .file-card h4{font-family:var(--l-font-b);font-weight:600;color:var(--l-text)}
+.leonie-page .file-kind{color:var(--l-text);background:var(--l-lime);border:1px solid var(--l-text);padding:4px 8px}
+.leonie-page .file-card p{color:var(--l-muted)}
+.leonie-page .note-box{background:#FDF6F1;border:1px solid var(--l-peach);color:#5E3B2C}
+.leonie-page .note-box svg{stroke:#B07254}
+
+/* ── AI manuscript / reader ── */
+.leonie-page .ai-pf-label{color:var(--l-muted)}
+.leonie-page .ai-pf-label::before{background:var(--l-lime)}
+.leonie-page .ai-pf-book{background:var(--l-dark);border:1px solid #2C2C29}
+.leonie-page .ai-pf-book::after{background:radial-gradient(circle,rgba(208,227,50,.22),transparent 70%);right:-70px;bottom:-90px}
+.leonie-page .ai-pf-book small{color:var(--l-lime)}
+.leonie-page .ai-pf-book strong{color:#F3F4EA;font-family:var(--l-font-d);font-weight:600}
+.leonie-page .ai-pf-book span{color:#B1B1AA}
+.leonie-page .ai-pf-h4{color:var(--l-muted)}
+.leonie-page .ai-pf-ask{color:var(--l-text);font-family:var(--l-font-d);font-weight:600}
+.leonie-page .ai-pf-lead{color:#3A3A34}
+.leonie-page .ai-pf-tags span{background:var(--l-lime);border:1px solid var(--l-text);color:var(--l-text)}
+.leonie-page .ai-pf-ex{border-color:var(--l-line);border-left:3px solid var(--l-lime);background:#FDFCF8}
+.leonie-page .ai-pf-ex h4{color:var(--l-muted)}
+.leonie-page .ai-pf-ex p{color:#3A3A34}
+.leonie-page .ai-pf-details{background:#FDFCF8;border-color:var(--l-line)}
+.leonie-page .ai-pf-details summary{color:var(--l-text)}
+.leonie-page .ai-pf-details summary::before{color:var(--l-text);background:var(--l-lime);border:1px solid var(--l-text)}
+.leonie-page .ai-reader h4.ai-reader-h{color:var(--l-text)}
+.leonie-page .ai-reader p,.leonie-page .ai-reader-list li{color:#3A3A34}
+.leonie-page .ai-reader-note{color:var(--l-muted)}
+.leonie-page .ai-reader-list li em{color:var(--l-lime-hover)}
+.leonie-page .ai-pf-source{border-color:var(--l-line)}
+.leonie-page .ai-pf-source-kicker{color:var(--l-muted)}
+.leonie-page .ai-pf-note{color:var(--l-muted)}
+.leonie-page .ai-chapter{border-top-color:var(--l-line)}
+.leonie-page .ai-chapter-kicker{color:var(--l-muted)}
+.leonie-page .ai-reader-h-chapter{color:var(--l-text);border-bottom-color:var(--l-line);font-family:var(--l-font-d);font-weight:600}
+.leonie-page .ai-chapter-h2{color:var(--l-text)}
+.leonie-page .ai-chapter-h3{color:var(--l-text);font-weight:600}
+.leonie-page .ai-chapter-p{color:#3A3A34}
+.leonie-page .ai-chapter-ul li{color:#3A3A34}
+.leonie-page .ai-chapter-ul li::before{background:var(--l-lime)}
+.leonie-page .ai-tbl{background:#FDFCF8;border-color:var(--l-line)}
+.leonie-page .ai-tbl th{background:var(--l-dark);color:#F3F4EA}
+.leonie-page .ai-tbl td{border-bottom-color:var(--l-line);color:#3A3A34}
+.leonie-page .ai-tbl tr:nth-child(even) td{background:#F5F3EB}
+.leonie-page .chapter-no{display:inline-grid;place-items:center;background:var(--l-lime);border:1px solid var(--l-text);color:var(--l-text);border-radius:5px}
+.leonie-page .overview-card .chapter-no{margin-right:10px}
+
+/* ── footer / misc ── */
+.leonie-page footer.site{border-top:1px solid var(--l-line);background:#F3F1E8;color:var(--l-muted)}
+.leonie-page footer.site a{color:var(--l-text);font-weight:600}
+.leonie-page .to-top{background:var(--l-dark);color:var(--l-lime);border:1px solid #2C2C29;box-shadow:0 10px 24px rgba(22,22,22,.28)}
+.leonie-page .to-top:hover{background:var(--l-text);color:var(--l-lime)}
+.leonie-page dialog#viewer{background:var(--l-dark)}
+.leonie-page dialog#viewer .viewer-bar button{background:var(--l-lime);color:var(--l-text)}
+.leonie-page dialog#viewer .img-cap{color:#B1B1AA}
+.leonie-page :focus-visible{outline:3px solid var(--l-lime-hover);outline-offset:3px}
+
+/* ── reuse global cyan focus outline inside portfolio only ── */
+.leonie-page ::selection{background:var(--l-lime);color:var(--l-text)}
+/* ================= livelier About (bio) page ================= */
+.blog-hero{position:relative;overflow:hidden;border-radius:16px;padding:30px 28px 28px;margin-bottom:18px;color:#fff;background:linear-gradient(135deg,var(--navy-3) 0%,var(--navy) 55%,#1f3d63 100%)}
+.blog-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(640px 260px at 100% 0%,rgba(94,234,212,.22),transparent 55%);pointer-events:none}
+.blog-hero-eyebrow{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5eead4}
+.blog-hero h1{position:relative;z-index:1;font-size:clamp(1.9rem,5.4vw,3rem);letter-spacing:-.035em;line-height:1.1;color:#fff;margin:14px 0 10px;font-weight:800}
+.blog-hero h1 .grad{background:linear-gradient(90deg,#fcd34d,#5eead4 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.blog-hero-sub{position:relative;z-index:1;margin:0;max-width:46ch;color:#dbe6f2;font-size:.98rem;line-height:1.7}
+.blog-hero-meta{position:relative;z-index:1;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.78rem;color:#b8c7dc}
+.blog-hero-meta .dot{width:5px;height:5px;border-radius:50%;background:#5eead4}
+.blog-stat-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 22px}
+.blog-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:0 2px 10px rgba(15,23,42,.04);transition:transform .18s ease, box-shadow .18s ease}
+.blog-stat:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(15,23,42,.1)}
+.blog-stat-num{font-size:clamp(1.15rem,2.6vw,1.5rem);font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1.15}
+.blog-stat-num .accent{color:var(--teal-2)}
+.blog-stat-label{margin:5px 0 0;font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+@keyframes blog-fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.blog-post{animation:blog-fade .6s ease-out both}
+.blog-body{font-size:1.02rem;line-height:1.92;color:#333f52}
+.blog-body p{margin:0 0 20px}
+.blog-body p:first-of-type::first-letter{font-size:3.3em;line-height:.85;float:left;padding:4px 10px 0 0;font-weight:800;color:var(--navy);font-family:Georgia,'Times New Roman',serif}
+.blog-body p:first-of-type{margin-top:2px}
+.blog-body .hl{background:linear-gradient(180deg,transparent 62%,#fde68a 62%);font-weight:700;color:var(--navy)}
+@media (max-width:560px){.blog-hero{padding:24px 18px}.blog-body p:first-of-type::first-letter{font-size:2.9em}}

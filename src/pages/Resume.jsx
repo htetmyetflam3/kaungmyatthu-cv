@@ -4,7 +4,7 @@ import Layout, { SectionHead } from '../layout/Layout';
 const CERT_URL = 'https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46';
 
 const EDUCATION = [
-  { school: 'Hmaw Bi Technology University', period: '2012 – 2015', line: 'Civil Engineering (3rd Year) — diploma chased and dropped, not lost' },
+  { school: 'Hmaw Bi Technology University', period: '2012 – 2015', line: 'Civil Engineering — failed in the third year' },
   { school: 'KMD Institute', period: '2015', line: 'Practical A+ & Basic Network Engineering' },
   { school: 'B.A English', period: '2020', line: 'English' },
   { school: 'Conversion Optimization Certification Exam', period: '2025', line: 'Skillshop · Issued 30 November 2025 · Expires 30 November 2026 · Certificate ID 167907950', cert: true },
