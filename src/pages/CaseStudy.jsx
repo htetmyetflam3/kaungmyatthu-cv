@@ -19,6 +19,7 @@ export default function CaseStudy() {
         <div className="overview-kicker">Overview</div>
         <h3>Reporting that the branch could actually use.</h3>
         <p>As Operations Assistant Supervisor, I ran the shop floor — frontline branch and staff administration: what sold, what customers wanted, day-to-day spend, staff coverage and incentives, and the branch's TikTok performance. The work turned raw daily records into figures the team could review, and kept social-media growth visible month after month.</p>
+        <p>On the social-media side, I coordinated with the voiceover and editing teams and reported the performance back to the branch — month-end figures plus the day-level records behind them.</p>
         <p>Simple outcomes — followers <b>157,000 → 187,375 → 298,104</b> Oct → Dec (<b>+90%</b>), plus <b>+110,729</b> followers and <b>+938,000</b> likes (+30.41%) added in December alone. The full workbook as reference is available on request.</p>
       </div>
 
@@ -86,6 +87,22 @@ export default function CaseStudy() {
 <text x="275.0" y="188" textAnchor="middle" fontSize="10.5" fontWeight="600" fill="#475569">DEC</text>
 </svg>
       </div>
+        </div>
+
+        <table className="mini-table" style={{ marginTop: 18 }}>
+          <thead><tr><th>By month</th><th>AUG</th><th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th></tr></thead>
+          <tbody>
+            <tr><td>MONTH-END FOLLOWERS</td><td>125,000</td><td>139,000</td><td>157,000</td><td>187,375</td><td><b>298,104</b></td></tr>
+            <tr><td>Change →</td><td>+27,000</td><td>+14,000</td><td>+18,000</td><td>+30,375</td><td>+110,729</td></tr>
+            <tr><td>TOTAL LIKES</td><td>1,750,000</td><td>1,958,000</td><td>2,136,000</td><td>3,085,000</td><td><b>4,023,000</b></td></tr>
+            <tr><td>Change →</td><td>+309,000</td><td>+208,000</td><td>+178,000</td><td>+949,000</td><td>+938,000</td></tr>
+          </tbody>
+        </table>
+
+        <details className="ai-pf-details supporting-records">
+          <summary>Supporting records — December, day by day</summary>
+          <div className="supporting-records-body">
+            <div className="charts-grid">
       <div className="chart-card">
         <h5>December, day by day</h5>
         <p className="chart-sub">Daily follower change</p>
@@ -131,21 +148,14 @@ export default function CaseStudy() {
 <rect x="321.2" y="164" width="7" height="4" rx="2" fill="#74c4c0"><title>Day 31 · 542 followers</title></rect>
 </svg>
       </div>
-        </div>
-
-        <table className="mini-table" style={{ marginTop: 18 }}>
-          <thead><tr><th>By month</th><th>AUG</th><th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th></tr></thead>
-          <tbody>
-            <tr><td>MONTH-END FOLLOWERS</td><td>125,000</td><td>139,000</td><td>157,000</td><td>187,375</td><td><b>298,104</b></td></tr>
-            <tr><td>Change →</td><td>+27,000</td><td>+14,000</td><td>+18,000</td><td>+30,375</td><td>+110,729</td></tr>
-            <tr><td>TOTAL LIKES</td><td>1,750,000</td><td>1,958,000</td><td>2,136,000</td><td>3,085,000</td><td><b>4,023,000</b></td></tr>
-            <tr><td>Change →</td><td>+309,000</td><td>+208,000</td><td>+178,000</td><td>+949,000</td><td>+938,000</td></tr>
-          </tbody>
-        </table>
+            </div>
+            <p className="muted" style={{ fontSize: '.78rem', margin: '10px 2px 0' }}>Daily entries kept as recorded from the branch performance sheet. They are a separate, partial series — not a complete breakdown of the monthly total above.</p>
+          </div>
+        </details>
 
         <div className="sheet-note">
           <div><strong>December vs November</strong> — followers +110,729 (<b>+59.09%</b>) · likes +938,000 (<b>+30.41%</b>)</div>
-          <div><strong>December daily followers</strong> — 31 days · +56,591</div>
+          <div>December’s confirmed month-end increase was <b>110,729 followers</b>. The surviving daily entries total <b>56,591</b> and do not reconcile with that increase. Both are preserved as separate records; the daily series is not presented as a complete breakdown of monthly growth.</div>
         </div>
       </div>
 

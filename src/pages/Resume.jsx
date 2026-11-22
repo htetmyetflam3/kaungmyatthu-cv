@@ -117,7 +117,7 @@ export default function Resume() {
           {EXPERIENCE.map((j) => (
             <div key={j.title} style={{ marginBottom: 14, borderBottom: '1px dashed var(--line)', paddingBottom: 14 }}>
               <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-                <a href={j.href} style={{ fontWeight: 700, color: 'var(--navy)', textDecoration: 'none' }}>{j.title}</a>
+                <a href={j.href} style={{ fontWeight: 700, color: 'var(--navy)', textDecoration: 'none', borderBottom: '1px solid rgba(11,121,131,.35)' }}>{j.title}</a>
                 <span className="tl-period" style={{ marginLeft: 0 }}>{j.period}</span>
               </div>
               <div className="muted" style={{ fontSize: '.85rem' }}>{j.line}</div>
