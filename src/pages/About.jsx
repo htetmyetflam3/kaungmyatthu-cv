@@ -10,59 +10,73 @@ export default function About() {
     <Layout
       active="about"
       title="About me — Kaung Myat Thu"
-      description="The full story of Kaung Myat Thu — the first-year fail, the NGO field, the cat, the 321, and now the freelance years. Personal blog."
+      description="The full story of Kaung Myat Thu. Personal blog."
     >
-      <div className="blog-notice">
-        <span className="blog-flag">Personal blog</span>
-        <p>
-          Welcome to my blog. Here, you'll mostly find my personal stories—a space about simply being human.
-        </p>
-      </div>
-
       <article className="blog-post">
-        <header className="blog-post-head">
-          <div className="blog-eyebrow">Personal blog</div>
-          <h1>About me</h1>
+        <header className="blog-hero">
+          <span className="blog-hero-eyebrow">✦ Personal blog</span>
+          <h1>About <span className="grad">me.</span></h1>
+          <p className="blog-hero-sub">The full, unedited story of Kaung Myat Thu — operations, content and systems, from a third-year civil failure to the AI book.</p>
+          <div className="blog-hero-meta">
+            <span>North Okkalapa</span><span className="dot"></span>
+            <span>Operations · Content · Systems</span><span className="dot"></span>
+            <span>+959955400017</span>
+          </div>
         </header>
 
+        <div className="blog-stat-strip">
+          <div className="blog-stat"><div className="blog-stat-num">157K → <span className="accent">298K</span></div><p className="blog-stat-label">Followers, 321 Ecolife (+90%)</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">4 <span className="accent">months</span></div><p className="blog-stat-label">CSM car-parts POS build</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">3 <span className="accent">careers</span></div><p className="blog-stat-label">NGO · 321 Ecolife · NPT Group</p></div>
+          <div className="blog-stat"><div className="blog-stat-num">Live <span className="accent">project</span></div><p className="blog-stat-label">Myangustis — Burmese text engine</p></div>
+        </div>
+
         <div className="blog-body">
-          <p><span className="yr">2012</span> — It started with a first-year exam I failed. I applied to a random university and regretted it — not because I was stupid, but because I never earned the <i>why</i> in front of it. MU — the medical university — disqualified me on the exam. So I went to KMD with the money to join as a <b>repeater in the third year</b>.</p>
+          <p>2012 was the start. My score was high enough to apply to any university. Back then engineering university was below MU and MMU, the medical universities. I had been disqualified at MU, and at that time I did not care much about the college. So I applied to random universities by writing top down to bottom, and got civil engineering — the highest major back then (today architecture is the highest).</p>
 
-          <p>My aunt knew I had failed. That broke the support. A short run of random jobs followed — a sales promoter, mobile sim-card selling — a move elsewhere, then re-rolled into the first year again.</p>
+          <p>At Hmaw Bi Technology University, civil engineering. I failed in the <b>third year</b> — as it became harder, and I played <b>Dota 2</b>. I regret it — not because I was stupid, but because I was not interested in that college. If I had gone to a computer college — which was below engineering university — I would not have failed. But I wrote the college form top down to bottom, so I did not get the computer college.</p>
 
-          <p><span className="yr">2012–2015</span> — Civil engineering at Hmaw Bi Technology University — chased the diploma to the third year and dropped it, not lost. <span className="yr">2015</span>: KMD Institute — Practical A+ &amp; Basic Network Engineering. The real English did not come from any certificate — it came from <b>Dota 2</b>: SEA-server IT, playing against international players.</p>
+          <p>A student who failed in the third year got an AGTI certificate. That system changed during my second year — even though I passed, it became a full 6-year program, not a batch like the first two years AGTI and then two years BTech. Engineering, medical college, and Marine university students who failed can continue from the failed year if they move to distance education — as an example, if I moved to distance education and took physics or chemistry, my education would start from the third year and I would only have the third and fourth years left — graduated. If I take math, I can also continue from the failed year like that. Yangon University and YUFL are language colleges, not like the science-branch colleges, and YUFL English is a higher-level English college — so they don't roll to the first year. Engineering and medical colleges don't have English as a major subject, so they roll to the first year unless they take math, physics, chemistry and IC.</p>
 
-          <p><span className="yr">2020</span> — Final year, before COVID — <b>BAR</b> — wrote articles and posts for lifestyle and marketing; collaborated with the marketing team to keep brand consistency.</p>
+          <p>At first my aunt did not know. Instead of joining as a repeater in the third year, I went to KMD. Later she found out, and broke the support, so I worked some random jobs — a sales promoter, mobile sim-card selling, a move elsewhere. Then I re-rolled into the first year again. That had nothing to do with the support — I was already good in English, so I did not need to study much. Thanks to Dota 2, which is part of the reason I failed in civil.</p>
 
-          <p><span className="yr">2021–2022</span> — <b>NGO (C.D.A)</b> — Senior Logistic Officer. Backed into the job by my aunt — many people had wanted that job. Field logistics for the projects — stayed home for one, and out field the other two — one week or two between cities. Then the rotation came — a rural state — too far, too poor, undeveloped. I quit — not fired; I quit directly. It was not a bad job — the pay was good, the role genuine — but the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.</p>
+          <p>In 2015 I was at KMD Institute for Practical A+ and Basic Network Engineering. The real English never came from any certificate. It came from <span class="hl">Dota 2</span>, SEA-server IT, playing against international players.</p>
 
-          <p><span className="yr">2021–2022</span> — <b>Program.base</b> — Script Writer (Part-Time) — Burmese scripts for travel, infotainment and educational content.</p>
+          <p>In 2020, final year before COVID, I worked at BAR, writing articles and posts for lifestyle and marketing, and collaborating with the marketing team to keep brand consistency.</p>
 
-          <p><span className="yr">2022</span> — Eight months of no job. Everyone the same — the coup.</p>
+          <p>In 2021–2022 I was Senior Logistic Officer at the NGO, C.D.A. My aunt backed me into the job. Many people had wanted it. I stayed home for one project and went to the field with the other two, one week or two between cities.</p>
 
-          <p><span className="yr">2022</span> — Translator (freelance) — literary and digital content.</p>
+          <p>Then the rotation came. A rural state, too far, too poor, undeveloped. I quit. Not fired. I quit directly. It was not a bad job. The pay was good, the role genuine. But the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.</p>
 
-          <p><span className="yr">2022</span> — <b>Canal+ Myanmar</b> — adapted media translations for the <i>Alice Adventure</i> program. The first project. A low-paid job. <span className="yr">2023</span> — the second project — the file's upload date can't lie, and it's 2023. The third project never came back — the friend who shared it died — he joined some organization for revolution.</p>
+          <p>The same time, I was a part-time Script Writer at Program.base, writing Burmese scripts for travel, infotainment and educational content.</p>
 
-          <p>I bought a <b>Persian cat</b> — decided to spend my life on the things I want to do. Back home after the last project; quit; never joined the next one. The relation with my aunt turned bad, and home turned into the opposite of what I imagined.</p>
+          <p>For eight months in 2022 there was no job. Everyone was the same. It was the coup.</p>
 
-          <p>I met a girl — she was from a different city — and fell in love. I did not want to stay home, so I left the cat with my aunt — she takes care of him — and I moved. Even though I had quit for the things I want to do, I needed a <b>safety net again</b> — <a href="warehouse.html">NPT</a>. She cheated — back home.</p>
+          <p>In 2022 I also started freelance translation work, literary and digital content.</p>
 
-          <p><span className="yr">Apr 2024</span> — <a href="case-study.html">321 Ecolife</a> — Operations Assistant Supervisor. Shop-floor operations, staff and TikTok: <b>157,000 → 187,375 → 298,104 followers (+90%, Oct → Dec)</b>. 321 liked my stock management — and after keeping the floor running, I quit — not for any grudge, but because I wanted out of the operations loop and expand into <b>coding and digital marketing</b>. The work was run well at 321; this site is the next step, not a grudge against the job.</p>
+          <p>Canal+ Myanmar adapted media translations for the <i>Alice Adventure</i> program. That was the first project. It was low-paid. The second came in 2023. The third project never came back. The friend who shared it died. He joined some organization for revolution.</p>
 
-          <p><span className="yr">2024–2025</span> — <a href="warehouse.html">NPT Group</a> — Warehouse Supervisor — family-shared distributor, electronics/tools and raw material. No software, no shelf maps, nobody owned the stock — I registered every item every day.</p>
+          <p>I bought a <b>Persian cat</b> and decided to spend my life on the things I want to do. After the last project I went back home. I quit, and never joined the next one. The relation with my aunt turned bad, and home turned into the opposite of what I imagined.</p>
 
-          <p><span className="yr">After 321</span> — in that era I wrote the <a href="ai.html">AI prompt book</a> — a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. <span className="yr">2025</span>: Conversion Optimization Cert — Skillshop — issued 30 Nov 2025, expires 30 Nov 2026.</p>
+          <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved. Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place. She cheated. I went back home.</p>
 
-          <p>After 321 — everything after that is freelance — for survival, to help my finances. The <a href="projects.html">web projects</a>: <b>Yumeyuki</b> — a Myanmar legal overseas employment agency — still alive; <b>TTS-AE</b> — built it for his company: the friend works as an Airbnb co-host, and his boss gave him the portfolio-site task — site and business mail for a bank, per their regulations (as best I understood from his explanation); the mail is alive, and they keep using it; <b>Writermorphosis</b> — a blog and book app — intentionally down on the site, a friend helping me hire for it; he doesn't need it — it's for me: I'm drowning in Myangustis without income and taking risk.</p>
+          <p>In April 2024 I started at <a href="case-study.html">321 Ecolife</a> as Operations Assistant Supervisor. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span class="hl">298,104</span>, a <span class="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span class="hl">coding and digital marketing</span>.</p>
 
-          <p><span className="yr">After 321</span> — <a href="warehouse.html">CSM</a> — the car-parts shop — project-based, not full-time — four months; I go when I wake up and go home whenever I want. The one rule: they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel — <b>the Excel part</b> — best part of my life.</p>
+          <p>From 2024 to 2025 I was the Warehouse Supervisor at <a href="warehouse.html">NPT Group</a>. Family-shared distributor. Electronics and tools, plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
 
-          <p><span className="yr">Current</span> — <a href="myangustis.html">Myangustis</a> — a Burmese text engine, owned from scratch — extract text from documents, organise it, support proofreading. Not NLP. Active development, pushed 2026-11-21.</p>
+          <p>In that era I wrote the <a href="ai.html">AI prompt book</a>, a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. In 2025 I got a Conversion Optimization Certification from Skillshop, issued 30 Nov 2025 and expiring 30 Nov 2026.</p>
 
-          <p><span className="yr">Nov 2026</span> — a short-term role — a full-time content writer for one short-term contract. I quit after four days. It was not a good fit.</p>
+          <p>Everything after 321 was freelance, for survival and to help my finances. <b>Yumeyuki</b>, a Myanmar legal overseas employment agency, still alive. <b>TTS-AE</b>, built for his company. The friend works as an Airbnb co-host, and his boss gave him the portfolio-site task: a site and business mail for a bank, per their regulations. I followed his explanation as best I could. The mail is alive, and they keep using it.</p>
 
-          <p>That is the story, as far as I know — everything after 321 is freelance, and the rest is just mine.</p>
+          <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
+
+          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span class="hl">best part of my life</span>.</p>
+
+          <p>Right now I am on <a href="myangustis.html">Myangustis</a>, a Burmese text engine owned from scratch. It extracts text from documents, organises it and supports proofreading. It is not NLP. Active development, pushed 2026-11-21.</p>
+
+          <p>In November 2026 I took a short-term role, a full-time content writer for one short-term contract. I quit after four days. It was not a good fit.</p>
+
+          <p>That is the story, as far as I know. Everything after 321 is freelance. The rest is mine.</p>
         </div>
       </article>
 
