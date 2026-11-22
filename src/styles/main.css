@@ -136,10 +136,14 @@ section.sec{padding:18px 0 6px}
 .mini-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
 .mini-table tr:last-child td{border-bottom:0}
 
-/* ---------- TikTok Performance sheet replica ---------- */
+/* ---------- TikTok Performance workbook charts ---------- */
 .sheet-chip{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-2);background:var(--teal-soft);border:1px solid var(--teal-border);border-radius:6px;padding:4px 9px;margin-left:10px;vertical-align:middle}
-.chart-wrap{background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:12px 6px 4px;margin:16px 0 4px}
-.chart-svg{display:block;width:100%;max-height:230px}
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px}
+@media (max-width:720px){.charts-grid{grid-template-columns:1fr}}
+.chart-card{background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:16px 14px 12px}
+.chart-card h5{font-size:.66rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:0}
+.chart-card .chart-sub{font-size:.72rem;color:var(--muted);margin:4px 0 10px;letter-spacing:.02em}
+.chart-card svg{display:block;width:100%;height:auto}
 .sheet-note{display:flex;flex-direction:column;gap:6px;margin-top:14px;padding:14px 16px;background:#fbfcfe;border:1px dashed var(--line);border-radius:10px;font-size:.8rem;color:#37455c;line-height:1.85}
 .sheet-note strong{color:var(--navy);letter-spacing:.04em}
 .sheet-note b{color:var(--teal-2)}
