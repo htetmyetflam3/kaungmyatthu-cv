@@ -79,13 +79,14 @@ section{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 .nav-scroll ul{ display:flex; flex-wrap:nowrap; align-items:center; gap:2px; margin:0 !important; padding:0 !important; list-style:none; height:var(--nav-h); }
 .nav-scroll li{ display:flex; align-items:center; height:var(--nav-h); flex-shrink:0; }
 .nav-scroll .nav-link{
-  display:flex; align-items:center; justify-content:center; height:var(--nav-h);
+  display:flex; align-items:center; justify-content:center; height:36px;
   color:var(--muted) !important; font-weight:600; font-size:.9rem; line-height:1 !important;
   white-space:nowrap; padding:0 14px !important; margin:0 !important;
-  border-bottom:2px solid transparent; text-decoration:none; transition:color .2s ease, border-color .2s ease;
+  border:1px solid transparent; border-radius:9px; text-decoration:none;
+  transition:color .2s ease, background .2s ease, border-color .2s ease;
 }
-.nav-scroll .nav-link:hover{ color:var(--navy) !important; }
-.nav-scroll .nav-link.active{ color:var(--navy) !important; border-bottom-color:var(--navy); font-weight:700; }
+.nav-scroll .nav-link:hover{ color:var(--navy) !important; background:#eef2f7; }
+.nav-scroll .nav-link.active{ background:var(--navy) !important; border-color:var(--navy); color:#fff !important; font-weight:700; }
 @media (max-width:575.98px){ .bar-label{ display:none; } .nav-scroll .nav-link{ font-size:.86rem; padding:0 11px !important; } }
 
 /* ===== ONE-COLUMN SECTIONS (clean cards) ===== */
@@ -173,6 +174,7 @@ footer a{ color:var(--navy); text-decoration:none; }
     <a href="/cdn-cgi/l/email-protection#e3888e97a38786958d8c95869bcd908b8c93dc90968189868097deab8a9186c6d1d3a882968d84c6d1d3ae9a8297c6d1d3b78b96" class="btn btn-primary-navy">Hire Me</a>
     <a href="tel:+959955400017" class="btn btn-outline">Call Me</a>
     <a href="https://htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html" class="btn btn-outline" target="_blank" rel="noopener">Portfolio</a>
+    <a href="Kaung-Myat-Thu-Portfolio.pdf" class="btn btn-outline" download>Download Portfolio PDF</a>
     <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
   </div>
 </header>
