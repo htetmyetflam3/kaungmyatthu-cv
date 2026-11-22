@@ -284,36 +284,90 @@
       <div class="sec-kicker"><span class="num">04</span> AI study</div>
       <h2>Understanding Prompts in AI — author</h2>
     </div>
-    <p class="sub">An independent, unfinished manuscript on prompt engineering as a system.</p>
+    <p class="sub">Tech &amp; AI — a self-authored manuscript on how LLMs actually work. Systems thinking over templates.</p>
   </div>
 
-  <div class="ai-hero">
-    <div class="ai-book"><small>Independent manuscript</small><strong>Beyond the wording<br>of a prompt.</strong><span>Kaung Myat Thu</span></div>
-    <div>
-      <p class="ask">Why can a clearly written prompt still produce an unexpected response?</p>
-      <p class="meta">A personal <strong>&ldquo;Layers &amp; Zones&rdquo;</strong> framework for interpreting conversational AI behaviour — context, premise acceptance, tone, inferred user knowledge and response constraints — rather than treating templates as the whole skill. Development paused as AI evolved; the full manuscript is below.</p>
-      <div class="dl-row">
-        <a class="btn-dl btn-dark" href="https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg> Download full manuscript · DOCX</a>
+  <article class="ai-pf">
+    <div class="ai-pf-label">Self-directed technical exploration · Tech &amp; AI</div>
+
+    <div class="ai-pf-grid">
+      <div class="ai-pf-book">
+        <small>Independent manuscript</small>
+        <strong>Beyond the wording<br>of a prompt.</strong>
+        <span>Kaung Myat Thu</span>
+      </div>
+      <div class="ai-pf-main">
+        <h4 class="ai-pf-h4">The central question</h4>
+        <p class="ai-pf-ask">Why can a clearly written prompt still produce an unexpected response?</p>
+        <p class="ai-pf-lead">I independently built a manuscript connecting practical prompting techniques with a personal &ldquo;Layers &amp; Zones&rdquo; framework — context, premise acceptance, tone, inferred user knowledge and response constraints — instead of treating templates as the whole skill.</p>
+        <div class="ai-pf-tags">
+          <span>Self-authored manuscript</span>
+          <span>LLM systems thinking</span>
+          <span>Prompt engineering</span>
+          <span>AI-assisted authoring</span>
+          <span>Unfinished · personal exploration</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="panel" style="margin-top:16px">
-    <h4>From the manuscript — body excerpts</h4>
-    <div class="excerpt">
-      <h4>Prompts as tasks across AI types</h4>
-      <p>In LLM-based AI, the user provides instructions, questions or examples and the system generates responses dynamically. The conversation itself becomes the task. In other AI types, tasks are embedded directly into control logic. Not all AI uses prompts — prompt-based interaction is what makes LLM-based AI fundamentally different.</p>
+    <div class="ai-pf-ex-row">
+      <div class="ai-pf-ex">
+        <h4>Prompts as tasks</h4>
+        <p>The conversation itself becomes the task. In LLM-based AI the user provides instructions, questions or examples and the system generates responses dynamically — in other AI types the task is embedded in control logic. Not all AI uses prompts; prompt-based interaction is what makes LLM-based AI fundamentally different.</p>
+      </div>
+      <div class="ai-pf-ex">
+        <h4>Emergent behaviour, not magic</h4>
+        <p>No single component decides. Just like a CPU, purposeful behaviour appears from the coordinated interaction of mathematical operations, learned parameters, sensory inputs and embedded rules — not an individual insight. Emergent behaviour results solely from the structured interaction of billions of parameters.</p>
+      </div>
+      <div class="ai-pf-ex">
+        <h4>Layers &amp; zones</h4>
+        <p>Input layers decide whether a response is possible; adjustment layers decide how that response appears. Most “why did the AI respond like that?” moments trace back to this two-way split.</p>
+      </div>
     </div>
-    <div class="excerpt">
-      <h4>AI: emergent behaviour, not magic</h4>
-      <p>No single component inside an AI system performs the task alone. Just like the CPU, the behavior appears purposeful because of the coordinated interaction of mathematical operations, learned parameters, sensory inputs and embedded rules — not an individual insight. Emergent behavior results solely from the structured interaction of billions of parameters.</p>
+
+    <details class="ai-pf-details">
+      <summary>Read the Layers &amp; Zones framework &amp; the prompt-types toolkit — the good part of the manuscript</summary>
+      <div class="ai-reader" lang="en" tabindex="0">
+        <h4 class="ai-reader-h">Layers &amp; zones — why a good prompt still fails</h4>
+        <p>Throughout the manuscript, the word &ldquo;layer&rdquo; refers to two related but different functions. To understand why a good prompt can still produce unexpected results, separate:</p>
+        <ul class="ai-reader-list">
+          <li><strong>Layers that evaluate the input</strong> — interpret intent and assumptions; evaluate context, constraints and risk; decide what is allowed, what is risky and what is relevant. <em>Premise Layer</em> → assumptions &amp; intent · <em>Safety Layer</em> → policy &amp; risk boundaries · <em>Context Layer</em> → scope, memory &amp; framing. These layers do not write the answer — they decide whether an answer can be given, and under what conditions.</li>
+          <li><strong>Layers that shape the output</strong> — modify tone, wording and structure; filter, soften, redirect or reframe content; apply constraints decided earlier by input layers. <em>Safety Adjustment Layer</em> → rewrites or limits output after safety approval · <em>Tone Adjustment Layer</em> → modulates style, formality &amp; emotional distance · <em>Knowledge Alignment Adjustment</em> → selects an explanation strategy that fits the situation. They do not re-evaluate intent — they transform an already-approved response into a safer, clearer, more appropriate form.</li>
+        </ul>
+        <p><strong>Why it matters.</strong> A common confusion: “My prompt wasn’t unsafe — so why did the output feel restricted?” Because both things can be true at once — the Safety Layer approved the input, while the Safety Adjustment Layer still reshaped the output. In simple terms: if a layer judges the request, it operates on the input; if a layer reshapes the answer, it operates on the output.</p>
+        <p class="ai-reader-note">Layers are conceptual models — they describe observable behaviour, not proprietary internal architecture.</p>
+
+        <h4 class="ai-reader-h">The prompt-types toolkit — 11 ways to shape an LLM</h4>
+        <p>Practical examples in the manuscript — each serving a distinct purpose:</p>
+        <div class="ai-toolkit">
+          <span><b>01</b> Zero-Shot<em>One clear instruction — clarity &amp; specificity, no examples</em></span>
+          <span><b>02</b> Structured / Formatted<em>Task · context · output format framework</em></span>
+          <span><b>03</b> Role-Based / Persona<em>Ask the AI to act as a specific role</em></span>
+          <span><b>04</b> Instruction + Constraint<em>Enforce word count, tone, format</em></span>
+          <span><b>05</b> Iterative / Follow-Up<em>Refine outputs step by step</em></span>
+          <span><b>06</b> Self-Improving / Feedback<em>AI learns from its own outputs</em></span>
+          <span><b>07</b> Comparative / Ranking<em>Compare &amp; rank options by criteria</em></span>
+          <span><b>08</b> Chain-of-Thought<em>Guide step-by-step reasoning</em></span>
+          <span><b>09</b> Multi-Task / Combined<em>Bundle multiple tasks, kept structured</em></span>
+          <span><b>10</b> Few-Shot<em>Input–output example pairs guide the output</em></span>
+          <span><b>11</b> Negative / Avoidance<em>Specify what to avoid — words, tones, topics</em></span>
+        </div>
+        <p>Plus a reusable Objective Template and per-task-type Section Templates (research, data analysis, marketing, coding, vibe coding, audio/podcast, image, video) to adapt the same pattern to any task.</p>
+
+        <h4 class="ai-reader-h">The central lesson</h4>
+        <p>Prompt engineering is probabilistic pattern-nudging. A well-structured prompt guides the system toward outputs aligned with learned patterns — alignment may occur precisely, partially or unexpectedly, because AI behavior is probabilistic, not deterministic. It is less mystical, less powerful and less stable than often claimed.</p>
+        <p><strong>That lens — prompts as tasks, layers &amp; zones, patterns over magic — is the tech &amp; AI skill this manuscript documents.</strong></p>
+      </div>
+    </details>
+
+    <div class="ai-pf-source">
+      <div>
+        <div class="ai-pf-source-kicker">Source files</div>
+        <a class="btn-dl btn-dark" href="https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg> Download full manuscript · DOCX</a>
+      </div>
+      <p class="ai-pf-note">Self-authored unfinished manuscript. Original wording retained. Presented as a personal exploration and a snapshot of thinking — not a published book.</p>
     </div>
-    <div class="excerpt">
-      <h4>Prompt engineering: nudging patterns</h4>
-      <p>Prompt engineering influences learned patterns within the model. A well-structured prompt guides the system toward outputs aligned with those patterns — alignment may occur precisely, partially or unexpectedly, because AI behavior is probabilistic rather than deterministic.</p>
-    </div>
-    <p class="muted" style="font-size:.82rem;margin:4px 0 0">Original wording, lightly excerpted — no author note or source notes included. Presented as a personal exploration and a snapshot of my thinking.</p>
-  </div>
+  </article>
 </section>
 
 <!-- ================= 05 SAMPLES ================= -->
