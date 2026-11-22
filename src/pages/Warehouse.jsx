@@ -74,7 +74,7 @@ export default function Warehouse() {
           handed it over; staff performed the physical counts.
         </p>
         <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
-          <li>The surviving files are partial working samples, not the final inventory.</li>
+          <li>The files on hand are partial working samples, not the final inventory.</li>
           <li>The portfolio POS demo uses fictional stock, prices and test sales — it is separate from actual operational records.</li>
           <li>Intended benefits are not presented as measured savings.</li>
         </ul>
