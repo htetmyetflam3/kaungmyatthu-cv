@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# private uploads — never commit
+google_drive/
+*.private.xlsx
+*.private.xls
+*.private.docx
