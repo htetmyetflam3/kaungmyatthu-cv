@@ -128,8 +128,10 @@ section{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   content:""; position:absolute; left:-1.4rem; top:6px; width:12px; height:12px; border-radius:50%;
   background:#fff; border:3px solid var(--navy);
 }
-.skill-row{ margin-bottom:16px; }
-.skill-row:last-child{ margin-bottom:0; }
+.skill-group{ margin-bottom:18px; }
+.skill-group:last-child{ margin-bottom:0; }
+.skill-group-label{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8b96a6; margin-bottom:4px; }
+.skill-group p{ margin:0; color:#d7dee7; font-size:.95rem; line-height:1.5; }
 .skill-top{ display:flex; justify-content:space-between; gap:1rem; font-weight:600; color:var(--navy); font-size:.92rem; margin-bottom:6px; }
 .skill-top .pct{ color:var(--muted); font-weight:600; }
 .progress{ height:6px; border-radius:99px; background:#eef2f7; overflow:hidden; }
@@ -207,7 +209,6 @@ footer a{ color:var(--navy); text-decoration:none; }
         <li><a class="nav-link" href="#experience">Experience</a></li>
         <li><a class="nav-link" href="#freelancer">Freelancer</a></li>
         <li><a class="nav-link" href="#skills">Skills</a></li>
-        <li><a class="nav-link" href="#services">Services</a></li>
         <li><a class="nav-link" href="#references">References</a></li>
       </ul>
     </div>
@@ -219,7 +220,7 @@ footer a{ color:var(--navy); text-decoration:none; }
 
   <section class="cv-section" id="about">
     <div class="sec-head"><div class="kicker">01 — About</div><h2>About Me</h2></div>
-    <p class="fs-5 mb-0">Currently working as a <strong>freelance web developer</strong> and developing <a href="https://github.com/htetmyetflam3/Myangustis">Myangustis</a>, a project focused on working with Myanmar-language text. The project explores ways to extract text from documents, organise it and support proofreading. Alongside my experience in <strong>content writing and translation</strong>, it has strengthened my attention to language, detail and problem-solving. I am a quick learner who builds skills through independent study.</p>
+    <p class="fs-5 mb-0">I bring experience in retail operations, staff coordination, reporting and content writing. My work has included branch administration, TikTok support, Burmese-language scripts and practical spreadsheet workflows. I am interested in marketing opportunities that connect customer understanding with clear communication and organised delivery.</p>
     <p style="margin-top:14px"><a href="about.html" class="cv-story-link" style="color:#0b7983;font-weight:700;text-decoration:none">Read the full story behind the numbers →</a></p>
   </section>
 
@@ -234,7 +235,7 @@ footer a{ color:var(--navy); text-decoration:none; }
       </div>
       <div class="timeline-item">
         <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-          <span class="job-title">B.A English</span><span class="badge-date">2020</span>
+          <span class="job-title">B.A. English</span><span class="badge-date">2019</span>
         </div>
         <div class="job-meta">English</div>
       </div>
@@ -340,39 +341,29 @@ footer a{ color:var(--navy); text-decoration:none; }
   </section>
 
   <section class="cv-section" id="skills">
-    <div class="sec-head"><div class="kicker">05 — Skills</div><h2>Skills &amp; Expertise</h2></div>
-    <div class="skill-row"><div class="skill-top"><span>Management &amp; Operations</span><span class="pct">90%</span></div><div class="progress"><div class="progress-bar" style="width:90%"></div></div></div>
-    <div class="skill-row"><div class="skill-top"><span>Translation &amp; Subtitling (Burmese ↔ English)</span><span class="pct">92%</span></div><div class="progress"><div class="progress-bar" style="width:92%"></div></div></div>
-    <div class="skill-row"><div class="skill-top"><span>Digital Marketing &amp; Copywriting</span><span class="pct">85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div></div>
-    <div class="skill-row"><div class="skill-top"><span>Email Marketing &amp; Automation</span><span class="pct">80%</span></div><div class="progress"><div class="progress-bar" style="width:80%"></div></div></div>
-    <div class="skill-row"><div class="skill-top"><span>Critical Thinking &amp; Communication</span><span class="pct">88%</span></div><div class="progress"><div class="progress-bar" style="width:88%"></div></div></div>
-    <div class="skill-row"><div class="skill-top"><span>Programming &amp; WordPress (HTML · CSS · PHP · JS Basic)</span><span class="pct">75%</span></div><div class="progress"><div class="progress-bar" style="width:75%"></div></div></div>
+    <div class="sec-head"><div class="kicker">05 — Skills</div><h2>Skills &amp; Experience</h2></div>
+    <div class="skill-group">
+      <div class="skill-group-label">Content</div>
+      <p>Burmese-language scripts, product and venue copy, social-content support.</p>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Operations</div>
+      <p>Staff coordination, sales checks, reporting and stock-workflow documentation.</p>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Tools and projects</div>
+      <p>Excel-based working records, EPOS setup, selected web projects and AI-assisted workflows.</p>
+    </div>
   </section>
 
-  <section class="cv-section" id="services">
-    <div class="sec-head"><div class="kicker">06 — Services</div><h2>Professional Services</h2></div>
-    <div class="service"><span class="time">2–7 days</span><div class="grow"><div class="job-title">Content Services</div><div class="job-meta">Translation, copywriting, subtitling, transcription</div></div><a class="btn-order" href="mailto:htetmyet157@gmail.com?subject=Order%3A%20Content%20Services">Order</a></div>
-    <div class="service"><span class="time">1–7 days</span><div class="grow"><div class="job-title">Advertising &amp; Boosting</div><div class="job-meta">Targeted Facebook boosting</div></div><a class="btn-order" href="mailto:htetmyet157@gmail.com?subject=Order%3A%20Advertising%20&%20Boosting">Order</a></div>
-    <div class="service"><span class="time">2–7 days</span><div class="grow"><div class="job-title">Branding Services</div><div class="job-meta">Logo &amp; digital QR code design</div></div><a class="btn-order" href="mailto:htetmyet157@gmail.com?subject=Order%3A%20Branding%20Services">Order</a></div>
-    <div class="service"><span class="time">5–10 days</span><div class="grow"><div class="job-title">Website / WordPress</div><div class="job-meta">Custom WordPress blogs &amp; portfolios</div></div><a class="btn-order" href="mailto:htetmyet157@gmail.com?subject=Order%3A%20Website%20/%20WordPress">Order</a></div>
-    <div class="service"><span class="time">1–3 days</span><div class="grow"><div class="job-title">Google Play Services</div><div class="job-meta">App submission &amp; developer account setup</div></div><a class="btn-order" href="mailto:htetmyet157@gmail.com?subject=Order%3A%20Google%20Play%20Services">Order</a></div>
-  </section>
+  
 
 
   <section class="cv-section" id="references">
-    <div class="sec-head"><div class="kicker">07 — References</div><h2>Reference Letters</h2></div>
+    <div class="sec-head"><div class="kicker">06 — References</div><h2>Reference Letters</h2></div>
     <p class="ref-on-request mb-4"><strong>Reference letter is available on request or demand.</strong></p>
-    <div class="salary">
-      <div class="tag">Expected Salary</div>
-      <ul class="salary-list">
-        <li class="salary-row"><span>Content writing</span><strong>MMK 600,000</strong></li>
-        <li class="salary-row"><span>Operations <em>(depends on responsibility)</em></span><strong>MMK 700,000+</strong></li>
-        <li class="salary-row"><span>Digital marketing <em>(depends on responsibility)</em></span><strong>MMK 850,000+</strong></li>
-      </ul>
-      <p class="mb-3"><small>Monthly. Multi-skilled, reliable, and creative professional — open to both <strong class="text-white">part-time and full-time</strong> opportunities.</small></p>
-      <div class="d-flex flex-wrap gap-2">
-        <a href="mailto:htetmyet157@gmail.com?subject=Contact" class="btn btn-ghost-light">Contact</a>
-      </div>
+    <div class="d-flex flex-wrap gap-2 mt-2">
+      <a href="mailto:htetmyet157@gmail.com?subject=Contact" class="btn btn-ghost-light">Contact</a>
     </div>
   </section>
 
