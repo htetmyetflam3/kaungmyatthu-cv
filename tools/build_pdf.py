@@ -29,8 +29,20 @@ MUTED  = (100, 116, 139)
 LINE   = (226, 232, 241)
 CARD   = (244, 246, 249)
 
-PORTFOLIO_URL = 'https://htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html'
-CV_URL        = 'https://htetmyetflam3.github.io/kaungmyatthu-cv/'
+SITE          = 'https://htetmyetflam3.github.io/kaungmyatthu-cv/'
+PORTFOLIO_URL = SITE + 'portfolio.html'
+CV_URL        = SITE
+PAGES = [
+    ('Full portfolio (single page)', PORTFOLIO_URL),
+    ('CV / resume',                  SITE + 'cv.html'),
+    ('321 case study',               SITE + 'case-study.html'),
+    ('Warehouse & CSM',              SITE + 'warehouse.html'),
+    ('Content & scripts',            SITE + 'content.html'),
+    ('Prompt engineering',           SITE + 'ai.html'),
+    ('Projects (web work)',          SITE + 'projects.html'),
+    ('About me',                     SITE + 'about.html'),
+    ('Myangustis',                   SITE + 'myangustis.html'),
+]
 
 def extract_samples():
     """Pull the content of the samples data file."""
@@ -242,13 +254,13 @@ class PortfolioPDF(FPDF):
 
         # quick-glance grid card-like rows
         rows = [
-            ('01', 'Case study — 321 Ecolife', 'Operations Assistant Supervisor · 2024–2025 · reporting, followers, sales'),
-            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel'),
-            ('03', 'CSM systems', 'Automotive-parts shelf mapping + POS demo'),
-            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)'),
-            ('05', 'Writing samples', 'Translation · adaptation · creative writing'),
+            ('01', 'Case study — 321 Ecolife', 'Operations Assistant Supervisor · 2024–2025 · reporting, followers, sales', 'page 3'),
+            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4'),
+            ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5'),
+            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6'),
+            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 7'),
         ]
-        for num, t, d in rows:
+        for num, t, d, page in rows:
             y = self.get_y()
             self.card_top(18, y, 174, 15.5, CARD, LINE)
             self.set_fill_color(*NAVY)
@@ -261,8 +273,38 @@ class PortfolioPDF(FPDF):
             self.set_text_color(*MUTED)
             self.set_xy(25, y + 9.5)
             self.cell(140, 5, d, new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.set_font('my', 'B', 7)
+            self.set_text_color(*TEAL)
+            self.set_xy(160, y + 9.5)
+            self.cell(28, 5, page, align='R')
             self.set_xy(18, y + 19)
         self.ln(2)
+
+        # the rest of the portfolio lives on the site — listed so the PDF covers it too
+        self.set_font('my', 'B', 8)
+        self.set_text_color(*TEAL)
+        self.cell(0, 6, 'ALSO IN THE PORTFOLIO (LIVE PAGES)', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(0.5)
+        self.set_font('my', '', 8.5)
+        self.set_text_color(*INK)
+        extra = [('Warehouse & CSM', SITE + 'warehouse.html'),
+                 ('Projects — web work', SITE + 'projects.html'),
+                 ('About me', SITE + 'about.html'),
+                 ('Myangustis', SITE + 'myangustis.html')]
+        x = 18
+        for label, url in extra:
+            w = self.get_string_width(label) + 10
+            if x + w > 192:
+                x = 18
+                self.ln(7)
+            self.set_fill_color(*TEAL_SOFT)
+            self.rect(x, self.get_y(), w, 6.2, 'F')
+            self.set_font('my', 'B', 7.5)
+            self.set_text_color(23, 73, 79)
+            self.set_xy(x + 4, self.get_y() + 1.2)
+            self.cell(w - 6, 4, label, link=url)
+            x += w + 4
+        self.ln(9)
 
         # contact strip — pinned to the bottom of the page
         y = 210
@@ -357,6 +399,12 @@ class PortfolioPDF(FPDF):
         self.set_font('my', 'I', 7.5)
         self.set_text_color(*MUTED)
         self.cell(0, 5, 'Rounded growth ~ +90%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(0.8)
+        self.multi_cell(0, 4.2,
+            'December in detail: the confirmed month-end increase was 110,729 followers. The surviving daily entries '
+            'total 56,591 and do not reconcile with that increase. Both are preserved as separate records; the daily '
+            'series is not presented as a breakdown of monthly growth.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
 
         # top-sale snapshot table
@@ -421,7 +469,8 @@ class PortfolioPDF(FPDF):
         self.ln(0.5)
 
         # reference note — the full workbook is available on request
-        self.card_top(18, self.get_y(), 174, 24, (255, 247, 236), (252, 220, 168))
+        note_y = self.get_y()
+        self.card_top(18, note_y, 174, 24, (255, 247, 236), (252, 220, 168))
         self.set_font('my', 'B', 8.5)
         self.set_text_color(180, 83, 9)
         self.set_xy(25, self.get_y() + 2.6)
@@ -431,6 +480,18 @@ class PortfolioPDF(FPDF):
         self.set_xy(25, self.get_y() + 0.5)
         self.multi_cell(160, 4.0,
             'Customer phone numbers redacted — as reference is available on request.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        # certification — one compact line so the case study stays on a single page
+        self.set_xy(18, note_y + 26)
+        self.set_font('my', 'B', 7.2)
+        self.set_text_color(*NAVY)
+        label = 'Certification · '
+        self.cell(self.get_string_width(label) + 0.6, 4, label)
+        self.set_font('my', '', 7.2)
+        self.set_text_color(*MUTED)
+        self.cell(0, 4,
+            'Conversion Optimization Certification Exam — Skillshop · issued 30 Nov 2025 · expires 30 Nov 2026 · ID 167907950',
+            link='https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def scripts_section(self):
@@ -477,7 +538,7 @@ class PortfolioPDF(FPDF):
         self.ln(2)
         self.set_font('my', 'I', 8)
         self.set_text_color(*MUTED)
-        self.cell(0, 5, 'Scripts live in Google Drive — click any title in this PDF to open it.', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'Scripts live in Google Drive — every file is linked from the index page at the back.', new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def csm_section(self):
         self.add_page()
@@ -527,6 +588,33 @@ class PortfolioPDF(FPDF):
         self.ln(1)
         self.link_line('CSM shelf-map master · XLSX', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view')
         self.link_line('Point of Sale · XLSM', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view')
+        self.ln(4)
+
+        # the same discipline, before the shelf map: the warehouse role
+        y = self.get_y()
+        self.card_top(18, y, 174, 34, CARD, LINE)
+        self.set_fill_color(*NAVY)
+        self.rect(18, y, 1.4, 34, 'F')
+        self.set_font('my', 'B', 7)
+        self.set_text_color(*TEAL)
+        self.set_xy(25, y + 3)
+        self.cell(0, 4, 'WAREHOUSE SUPERVISION  ·  NPT GROUP')
+        self.set_font('my', 'B', 10)
+        self.set_text_color(*NAVY)
+        self.set_xy(25, y + 7.5)
+        self.cell(0, 5, '6 Jan 2024 – 1 Nov 2024')
+        self.set_font('my', '', 8)
+        self.set_text_color(*MUTED)
+        self.set_xy(25, y + 14)
+        self.multi_cell(158, 4.4,
+            'Family-shared distributor — electronics / tools and raw material. No software and no shelf maps: every '
+            'item registered every day, the whole floor kept reviewable. Signed reference from the co-founder, '
+            'dated 08 Dec 2024.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.set_font('my', 'B', 7.5)
+        self.set_text_color(*TEAL)
+        self.set_xy(25, y + 29)
+        self.cell(0, 4, 'Warehouse & CSM page', link=SITE + 'warehouse.html')
 
     def ai_section(self):
         self.add_page()
@@ -667,10 +755,7 @@ class PortfolioPDF(FPDF):
             'This PDF is a self-contained snapshot of the portfolio. Live materials live on the web and in Google Drive; every link below opens that material in a new tab.')
         self.ln(1)
         groups = [
-            ('Portfolio & CV', [
-                ('Portfolio (web)', PORTFOLIO_URL),
-                ('CV (web)', CV_URL),
-            ]),
+            ('Web pages — the whole portfolio', PAGES),
             ('Content scripts', [
                 ('IMB1 · Leave-in conditioner (DOCX)', 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
                 ('IMB2 · Salon-quality home hair care (DOCX)', 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view'),
