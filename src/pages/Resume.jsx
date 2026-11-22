@@ -12,13 +12,13 @@ const EDUCATION = [
 
 const EXPERIENCE = [
   { title: '321 Ecolife — Assistant Supervisor (Nok Branch)', period: '2024 – 2025', line: 'Ran the shop floor — frontline branch and staff administration: what sold, what customers wanted, day-to-day spend, staff coverage and incentives. Kept the TikTok performance visible month after month — 157,000 → 187,375 → 298,104 followers (Oct → Dec, +90%).', href: 'case-study.html', label: '321 case study' },
-  { title: 'NPT Group — Warehouse Supervisor', period: '6 Jan – 1 Nov 2024', line: 'Handled project-based warehouse and logistics operations.', href: 'warehouse.html', label: 'Warehouse detail' },
+  { title: 'NPT Group — Warehouse Supervisor', period: 'January – November 2024', line: 'Handled project-based warehouse and logistics operations.', href: 'warehouse.html', label: 'Warehouse detail' },
   { title: 'NGO (C.D.A) — Senior Logistic Officer', period: '2021 – 2022', line: 'Oversaw warehouse and transport operations for project areas.', href: 'about.html', label: 'About me — full story' },
 ];
 
 const FREELANCE = [
   { title: 'Web Developer — WordPress', line: 'Yumeyuki.info (alive) · TTS-AE.com (mail in use) · Writermorphosis.com (current app)', badge: 'alive / dead / current' },
-  { title: 'Shelf mapping & POS build — car-parts shop (CSM)', line: 'Freelance, after the 321 role — master shelf map and a working POS demo for an automotive-parts shop.', period: '', href: 'warehouse.html' },
+  { title: 'Shelf mapping & POS build — car-parts shop (CSM)', line: 'Separate freelance project, roughly four months (dates unconfirmed) — EPOS/stock setup and shelf-location map, handed over.', period: '', href: 'warehouse.html' },
   { title: 'Country BAR — Content Writer (North-Dagon)', line: 'Articles and lifestyle/marketing posts; kept brand consistency with the marketing team.', period: '2020', href: 'content.html' },
   { title: 'Program.base — Script Writer (Part-Time)', line: 'Burmese scripts for travel, infotainment and educational content.', period: '2021 – 2022', href: 'content.html' },
   { title: 'Translator (Freelance)', line: 'English ↔ Burmese literary and digital content; U.S. (Texas) life insurance policies into Burmese.', period: '2022 – 2023', href: 'content.html' },

@@ -1,6 +1,12 @@
 import React from 'react';
 import Layout, { SectionHead, DetailsButton } from '../layout/Layout';
 
+const NPT_INVENTORY_ID = '12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY';
+const NPT_LETTER_ID = '1QdqLp4riClyC4h7HTQwxoch-Bj31Fa2D';
+const driveView = (id) => `https://drive.google.com/file/d/${id}/view`;
+const driveDl = (id) => `https://drive.google.com/uc?export=download&id=${id}`;
+const driveImg = (id, w = 1400) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
+
 const NPT_POINTS = [
   'Easily learns new skills and work methods',
   'Has proper systems of record-keeping',
@@ -27,9 +33,9 @@ export default function Warehouse() {
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>Hand-kept records first, then a system of my own.</h3>
-        <p>Two separate engagements, not one continuous story. At <b>NPT Group</b> I was Warehouse Supervisor from 6 January to 1 November 2024, keeping the stock record by hand. The <b>car-parts shop (CSM)</b> came later as a freelance project, after the 321 role, on its own timeline.</p>
-        <p>NPT had no stock system to work from, so discipline carried it. CSM needed something built, so I designed the shelf map and a working POS demo. Different problems, same subject — knowing where the stock is.</p>
+        <h3>One employment role, one separate freelance project.</h3>
+        <p><b>NPT Group</b> was a job: Warehouse Supervisor, <b>6 January – 1 November 2024</b>. <b>CSM</b> was a separate freelance project of roughly four months, with no confirmed dates — so none are given, and it is not placed inside the NPT timeline.</p>
+        <p>They involve the same subject (stock), not the same workflow. At NPT I kept the inventory record by hand. For CSM I set up an EPOS/stock system and designed a shelf-location map, then handed it over.</p>
       </div>
 
       <div className="panel">
@@ -42,21 +48,47 @@ export default function Warehouse() {
         <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
           {NPT_POINTS.map((p) => <li key={p}>{p}</li>)}
         </ul>
+        <div className="dl-row">
+          <a className="btn-dl btn-dark" href={driveView(NPT_INVENTORY_ID)} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
+            NPT inventory document · DOCX
+          </a>
+          <a className="btn-dl" href={driveDl(NPT_INVENTORY_ID)} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
+            Download inventory document
+          </a>
+        </div>
+        <figure style={{ margin: '18px 0 0' }}>
+          <a href={driveView(NPT_LETTER_ID)} target="_blank" rel="noopener">
+            <img
+              src={driveImg(NPT_LETTER_ID, 1400)}
+              alt="NPT Group reference letter"
+              loading="lazy"
+              style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid #dbe3ec', display: 'block' }}
+            />
+          </a>
+          <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>NPT Group reference letter — the co-founder letter of recommendation dated 08 Dec 2024. <a href={driveView(NPT_LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+        </figure>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span>Warehouse detail is from my own records, not the company's internal systems. Signed reference letter — confirmed.</span>
+          <span>Warehouse detail is from my own records, not the company's internal systems. The inventory document is a scan of my own working pages.</span>
         </div>
       </div>
 
       <div className="panel">
-        <h4>CSM · car-parts shop — shelf mapping + Point of Sale <span className="muted" style={{ fontWeight: 400 }}>(freelance, after the 321 role)</span></h4>
+        <h4>CSM · car-parts shop — shelf mapping + EPOS <span className="muted" style={{ fontWeight: 400 }}>(separate freelance project, roughly four months)</span></h4>
         <p style={{ margin: '0 0 14px' }}>
-          A separate freelance engagement, later than the NPT warehouse role and after my time at 321 — not part of either job. Project-based, advising an automotive-parts shop. In a densely stocked shelf
-          of 100+ pieces, one row can hold 30+ similar-looking variants that fit different vehicles — a missing
-          item gets assumed out of stock, a replacement arrives, the original reappears, and both keep scarce
-          shelf space. I designed the master shelf map and a POS demo so staff can identify the code, find the
-          position (MR-2 / SH-1 / R3), confirm the variant, replenish the same location.
+          A separate freelance project, roughly four months. Exact dates are not confirmed, so none are given and it is
+          not placed inside the NPT timeline. In a densely stocked shelf of 100+ pieces, one row can hold 30+ similar
+          variants that fit different vehicles — a missing item gets assumed out of stock and duplicate stock arrives.
+          I set up the EPOS/stock system and designed the shelf-location map (MR-2 / SH-1 / R3, brand variants), then
+          handed it over; staff performed the physical counts.
         </p>
+        <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
+          <li>The surviving files are partial working samples, not the final inventory.</li>
+          <li>The portfolio POS demo uses fictional stock, prices and test sales — it is separate from actual operational records.</li>
+          <li>Intended benefits are not presented as measured savings.</li>
+        </ul>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
@@ -69,13 +101,13 @@ export default function Warehouse() {
         </div>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span>Working samples of the map and the POS, not the final inventory. The POS file is a portfolio demonstration built for the automotive shop — it is not the grocery-sales workbook, and intended benefits are not presented as measured savings.</span>
+          <span>The POS file is a portfolio demonstration built for the automotive shop (fictional stock, prices and test sales) — it is not the grocery-sales workbook.</span>
         </div>
       </div>
 
       <div className="takeaway">
         <span className="ti">◆</span>
-        <p><span className="label">What this demonstrates</span>Running a warehouse on hand-kept records when there was no system — and later building the shelf map and POS demo a shop needed once the work called for one.</p>
+        <p><span className="label">What this demonstrates</span>Running a warehouse on hand-kept records — and, in a separate freelance project, setting up an EPOS/stock system and shelf-location map and handing it over.</p>
       </div>
 
       <div className="dl-row" style={{ marginTop: 20 }}>
