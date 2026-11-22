@@ -558,8 +558,8 @@ class PortfolioPDF(FPDF):
         self.set_font('my', 'I', 7.6)
         self.set_text_color(*MUTED)
         self.multi_cell(0, 4.2,
-            'My personal working checklist, retained in its original Burmese/English wording. The timings and '
-            'repeated closing entries are shown as recorded. The original DOCX is linked in the index page.',
+            'My personal working checklist, in its original Burmese/English wording and order. The timings, and the '
+            'steps that come round again during the day, are shown as I wrote them. The original DOCX is linked in the index page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(6)
 

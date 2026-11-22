@@ -55,7 +55,7 @@ export default function CaseStudy() {
               <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; repeated closing, generator-log, returns and stock checks; 5:55 checkout approval.</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, retained in its original Burmese/English wording. The timings and repeated closing entries are shown as recorded.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings, and the steps that repeat through the day, are shown as I wrote them.</p>
           <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The full list from the original document is reproduced below, in order.</p>
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
@@ -105,7 +105,7 @@ export default function CaseStudy() {
               </table>
             </div>
           </div>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced in the original order and timings — including the repeated closing and generator entries and the duplicated 5:30pm line. The original is written in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced the way I wrote it — same order, same timings, nothing tidied up. Some steps come round more than once in a day because the same records get checked again, so they appear each time. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
 
           <div className="dl-row" style={{ marginTop: 12 }}>
             <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
