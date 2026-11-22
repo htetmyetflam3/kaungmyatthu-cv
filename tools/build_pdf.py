@@ -5,9 +5,9 @@ Usage:  python3 tools/build_pdf.py <out.pdf>
 
 Dependencies:  pip install fpdf2 beautifulsoup4
 
-The samples section is extracted live from portfolio.html, so the PDF always
-matches the website. The built PDF lands in public/ and is served as-is by
-GitHub Pages / Vercel.
+The samples section is read from tools/samples.json (the samples no
+longer live on the page; they live in the combined samples PDF). The
+built PDF lands in public/ and is served as-is by GitHub Pages / Vercel.
 """
 import html.parser
 import json
@@ -18,7 +18,6 @@ from fpdf.enums import XPos, YPos
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'public/Kaung-Myat-Thu-Portfolio.pdf'
 FONT_MY = 'src/assets/fonts/PortfolioMyanmar.ttf'
-PORTFOLIO_HTML = 'portfolio.html'
 
 NAVY   = (27, 54, 93)
 NAVY2  = (14, 31, 54)
@@ -34,36 +33,13 @@ PORTFOLIO_URL = 'https://htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html'
 CV_URL        = 'https://htetmyetflam3.github.io/kaungmyatthu-cv/'
 
 def extract_samples():
-    """Pull the content of the #samples section out of portfolio.html."""
-    from bs4 import BeautifulSoup
+    """Pull the content of the samples data file."""
+    import json
 
-    with open(PORTFOLIO_HTML, encoding='utf-8') as f:
-        soup = BeautifulSoup(f.read(), 'html.parser')
-
-    section = soup.find(id='samples')
-    if section is None:
-        raise SystemExit('portfolio.html has no #samples section')
-
-    out = []
-    for panel in section.find_all('div', class_='sample-panel'):
-        summary = panel.find('summary')
-        tag_el = summary.find('span', class_='sample-tag') if summary else None
-        tag = tag_el.get_text(strip=True) if tag_el else ''
-        title = summary.get_text(' ', strip=True) if summary else ''
-        title = title[len(tag):].strip() if tag and title.startswith(tag) else title
-
-        body = panel.find('div', class_='sample-body')
-        items = []
-        if body:
-            for el in body.find_all(['h3', 'p'], recursive=True):
-                text = re.sub(r'\s+', ' ', el.get_text(' ', strip=True)).strip()
-                if not text:
-                    continue
-                lang = el.get('lang') or ('en' if el.name == 'p' else None)
-                items.append({'t': el.name, 'lang': lang, 'text': text})
-        out.append({'tag': tag, 'title': title, 'items': items})
+    with open('tools/samples.json', encoding='utf-8') as f:
+        out = json.load(f)
     if len(out) != 3:
-        raise SystemExit(f'expected 3 sample panels, found {len(out)}')
+        raise SystemExit(f'expected 3 sample panels in tools/samples.json, found {len(out)}')
     return out
 
 
