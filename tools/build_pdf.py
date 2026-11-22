@@ -401,9 +401,9 @@ class PortfolioPDF(FPDF):
         self.cell(0, 5, 'Rounded growth ~ +90%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(0.8)
         self.multi_cell(0, 4.2,
-            'December in detail: the confirmed month-end increase was 110,729 followers. The surviving daily entries '
-            'total 56,591 and do not reconcile with that increase. Both are preserved as separate records; the daily '
-            'series is not presented as a breakdown of monthly growth.',
+            'Daily-record note — December’s confirmed month-end follower increase was 110,729. The surviving daily '
+            'entries total 56,591 and do not reconcile with that increase. Both records are preserved; the daily '
+            'series is not presented as a complete breakdown of monthly growth.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
 
@@ -697,11 +697,11 @@ class PortfolioPDF(FPDF):
         self.header_band('Writing samples')
         self.ln(2)
         self.kicker('05 — Writing samples')
-        self.section_title('Language samples', 20)
+        self.section_title('Translation, adaptation & original writing', 17)
         self.rule()
         self.set_font('my', '', 9)
         self.set_text_color(*MUTED)
-        self.multi_cell(0, 5.5, 'Selected translation, adaptation and original writing — excerpts.')
+        self.multi_cell(0, 5.5, 'Three selected pieces showing Burmese translation, adaptation and creative-writing work.')
         self.ln(4)
 
         for i, s in enumerate(SAMPLES):
