@@ -112,6 +112,9 @@ section{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 .job:last-child{ border-bottom:0; padding-bottom:4px; }
 .job-title{ font-weight:700; color:var(--navy); }
 .job-meta{ color:var(--muted); font-size:.9rem; }
+.job-title-link{ text-decoration:none; border-bottom:1px solid rgba(11,121,131,.35); }
+.job-title-link:hover{ text-decoration:none; border-bottom-color:#0b7983; color:#0b7983; }
+.job-title-link::after{ content:" →"; font-size:.85em; color:#0b7983; }
 .job-links{ margin:.55rem 0 0; font-size:.84rem; font-weight:700; }
 .job-links a{ color:#0b7983; text-decoration:none; }
 .job-links a:hover{ text-decoration:underline; }
@@ -258,7 +261,7 @@ footer a{ color:var(--navy); text-decoration:none; }
     <div class="sec-head"><div class="kicker">03 — Experience</div><h2>Work Experience</h2></div>
     <div class="job">
       <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-        <span class="job-title">Operations Assistant Supervisor — 321 Ecolife (Nok Branch)</span><span class="badge-date">2024 – 2025</span>
+        <a class="job-title job-title-link" href="case-study.html">Operations Assistant Supervisor — 321 Ecolife (Nok Branch)</a><span class="badge-date">2024 – 2025</span>
       </div>
       <ul class="mb-0 ps-3 mt-2">
         <li>Ran the shop floor — frontline branch and staff administration: sales, customer needs, day-to-day spend, staff coverage and incentives.</li>
@@ -269,14 +272,14 @@ footer a{ color:var(--navy); text-decoration:none; }
     </div>
     <div class="job">
       <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-        <span class="job-title">Warehouse Supervisor — NPT Group</span><span class="badge-date">2024 – 2025</span>
+        <a class="job-title job-title-link" href="warehouse.html">Warehouse Supervisor — NPT Group</a><span class="badge-date">2024 – 2025</span>
       </div>
       <ul class="mb-0 ps-3 mt-2"><li>Handled project-based warehouse and logistics operations.</li></ul>
       <p class="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>
     <div class="job">
       <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-        <span class="job-title">Senior Logistic Officer — NGO (C.D.A)</span><span class="badge-date">2021 – 2022</span>
+        <a class="job-title job-title-link" href="warehouse.html">Senior Logistic Officer — NGO (C.D.A)</a><span class="badge-date">2021 – 2022</span>
       </div>
       <ul class="mb-0 ps-3 mt-2"><li>Oversaw warehouse and transport operations for project areas.</li></ul>
       <p class="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>

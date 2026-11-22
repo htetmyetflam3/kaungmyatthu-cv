@@ -254,13 +254,13 @@ class PortfolioPDF(FPDF):
 
         # quick-glance grid card-like rows
         rows = [
-            ('01', 'Case study — 321 Ecolife', 'Operations Assistant Supervisor · 2024–2025 · reporting, followers, sales', 'page 3'),
-            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4'),
-            ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5'),
-            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6'),
-            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 7'),
+            ('01', 'Case study — 321 Ecolife', 'Operations Assistant Supervisor · 2024–2025 · reporting, followers, sales', 'page 3', 'sec-01'),
+            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4', 'sec-02'),
+            ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5', 'sec-03'),
+            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6', 'sec-04'),
+            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 7', 'sec-05'),
         ]
-        for num, t, d, page in rows:
+        for num, t, d, page, dest in rows:
             y = self.get_y()
             self.card_top(18, y, 174, 15.5, CARD, LINE)
             self.set_fill_color(*NAVY)
@@ -268,7 +268,7 @@ class PortfolioPDF(FPDF):
             self.set_font('my', 'B', 9.5)
             self.set_text_color(*NAVY)
             self.set_xy(25, y + 3)
-            self.cell(0, 6, f'{num}  ·  {t}', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.cell(0, 6, f'{num}  ·  {t}', link=dest, new_x=XPos.LEFT, new_y=YPos.NEXT)
             self.set_font('my', '', 8.5)
             self.set_text_color(*MUTED)
             self.set_xy(25, y + 9.5)
