@@ -29,6 +29,18 @@ section{scroll-margin-top:calc(var(--nav-h) + 24px)}
 .topnav a.active{color:#fff;background:var(--navy)}
 .topnav a.cta{color:var(--teal-2);border:1px solid var(--teal-border);background:var(--teal-soft)}
 .topnav a.cta:hover{color:#fff;background:var(--teal-2)}
+.subnav{border-bottom:1px solid var(--line);background:#f6f8fb}
+.subnav-inner{max-width:1020px;margin:0 auto;padding:9px 22px;display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-label{white-space:nowrap;font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.subnav a{white-space:nowrap;font-size:.8rem;font-weight:600;color:var(--navy);text-decoration:none;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;transition:all .2s}
+.subnav a:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.detail-link-row{margin:16px 0 0;font-size:.9rem}
+.detail-link-row a{color:var(--teal-2);font-weight:700;text-decoration:none}
+.detail-link-row a:hover{text-decoration:underline}
+.footer-nav{font-size:.86rem;line-height:2}
+.footer-nav a{color:var(--teal-2);text-decoration:none}
+.footer-nav a:hover{text-decoration:underline}
 @media (max-width:860px){.brand small{display:none}}
 
 /* ---------- overview card ---------- */
@@ -415,6 +427,13 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
 .leonie-page .topnav a.active{background:var(--l-text);color:var(--l-bg)}
 .leonie-page .topnav a.cta{color:var(--l-text);border:1px solid var(--l-line);background:transparent}
 .leonie-page .topnav a.cta:hover{background:var(--l-lime);color:var(--l-bg);border-color:var(--l-text)}
+.leonie-page .subnav{background:#F4F3EC;border-bottom:1px solid var(--l-line)}
+.leonie-page .subnav-inner{max-width:1160px}
+.leonie-page .subnav-label{color:var(--l-muted);font-family:var(--l-font-b)}
+.leonie-page .subnav a{background:#FBFAF6;border-color:var(--l-line);color:var(--l-text);font-family:var(--l-font-b)}
+.leonie-page .subnav a:hover{background:var(--l-lime);border-color:var(--l-text);color:var(--l-bg)}
+.leonie-page .detail-link-row a{color:var(--l-lime-hover);font-family:var(--l-font-b)}
+.leonie-page .footer-nav a{color:var(--l-lime-hover)}
 
 /* ── full-screen navy hero: sunburst + letter, Leonie signature ── */
 .leonie-hero{position:relative;margin:0;max-width:none;padding:0;min-height:calc(100vh - 66px);min-height:calc(100svh - 66px);background:linear-gradient(150deg,#1B365D 0%,#16294A 58%,#122A4A 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid #1B365D}
