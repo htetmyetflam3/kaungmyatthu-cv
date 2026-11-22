@@ -123,7 +123,7 @@ export default function CaseStudy() {
         </div>
 
         <div className="panel">
-          <p>The surviving workbook shows how branch information was recorded across payment channels, product sales, expenses and staff administration. My checklist also shows the follow-up behind the records: comparing salesperson totals with net sales, checking deposit slips and late-sale entries, and following up pivot reports with the relevant staff.</p>
+          <p>The workbook on hand shows how branch information was recorded across payment channels, product sales, expenses and staff administration. My checklist also shows the follow-up behind the records: comparing salesperson totals with net sales, checking deposit slips and late-sale entries, and following up pivot reports with the relevant staff.</p>
           <p>These are working records, not a claim that every figure represents a result caused by my marketing work.</p>
 
           <table className="mini-table" style={{ marginTop: 6 }}>
@@ -285,7 +285,7 @@ export default function CaseStudy() {
           </div>
         </details>
 
-        <p className="muted" style={{ fontSize: '.8rem', margin: '16px 0 0' }}>The surviving daily entries do not reconcile with the confirmed December month-end increase of 110,729. They are shown as separate working records, not a complete daily breakdown of that increase. Any allocation table is a later calculation, not recovered daily analytics.</p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '16px 0 0' }}>The remaining daily entries do not reconcile with the confirmed December month-end increase of 110,729. They are shown as separate working records, not a complete daily breakdown of that increase. Any allocation table is a later calculation, not recovered daily analytics.</p>
         </div>
       </section>
 
@@ -347,7 +347,7 @@ export default function CaseStudy() {
 
       <div className="takeaway">
         <span className="ti">◆</span>
-        <p><span className="label">What this demonstrates</span>Operational range — frontline needs, people coordination, stock flow — plus the discipline to make activity reviewable. The value is bringing details into a form the branch can act on, not filling spreadsheet cells.</p>
+        <p><span className="label">What this demonstrates</span>Operational range — frontline needs, people coordination, stock flow — plus the discipline to make activity reviewable. The value is bringing details into a form the branch can act on.</p>
       </div>
 
       <div className="dl-row" style={{ marginTop: 20 }}>

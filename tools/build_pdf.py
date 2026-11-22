@@ -403,7 +403,7 @@ class PortfolioPDF(FPDF):
         self.cell(0, 5, 'Recorded growth ~ +89.9%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(0.8)
         self.multi_cell(0, 4.2,
-            'Daily-record note — December’s confirmed month-end follower increase was 110,729. The surviving daily '
+            'Daily-record note — December’s confirmed month-end follower increase was 110,729. The remaining daily '
             'entries total 56,591 and do not reconcile with that increase. Both records are preserved; the daily '
             'series is not presented as a complete breakdown of monthly growth.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout, { SectionHead, DetailsButton } from '../layout/Layout';
 
-const NPT_INVENTORY_ID = '12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY';
 const NPT_LETTER_ID = '1QdqLp4riClyC4h7HTQwxoch-Bj31Fa2D';
 const driveView = (id) => `https://drive.google.com/file/d/${id}/view`;
 const driveDl = (id) => `https://drive.google.com/uc?export=download&id=${id}`;
@@ -48,16 +47,6 @@ export default function Warehouse() {
         <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
           {NPT_POINTS.map((p) => <li key={p}>{p}</li>)}
         </ul>
-        <div className="dl-row">
-          <a className="btn-dl btn-dark" href={driveView(NPT_INVENTORY_ID)} target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
-            NPT inventory document · DOCX
-          </a>
-          <a className="btn-dl" href={driveDl(NPT_INVENTORY_ID)} target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
-            Download inventory document
-          </a>
-        </div>
         <figure style={{ margin: '18px 0 0' }}>
           <a href={driveView(NPT_LETTER_ID)} target="_blank" rel="noopener">
             <img
@@ -71,7 +60,7 @@ export default function Warehouse() {
         </figure>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span>Warehouse detail is from my own records, not the company's internal systems. The inventory document is a scan of my own working pages.</span>
+          <span>Warehouse detail is from my own records, not the company's internal systems. No NPT stock list survives; the reference letter above is the supporting document for this role.</span>
         </div>
       </div>
 
@@ -85,7 +74,7 @@ export default function Warehouse() {
           handed it over; staff performed the physical counts.
         </p>
         <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
-          <li>The surviving files are partial working samples, not the final inventory.</li>
+          <li>The files on hand are partial working samples, not the final inventory.</li>
           <li>The portfolio POS demo uses fictional stock, prices and test sales — it is separate from actual operational records.</li>
           <li>Intended benefits are not presented as measured savings.</li>
         </ul>
