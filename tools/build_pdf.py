@@ -514,7 +514,7 @@ class PortfolioPDF(FPDF):
         self.multi_cell(0, 5.2,
             'The original combines staff administration, cash and sales checks, stock coordination, TikTok '
             'follow-up, reporting and closing tasks. The summary below is a readable version; the original '
-            'document is available on request.',
+            'document is linked in the index page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(4)
 
@@ -559,8 +559,36 @@ class PortfolioPDF(FPDF):
         self.set_text_color(*MUTED)
         self.multi_cell(0, 4.2,
             'My personal working checklist, retained in its original Burmese/English wording. The timings and '
-            'repeated closing entries are shown as recorded. The original DOCX is available on request.',
+            'repeated closing entries are shown as recorded. The original DOCX is linked in the index page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(6)
+
+        self.set_font('my', 'B', 9)
+        self.set_text_color(*NAVY)
+        self.cell(0, 6, 'Other records in the same workbook', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.5)
+        lines = [
+            ('daily sale ', '31 daily rows, 1–31 December 2024 — sale revenue 148,356,500; discount 1,068,495; '
+                            'net 147,288,005; returns 1,081,500 (MMK). Recorded sales, not profit.'),
+            ('Stuff level up', 'Staff movement: three new starters, one transfer to online sale, one resignation, '
+                               'three terminations.'),
+            ('DAYS -OFF', 'Weekly days-off schedule covering 18 staff, Monday to Saturday.'),
+            ('Generator Usage Log', 'Seven entries, 24 December 2024 – 15 January 2025, with start/end times and '
+                                    'run times of 1–8 hours.'),
+            ('customer feedback', '33 feedback rows; praise and product requests kept apart in this PDF.'),
+        ]
+        for name, detail in lines:
+            y = self.get_y()
+            self.set_font('my', 'B', 7.8)
+            self.set_text_color(*NAVY)
+            self.set_xy(18, y + 1.2)
+            self.multi_cell(38, 4.2, name, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            left = self.get_y()
+            self.set_xy(58, y + 1.2)
+            self.set_font('my', '', 8)
+            self.set_text_color(*INK)
+            self.multi_cell(134, 4.2, detail, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.set_y(max(left, self.get_y()) + 1.8)
 
     def scripts_section(self):
         self.add_page()

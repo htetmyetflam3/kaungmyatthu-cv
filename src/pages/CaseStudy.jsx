@@ -1,6 +1,12 @@
 import React from 'react';
 import Layout, { SectionHead, DetailsButton } from '../layout/Layout';
 
+const CHECKLIST_ID = '1EztkzxGGndfXrqhImbfm46UEDr5k0Njo';
+const PHOTO_ID = '1XSHBpjyd76gkiF0c-Dwis8Xx0oSxuN0l';
+const LETTER_ID = '1Cqm_FKQFeSKrrH5xQkIkZFm8GYzUrSoK';
+const DRIVE_VIEW = (id) => `https://drive.google.com/file/d/${id}/view`;
+const DRIVE_DL = (id) => `https://drive.google.com/uc?export=download&id=${id}`;
+const DRIVE_IMG = (id, w = 1600) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
 const WORKBOOK_ID = '1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J';
 const WORKBOOK_VIEW = `https://drive.google.com/file/d/${WORKBOOK_ID}/view`;
 const WORKBOOK_DL = `https://drive.google.com/uc?export=download&id=${WORKBOOK_ID}`;
@@ -50,7 +56,22 @@ export default function CaseStudy() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, retained in its original Burmese/English wording. The timings and repeated closing entries are shown as recorded.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The original document (DOCX) is available on request.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The original document is reproduced below exactly as saved — Burmese and English as written, timings unchanged.</p>
+
+          <div style={{ marginTop: 14, border: '1px solid var(--line, #dbe3ec)', borderRadius: 12, overflow: 'hidden', background: '#f7f9fb' }}>
+            <iframe
+              src={`https://drive.google.com/file/d/${CHECKLIST_ID}/preview`}
+              title="My daily to-do list — original DOCX"
+              style={{ width: '100%', height: 560, border: 0, display: 'block' }}
+              allowFullScreen
+            />
+          </div>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Original file: <code>Daily To Do List.docx</code> · 9:00 → 5:55&nbsp;pm. Open the file directly for full size and to scroll every page.</p>
+
+          <div className="dl-row" style={{ marginTop: 12 }}>
+            <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
+            <a className="btn-dl" href={DRIVE_DL(CHECKLIST_ID)} target="_blank" rel="noopener">Download DOCX</a>
+          </div>
         </div>
       </section>
 
@@ -74,6 +95,19 @@ export default function CaseStudy() {
               <tr><td>Daily Expenses</td><td>A1:J12</td><td>Day-level branch expenses as entered.</td></tr>
             </tbody>
           </table>
+          <h4 style={{ marginTop: 22 }}>December 2024 as recorded</h4>
+          <table className="mini-table" style={{ marginTop: 8 }}>
+            <thead><tr><th>Recorded line</th><th style={{ textAlign: 'right' }}>Amount (MMK)</th></tr></thead>
+            <tbody>
+              <tr><td>Sale revenue (top-line)</td><td style={{ textAlign: 'right' }}>148,356,500</td></tr>
+              <tr><td>Discount</td><td style={{ textAlign: 'right' }}>1,068,495</td></tr>
+              <tr><td>Net amount</td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
+              <tr><td>Return amount</td><td style={{ textAlign: 'right' }}>1,081,500</td></tr>
+              <tr><td>Online-channel total</td><td style={{ textAlign: 'right' }}>579,500</td></tr>
+            </tbody>
+          </table>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '10px 0 0' }}>Thirty-one daily rows, 1–31 December 2024, summed by the sheet’s own TOTAL row. These are recorded sales, discounts and returns — not profit, and not a measure of marketing performance.</p>
+
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Source: <code>321/321NOk/321NOK-Master-Redacted.xlsx</code>. Previews preserve the source order and blank fields; they do not establish a sales period or campaign attribution beyond what each sheet records.</p>
 
           <div className="dl-row" style={{ marginTop: 16 }}>
@@ -106,6 +140,9 @@ export default function CaseStudy() {
           <details className="ai-pf-details" style={{ marginTop: 16 }}>
             <summary>Additional administration records</summary>
             <div style={{ paddingTop: 10 }}>
+              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my Assistant Supervisor role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
+              <p><b>Days off:</b> 18 staff listed across Monday to Saturday in the weekly days-off schedule.</p>
+              <p><b>Generator log:</b> seven entries between 24 December 2024 and 15 January 2025, each with start and end times and a derived run time of between 1 and 8 hours.</p>
               <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are retained in the same workbook. The sign-off column is not described here as proof of payment — it is a record template, not a payment confirmation.</p>
             </div>
           </details>
@@ -223,6 +260,41 @@ export default function CaseStudy() {
         </div>
         <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>Praise rows from the branch feedback sheet, kept as received; the third entry is shown with its request for more sizes so the mixed meaning is preserved. The sheet’s cramped-shop complaint is not presented as praise. Phone numbers are redacted.</p>
       </div>
+
+      <section className="sec" id="workplace" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">06</span> Workplace context</div>
+            <h2>Team and reference</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <figure style={{ margin: 0 }}>
+            <a href={DRIVE_VIEW(PHOTO_ID)} target="_blank" rel="noopener">
+              <img
+                src={DRIVE_IMG(PHOTO_ID, 1600)}
+                alt="Team photograph at the 321 Ecolife shop"
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
+              />
+            </a>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Team photograph at the 321 workplace. The shop setting, workplace clothing and lanyards provide context alongside the working records. Individual colleagues are not identified.</figcaption>
+          </figure>
+
+          <figure style={{ margin: '22px 0 0' }}>
+            <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">
+              <img
+                src={DRIVE_IMG(LETTER_ID, 1200)}
+                alt="Employer reference letter confirming the Assistant Supervisor role"
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid var(--line, #dbe3ec)', display: 'block' }}
+              />
+            </a>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Employer reference confirming my Assistant Supervisor role. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+          </figure>
+        </div>
+      </section>
 
       <aside className="cert-box">
         <div>
