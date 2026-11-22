@@ -197,15 +197,22 @@ section.sec{padding:18px 0 6px}
 .ai-reader-list{margin:0 0 10px;padding-left:1.2rem}
 .ai-reader-list li{font-size:.9rem;line-height:1.75;color:#37455c;margin-bottom:10px}
 .ai-reader-list li em{color:var(--teal-2);font-style:italic;font-weight:600}
-.ai-toolkit{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:10px 0 12px}
-.ai-toolkit span{background:var(--teal-soft);border:1px solid var(--teal-border);border-radius:9px;padding:9px 11px;display:flex;flex-direction:column;gap:2px}
-.ai-toolkit b{font-size:.8rem;color:var(--navy);font-weight:800}
-.ai-toolkit em{font-size:.72rem;color:var(--muted);font-style:normal;line-height:1.5}
 .ai-pf-source{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 .ai-pf-source-kicker{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .ai-pf-note{font-size:.8rem;color:var(--muted);margin:0;max-width:420px;line-height:1.6}
 @media (max-width:700px){.ai-pf{padding:20px}.ai-pf-ask{font-size:1.12rem}}
 @media print{.ai-reader{max-height:none;overflow:visible}}
+
+
+/* ---------- AI study chapter (full “Learn Prompting by Examples”) ---------- */
+.ai-chapter{border-top:1px dashed var(--line);margin-top:18px;padding-top:18px}
+.ai-chapter-kicker{font-size:.62rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-2);margin:0 0 10px}
+.ai-reader-h-chapter{font-size:1.05rem;letter-spacing:-.01em;color:var(--navy);margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.ai-chapter-h2{font-size:.95rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin:22px 0 8px}
+.ai-chapter-h3{font-size:.82rem;font-weight:700;color:var(--teal-2);margin:14px 0 6px;letter-spacing:.02em}
+.ai-chapter-p{font-size:.86rem;line-height:1.78;color:#37455c;margin:0 0 8px}
+.ai-pre{font-family:inherit;font-size:.78rem;line-height:1.7;color:#1f2937;background:#f3f7fa;border:1px solid #dbe3ec;border-radius:10px;padding:12px 14px;margin:0 0 12px;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+.ai-reader-h2{font-size:.95rem;font-weight:800;letter-spacing:.02em;color:var(--navy);margin:18px 0 8px}
 
 /* ---------- samples ---------- */
 .sample-panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:12px;transition:box-shadow .2s}
@@ -253,3 +260,13 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
   section.sec{padding:10px 0 0}
   .topnav{display:none}
 }
+
+/* ---------- certification card (321 case study + CV) ---------- */
+.cert-box{border:1px solid var(--teal-border);background:linear-gradient(150deg,#f3fbf9,#eafaf7);border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:16px;break-inside:avoid}
+.cert-label{font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-2);margin-bottom:4px}
+.cert-title{font-size:1.02rem;font-weight:800;color:var(--navy);line-height:1.35;margin:0 0 3px}
+.cert-meta{font-size:.84rem;font-weight:600;color:#334155;margin:0 0 2px}
+.cert-note{font-size:.78rem;color:var(--muted);margin:0}
+.cert-link{display:inline-flex;align-items:center;gap:8px;background:var(--teal-2);border:1px solid var(--teal-2);color:#fff;font-weight:700;font-size:.85rem;text-decoration:none;padding:10px 16px;border-radius:10px;white-space:nowrap}
+.cert-link:hover{background:var(--teal);border-color:var(--teal);transform:translateY(-1px)}
+@media (max-width:600px){.cert-box{flex-direction:column;align-items:flex-start}}

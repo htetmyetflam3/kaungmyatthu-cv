@@ -190,6 +190,16 @@
     <span class="ti">◆</span>
     <p><span class="label">What this demonstrates</span>Operational range — frontline needs, people coordination, stock flow — plus the discipline to make activity reviewable. The value is bringing details into a form the branch can act on, not filling spreadsheet cells.</p>
   </div>
+
+  <aside class="cert-box">
+    <div>
+      <div class="cert-label">Supporting certification</div>
+      <div class="cert-title">Conversion Optimization Certification Exam</div>
+      <div class="cert-meta">Skillshop · Kaung Myat Thu</div>
+      <div class="cert-note">Issued 30 Nov 2025 · Expires 30 Nov 2026 &nbsp;·&nbsp; Certificate ID: 167907950</div>
+    </div>
+    <a class="cert-link" href="https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46" target="_blank" rel="noopener">Verify credential ↗</a>
+  </aside>
 </section>
 
 <!-- ================= 02 SCRIPTS ================= -->
@@ -326,7 +336,7 @@
     </div>
 
     <details class="ai-pf-details">
-      <summary>Read the Layers &amp; Zones framework &amp; the prompt-types toolkit — the good part of the manuscript</summary>
+      <summary>Read the manuscript — Layers &amp; Zones + the full “Learn Prompting by Examples” chapter</summary>
       <div class="ai-reader" lang="en" tabindex="0">
         <h4 class="ai-reader-h">Layers &amp; zones — why a good prompt still fails</h4>
         <p>Throughout the manuscript, the word &ldquo;layer&rdquo; refers to two related but different functions. To understand why a good prompt can still produce unexpected results, separate:</p>
@@ -337,22 +347,503 @@
         <p><strong>Why it matters.</strong> A common confusion: “My prompt wasn’t unsafe — so why did the output feel restricted?” Because both things can be true at once — the Safety Layer approved the input, while the Safety Adjustment Layer still reshaped the output. In simple terms: if a layer judges the request, it operates on the input; if a layer reshapes the answer, it operates on the output.</p>
         <p class="ai-reader-note">Layers are conceptual models — they describe observable behaviour, not proprietary internal architecture.</p>
 
-        <h4 class="ai-reader-h">The prompt-types toolkit — 11 ways to shape an LLM</h4>
-        <p>Practical examples in the manuscript — each serving a distinct purpose:</p>
-        <div class="ai-toolkit">
-          <span><b>01</b> Zero-Shot<em>One clear instruction — clarity &amp; specificity, no examples</em></span>
-          <span><b>02</b> Structured / Formatted<em>Task · context · output format framework</em></span>
-          <span><b>03</b> Role-Based / Persona<em>Ask the AI to act as a specific role</em></span>
-          <span><b>04</b> Instruction + Constraint<em>Enforce word count, tone, format</em></span>
-          <span><b>05</b> Iterative / Follow-Up<em>Refine outputs step by step</em></span>
-          <span><b>06</b> Self-Improving / Feedback<em>AI learns from its own outputs</em></span>
-          <span><b>07</b> Comparative / Ranking<em>Compare &amp; rank options by criteria</em></span>
-          <span><b>08</b> Chain-of-Thought<em>Guide step-by-step reasoning</em></span>
-          <span><b>09</b> Multi-Task / Combined<em>Bundle multiple tasks, kept structured</em></span>
-          <span><b>10</b> Few-Shot<em>Input–output example pairs guide the output</em></span>
-          <span><b>11</b> Negative / Avoidance<em>Specify what to avoid — words, tones, topics</em></span>
-        </div>
-        <p>Plus a reusable Objective Template and per-task-type Section Templates (research, data analysis, marketing, coding, vibe coding, audio/podcast, image, video) to adapt the same pattern to any task.</p>
+<div class="ai-chapter">
+        <p class="ai-chapter-kicker">Full chapter · source DOCX unchanged</p>
+        <h4 class="ai-reader-h ai-reader-h-chapter">Chapter: Learn Prompting by Examples — A Guide to Master Prompt Engineering</h4>
+<p class="ai-chapter-p">Even though prompt engineering is often talked about as a mysterious skill, at its core it’s about clarity, structure, and guidance. Knowing how to shape your instructions can drastically improve AI responses.</p>
+<p class="ai-chapter-p">At a high level, there are several types of prompts—each serving a distinct purpose. We’ll go from foundational prompts to more complex, multi-step reasoning approaches.</p>
+<h4 class="ai-chapter-h2">1. Zero-Shot</h4>
+<p class="ai-chapter-p">Prompts — Clarity and Specificity</p>
+<p class="ai-chapter-p">Zero-shot prompts rely on giving one clear instruction, without providing examples. Focus on clarity, specificity, and context to ensure the AI understands your goal.</p>
+<p class="ai-chapter-p">Guidelines:</p>
+<p class="ai-chapter-p">Use clear, unambiguous language</p>
+<p class="ai-chapter-p">Specify exactly what you want (format, style, tone, output length, etc.)</p>
+<p class="ai-chapter-p">Avoid vague or open-ended questions unless brainstorming is your goal</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Instead of: “Tell me about photosynthesis”Use: “Explain photosynthesis in simple terms suitable for a 10-year-old in under 100 words.”</p>
+<p class="ai-chapter-p">Instead of: “How does a car engine work?”Use: “Explain the basic four-stroke cycle of a gasoline car engine so a high school student with no prior knowledge of mechanics can understand. Use an analogy to make it easier to grasp.”</p>
+<p class="ai-chapter-p">Instead of: “Create a recipe”Use: “Create a simple recipe for a vegan chocolate chip cookie. Use common ingredients, prep time under 15 minutes, with step-by-step instructions.”</p>
+<p class="ai-chapter-p">Instead of: “Give me some ideas for a blog post”Use: “Generate 5 blog post titles about the benefits of remote work for small businesses. The titles should be catchy and SEO-friendly, targeting an audience of entrepreneurs.”</p>
+<h4 class="ai-chapter-h2">2. Structured / Formatted Prompts</h4>
+<p class="ai-chapter-p">Structured prompts provide a framework that guides the AI clearly. They help make instructions precise and outputs predictable.</p>
+<h5 class="ai-chapter-h3">Intro</h5>
+<p class="ai-chapter-p">There are two main ways to structure prompts:</p>
+<p class="ai-chapter-p">Format 1 – Sectioned / Structured Prompt</p>
+<p class="ai-chapter-p">Task: Create a 3-day itinerary for a family visiting Paris.</p>
+<p class="ai-chapter-p">Context: Include art, history, and food activities.</p>
+<p class="ai-chapter-p">Output: Table with columns 'Day', 'Morning Activity', 'Afternoon Activity', 'Evening Activity'</p>
+<p class="ai-chapter-p">Format 2 – Single-Paragraph / Condensed Prompt</p>
+<p class="ai-chapter-p">Create a 3-day itinerary for a family visiting Paris. Include art, history, and food activities. Generate output as Table with columns 'Day', 'Morning Activity', 'Afternoon Activity', 'Evening Activity'.</p>
+<p class="ai-chapter-p">Both formats functionally achieve the same output. The choice depends on readability, workflow preference, or AI compatibility. But for reusing purposes and to capture key elements in examples below, we will use Format 1.</p>
+<p class="ai-chapter-p">Structured prompts often include:</p>
+<p class="ai-chapter-p">Instruction / Task: What the AI should do</p>
+<p class="ai-chapter-p">Context: Background info or references</p>
+<p class="ai-chapter-p">Output format: JSON, table, list, bullet points, code, Excel, etc.</p>
+<h5 class="ai-chapter-h3">Example Skeleton</h5>
+<p class="ai-chapter-p">Task / Instruction: Summarize customer reviews into key points</p>
+<p class="ai-chapter-p">Context: Reviews may include slang or abbreviations</p>
+<p class="ai-chapter-p">Output format: Bullet points</p>
+<h5 class="ai-chapter-h3">Examples</h5>
+<p class="ai-chapter-p">Summarize customer reviews into key points based on the last 50 reviews, output as bullet points.</p>
+<p class="ai-chapter-p">Create a 3-day itinerary for a family visiting Paris. Include art, history, and food activities. Output: Table with columns 'Day', 'Morning Activity', 'Afternoon Activity', 'Evening Activity'.</p>
+<p class="ai-chapter-p">Write a Python function that returns the second-largest number in a list, handling duplicates and lists with fewer than two elements. Output: Python code with brief inline comments.</p>
+<p class="ai-chapter-p">Write three tweets for an eco-friendly coffee cup launch. Output: Numbered list under 280 characters each, include #EcoFriendly.</p>
+<p class="ai-chapter-p">Draft an interview invitation email for a Marketing Manager candidate. Output: Professional email template with placeholders [Candidate Name], date, and time.</p>
+<p class="ai-chapter-p">Analyze customer feedback in CSV ('Feedback' and 'Rating'). Output: JSON object with keys 'positive_themes' and 'negative_themes', each listing top 3 recurring themes.</p>
+<h4 class="ai-chapter-h2">3. Role-Based / Persona Prompts</h4>
+<p class="ai-chapter-p">Ask AI to “act as” a specific role to influence tone, perspective, or style. This builds on structured prompts.</p>
+<p class="ai-chapter-p">Key Elements:</p>
+<p class="ai-chapter-p">Role / Persona: AI identity</p>
+<p class="ai-chapter-p">Task / Instruction: What it should do in that role</p>
+<p class="ai-chapter-p">Context / Background: Optional scenario</p>
+<p class="ai-chapter-p">Output format: Optional</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Role: “Act as a senior product analyst”</p>
+<p class="ai-chapter-p">Prompt: "Summarize the last 50 customer reviews into key bullet points"</p>
+<p class="ai-chapter-p">Follow-up: Highlight positive themes analytically, add top 3 negative points, provide a final recommendation paragraph</p>
+<p class="ai-chapter-p">Paris Family Itinerary</p>
+<p class="ai-chapter-p">Role: “Act as a professional travel guide”</p>
+<p class="ai-chapter-p">Prompt: "Create a 3-day itinerary for a family visiting Paris"</p>
+<p class="ai-chapter-p">Follow-up: Include art/history activities with insider tips, add recommended local restaurants, format as a table</p>
+<p class="ai-chapter-p">Eco-Friendly Coffee Cup Tweets</p>
+<p class="ai-chapter-p">Role: “Act as a social media manager targeting millennials”</p>
+<p class="ai-chapter-p">Prompt: "Write three tweets for a new eco-friendly coffee cup launch"</p>
+<p class="ai-chapter-p">Follow-up: Include #EcoFriendly, keep under 280 characters, make tone casual and engaging</p>
+<h4 class="ai-chapter-h2">4. Instruction + Constraint Prompts</h4>
+<p class="ai-chapter-p">Enforce rules like word count, tone, or format to match real-world needs.</p>
+<p class="ai-chapter-p">Key Elements:</p>
+<p class="ai-chapter-p">Task / Instruction</p>
+<p class="ai-chapter-p">Constraints (word limit, tone, format)</p>
+<p class="ai-chapter-p">Context / Background (optional)</p>
+<p class="ai-chapter-p">Output format (optional)</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Prompt: "Summarize 50 reviews into exactly 5 bullet points"</p>
+<p class="ai-chapter-p">Constraint: Each bullet under 20 words, positive first, then negative</p>
+<p class="ai-chapter-p">Follow-up: Ensure neutral, professional tone suitable for management presentation</p>
+<p class="ai-chapter-p">Paris Family Itinerary</p>
+<p class="ai-chapter-p">Prompt: "Create 3-day itinerary for Paris family"</p>
+<p class="ai-chapter-p">Constraint: Each day has 3 activities under 4 hours</p>
+<p class="ai-chapter-p">Follow-up: Format as table with 'Day', 'Morning', 'Afternoon', 'Evening'</p>
+<p class="ai-chapter-p">Interview Invitation Email</p>
+<p class="ai-chapter-p">Prompt: "Draft email for Marketing Manager candidate"</p>
+<p class="ai-chapter-p">Constraint: Keep under 150 words, professional yet friendly</p>
+<p class="ai-chapter-p">Follow-up: Include placeholders for name, date, and time</p>
+<h4 class="ai-chapter-h2">5. Iterative / Follow-Up Prompts</h4>
+<p class="ai-chapter-p">Refine outputs step by step without rewriting the original prompt.</p>
+<p class="ai-chapter-p">Examples Using Skeletons:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Initial Prompt: Summarize 50 reviews into bullet points</p>
+<p class="ai-chapter-p">Follow-ups: Highlight positives, include top 3 negatives, add summary paragraph</p>
+<p class="ai-chapter-p">Paris Itinerary</p>
+<p class="ai-chapter-p">Initial: Create 3-day family itinerary</p>
+<p class="ai-chapter-p">Follow-ups: Include art/history, add local restaurants, format in table</p>
+<p class="ai-chapter-p">Python Function — Second Largest Number</p>
+<p class="ai-chapter-p">Initial: Write Python function</p>
+<p class="ai-chapter-p">Follow-ups: Handle empty lists, add inline comments, format clearly</p>
+<h4 class="ai-chapter-h2">6. Self-Improving / Feedback Prompts</h4>
+<p class="ai-chapter-p">AI can learn from its own outputs by giving it feedback iteratively.</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Prompt: Summarize reviews</p>
+<p class="ai-chapter-p">Feedback: "Make it more concise while keeping key themes"</p>
+<p class="ai-chapter-p">Paris Itinerary</p>
+<p class="ai-chapter-p">Prompt: Create 3-day itinerary</p>
+<p class="ai-chapter-p">Feedback: "Adjust schedule to minimize travel and maximize sightseeing"</p>
+<p class="ai-chapter-p">Eco-Friendly Coffee Tweets</p>
+<p class="ai-chapter-p">Prompt: Draft tweets</p>
+<p class="ai-chapter-p">Feedback: "Make tweets more humorous and engaging without exceeding 280 characters"</p>
+<h4 class="ai-chapter-h2">7. Comparative / Ranking Prompts</h4>
+<p class="ai-chapter-p">Compare or rank options based on criteria. Useful for decision-making or analysis.</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Prompt: Rank top 5 positive themes by frequency</p>
+<p class="ai-chapter-p">Follow-up: Explain reasoning</p>
+<p class="ai-chapter-p">Paris Itinerary</p>
+<p class="ai-chapter-p">Prompt: Rank top 3 activities for children</p>
+<p class="ai-chapter-p">Follow-up: Explain choices based on convenience and fun</p>
+<p class="ai-chapter-p">Eco-Friendly Coffee Tweets</p>
+<p class="ai-chapter-p">Prompt: Rank tweets by engagement</p>
+<p class="ai-chapter-p">Follow-up: Explain ranking reasoning including tone and hashtags</p>
+<h4 class="ai-chapter-h2">8. Chain-of-Thought / Step-by-Step Prompts</h4>
+<p class="ai-chapter-p">Guide AI to reason step by step, perfect for multi-step tasks or complex outputs.</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Prompt: Summarize 50 reviews and explain reasoning</p>
+<p class="ai-chapter-p">Follow-ups: List positives first with justification, then negatives, add summary paragraph</p>
+<p class="ai-chapter-p">Python Function — Second Largest Number</p>
+<p class="ai-chapter-p">Prompt: Write function and explain each step</p>
+<p class="ai-chapter-p">Follow-ups: Describe handling of duplicates, behavior for &lt;2 elements, format code with comments</p>
+<p class="ai-chapter-p">Eco-Friendly Coffee Tweets</p>
+<p class="ai-chapter-p">Prompt: Draft 3 tweets, explain why each appeals to millennials</p>
+<p class="ai-chapter-p">Follow-ups: Highlight engaging words, suggest minor improvements for clarity or humor</p>
+<h4 class="ai-chapter-h2">9. Multi-Task / Combined Prompts</h4>
+<p class="ai-chapter-p">Have AI perform multiple tasks at once, keeping everything structured.</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Customer Reviews Summary</p>
+<p class="ai-chapter-p">Prompt: Summarize reviews into key points and write recommendation paragraph</p>
+<p class="ai-chapter-p">Follow-up: Highlight positive and negative themes, provide actionable advice</p>
+<p class="ai-chapter-p">Python Function</p>
+<p class="ai-chapter-p">Prompt: Write function and generate test cases</p>
+<p class="ai-chapter-p">Follow-up: Explain logic step by step and expected outputs</p>
+<p class="ai-chapter-p">Eco-Friendly Coffee Tweets</p>
+<p class="ai-chapter-p">Prompt: Draft tweets and suggest posting schedule</p>
+<p class="ai-chapter-p">Follow-up: Include hashtags, character count, and reasoning</p>
+<h4 class="ai-chapter-h2">10. Few-Shot Prompts</h4>
+<p class="ai-chapter-p">Expand a skeleton into a few-shot prompt with examples of input-output pairs to guide AI.</p>
+<p class="ai-chapter-p">Key Elements:</p>
+<p class="ai-chapter-p">Instruction / Task</p>
+<p class="ai-chapter-p">Context / Background (optional)</p>
+<p class="ai-chapter-p">Examples (input-output pairs)</p>
+<p class="ai-chapter-p">Output format (optional)</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Extract company names from headlines</p>
+<p class="ai-chapter-p">Input: "Apple announces new iPhone at their annual event." → Output: "Apple"</p>
+<p class="ai-chapter-p">Input: "Shares of Microsoft surged after a positive earnings report." → Output: "Microsoft"</p>
+<p class="ai-chapter-p">Input: "The new electric car from Tesla is getting great reviews." → Output: "Tesla"</p>
+<p class="ai-chapter-p">Simplify complex sentences</p>
+<p class="ai-chapter-p">Input: "The confluence of technological advancements… has culminated in a paradigm shift…" → Output: "New technology and changing customer tastes have transformed retail."</p>
+<p class="ai-chapter-p">Categorize support tickets</p>
+<p class="ai-chapter-p">Input: "I can't log in to my account." → Output: "Technical Issue"</p>
+<p class="ai-chapter-p">Input: "How much does the premium plan cost?" → Output: "Billing Inquiry"</p>
+<p class="ai-chapter-p">Input: "My order hasn't arrived yet." → Output: "Shipping Issue"</p>
+<p class="ai-chapter-p">Convert natural language to SQL</p>
+<p class="ai-chapter-p">Input: "Show me all users from Canada." → Output: SELECT * FROM users WHERE country = 'Canada';</p>
+<p class="ai-chapter-p">Generate product descriptions</p>
+<p class="ai-chapter-p">Input: "Product: Leather Wallet. Features: Hand-stitched, full-grain leather…" → Output: "Experience timeless craftsmanship with our hand-stitched leather wallet…"</p>
+<h4 class="ai-chapter-h2">11. Negative Prompts / Avoidance Instructions</h4>
+<p class="ai-chapter-p">Negative prompts guide AI by specifying what to avoid in its output.</p>
+<p class="ai-chapter-p">Key Elements:</p>
+<p class="ai-chapter-p">Task / Instruction</p>
+<p class="ai-chapter-p">Avoid / Exclude: Specific words, tones, topics, or styles</p>
+<p class="ai-chapter-p">Optional context / constraints</p>
+<p class="ai-chapter-p">Examples:</p>
+<p class="ai-chapter-p">Text — Blog Drafts</p>
+<p class="ai-chapter-p">Task: Generate a 300-word blog post on sustainable travel</p>
+<p class="ai-chapter-p">Avoid: Technical jargon, negative tone, clichés</p>
+<p class="ai-chapter-p">Output: Friendly, concise, engaging paragraph</p>
+<p class="ai-chapter-p">Image Generation — Landscape</p>
+<p class="ai-chapter-p">Task: Create a scenic mountain landscape</p>
+<p class="ai-chapter-p">Avoid: People, animals, text overlay, night scenes</p>
+<p class="ai-chapter-p">Output: Bright daytime mountain view with realistic colors</p>
+<p class="ai-chapter-p">Audio / Speech</p>
+<p class="ai-chapter-p">Task: Generate a podcast intro for a health episode</p>
+<p class="ai-chapter-p">Avoid: Background noise, informal slang, music overlay</p>
+<p class="ai-chapter-p">Output: Clear, professional voiceover under 30 seconds</p>
+<p class="ai-chapter-p">Data / Analysis</p>
+<p class="ai-chapter-p">Task: Summarize customer feedback trends</p>
+<p class="ai-chapter-p">Avoid: Speculation, unverifiable claims, personal opinions</p>
+<p class="ai-chapter-p">Output: Objective bullet points with evidence from data</p>
+<h4 class="ai-chapter-h2">Optional Objective Templates  or Reusable Skeleton</h4>
+<p class="ai-chapter-p">Before you start creating prompts, you can optionally use an Objective Template. It’s a simple skeleton that helps define the purpose, tone, scope, tasks, and constraints for any prompt or workflow. Using it ensures clarity and consistency, especially when you have multiple types of tasks or want the AI (or yourself) to follow structured guidance.</p>
+<p class="ai-chapter-p">How to Use It:</p>
+<p class="ai-chapter-p">You can place this at the start of any section or prompt.</p>
+<p class="ai-chapter-p">It’s not mandatory, but it helps anchor the prompt with a clear purpose.</p>
+<p class="ai-chapter-p">Concrete examples for different tasks (research, coding, marketing, etc.) can follow this template.</p>
+<p class="ai-chapter-p">Template (Optional):</p>
+<pre class="ai-pre">
+Objective: [Describe purpose: summary, draft, analysis, or teaching]
+Tone: [Formal / Conversational / Neutral / Persuasive]
+Data Scope: [Peer-reviewed papers / Provided dataset / Specific journals / All sources]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid personal opinions
+- Cite sources correctly
+- Keep style consistent
+</pre>
+<p class="ai-chapter-p">Concrete Example:</p>
+<pre class="ai-pre">
+Objective: Generate a data analysis report from provided dataset
+Tone: Clear, concise, business-report style
+Components / Sections: Trends, Top Products, Insights
+Tasks:
+- Highlight key trends and patterns
+- Include charts or tables for visualization
+- Flag anomalies or missing data
+Constraints:
+- Use professional, readable language
+- Avoid personal opinions
+- Ensure calculations are accurate
+</pre>
+<h4 class="ai-reader-h2">Section Templates (Reusable by Task Type)</h4>
+<p class="ai-chapter-p">Each section includes a reusable template with placeholders and a concrete example.</p>
+<h5 class="ai-chapter-h3">1. Research / Academic Writing</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Describe purpose: summary, draft, analysis, or teaching]
+Tone: [Formal / Conversational / Neutral / Persuasive]
+Data Scope: [Peer-reviewed papers / Provided dataset / Specific journals / All sources]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid personal opinions
+- Cite sources correctly
+- Keep style consistent
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Write sections of a research paper based on provided dataset
+Tone: Formal, coherent, academic
+Components / Sections: Introduction, Methodology, Results, Discussion
+Tasks:
+- Maintain logical flow between sections
+- Highlight key points from supplied data
+- Flag missing citations or unclear arguments
+Constraints:
+- Avoid unproven or unsupported data
+- Keep academic tone consistent
+</pre>
+<h5 class="ai-chapter-h3">2. Data Analysis / Business Insights</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Describe purpose: summary, report, analysis, or visualization]
+Tone: [Formal / Conversational / Neutral / Persuasive]
+Data Scope: [Provided dataset / Peer-reviewed papers / Specific sources / All sources]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid personal opinions
+- Cite sources correctly
+- Ensure consistency and accuracy
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Generate a data analysis report from provided dataset
+Tone: Clear, concise, business-report style
+Components / Sections: Trends, Top Products, Insights
+Tasks:
+- Highlight key trends and patterns
+- Include charts or tables for visualization
+- Flag anomalies or missing data
+Constraints:
+- Use professional, readable language
+- Avoid personal opinions
+- Ensure calculations are accurate
+</pre>
+<h5 class="ai-chapter-h3">3. Marketing / Email Campaigns</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Describe purpose: inform, persuade, or engage]
+Tone: [Formal / Conversational / Friendly / Persuasive]
+Audience: [Customer type / Internal team / Subscribers / Leads]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid jargon or ambiguous language
+- Keep tone consistent
+- Follow brand guidelines
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Draft a promotional email for a new product launch
+Tone: Friendly, engaging, persuasive
+Components / Sections: Subject line, Body, Call-to-action
+Tasks:
+- Introduce product benefits clearly
+- Encourage readers to click link or make purchase
+- Maintain brand voice
+Constraints:
+- Keep email under 150 words
+- Avoid exaggerations or false claims
+- Ensure readability on mobile devices
+</pre>
+<h5 class="ai-chapter-h3">4. Coding / Development Tasks</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Describe purpose: solve problem, generate code, explain logic]
+Tone: [Formal / Clear / Concise / Instructional]
+Language / Framework: [Python / JavaScript / HTML / CSS / Other]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid unnecessary code or comments
+- Keep logic clear and maintainable
+- Follow coding best practices
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Write a Python function to return the second-largest number in a list
+Tone: Clear, instructional, concise
+Language: Python
+Tasks:
+- Handle duplicate numbers correctly
+- Include error handling for empty or short lists
+- Format code with proper indentation
+Constraints:
+- Avoid using external libraries
+- Include brief inline comments explaining logic
+- Maintain readability
+</pre>
+<h5 class="ai-chapter-h3">5. Vibe Coding / Creative Coding</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Create generative art / interactive experience / AI-driven visualization]
+Tone: [Experimental / Creative / Playful]
+Tools / Libraries: [p5.js / Processing / Three.js / Other]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Keep code efficient
+- Ensure visuals are consistent and aesthetic
+- Avoid overly complex logic
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Generate interactive particle animation using p5.js
+Tone: Creative, playful, experimental
+Components: Particle system, mouse interaction, dynamic colors
+Tasks:
+- Particles follow mouse pointer dynamically
+- Change color based on speed or distance
+- Keep smooth animation at 60fps
+Constraints:
+- Avoid heavy computations that lag browser
+- Maintain consistent visual style
+- Ensure responsiveness on different screen sizes
+</pre>
+<h5 class="ai-chapter-h3">6. Audio / Music / Podcast Tasks</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Transcribe / Summarize / Analyze / Generate audio]
+Tone: [Formal / Conversational / Neutral / Descriptive]
+Input: [Audio file / Transcript / Dataset]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Preserve original meaning
+- Avoid misinterpretation
+- Keep formatting or timestamps consistent
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Transcribe a 30-minute podcast episode
+Tone: Neutral, clear, accurate
+Input: Podcast audio file (MP3)
+Tasks:
+- Produce timestamped transcript
+- Identify speakers and label dialogue
+- Highlight key topics discussed
+Constraints:
+- Avoid paraphrasing
+- Preserve all technical terms correctly
+- Ensure readability for captioning
+</pre>
+<h5 class="ai-chapter-h3">7. Image Generation / Editing Tasks</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Generate / Enhance / Edit / Describe images]
+Tone: [Descriptive / Creative / Realistic / Stylized]
+Input / Reference: [Text prompt / Reference image / Style guide]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid irrelevant elements
+- Keep style consistent
+- Maintain image resolution quality
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Generate a futuristic cityscape illustration
+Tone: Creative, detailed, stylized
+Input: Text prompt describing city, lighting, and perspective
+Tasks:
+- Include skyscrapers with neon lights
+- Add flying vehicles and atmospheric effects
+- Ensure depth and perspective are coherent
+Constraints:
+- Avoid unrelated objects (animals, natural scenery)
+- Keep color palette consistent
+- Output high-resolution image suitable for print
+</pre>
+<h5 class="ai-chapter-h3">8. Video / Multimedia Tasks</h5>
+<p class="ai-chapter-p">Template:</p>
+<pre class="ai-pre">
+Objective: [Summarize / Edit / Generate / Caption video]
+Tone: [Professional / Informative / Entertaining]
+Input: [Video file / Script / Audio]
+Tasks:
+- [Task 1]
+- [Task 2]
+- [Task 3]
+Constraints:
+- Avoid cutting important content
+- Maintain audio-video sync
+- Keep transitions smooth and consistent
+</pre>
+<p class="ai-chapter-p">Example:</p>
+<pre class="ai-pre">
+Objective: Edit a 5-minute educational video for online course
+Tone: Informative, professional
+Input: Raw video footage and narration script
+Tasks:
+- Cut unnecessary pauses and filler content
+- Add on-screen annotations and captions
+- Include smooth transitions between sections
+Constraints:
+- Maintain audio-video synchronization
+- Avoid distracting effects
+- Keep style consistent with course branding
+</pre>
+<h4 class="ai-chapter-h2">Bonus Section — Multi-Step All-in-One Prompt Example</h4>
+<p class="ai-chapter-p">“The following is an advanced, all-in-one workflow combining everything we’ve covered. Don’t worry if it feels heavy — it’s meant as a reference template.” (Cyberpunk cityscape, step-by-step workflow preserved exactly as in your draft.)</p>
+<h5 class="ai-chapter-h3">Key Practices for AI Prompting</h5>
+<p class="ai-chapter-p">Identify Roles and Objectives (Role-Based / Persona)</p>
+<p class="ai-chapter-p">Clarify the Task (Zero-Shot + Structured)</p>
+<p class="ai-chapter-p">Break Down Into Steps (Chain-of-Thought / Iterative)</p>
+<p class="ai-chapter-p">Apply Constraints / Negative Instructions</p>
+<p class="ai-chapter-p">Multi-Task Integration</p>
+<p class="ai-chapter-p">Use Iteration / Feedback Loops</p>
+<p class="ai-chapter-p">Style and Tone Guidance (Instruction + Constraint)</p>
+<p class="ai-chapter-p">Optional Creativity / Expansion</p>
+<p class="ai-chapter-p">Final Quality Check</p>
+<p class="ai-chapter-p">Transferable Takeaway</p>
+<h5 class="ai-chapter-h3">Monster Prompt — Reusable Placeholder Template</h5>
+<p class="ai-chapter-p">Objective: [Describe overall goal]Tone / Style: [Formal / Creative / Technical / Playful / Cinematic / Descriptive / Persuasive]Scope / Input: [Dataset / Reference image / Script / Source material / Scene description / Audio file]Components / Sections / Steps:</p>
+<p class="ai-chapter-p">Step 1 – Scene / Structure / Composition</p>
+<p class="ai-chapter-p">Step 2 – Key Elements / Features</p>
+<p class="ai-chapter-p">Step 3 – Color / Mood / Style</p>
+<p class="ai-chapter-p">Step 4 – Rendering / Formatting / Processing</p>
+<p class="ai-chapter-p">Step 5 – Constraints / Avoidances</p>
+<p class="ai-chapter-p">Step 6 – Iterative Refinement</p>
+<p class="ai-chapter-p">Step 7 – Multi-Task Output</p>
+<p class="ai-chapter-p">Step 8 – Optional Creativity / Enhancements</p>
+<p class="ai-chapter-p">Step 9 – Quality Control / Validation</p>
+<p class="ai-chapter-p">Step 10 – Final Notes / Deliverable Readiness</p>
+<p class="ai-chapter-p">Tasks (customizable per step):</p>
+<p class="ai-chapter-p">[Task 1 relevant to Step 1–10]</p>
+<p class="ai-chapter-p">[Task 2 relevant to Step 1–10]</p>
+<p class="ai-chapter-p">[Task 3 relevant to Step 1–10]</p>
+<p class="ai-chapter-p">Constraints (global):</p>
+<p class="ai-chapter-p">Avoid [irrelevant content / jargon / unverified claims / clutter / style breaks]</p>
+<p class="ai-chapter-p">Keep style [consistent / clear / readable / visually coherent]</p>
+<p class="ai-chapter-p">Follow [domain-specific rules, brand guidelines, or technical standards]</p>
+<p class="ai-chapter-p">Applications:</p>
+<p class="ai-chapter-p">Cyberpunk cityscapes (art &amp; design)</p>
+<p class="ai-chapter-p">Research papers or reports (academic/business)</p>
+<p class="ai-chapter-p">Marketing campaigns (emails, social posts)</p>
+<p class="ai-chapter-p">Code or interactive experiences (Vibe coding, simulations)</p>
+<p class="ai-chapter-p">Audio/video production (podcast edits, multimedia clips)</p>
+<p class="ai-chapter-p">Any multi-step, multi-output AI task</p>
+<p class="ai-chapter-p">It captures all 11 prompt types: zero-shot, structured, role-based, constraints, iterative, self-improving, comparative, chain-of-thought, multi-task, few-shot, and negative prompts—all in one framework.</p>
+      </div>
 
         <h4 class="ai-reader-h">The central lesson</h4>
         <p>Prompt engineering is probabilistic pattern-nudging. A well-structured prompt guides the system toward outputs aligned with learned patterns — alignment may occur precisely, partially or unexpectedly, because AI behavior is probabilistic, not deterministic. It is less mystical, less powerful and less stable than often claimed.</p>
