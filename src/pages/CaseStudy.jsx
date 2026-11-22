@@ -52,10 +52,10 @@ export default function CaseStudy() {
               <tr><td>Morning content and sales checks</td><td>9:45 video captions; 10:20 team-leader discussion; 10:35 deposit-slip checks; 10:40 late-sale entry checks; 10:45 stock-team pivot follow-up; 10:50 salesperson-total/net-sale comparison.</td></tr>
               <tr><td>Posting and staff follow-up</td><td>11:00 check the scheduled 10:00 TikTok post and comment replies; closing-check follow-up with cashiers; break-book and other-floor checks.</td></tr>
               <tr><td>Reporting and afternoon coordination</td><td>12:10–1:00 personal reporting, review and notes; 2:15 check the 1:00 TikTok post/replies; 2:20 online-sale payment follow-up; 2:50 stock-order discussion and order-list checking before signing.</td></tr>
-              <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; repeated closing, generator-log, returns and stock checks; 5:55 checkout approval.</td></tr>
+              <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, generator-log, returns and stock checks across the evening; 5:55 checkout approval.</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings, and the steps that repeat through the day, are shown as I wrote them.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
           <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The full list from the original document is reproduced below, in order.</p>
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
@@ -105,7 +105,7 @@ export default function CaseStudy() {
               </table>
             </div>
           </div>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced the way I wrote it — same order, same timings, nothing tidied up. Some steps come round more than once in a day because the same records get checked again, so they appear each time. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced the way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
 
           <div className="dl-row" style={{ marginTop: 12 }}>
             <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>

@@ -537,8 +537,8 @@ class PortfolioPDF(FPDF):
              '12:10–1:00 personal reporting, review and notes; 2:15 check the 1:00 TikTok post/replies; '
              '2:20 online-sale payment follow-up; 2:50 stock-order discussion and order-list checking before signing.'),
             ('End-of-day controls',
-             '4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; repeated '
-             'closing, generator-log, returns and stock checks; 5:55 checkout approval.'),
+             '4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, '
+             'generator-log, returns and stock checks across the evening; 5:55 checkout approval.'),
         ]
         for stage, detail in rows:
             y = self.get_y()
@@ -558,8 +558,10 @@ class PortfolioPDF(FPDF):
         self.set_font('my', 'I', 7.6)
         self.set_text_color(*MUTED)
         self.multi_cell(0, 4.2,
-            'My personal working checklist, in its original Burmese/English wording and order. The timings, and the '
-            'steps that come round again during the day, are shown as I wrote them. The original DOCX is linked in the index page.',
+            'My personal working checklist, in its original Burmese/English wording and order. The timings are as I '
+            'wrote them; the generator checks appear several times because the electricity here is not on all day — it '
+            'comes in shifts, and in summer it can go and come back, so each check and log entry was a separate task. '
+            'The original DOCX is linked in the index page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(6)
 
