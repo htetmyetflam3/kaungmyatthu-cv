@@ -56,17 +56,56 @@ export default function CaseStudy() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, retained in its original Burmese/English wording. The timings and repeated closing entries are shown as recorded.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The original document is reproduced below exactly as saved — Burmese and English as written, timings unchanged.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The full list from the original document is reproduced below, in order.</p>
 
-          <div style={{ marginTop: 14, border: '1px solid var(--line, #dbe3ec)', borderRadius: 12, overflow: 'hidden', background: '#f7f9fb' }}>
-            <iframe
-              src={`https://drive.google.com/file/d/${CHECKLIST_ID}/preview`}
-              title="My daily to-do list — original DOCX"
-              style={{ width: '100%', height: 560, border: 0, display: 'block' }}
-              allowFullScreen
-            />
+          <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
+            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
+            <div style={{ maxHeight: 460, overflowY: 'auto', padding: '6px 14px' }}>
+              <table className="mini-table" style={{ marginTop: 6 }}>
+                <tbody>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:00am</td><td>Check-in approve and attendance check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:15 am</td><td>Viber group attendance and update information; share what needs following up.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:20am</td><td>Check whether the shop is running on generator power (construction), and record generator usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:30am</td><td>Check the bank transfer / payment slips received.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>9:45</td><td>Prepare TikTok video captions.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:15 am</td><td>Check the morning food-offering arrangement.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:20am</td><td>Discuss with the team leader.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:30am</td><td>Check the offering / meal arrangement again.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:35 am</td><td>Check that the deposit-slip amount matches.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:40 am</td><td>Check closing and late-sale entries against the sales record.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:45 am</td><td>Follow up the stock team’s pivot; check it before it goes out.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>10:50 am</td><td>Assign cashiers; compare salesperson totals with net sales.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:00 am</td><td>Check the 10:00 TikTok video is posted; reply to comments.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:10 am</td><td>Follow up cashier closing.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:15am</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>11:20 am</td><td>Check the other floor.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>12:00 pm</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>12:10pm – 1:00pm</td><td>Personal reporting; review the previous day’s notes and write today’s note.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>1:05pm</td><td>Check shop power / generator again and record usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>1:10pm – 2:10pm</td><td>Lunch break.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:10pm</td><td>Break time; check the other floor afterwards.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>02:15 pm</td><td>Check replies on the 1:00pm TikTok video.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:20pm</td><td>Follow up items owed on the online-sale channel.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:30 pm</td><td>Follow up the stock items that were asked about.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>2:50 pm</td><td>Discuss stock ordering with the stock team; check the order list and sign it.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>3:00pm</td><td>Check the Viber group.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:00pm</td><td>Compare salesperson totals with net sales; check the cashier pivot before it goes out.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:15 pm</td><td>Break time.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:20 pm</td><td>Prepare video captions; check edits before posting.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>4:45pm</td><td>Review the daily note.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:00 pm</td><td>Closing check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:05pm</td><td>Check shop power / generator and record usage.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:10pm</td><td>Surprise stock check.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:30pm</td><td>Closing check and returns.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:35 pm</td><td>Compare the cashier pivot with salesperson totals and net sales for the month.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:30pm</td><td>Check the shop floor again.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:50pm</td><td>Sign attendance; check the break book.</td></tr>
+              <tr><td style={{ whiteSpace: 'nowrap', fontWeight: 700, color: 'var(--navy)', verticalAlign: 'top' }}>5:55pm</td><td>Check-out approve.</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Original file: <code>Daily To Do List.docx</code> · 9:00 → 5:55&nbsp;pm. Open the file directly for full size and to scroll every page.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced in the original order and timings — including the repeated closing and generator entries and the duplicated 5:30pm line. The original is written in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
 
           <div className="dl-row" style={{ marginTop: 12 }}>
             <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
