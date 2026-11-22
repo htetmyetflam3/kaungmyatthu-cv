@@ -133,6 +133,12 @@ section{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 .sample-details p{ line-height:1.8; overflow-wrap:anywhere; }
 .salary{ background:var(--navy); color:#fff; border-radius:14px; padding:26px; }
 .salary .tag{ font-size:.72rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#93c5fd; margin-bottom:6px; }
+.salary .salary-list{ list-style:none; padding:0; margin:0 0 16px; }
+.salary .salary-row{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.18); }
+.salary .salary-row:last-child{ border-bottom:0; }
+.salary .salary-row span{ color:#dbeafe; font-size:.95rem; font-weight:600; }
+.salary .salary-row span em{ display:block; font-style:normal; font-weight:400; font-size:.76rem; color:#93c5fd; margin-top:2px; }
+.salary .salary-row strong{ color:#fff; font-size:1.05rem; font-weight:800; white-space:nowrap; }
 .salary .amount{ font-size:2rem; font-weight:800; letter-spacing:-.02em; }
 .salary p{ color:#cbd5e1; }
 .salary .btn-light{ background:#fff; color:var(--navy) !important; font-weight:700; border-radius:10px; padding:.6rem 1.3rem; }
@@ -170,6 +176,7 @@ footer a{ color:var(--navy); text-decoration:none; }
   <div class="btn-row">
     <a href="/cdn-cgi/l/email-protection#e3888e97a38786958d8c95869bcd908b8c93dc90968189868097deab8a9186c6d1d3a882968d84c6d1d3ae9a8297c6d1d3b78b96" class="btn btn-primary-navy">Hire Me</a>
     <a href="tel:+959955400017" class="btn btn-outline">Call Me</a>
+    <a href="https://htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html" class="btn btn-outline" target="_blank" rel="noopener">Portfolio</a>
     <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
   </div>
 </header>
@@ -209,6 +216,12 @@ footer a{ color:var(--navy); text-decoration:none; }
           <span class="job-title">Hmaw Bi Technology University</span><span class="badge-date">2012 – 2015</span>
         </div>
         <div class="job-meta">Civil Engineering (3rd Year)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
+          <span class="job-title">B.A English</span><span class="badge-date">2020</span>
+        </div>
+        <div class="job-meta">English</div>
       </div>
       <div class="timeline-item">
         <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center">
@@ -373,8 +386,12 @@ footer a{ color:var(--navy); text-decoration:none; }
     </div>
     <div class="salary">
       <div class="tag">Expected Salary</div>
-      <div class="amount">MMK 650,000</div>
-      <p class="mb-3">Open to both <strong class="text-white">part-time and full-time</strong> opportunities. Multi-skilled, reliable, and creative professional.</p>
+      <ul class="salary-list">
+        <li class="salary-row"><span>Content writing</span><strong>MMK 600,000</strong></li>
+        <li class="salary-row"><span>Operations <em>(depends on responsibility)</em></span><strong>MMK 700,000+</strong></li>
+        <li class="salary-row"><span>Digital marketing <em>(depends on responsibility)</em></span><strong>MMK 850,000</strong></li>
+      </ul>
+      <p class="mb-3"><small>Monthly. Multi-skilled, reliable, and creative professional — open to both <strong class="text-white">part-time and full-time</strong> opportunities.</small></p>
       <div class="d-flex flex-wrap gap-2">
         <a href="/cdn-cgi/l/email-protection#9af1f7eedafeffecf4f5ecffe2b4e9f2f5eaa5e9eff8f0fff9eea7d0f5f8bfa8aad5eaeaf5e8eeeff4f3eee3" class="btn btn-ghost-light">Contact</a>
       </div>
@@ -383,7 +400,7 @@ footer a{ color:var(--navy); text-decoration:none; }
 
 </div>
 
-<footer>© 2026 Kaung Myat Thu · North Okkalapa · <a href="/cdn-cgi/l/email-protection#8de6e0f9cde9e8fbe3e2fbe8f5a3fee5e2fd"><span class="__cf_email__" data-cfemail="92f9ffe6d2f6f7e4fcfde4f7eabce1fafde2">[email&#160;protected]</span></a> · <a href="tel:+959955400017">+959955400017</a></footer>
+<footer>© 2026 Kaung Myat Thu · North Okkalapa · <a href="https://htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html" target="_blank" rel="noopener">Portfolio</a> · <a href="/cdn-cgi/l/email-protection#8de6e0f9cde9e8fbe3e2fbe8f5a3fee5e2fd"><span class="__cf_email__" data-cfemail="92f9ffe6d2f6f7e4fcfde4f7eabce1fafde2">[email&#160;protected]</span></a> · <a href="tel:+959955400017">+959955400017</a></footer>
 
 <button class="to-top" id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
