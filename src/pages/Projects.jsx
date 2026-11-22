@@ -1,0 +1,61 @@
+import React from 'react';
+import Layout, { SectionHead } from '../layout/Layout';
+
+const PROJECTS = [
+  {
+    kicker: 'alive',
+    title: 'Yumeyuki.info',
+    body: 'Myanmar legal overseas employment agency. Still alive — and the most-used web stack of the three. Built it and kept it running.',
+    badge: 'alive',
+  },
+  {
+    kicker: 'alive',
+    title: 'TTS-AE.com',
+    body: 'Built it for his company. The mail is alive — they keep using it.',
+    badge: 'mail in use',
+  },
+  {
+    kicker: 'current',
+    title: 'Writermorphosis.com',
+    body: "A blog and book app — current — a friend helping me hire for it; he doesn\u2019t need it — built for my survival.",
+    badge: 'current app',
+    href: 'https://github.com/htetmyetflam3/writermorphosis',
+    hrefLabel: 'Repo — uploading back to git… (placeholder)',
+  },
+];
+
+export default function Projects() {
+  return (
+    <Layout
+      active=""
+      title="Previous projects — Kaung Myat Thu"
+      description="Web-development safety net — three projects, no career path."
+    >
+      <SectionHead
+        num="04"
+        kicker="Freelance · web stack"
+        title="Previous web-development projects."
+        sub="Three projects made for survival — Yumeyuki (alive), TTS-AE (mail in use), Writermorphosis (current app)."
+      />
+
+      {PROJECTS.map((p) => (
+        <article key={p.title} className="overview-card">
+          <div className="overview-kicker">{p.kicker}</div>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+          <div className="dl-row">
+            <span className="sheet-chip">{p.badge}</span>
+            {p.href && (
+              <a className="btn-dl" href={p.href} target="_blank" rel="noopener noreferrer">{p.hrefLabel} <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            )}
+          </div>
+        </article>
+      ))}
+
+      <div className="dl-row" style={{ marginTop: 10 }}>
+        <a className="btn-dl" href="index.html">← Back to resume</a>
+        <a className="btn-dl" href="portfolio.html">Portfolio</a>
+      </div>
+    </Layout>
+  );
+}

@@ -13,3 +13,6 @@ google_drive/
 .venv-build/
 samples-build/
 __pycache__/
+
+# private story notes — never commit
+*.private.md

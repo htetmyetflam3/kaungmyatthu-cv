@@ -1,23 +1,38 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// Multi-page React build. Each HTML file is a separate entry; Vite builds each
+// separately so GitHub Pages serves plain static files.
+const pages = [
+  'index.html',
+  'warehouse.html',
+  'case-study.html',
+  'content.html',
+  'myangustis.html',
+  'ai.html',
+  'projects.html',
+  'about.html',
+  'cv.html',
+  'portfolio.html', // old portfolio — kept, untouched
+];
 
 export default defineConfig({
-  // Relative base so the build works from any sub-path (GitHub Pages, Vercel, file-based hosting)
   base: './',
+  plugins: [react()],
   server: {
     host: '0.0.0.0',
-    allowedHosts: true, // preview/dev behind the Arena proxy
+    allowedHosts: true,
   },
   preview: {
     host: '0.0.0.0',
-    allowedHosts: true, // preview behind the Arena proxy
+    allowedHosts: true,
   },
   build: {
     rollupOptions: {
-      input: {
-        index: fileURLToPath(new URL('./index.html', import.meta.url)),
-        portfolio: fileURLToPath(new URL('./portfolio.html', import.meta.url)),
-      },
+      input: Object.fromEntries(
+        pages.map((p) => [p.replace(/\.html$/, ''), fileURLToPath(new URL('./' + p, import.meta.url))])
+      ),
     },
   },
 });
