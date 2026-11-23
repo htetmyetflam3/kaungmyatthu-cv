@@ -15,14 +15,14 @@ export default function CaseStudy() {
   return (
     <Layout
       active="case-study"
-      title="Operations Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
-      description="Operations Assistant Supervisor at 321 Ecolife, Nok branch — one of six shops, no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
+      title="Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
+      description="Assistant Supervisor at 321 Ecolife (Stalker Company Limited), Nok branch — running one of six shops with no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
     >
       <SectionHead
         num="01"
-        kicker="Operations Assistant Supervisor · 321 Ecolife"
+        kicker="Assistant Supervisor · 321 Ecolife"
         title="One of six shops, with no shop manager above me"
-        sub="Nok branch, North Okkalapa · 2024–2025 · reported to the Ecolife sector manager, who sits on the board"
+        sub="Nok branch, North Okkalapa · 9 January 2024 – 10 January 2025 · reported to the Ecolife sector manager, who sits on the board"
       />
 
       <figure style={{ margin: '0 0 22px' }}>
@@ -42,7 +42,7 @@ export default function CaseStudy() {
 
       <div className="overview-card">
         <div className="overview-kicker">The role in one paragraph</div>
-        <p>My title said Operations Assistant Supervisor. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
+        <p>The title on the letter is Assistant Supervisor. The work was managing a branch. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
         <p>To carry it, I wrote my own time-based daily list: opening checks, scheduled follow-ups, closing controls. That list is the first thing below, because it is the clearest picture of what the job actually was.</p>
       </div>
 
@@ -70,7 +70,7 @@ export default function CaseStudy() {
               <tr><td>TikTok follow-up and performance reporting</td><td>Ecolife sector manager</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The employer reference calls the role Assistant Supervisor. The recorded scope is described here as it was worked.</p>
+          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR reference (17 March 2025) records the post as Assistant Supervisor, Retail Shop Department, 9 January 2024 – 10 January 2025.</p>
         </div>
       </section>
 
