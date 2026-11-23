@@ -10,13 +10,13 @@ export default function About() {
     <Layout
       active="about"
       title="About me — Kaung Myat Thu"
-      description="The full story of Kaung Myat Thu. Personal blog."
+      description="My background in my own words — the shop floor, the warehouse, the writing, and what each one taught me."
     >
       <article className="blog-post">
         <header className="blog-hero">
           <span className="blog-hero-eyebrow">✦ Personal blog</span>
           <h1>About <span className="grad">me.</span></h1>
-          <p className="blog-hero-sub">The full, unedited story of Kaung Myat Thu — operations, content and systems, from a third-year civil failure to the AI book.</p>
+          <p className="blog-hero-sub">My own story, unedited — operations, content and systems, from a third-year civil failure to the AI book.</p>
           <div className="blog-hero-meta">
             <span>North Okkalapa</span><span className="dot"></span>
             <span>Operations · Content · Systems</span><span className="dot"></span>
@@ -60,7 +60,7 @@ export default function About() {
 
           <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved. Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place. She cheated. I went back home.</p>
 
-          <p>In January 2024 I started at <a href="case-study.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
+          <p>In January 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
 
           <p>From January to November 2024 I was the Warehouse Supervisor at <a href="warehouse.html">NPT Group</a>. Family-shared distributor. Electronics and tools, plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
 

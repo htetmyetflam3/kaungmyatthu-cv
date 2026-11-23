@@ -6,11 +6,11 @@ export default function Myangustis() {
     <Layout
       active="myangustis"
       title="Myangustis — Kaung Myat Thu"
-      description="Myangustis — a Burmese text engine for Myanmar documents (Zawgyi / Unicode / legacy fonts), active development."
+      description="A project of mine — a Burmese text engine for Myanmar documents (Zawgyi / Unicode / legacy fonts), still being built."
     >
       <SectionHead
         num="04"
-        kicker="Own development · Burmese text toolchain"
+        kicker="Case study · Burmese text toolchain"
         title="Myangustis — a Myanmar-language text engine."
         sub="Not NLP — extraction, cleaning and proofreading for Myanmar documents."
       />

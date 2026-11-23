@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react';
 const pages = [
   'index.html',
   'warehouse.html',
-  'case-study.html',
+  'work-record.html',
   'content.html',
   'myangustis.html',
   'ai.html',

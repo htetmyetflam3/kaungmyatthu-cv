@@ -6,7 +6,7 @@ export default function AiStudy() {
     <Layout
       active="ai"
       title="AI & prompt engineering — Kaung Myat Thu"
-      description="Self-authored manuscript on how prompts shape LLM responses — and how to read AI as a layered system."
+      description="My own writing on how prompts shape LLM responses — how I read AI as a layered system rather than a magic box."
     >
       <SectionHead
         num="05"

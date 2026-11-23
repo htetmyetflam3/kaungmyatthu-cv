@@ -29,7 +29,7 @@ export default function Projects() {
     <Layout
       active=""
       title="Previous projects — Kaung Myat Thu"
-      description="Web-development safety net — three projects, no career path."
+      description="Three sites I built and still look after — Yumeyuki, TTS-AE and Writermorphosis."
     >
       <SectionHead
         num="04"

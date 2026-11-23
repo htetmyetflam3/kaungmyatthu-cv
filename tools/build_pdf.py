@@ -35,7 +35,7 @@ CV_URL        = SITE
 PAGES = [
     ('Full portfolio (single page)', PORTFOLIO_URL),
     ('CV / resume',                  SITE),
-    ('321 work record',             SITE + 'case-study.html'),
+    ('321 work record',             SITE + 'work-record.html'),
     ('Warehouse & CSM',              SITE + 'warehouse.html'),
     ('Content & scripts',            SITE + 'content.html'),
     ('Prompt engineering',           SITE + 'ai.html'),
@@ -149,6 +149,11 @@ class PortfolioPDF(FPDF):
         self.set_fill_color(*TEAL_BRIGHT)
         self.rect(0, 56, 210, 1.6, 'F')
 
+        # logo mark, on a white card so it reads against the navy band
+        self.set_fill_color(255, 255, 255)
+        self.rect(168, 16, 24, 24, 'F', round_corners=True)
+        self.image('public/logo-mark.png', x=171.5, y=19.5, w=17)
+
         # kicker
         self.set_font('my', 'B', 8.5)
         self.set_text_color(*TEAL_BRIGHT)
@@ -192,6 +197,7 @@ class PortfolioPDF(FPDF):
         self.set_text_color(140, 190, 180)
         self.cell(0, 6, 'IN THIS PORTFOLIO', new_x=XPos.LEFT, new_y=YPos.NEXT)
         index = [
+            ('00', 'Where I have worked — every role, in order', 'sec-00x'),
             ('01', 'Work record — 321 Ecolife', 'sec-01'),
             ('02', 'Content scripts & reels', 'sec-02'),
             ('03', 'CSM systems — parts shelf mapping', 'sec-03'),
@@ -244,8 +250,8 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 10.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6.5,
-            'Each section below is a small, reviewable body of work — with the full files downloadable from the links inside. '
-            'This PDF packages the portfolio into a single keepable file: the 321 work record, scripts, systems work, AI study and writing samples.')
+            'This is the work I can show, in one file: where I have worked, the 321 branch and what the job actually was, the '
+            'scripts I wrote, the CSM setup, the AI study, and the writing samples. The full files sit behind the links inside.')
         self.ln(4)
         self.set_font('my', 'B', 9)
         self.set_text_color(*TEAL)
@@ -254,17 +260,18 @@ class PortfolioPDF(FPDF):
 
         # quick-glance grid card-like rows
         rows = [
-            ('01', 'Work record — 321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 3', 'sec-01'),
-            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4', 'sec-02'),
-            ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5', 'sec-03'),
-            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6', 'sec-04'),
-            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 7', 'sec-05'),
+            ('00', 'Where I have worked', 'Every role in order — 321, NPT, CSM, the NGO, the writing and the builds', 'page 2', 'sec-00x'),
+            ('01', 'Work record — 321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 4', 'sec-01'),
+            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 6', 'sec-02'),
+            ('03', 'CSM systems + NPT warehouse', 'POS setup, shelf map, till mock-up and the warehouse role', 'page 7', 'sec-03'),
+            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 8', 'sec-04'),
+            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 9', 'sec-05'),
         ]
         for num, t, d, page, dest in rows:
             y = self.get_y()
-            self.card_top(18, y, 174, 15.5, CARD, LINE)
+            self.card_top(18, y, 174, 15, CARD, LINE)
             self.set_fill_color(*NAVY)
-            self.rect(18, y, 1.4, 15.5, 'F')
+            self.rect(18, y, 1.4, 15, 'F')
             self.set_font('my', 'B', 9.5)
             self.set_text_color(*NAVY)
             self.set_xy(25, y + 3)
@@ -277,7 +284,7 @@ class PortfolioPDF(FPDF):
             self.set_text_color(*TEAL)
             self.set_xy(160, y + 9.5)
             self.cell(28, 5, page, align='R')
-            self.set_xy(18, y + 19)
+            self.set_xy(18, y + 18.1)
         self.ln(2)
 
         # the rest of the portfolio lives on the site — listed so the PDF covers it too
@@ -332,7 +339,95 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 6.5)
         self.set_text_color(150, 170, 195)
         self.set_xy(24, y + 34)
-        self.cell(150, 4, 'This PDF is a static snapshot — click these links or the ones inside to open the live materials.')
+        self.cell(150, 4, 'This PDF is a snapshot; the links open the live pages.')
+        self.set_xy(18, y + 46.5)
+
+        self.kicker('WHAT I WANT NEXT')
+        self.set_font('my', '', 8.6)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 4.7,
+            'I want the next job to be operations with systems in it: a store, a warehouse or a back office where '
+            'the records are mine to build and the numbers are wanted straight. Retail ops and content both suit me, '
+            'and longer term I want to build tools like Myangustis properly.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+
+    def experience_page(self):
+        self.add_page()
+        self.set_link(name='sec-00x', x=18, y=277)
+        self.header_band('Experience')
+        self.ln(3.5)
+        self.kicker('00 — Experience')
+        self.section_title('Where I have worked', 19)
+        self.rule()
+        self.set_font('my', '', 9)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 5.2,
+            'Six years, four kinds of work: a shop floor, a warehouse, a content desk and freelance builds. '
+            'Most recent first — the three at the top are the ones with detail pages in this file.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2.5)
+
+        rows = [
+            ('Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok branch',
+             'Jan 2024 – Jan 2025',
+             'Ran one of six shops with no shop manager above me; reported to the sector manager on the board. '
+             'Attendance, daily expense, sales and stock records, staff transfer and assignment, and the branch TikTok.'),
+            ('Warehouse Supervisor — NPT Group', '6 Jan – 1 Nov 2024',
+             'Electronics, tools and raw materials. No stock system, so every item registered by hand, every day. '
+             'Co-founder’s letter of recommendation dated 08 Dec 2024.'),
+            ('POS setup, shelf map, staff training — car-parts shop (CSM)', 'freelance, about 4.5 months',
+             'A shop with no till. Built the import-shaped register, an ID for every part, the shelf map around '
+             'shelves the owners would not move, then trained the staff on a till mock-up.'),
+            ('Senior Logistic Officer — NGO (C.D.A)', '2021 – 2022',
+             'Warehouse and transport operations for project areas.'),
+            ('Script Writer (part-time) — Program.base', '2021 – 2022',
+             'Burmese scripts for travel, infotainment and educational content; Canal+ Myanmar media adaptation '
+             '(Alice Adventure) followed, 2022 – 2023.'),
+            ('Content Writer — Country BAR, North Dagon', '2020',
+             'Articles and lifestyle / marketing posts, kept consistent with the brand.'),
+            ('Translator — freelance', '2022 – 2023',
+             'English to Burmese literary and digital content, including U.S. (Texas) life insurance policies.'),
+            ('WordPress builds — Yumeyuki.info, TTS-AE.com, Writermorphosis.com', 'current',
+             'A legal overseas-employment agency, a UAE company project, and my own build, still going.'),
+            ('Myangustis — own project', 'ongoing',
+             'A Burmese text engine: extraction, cleaning and proofreading for Myanmar documents.'),
+        ]
+        for title, period, body_text in rows:
+            y0 = self.get_y()
+            self.set_font('my', 'B', 8.8)
+            lines_t = self.multi_cell(140, 4.6, title, dry_run=True, output='LINES')
+
+            self.set_font('my', '', 7.6)
+            self.set_text_color(*TEAL)
+            self.set_xy(160, y0)
+            self.cell(32, 4.6, period, align='R')
+
+            self.set_font('my', 'B', 8.8)
+            self.set_text_color(*NAVY)
+            self.set_xy(18, y0)
+            for ln in lines_t:
+                self.cell(140, 4.6, ln, new_x=XPos.LEFT, new_y=YPos.NEXT)
+
+            self.set_font('my', '', 8)
+            self.set_text_color(60, 74, 96)
+            self.set_x(18)
+            self.multi_cell(174, 4.4, body_text, new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.ln(1.8)
+
+        self.ln(1)
+        self.set_draw_color(*LINE)
+        self.line(18, self.get_y(), 192, self.get_y())
+        self.ln(2.5)
+        self.set_font('my', 'B', 7.6)
+        self.set_text_color(*TEAL)
+        self.cell(0, 4.4, 'EDUCATION  ·  CERTIFICATION', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.set_font('my', '', 7.8)
+        self.set_text_color(*MUTED)
+        self.multi_cell(0, 4.2,
+            'Hmaw Bi Technology University — civil engineering, to third year (2012 – 2015) · B.A. English (2019) · '
+            'KMD Institute — practical A+ and basic network engineering (2015) · Conversion Optimization '
+            'Certification, Skillshop, issued 30 Nov 2025, expires 30 Nov 2026.',
+            new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def case_study(self):
         self.add_page()
@@ -484,7 +579,7 @@ class PortfolioPDF(FPDF):
         self.multi_cell(160, 4.0,
             'Customer phone numbers redacted. The redacted workbook is linked in this PDF’s links page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
-        # certification — one compact line so the case study stays on a single page
+        # certification — one compact line so this page stays on a single page
         self.set_xy(18, note_y + 22)
         self.set_font('my', 'B', 7.2)
         self.set_text_color(*NAVY)
@@ -897,6 +992,7 @@ class PortfolioPDF(FPDF):
 
     def build(self):
         self.cover()
+        self.experience_page()
         self.overview_page()
         self.case_study()
         self.workflow_section()
