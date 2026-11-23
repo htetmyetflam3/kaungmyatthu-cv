@@ -112,6 +112,13 @@ export default function Warehouse() {
           rides in the code instead: D-2183 and D-2183-M, D-1250 and D-1250-M, D-2198 and D-2198-M. The number says
           what the pad fits, the letters after it say which variant, and the brand says who sells it.
         </p>
+        <p style={{ margin: '0 0 16px' }}>
+          The Family column is where that join was meant to happen. It holds the other brand's code for the same part.
+          A Paraut water pump sells as S3-024 and carries Gws-34 beside it, Genteq's Gwp-50117 carries Gwho-47, and on
+          the filter sheet a KYIOI filter sells as 23303-54071 with BF-113 in the family cell, a DMAX one as MD-069782
+          with C-1008. Two codes, one filter, and nothing else on the row saying so. The brake-pad sheet has no such
+          column, so its variants sat unjoined.
+        </p>
 
         <div style={{ margin: '0 0 16px', border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
           <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>
