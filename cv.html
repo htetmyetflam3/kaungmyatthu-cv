@@ -112,9 +112,9 @@ section{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 .job:last-child{ border-bottom:0; padding-bottom:4px; }
 .job-title{ font-weight:700; color:var(--navy); }
 .job-meta{ color:var(--muted); font-size:.9rem; }
-.job-title-link{ text-decoration:none; border-bottom:1px solid rgba(11,121,131,.35); }
-.job-title-link:hover{ text-decoration:none; border-bottom-color:#0b7983; color:#0b7983; }
-.job-title-link::after{ content:" →"; font-size:.85em; color:#0b7983; }
+.job-title-link{ color:#0b5f6b; text-decoration:underline; text-decoration-color:rgba(11,121,131,.5); text-underline-offset:3px; text-decoration-thickness:1px; }
+.job-title-link:hover{ color:#0b7983; text-decoration-color:#0b7983; text-decoration-thickness:2px; }
+.job-title-link::after{ content:" →"; font-size:.85em; color:#0b7983; text-decoration:none; display:inline-block; }
 .job-links{ margin:.55rem 0 0; font-size:.84rem; font-weight:700; }
 .job-links a{ color:#0b7983; text-decoration:none; }
 .job-links a:hover{ text-decoration:underline; }
@@ -193,6 +193,7 @@ footer a{ color:var(--navy); text-decoration:none; }
     <a href="mailto:htetmyet157@gmail.com?subject=Hire%20Me" class="btn btn-primary-navy">Hire Me</a>
     <a href="tel:+959955400017" class="btn btn-outline">Call Me</a>
     <a href="portfolio.html" class="btn btn-outline" target="_blank" rel="noopener">Portfolio</a>
+    <a href="Kaung-Myat-Thu-CV.pdf" class="btn btn-primary-navy" download>Download CV (PDF)</a>
     <a href="Kaung-Myat-Thu-Portfolio.pdf" class="btn btn-outline" download>Download Portfolio PDF</a>
     <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
   </div>
