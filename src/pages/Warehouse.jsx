@@ -60,12 +60,15 @@ export default function Warehouse() {
         </figure>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span>The warehouse records here are my own working notes from the role; the reference letter above is my supporting document from NPT.</span>
+          <span>The working notes are mine; the letter is NPT’s.</span>
         </div>
       </div>
 
       <div className="panel" id="csm">
-        <h4>CSM · car-parts shop — POS setup, shelf map, staff training <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
+        <h4>CSM · ချစ်စုမ, the car-parts shop — POS setup, shelf map, staff training <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
+        <p className="muted" style={{ fontSize: '.82rem', margin: '0 0 12px' }}>
+          CSM is short for ချစ်စုမ — <a href="https://maps.app.goo.gl/ZC7WVxtcdegZSvyJ8" target="_blank" rel="noopener">the shop on Google Maps ↗</a>
+        </p>
 
         <p style={{ margin: '0 0 12px' }}>
           The shop had no till system of any kind. To know what was in stock you need a POS; to run a POS you need the

@@ -7,14 +7,14 @@ const WORK = [
     href: 'work-record.html',
     kicker: 'Operation Assistant Supervisor · Stalker / 321 Ecolife',
     title: 'Running a branch with no manager above me',
-    body: 'Nok branch, January 2024 to January 2025 — the only Stalker staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
+    body: 'Nok branch, November 2024 to February 2025 — the only Stalker staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
     go: 'Read the work record →',
   },
   {
     href: 'content.html',
     kicker: 'Scripts & writing',
     title: 'Product scripts, venue stories and social copy',
-    body: 'Burmese video scripts for hair-care products and for a bar, plus translation and adaptation work. The wording is on the page, in Burmese wherever the script is Burmese.',
+    body: 'Burmese video scripts for hair-care products and for a bar, plus translation and adaptation work — Burmese wherever the script is Burmese.',
     quote: {
       text: '“ဆံသားက ထူပြီး အကောက်လည်းကောင်းလို့ ဘယ်လိုဖြောင့်ဖြောင့် မဖြောင့်ဖြစ်နေတဲ့သူတွေအတွက် Labbell Professional Vitalist Extra Strong Rebonding System ရောက်လာပါပြီ။”',
       note: 'IMB3 script, Scene 1',
@@ -45,8 +45,8 @@ const WORK = [
   {
     href: 'myangustis.html',
     kicker: 'Case study · own project',
-    title: 'Myangustis — Myanmar-language text tooling',
-    body: 'A project of mine: pulling text out of documents, keeping it in order, and checking proofreads against it.',
+    title: 'Myangustis — segmentation, tagging and grammar for Burmese',
+    body: 'My own project, built in my spare time: a Burmese segmenter and part-of-speech tagger with no regex in the tokenising, a grammar pass with no model, and the parser, scraper and proofreading workflow it needed.',
     go: 'Myangustis →',
   },
   {
@@ -70,7 +70,7 @@ export default function Portfolio() {
     <Layout
       active="portfolio"
       title="Kaung Myat Thu — Portfolio"
-      description="I have worked shop floors, a warehouse and a content desk. Here is the work I can show: the 321 branch records, Burmese scripts, a car-parts stock system, websites, and a study of how prompting works."
+      description="I have worked shop floors, a warehouse and a content desk. The work I can show: the 321 branch records, Burmese scripts, a car-parts stock system, websites, and a study of how prompting works."
     >
       <section className="pf-hero">
         <div className="kicker">Portfolio</div>

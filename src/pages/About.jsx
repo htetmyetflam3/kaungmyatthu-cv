@@ -46,7 +46,7 @@ export default function About() {
 
           <p>In 2021–2022 I was Senior Logistic Officer at the NGO, C.D.A. My aunt backed me into the job. Many people had wanted it. I stayed home for one project and went to the field with the other two, one week or two between cities.</p>
 
-          <p>Then the rotation came. A rural state, too far, too poor, undeveloped. I quit. Not fired. I quit directly. It was not a bad job. The pay was good, the role genuine. But the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.</p>
+          <p>Then the rotation came. A rural state, too far, too poor, undeveloped. I quit. Not fired. I quit directly. It was not a bad job. The pay was good, the role genuine. But the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.<br/><br/>I came back home, bought a <b>Persian cat</b> and decided to spend my life on the things I want to do. The relation with my aunt turned bad after that, and home turned into the opposite of what I imagined.</p>
 
           <p>The same time, I was a part-time Script Writer at Program.base, writing Burmese scripts for travel, infotainment and educational content.</p>
 
@@ -56,32 +56,32 @@ export default function About() {
 
           <p>Canal+ Myanmar adapted media translations for the <i>Alice Adventure</i> program. That was the first project. It was low-paid. The second came in 2023. The third project never came back. The friend who shared it died. He joined some organization for revolution.</p>
 
-          <p>I bought a <b>Persian cat</b> and decided to spend my life on the things I want to do. After the last project I went back home. I quit, and never joined the next one. The relation with my aunt turned bad, and home turned into the opposite of what I imagined.</p>
+          <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved to Mawlamyine — her city.</p>
 
-          <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved. Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place. She cheated. I went back home.</p>
+          <p>Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place — the job I took once I reached her city. Warehouse Supervisor, 6 January to 1 November 2024. Family-shared distributor, electronics and tools plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
 
-          <p>In January 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
+          <p>She cheated. I went back home.</p>
 
-          <p>From January to November 2024 I was the Warehouse Supervisor at <a href="warehouse.html">NPT Group</a>. Family-shared distributor. Electronics and tools, plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
+          <p>The 321 interview was arranged before I left Mawlamyine. Two days after I got back to Yangon I sat it, and two days after that I had the job. In November 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
 
-          <p>In that era I wrote the <a href="ai.html">AI prompt book</a>, a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. In 2025 I got a Conversion Optimization Certification from Skillshop, issued 30 Nov 2025 and expiring 30 Nov 2026.</p>
+                    <p>In that era I wrote the <a href="ai.html">AI prompt book</a>, a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. In 2025 I got a Conversion Optimization Certification from Skillshop, issued 30 Nov 2025 and expiring 30 Nov 2026.</p>
 
           <p>Everything after 321 was freelance, for survival and to help my finances. <b>Yumeyuki</b>, a Myanmar legal overseas employment agency, still alive. <b>TTS-AE</b>, built for his company. The friend works as an Airbnb co-host, and his boss gave him the portfolio-site task: a site and business mail for a bank, per their regulations. I followed his explanation as best I could. The mail is alive, and they keep using it.</p>
 
           <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
 
-          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
+          <p><a href="warehouse.html">CSM</a> — ချစ်စုမ, the car-parts shop — was project-based, not full-time. Four months, freelance. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
 
-          <p>Right now I am on <a href="myangustis.html">Myangustis</a>, a Burmese text engine owned from scratch. It extracts text from documents, organises it and supports proofreading. It is not NLP. Active development, pushed 2026-11-21.</p>
+          <p>Right now I am on <a href="myangustis.html">Myangustis</a>, my own Burmese toolkit, built from scratch: a segmenter and part-of-speech tagger with no regex in the tokenising, a grammar pass with no model and no language model, and around it a PDF parser, a scraper and a proofreading workflow. It is what my spare time goes to, outside freelance.</p>
 
           <p>In November 2026 I took a short-term role, a full-time content writer for one short-term contract. I quit after four days. It was not a good fit.</p>
 
-          <p>That is the story, as far as I know. Everything after 321 is freelance. The rest is mine.</p>
+          <p>That is the story. Everything after 321 has been freelance, CSM included — some of it for money, all of it mine — and whatever spare time is left goes to Myangustis.</p>
         </div>
       </article>
 
       <div className="blog-related">
-        <span className="b-rel-title">This site</span>
+        <span className="b-rel-title">Keep reading</span>
         <div className="b-rel-links">
           <a href="index.html">Resume <Arrow /></a>
           <a href="portfolio.html">Portfolio <Arrow /></a>

@@ -52,7 +52,7 @@ export default function Content() {
         <div className="overview-kicker">Overview</div>
         <h3>Three approaches to language and storytelling.</h3>
         <p><b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> — my Burmese translation, presented alongside an English excerpt; <b>Carl</b> — my adaptation of Invoker’s game lore; <b>RGB</b> — my original creative-writing piece about a test of colour.</p>
-        <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. The full PDF with the three samples is the download below.</p>
+        <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. All three are in one PDF.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
