@@ -200,7 +200,7 @@ export default function Cv() {
 
   <section className="cv-section" id="references">
     <div className="sec-head"><div className="kicker">06 — References</div><h2>Reference Letters</h2></div>
-    <p className="ref-on-request mb-4"><strong>I can send the reference letter.</strong></p>
+    <p className="ref-on-request mb-4"><strong>Reference available on request.</strong></p>
     <div className="d-flex flex-wrap gap-2 mt-2">
       <a href="mailto:htetmyet157@gmail.com?subject=Contact" className="btn-primary-navy" style={{ display: 'inline-block', textDecoration: 'none', padding: '.6rem 1.5rem' }}>Contact</a>
     </div>
