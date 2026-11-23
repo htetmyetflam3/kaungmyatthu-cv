@@ -18,7 +18,7 @@ export default function AiStudy() {
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
         <h3>The tech insight.</h3>
-    <p>Most prompt-engineering guides say the job is writing perfect instructions. This study shows the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
+    <p>Most prompt-engineering guides say the job is writing perfect instructions. In this study I argue the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
     <p>And the tech is moving faster than a book survives. That is a choice I made early: I wrote the chapters on the system, and kept the rest of what I know for when it can be written without going stale on the shelf. By publication day half of a full-length book on this would already be behind. So I work from the current picture instead — prompts as input to a living system, written with the layers in mind, not with canned templates.</p>
     <div className="ai-pf-tags">
       <span>Self-authored manuscript</span>
@@ -48,8 +48,8 @@ export default function AiStudy() {
       <summary><span className="chapter-no">Ch. 1</span> Understanding AI as LLMs and Prompts — summary</summary>
       <div className="ai-reader" lang="en">
         <h4 className="ai-reader-h">Chapter 1 — Understanding AI as LLMs and Prompts</h4>
-        <p>The book's first chapter sets the terms: AI is a broad term, but here it means text-based AI built on large language models. A prompt is a task delivered interactively — the user provides instructions, questions or examples, and the system generates responses dynamically.</p>
-        <p>The core idea: an AI does not reason like a person. Just like a CPU, no single component does the work alone — the behavior that looks intelligent emerges from the coordinated interaction of mathematical operations, learned parameters and rules. Emergent behavior, not magic.</p>
+        <p>In the first chapter I set the terms: AI is a broad term, but here it means text-based AI built on large language models. A prompt is a task delivered interactively — the user provides instructions, questions or examples, and the system generates responses dynamically.</p>
+        <p>The core idea I set out: an AI does not reason like a person. Just like a CPU, no single component does the work alone — the behavior that looks intelligent emerges from the coordinated interaction of mathematical operations, learned parameters and rules. Emergent behavior, not magic.</p>
         <ul className="ai-reader-list">
           <li>Prompts are tasks — and only LLM-based AI takes prompts as interactive instructions.</li>
           <li>Emergent behavior — the CPU analogy — explains why a prompt cannot be a "mind command."</li>
@@ -62,7 +62,7 @@ export default function AiStudy() {
       <summary><span className="chapter-no">Ch. 2</span> Prompt techniques — summary</summary>
       <div className="ai-reader" lang="en">
         <h4 className="ai-reader-h">Chapter 2 — Practical techniques (summary)</h4>
-        <p>The book also covers the practical side — reusable skeletons, objective templates and ~11 techniques worth knowing, such as multitask / combined prompts, few-shot prompts (input-output examples to guide the AI) and negative prompts (what to avoid, not just what to do).</p>
+        <p>I also cover the practical side — reusable skeletons, objective templates and ~11 techniques worth knowing, such as multitask / combined prompts, few-shot prompts (input-output examples to guide the AI) and negative prompts (what to avoid, not just what to do).</p>
         <p>A reusable objective template helps define the purpose, tone, scope, tasks and constraints up front — before you write the prompt — so the final result is easier to check against that intent. The full chapter, examples and follow-up prompts are in the manuscript.</p>
       </div>
     </details>
