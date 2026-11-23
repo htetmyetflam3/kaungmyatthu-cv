@@ -100,7 +100,7 @@ section.sec{padding:18px 0 6px}
 .figure figcaption{padding:12px 14px;font-size:.8rem;color:#475569;background:#fff;border-top:1px solid var(--line);line-height:1.6}
 .figure figcaption a{color:var(--teal-2);font-weight:700}
 
-/* ---------- 321 case study ---------- */
+/* ---------- 321 work record ---------- */
 .ops-hero{background:radial-gradient(700px 300px at 100% 0%,rgba(94,234,212,.16),transparent 55%),linear-gradient(135deg,var(--navy-2),var(--navy));border-radius:18px;color:#dbe6f2;padding:30px 30px 26px;margin-bottom:16px}
 .ops-hero h3{color:#fff;font-size:clamp(1.55rem,3.2vw,2.1rem);line-height:1.16;letter-spacing:-.03em;font-weight:800;margin:10px 0 6px;max-width:640px}
 .ops-hero .role{color:#7dd3fc;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
@@ -273,7 +273,7 @@ dialog#viewer .viewer-scroll img{max-width:100%;max-height:calc(92vh - 58px);obj
   .topnav{display:none}
 }
 
-/* ---------- certification card (321 case study + CV) ---------- */
+/* ---------- certification card (321 work record + CV) ---------- */
 .cert-box{border:1px solid var(--teal-border);background:linear-gradient(150deg,#f3fbf9,#eafaf7);border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:16px;break-inside:avoid}
 .cert-label{font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-2);margin-bottom:4px}
 .cert-title{font-size:1.02rem;font-weight:800;color:var(--navy);line-height:1.35;margin:0 0 3px}

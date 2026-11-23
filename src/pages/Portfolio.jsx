@@ -8,7 +8,7 @@ const WORK = [
     kicker: 'Operation Assistant Supervisor · Stalker / 321 Ecolife',
     title: 'Running a branch with no manager above me',
     body: 'Nok branch, January 2024 to January 2025 — the only Stalker staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
-    go: 'Read the case study →',
+    go: 'Read the work record →',
   },
   {
     href: 'content.html',
@@ -25,15 +25,15 @@ const WORK = [
     href: 'warehouse.html',
     kicker: 'Warehouse & systems',
     title: 'Stock records and a shelf-location system',
-    body: 'Warehouse Supervisor at NPT Group, January to November 2024, keeping stock by hand. Four months with a car-parts shop came later: their POS and shelf map.',
+    body: 'Warehouse Supervisor at NPT Group, January to November 2024, keeping the stock record by hand. Later, four and a half months at a car-parts shop with no till system: the POS-ready register, the shelf map, a till mock-up and the staff training.',
     go: 'Warehouse and CSM →',
   },
   {
     href: 'ai.html',
     kicker: 'Prompt engineering',
-    title: 'An unfinished manuscript on prompting',
-    body: 'Chapters and notes on how prompting works and where models slip. I am still writing it.',
-    go: 'Read the AI study →',
+    title: 'A study of how prompting works',
+    body: 'How a prompt reaches a model: the layers that negotiate an answer, why a clear request can still come back wrong, and what a good prompt can and cannot do. I wrote the chapters to understand the machinery.',
+    go: 'Read the study →',
   },
   {
     href: 'projects.html',
@@ -53,7 +53,7 @@ const WORK = [
     href: 'about.html',
     kicker: 'Background',
     title: 'The years in between',
-    body: 'How the warehouse, the shop and the writing fit together, including the parts that did not go to plan.',
+    body: 'How the warehouse, the shop and the writing fit together, and what each one taught me about stock, people and language.',
     go: 'About me →',
   },
   {
@@ -75,7 +75,7 @@ export default function Portfolio() {
       <section className="pf-hero">
         <div className="kicker">Portfolio</div>
         <h1>Retail experience. Content writing. <em>Practical digital work.</em></h1>
-        <p>I have worked shop floors, a warehouse and a content desk. What follows is the work I can actually show: the branch records from 321 Ecolife, Burmese scripts for products and a bar, a stock system built for a car-parts shop, a few websites, and a manuscript about prompting that isn't finished yet.</p>
+        <p>I have worked shop floors, a warehouse and a content desk. What follows is the work I can actually show: the branch records from 321 Ecolife, Burmese scripts for products and a bar, a stock system built for a car-parts shop, a few websites, and a study of how prompting actually works.</p>
         <p>I am looking for marketing work where knowing the customer matters as much as the copy.</p>
         <div className="pf-ctas">
           <a className="btn-primary" href="#work">See the work</a>

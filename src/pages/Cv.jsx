@@ -100,7 +100,7 @@ export default function Cv() {
         <li>Coordinated with voiceover and editing teams for content delivery, and reported social-media performance back to the branch.</li>
         <li>Kept TikTok performance visible month after month — 157,000 → 187,375 → 298,104 month-end followers (Oct → Dec, +89.9%).</li>
       </ul>
-      <p className="job-links"><a href="case-study.html">321 case study →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
+      <p className="job-links"><a href="case-study.html">321 work record →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
     </div>
     <div className="job">
       <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
@@ -117,7 +117,7 @@ export default function Cv() {
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>
     <p className="job-links" style={{marginTop: '16px'}}>
-      <a href="case-study.html">321 case study →</a> <span className="sep">·</span>
+      <a href="case-study.html">321 work record →</a> <span className="sep">·</span>
       <a href="warehouse.html">Warehouse &amp; CSM →</a> <span className="sep">·</span>
       <a href="content.html">Scripts &amp; writing →</a> <span className="sep">·</span>
       <a href="ai.html">Prompt engineering →</a> <span className="sep">·</span>
@@ -142,9 +142,9 @@ export default function Cv() {
     <div className="job">
       <div className="job-title">Shelf mapping &amp; POS build — car-parts shop (CSM)</div>
       <ul className="mb-0 ps-3 mt-2">
-        <li>Separate freelance project, roughly four months — exact dates not confirmed.</li>
-        <li>Set up the EPOS/stock system and designed the shelf-location map for a densely stocked automotive-parts shop, then handed it over; staff performed the physical counts.</li>
-        <li>The files on hand are partial working samples; the portfolio POS demo uses fictional stock, prices and test sales.</li>
+        <li>Built the POS setup for a car-parts shop that had no till: every item registered with a code, a POS item ID and the columns a local POS imports from Excel (category, brand, family, model, package colour, shelf location, quantity) across 11 category records — a register they only had to fill with a ground count and import.</li>
+        <li>Learned the parts from the owners' own answers, not from cars: asked how the stock differs and built the categories from it. Owners would not have their shelves moved, so the map described the shop as it stood rather than relocating it.</li>
+        <li>Split the ground count (theirs) from the mapping (mine) so a moving shelf never had to be registered twice; scoped at three months, delivered in four and a half. Then a till mock-up and a staff training session.</li>
       </ul>
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>

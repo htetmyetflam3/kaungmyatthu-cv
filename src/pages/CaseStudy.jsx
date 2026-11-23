@@ -21,7 +21,7 @@ export default function CaseStudy() {
       <SectionHead
         num="01"
         kicker="Operation Assistant Supervisor · 321 Ecolife"
-        title="One of six shops, with no shop manager above me"
+        title="I ran the Nok branch with no shop manager above me"
         sub="Nok branch, North Okkalapa · 9 January 2024 – 10 January 2025 · reported to the Ecolife sector manager, who sits on the board"
       />
 
@@ -41,9 +41,24 @@ export default function CaseStudy() {
       </figure>
 
       <div className="overview-card">
-        <div className="overview-kicker">The role in one paragraph</div>
-        <p>The title is Operation Assistant Supervisor — Stalker runs a separate Sales Assistant Supervisor post beside it, and mine was the operations side. The work was managing a branch. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
-        <p>To carry it, I wrote my own time-based daily list: opening checks, scheduled follow-ups, closing controls. That list is the first thing below, because it is the clearest picture of what the job actually was.</p>
+        <div className="overview-kicker">What the job actually was</div>
+        <p>My title was Operation Assistant Supervisor. The work underneath the title was a shop manager&rsquo;s work. Stalker had no shop supervisor and no shop manager at Nok, so it landed on me: I was the company&rsquo;s own staff member on that floor, and the only one in the shop. (Stalker runs a separate Sales Assistant Supervisor post; mine was the operations side.)</p>
+        <p>There were six 321 Ecolife shops, and mine was being groomed as the head branch — which is why it was expected to hold together without a manager in the building. The next person above me was the Ecolife sector manager, who sits on the board. Everything the branch produced passed through my hands before it reached him: attendance approval and days off, daily expense and cashier follow-up, sales and stock records, staff transfer and assignment records, promotion and incentive recommendations, and the branch TikTok — captions, voiceover, edits, posting checks and the numbers behind them.</p>
+        <p>Nobody handed me a process for that, so I wrote one: a time-based daily list, opening checks to closing controls. It is the first thing below, because it is the plainest evidence of what the job really was.</p>
+
+        <table className="mini-table" style={{ marginTop: 14 }}>
+          <thead><tr><th>On paper</th><th>What I actually carried</th></tr></thead>
+          <tbody>
+            <tr><td>Assistant Supervisor</td><td>Ran a whole branch of a six-shop group, with no shop supervisor or shop manager between me and a board member.</td></tr>
+            <tr><td>&ldquo;Staff supervision&rdquo;</td><td>Attendance approval, the weekly days-off schedule, staff transfer and assignment records — transfers between shop and online sale, new starters, resignations — plus promotion and incentive recommendations.</td></tr>
+            <tr><td>&ldquo;Shop operations&rdquo;</td><td>Stock-order discussions and signing the order list before it went out, unscheduled stock checks, deposit-slip and late-sale checks, salesperson totals against net sales.</td></tr>
+            <tr><td>&ldquo;Cash handling&rdquo;</td><td>The daily expense and cash-control record, cashier closing follow-up, and reconciling the till against the day&rsquo;s sales.</td></tr>
+            <tr><td>&ldquo;Reporting&rdquo;</td><td>Every branch report and every monthly figure went straight to the Ecolife sector manager on the board — no shop manager in between to absorb it or sign it off.</td></tr>
+            <tr><td>&ldquo;Marketing support&rdquo;</td><td>Owned the branch TikTok end to end: captions, voiceover, edits, posting checks, comment replies and the follower and incentive reporting. 157,000 followers in October to 298,104 in December, in my last quarter there.</td></tr>
+          </tbody>
+        </table>
+
+        <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>What I did not have was the title or the final signature: hiring, spending and the signed order sat with the sector manager and the board. What I had was the work that made their decisions possible.</p>
       </div>
 
       <section className="sec" id="where-it-sat" style={{ scrollMarginTop: 90 }}>
@@ -58,18 +73,8 @@ export default function CaseStudy() {
         <div className="panel">
           <p><b>The company is Stalker Company Limited.</b> It runs three sectors. Two of them are retail, under separate names: <b>321 Ecolife</b> — six shops, mine among them — and <b>321 Factory Outlet</b>. The third is the warehouse and wholesale business. Above the three sits a board of five: the Director, the owner, and the manager of each sector.</p>
           <p>Policy is set by the Director together with the sector managers. The owner is not on the frontline. Nok is one of the six 321 Ecolife shops, and it was being prepared as the head branch — which is the main reason it was expected to run without a shop-level supervisor or manager in place.</p>
-          <p>That left the branch reporting straight into the board. My reports went to the Ecolife sector manager; there was no shop manager between us to absorb or sign off the work.</p>
+          <p>That left the branch reporting straight into the board: my reports went to the Ecolife sector manager, and there was no shop manager between us to absorb or sign off the work.</p>
 
-          <table className="mini-table" style={{ marginTop: 10 }}>
-            <thead><tr><th>What I owned at Nok</th><th>Who it went to</th></tr></thead>
-            <tbody>
-              <tr><td>Attendance, days off, staff movement</td><td>Ecolife sector manager</td></tr>
-              <tr><td>Daily expense and cashier follow-up</td><td>Ecolife sector manager</td></tr>
-              <tr><td>Sales and stock records</td><td>Ecolife sector manager</td></tr>
-              <tr><td>Staff promotion and incentive recommendations</td><td>Ecolife sector manager</td></tr>
-              <tr><td>TikTok follow-up and performance reporting</td><td>Ecolife sector manager</td></tr>
-            </tbody>
-          </table>
           <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR service letter (17 March 2025) shortens the post to &ldquo;Assistant Supervisor&rdquo; and records 9 January 2024 – 10 January 2025, Retail Shop Department.</p>
         </div>
       </section>

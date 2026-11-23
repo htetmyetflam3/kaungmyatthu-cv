@@ -18,13 +18,13 @@ export default function AiStudy() {
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
         <h3>The tech insight.</h3>
-    <p>Most prompt-engineering guides say the job is writing perfect instructions. This manuscript — a self-authored book in three chapters — shows the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
-    <p>And the tech is moving fast. As the old template approach becomes mostly irrelevant, I work from the current picture: prompts are the input to a living system — I write with the layers in mind, not with canned templates, and stay honest about what a good prompt can and cannot do.</p>
+    <p>Most prompt-engineering guides say the job is writing perfect instructions. This study shows the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
+    <p>And the tech is moving faster than a book survives. That is a choice I made early: I wrote the chapters on the system, and kept the rest of what I know for when it can be written without going stale on the shelf. By publication day half of a full-length book on this would already be behind. So I work from the current picture instead — prompts as input to a living system, written with the layers in mind, not with canned templates.</p>
     <div className="ai-pf-tags">
       <span>Self-authored manuscript</span>
       <span>LLM systems thinking</span>
       <span>Layers &amp; zones</span>
-      <span>Unfinished · personal exploration</span>
+      <span>Personal study · Layers &amp; Zones</span>
     </div>
 
     <div className="ai-pf-ex-row">
@@ -183,7 +183,7 @@ export default function AiStudy() {
         <div className="ai-pf-source-kicker">The manuscript</div>
         <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg> Download full manuscript · DOCX</a>
       </div>
-      <p className="ai-pf-note">A self-authored manuscript on how prompts shape LLM responses, in the original wording — unfinished, and presented as a personal exploration, not a published book.</p>
+      <p className="ai-pf-note">My own writing on how prompts shape LLM responses, in the original wording — a personal study, kept as I wrote it.</p>
     </div>
       <div className="dl-row" style={{ marginTop: 20 }}>
         <DetailsButton href="index.html">← Back to home</DetailsButton>

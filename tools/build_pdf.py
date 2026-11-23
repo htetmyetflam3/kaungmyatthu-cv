@@ -35,7 +35,7 @@ CV_URL        = SITE
 PAGES = [
     ('Full portfolio (single page)', PORTFOLIO_URL),
     ('CV / resume',                  SITE),
-    ('321 case study',               SITE + 'case-study.html'),
+    ('321 work record',             SITE + 'case-study.html'),
     ('Warehouse & CSM',              SITE + 'warehouse.html'),
     ('Content & scripts',            SITE + 'content.html'),
     ('Prompt engineering',           SITE + 'ai.html'),
@@ -169,7 +169,7 @@ class PortfolioPDF(FPDF):
 
         # role chips — clickable, same destinations as the index
         chip_dests = ['sec-01', 'sec-02', 'sec-03', 'sec-04', 'sec-05']
-        chips = ['Case study', 'Content scripts', 'CSM systems', 'AI study', 'Writing samples']
+        chips = ['Work record', 'Content scripts', 'CSM systems', 'AI study', 'Writing samples']
         x, y = 18, 150
         for ch, dest in zip(chips, chip_dests):
             self.set_font('my', 'B', 8)
@@ -192,7 +192,7 @@ class PortfolioPDF(FPDF):
         self.set_text_color(140, 190, 180)
         self.cell(0, 6, 'IN THIS PORTFOLIO', new_x=XPos.LEFT, new_y=YPos.NEXT)
         index = [
-            ('01', 'Case study — 321 Ecolife', 'sec-01'),
+            ('01', 'Work record — 321 Ecolife', 'sec-01'),
             ('02', 'Content scripts & reels', 'sec-02'),
             ('03', 'CSM systems — parts shelf mapping', 'sec-03'),
             ('04', 'AI study — Understanding Prompts in AI', 'sec-04'),
@@ -245,7 +245,7 @@ class PortfolioPDF(FPDF):
         self.set_text_color(*INK)
         self.multi_cell(0, 6.5,
             'Each section below is a small, reviewable body of work — with the full files downloadable from the links inside. '
-            'This PDF packages the portfolio into a single keepable file: case study, scripts, systems work, AI study and writing samples.')
+            'This PDF packages the portfolio into a single keepable file: the 321 work record, scripts, systems work, AI study and writing samples.')
         self.ln(4)
         self.set_font('my', 'B', 9)
         self.set_text_color(*TEAL)
@@ -254,7 +254,7 @@ class PortfolioPDF(FPDF):
 
         # quick-glance grid card-like rows
         rows = [
-            ('01', 'Case study — 321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 3', 'sec-01'),
+            ('01', 'Work record — 321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 3', 'sec-01'),
             ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4', 'sec-02'),
             ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5', 'sec-03'),
             ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6', 'sec-04'),
@@ -337,20 +337,22 @@ class PortfolioPDF(FPDF):
     def case_study(self):
         self.add_page()
         self.set_link(name='sec-01', x=18, y=277)
-        self.header_band('Case study')
+        self.header_band('Work record')
         self.ln(3.5)
-        self.kicker('01 — Case study')
+        self.kicker('01 — Work record')
         self.section_title('321 Ecolife — North Okkalapa')
         self.rule()
         self.set_font('my', 'B', 8)
         self.set_text_color(*TEAL)
-        self.cell(0, 5.5, 'ASSISTANT SUPERVISOR  ·  NORTH OKKALAPA BRANCH  ·  2024 – 2025', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5.5, 'OPERATION ASSISTANT SUPERVISOR  ·  321 ECO LIFE, NOK BRANCH  ·  JAN 2024 – JAN 2025',
+                  new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.set_font('my', '', 10)
         self.set_text_color(*INK)
-        self.multi_cell(0, 6.2, 'My role covered frontline branch operations and staff administration as well as reporting and '
-                                 'social-content support. I checked attendance and staff updates, followed up sales and stock records, '
-                                 'coordinated with team leaders and cashiers, and supported TikTok work through captions, '
-                                 'voiceover/editing coordination, posting checks and reporting.')
+        self.multi_cell(0, 6.2, 'The title was smaller than the job. Stalker had no shop supervisor and no shop manager at Nok — '
+                                 'one of six 321 Ecolife shops, groomed as the head branch — so the branch\u2019s work landed on me: '
+                                 'attendance and days off, staff transfer and assignment records, daily expense and cashier follow-up, '
+                                 'sales and stock records, and the branch TikTok, captions to reporting. Every report went straight to the '
+                                 'Ecolife sector manager on the board, with no shop manager in between.')
         self.ln(1.5)
 
         # stat tiles
@@ -403,9 +405,8 @@ class PortfolioPDF(FPDF):
         self.cell(0, 5, 'Recorded growth ~ +89.9%, Oct–Dec.', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(0.8)
         self.multi_cell(0, 4.2,
-            'Daily-record note — December’s confirmed month-end follower increase was 110,729. The remaining daily '
-            'entries total 56,591 and do not reconcile with that increase. Both records are preserved; the daily '
-            'series is not presented as a complete breakdown of monthly growth.',
+            'Daily-record note — December’s confirmed increase was 110,729; the remaining daily entries total 56,591 '
+            'and do not reconcile with it. Both records are kept; the daily series is not a full breakdown.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
 
@@ -453,21 +454,21 @@ class PortfolioPDF(FPDF):
         # feedback quotes
         self.set_font('my', 'B', 10)
         self.set_text_color(*NAVY)
-        self.cell(0, 7, 'Customer feedback', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.ln(1)
+        self.cell(0, 6.4, 'Customer feedback', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(0.6)
         quotes = [('"Good Service"', 'my'),
                   ('"Excellent service"', 'my'),
                   ('"Service အရမ်းကောင်းပါတယ်။ Size စုံစေချင်တယ်။"', 'my')]
         for text, lang in quotes:
-            self.card_top(18, self.get_y(), 174, 13, TEAL_SOFT, (205, 227, 225))
+            self.card_top(18, self.get_y(), 174, 11.5, TEAL_SOFT, (205, 227, 225))
             self.set_fill_color(*TEAL)
-            self.rect(18, self.get_y(), 1.4, 13, 'F')
+            self.rect(18, self.get_y(), 1.4, 11.5, 'F')
             y = self.get_y()
-            self.set_xy(25, y + 2.6)
+            self.set_xy(25, y + 1.9)
             self.set_font('my', '', 8)
             self.set_text_color(23, 73, 79)
             self.cell(0, 4, text, new_x=XPos.LEFT, new_y=YPos.NEXT)
-            self.set_xy(18, y + 14.8)
+            self.set_xy(18, y + 13.2)
         self.ln(0.5)
 
         # reference note — the full workbook is available on request
@@ -481,7 +482,7 @@ class PortfolioPDF(FPDF):
         self.set_text_color(110, 64, 10)
         self.set_xy(25, self.get_y() + 0.5)
         self.multi_cell(160, 4.0,
-            'Customer phone numbers redacted. The selected redacted workbook is linked in this PDF’s links page; the original master is kept separately.',
+            'Customer phone numbers redacted. The redacted workbook is linked in this PDF’s links page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
         # certification — one compact line so the case study stays on a single page
         self.set_xy(18, note_y + 22)
@@ -648,14 +649,16 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', 'B', 7.5)
         self.set_text_color(*TEAL)
-        self.cell(0, 5, 'AUTOMOTIVE PARTS · EPOS + EXCEL SHELF MAPPING + IN-STORE POS DEMO', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'AUTOMOTIVE PARTS · POS SETUP + SHELF MAPPING + STAFF TRAINING', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
         self.set_font('my', '', 9.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6,
-            'In a densely stocked automotive-parts shop, one shelf row can hold 30+ variants among 100+ pieces; similar-looking parts fit different vehicles, '
-            'and the same part fits many vehicles. A missing item gets assumed out of stock › replacements arrive › the original reappears › '
-            'duplicates take scarce shelf space › the cycle repeats.')
+            'The shop had no till. Local POS software imports from Excel, so I built the register in that shape — code, item ID, '
+            'category, brand, family, model, package colour, location, quantity — after learning the parts by asking the owners how '
+            'they differ. Shelves stayed where the owners wanted them; the map described the shop as it stood. Their ground count '
+            'and my mapping ran as separate jobs: three months scoped, four and a half delivered. Then a till mock-up and a staff '
+            'training session.')
         self.ln(2)
 
         steps = [('STEP 1', 'Identify the code', 'Look up the code in the shelf-location map.'),
@@ -685,7 +688,7 @@ class PortfolioPDF(FPDF):
         self.cell(0, 6, 'Files', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1)
         self.link_line('CSM shelf-map master · XLSX', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view')
-        self.link_line('Point of Sale · XLSM', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view')
+        self.link_line('Till mock-up · XLSM', 'https://drive.google.com/file/d/1gvdPV9ZSIcRrEmkzuLp4Lqzx6Wxwnt1D/view')
         self.ln(4)
 
         # the same discipline, before the shelf map: the warehouse role
@@ -752,7 +755,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 8.5)
         self.set_text_color(*MUTED)
         self.multi_cell(0, 5.5,
-            'Development paused as AI evolved; the full manuscript is linked below. Excerpts are original wording, lightly excerpted — no author note or source notes included.')
+            'I wrote the chapters on the system and held the rest back: this field moves faster than a book survives publication, so what I have learned since stays with me until it can be written without going stale. The manuscript is linked below, in my original wording.')
         self.ln(2)
 
         self.set_font('my', 'B', 10)
@@ -904,7 +907,7 @@ class PortfolioPDF(FPDF):
         self.links_page()
         self.set_author('Kaung Myat Thu')
         self.set_title('Kaung Myat Thu — Portfolio')
-        self.set_subject('Portfolio: case study, scripts, systems, AI study, writing samples')
+        self.set_subject('Portfolio: 321 work record, scripts, systems, AI study, writing samples')
         self.set_creator('Kaung Myat Thu')
         self.output(OUT)
         print('PDF written to', OUT)
