@@ -276,6 +276,8 @@ export default function WorkRecord() {
         <div className="panel">
           <p>My responsibilities were not limited to stock or social media. The daily checklist includes attendance approval, team-leader communication, break records, cashier follow-ups and end-of-day checks. The workbook keeps the staff side too — and the sheet that matters here is <code>Stuff level up</code>: the record I kept of who was assigned where. Transfers between the shop floor and the online-sale channel, new starters, resignations and terminations all go through it, with the branch headcount carried on the sheet&rsquo;s own header line.</p>
 
+          <p>When a case came up with two of my staff, I did not leave it for someone above me to decide. I wrote it up and sent it to head office under my own signature, and I asked them not to terminate. At 321 a case like that normally comes back stamped and the staff member is gone. In this one nobody was dismissed.</p>
+
           <table className="mini-table" style={{ marginTop: 6 }}>
             <thead><tr><th>Record</th><th>Range</th><th>What it holds</th></tr></thead>
             <tbody>
