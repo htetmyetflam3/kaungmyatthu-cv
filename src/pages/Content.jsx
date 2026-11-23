@@ -189,10 +189,37 @@ export default function Content() {
         ))}
       </div>
 
+      <section className="sec" id="kept" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">02</span> Kept</div>
+            <h2>Two pieces that survived.</h2>
+          </div>
+          <p className="sub">Two files out of everything I wrote in those years. The rest I deleted as it was written.</p>
+        </div>
+
+        <div className="row g-3 files">
+          <div className="col-md-6">
+            <div className="file-card">
+              <div className="f-top"><span className="file-kind">Essay · Burmese</span></div>
+              <h4>False Promise</h4>
+              <p>A boy brings his report card home. His father promised him whatever he wants for a top-ten rank, and the promise keeps sliding to the next exam — bicycle, football, next year. The concept came from a friend, and the credit for the idea is theirs. The title is Oracle’s spell in Dota 2.</p>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="file-card">
+              <div className="f-top"><span className="file-kind">Essay · Burmese</span></div>
+              <h4>RGB</h4>
+              <p>Someone walking the road they always walk meets a person by chance, and is handed a set of colour plates. It is the loosest of the three pieces in the PDF — nothing to answer to but itself.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="sec" id="files" style={{ scrollMarginTop: 90 }}>
         <div className="sec-head">
           <div>
-            <div className="sec-kicker"><span className="num">02</span> The folder</div>
+            <div className="sec-kicker"><span className="num">03</span> The folder</div>
             <h2>Every file, by the name it has</h2>
           </div>
           <p className="sub">The working folder behind this page, listed as the files are named. Nothing is renamed here, so a title on this page and a file in the folder can be matched.</p>
@@ -212,7 +239,7 @@ export default function Content() {
               <tr><td><code>imb2.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>IMB2 — the scalp and hair solution script.</td></tr>
               <tr><td><code>gamelore_adaptation-Carl.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Invoker’s game lore adapted into Burmese for the character Carl.</td></tr>
               <tr><td><code>if I die in combat zone.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Tim O’Brien’s memoir in Burmese, with the English excerpt kept beside it.</td></tr>
-              <tr><td><code>rgb.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>RGB — the piece about a test of colour, written from nothing.</td></tr>
+              <tr><td><code>rgb.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>A Burmese essay that opens with a chance meeting and a set of colour plates.</td></tr>
               <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>An essay in Burmese, written from a concept a friend once talked about, with the idea credited to them. A boy brings his report card home, his father promises him whatever he wants for a top-ten rank, and the promise keeps sliding to the next exam, until the piece turns on what false hope is. The title is Oracle's spell in Dota 2.</td></tr>
             </tbody>
           </table>
