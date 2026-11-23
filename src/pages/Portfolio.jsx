@@ -7,14 +7,14 @@ const WORK = [
     href: 'case-study.html',
     kicker: 'Case study · 321 Ecolife',
     title: 'Branch reporting and daily coordination',
-    body: 'Assistant Supervisor at the North Okkalapa branch: my own time-based daily checklist, selected workplace records, TikTok follow-up and customer feedback — with the account-level follower records kept separate from the daily entries.',
-    go: 'Open the case study →',
+    body: 'Assistant Supervisor at the North Okkalapa shop, 2024–2025. The checklist I wrote for myself, the sales and staff records I kept, the TikTok follow-up, and what customers told the branch.',
+    go: 'Read the case study →',
   },
   {
     href: 'content.html',
     kicker: 'Scripts & writing',
     title: 'Product scripts, venue stories and social copy',
-    body: 'Burmese product-video scripts, a story-led venue script, and translation and adaptation samples — shown as text, not as pictures of pages.',
+    body: 'Burmese video scripts for hair-care products and for a bar, plus translation and adaptation work. The wording is on the page, in Burmese wherever the script is Burmese.',
     quote: {
       text: '“ဆံသားက ထူပြီး အကောက်လည်းကောင်းလို့ ဘယ်လိုဖြောင့်ဖြောင့် မဖြောင့်ဖြစ်နေတဲ့သူတွေအတွက် Labbell Professional Vitalist Extra Strong Rebonding System ရောက်လာပါပြီ။”',
       note: 'IMB3 script, Scene 1',
@@ -25,43 +25,43 @@ const WORK = [
     href: 'warehouse.html',
     kicker: 'Warehouse & systems',
     title: 'Stock records and a shelf-location system',
-    body: 'NPT Group Warehouse Supervisor (January – November 2024), keeping the stock record by hand — and, separately, a roughly four-month freelance project for a car-parts shop where I set up an EPOS/stock system and shelf-location map.',
-    go: 'Open warehouse & CSM →',
+    body: 'Warehouse Supervisor at NPT Group, January to November 2024, keeping stock by hand. Four months with a car-parts shop came later: their POS and shelf map.',
+    go: 'Warehouse and CSM →',
   },
   {
     href: 'ai.html',
     kicker: 'Prompt engineering',
     title: 'An unfinished manuscript on prompting',
-    body: 'My own self-authored exploration of prompting, LLM behaviour and human–AI interaction. Unfinished, and presented as such.',
-    go: 'Open the AI study →',
+    body: 'Chapters and notes on how prompting works and where models slip. I am still writing it.',
+    go: 'Read the AI study →',
   },
   {
     href: 'projects.html',
     kicker: 'Web work',
     title: 'WordPress builds',
-    body: 'Yumeyuki.info — a Myanmar legal overseas employment agency; TTS-AE.com — a UAE company project; Writermorphosis.com — the current build.',
-    go: 'Open projects →',
+    body: 'Yumeyuki.info for a legal overseas-employment agency, TTS-AE.com for a company in the UAE, and Writermorphosis.com, the one I am working on now.',
+    go: 'See the sites →',
   },
   {
     href: 'myangustis.html',
     kicker: 'Own project',
     title: 'Myangustis — Myanmar-language text tooling',
-    body: 'A project of my own: extracting text from documents, organising it and supporting proofreading for Myanmar-language material.',
-    go: 'Open Myangustis →',
+    body: 'A project of mine: pulling text out of documents, keeping it in order, and checking proofreads against it.',
+    go: 'Myangustis →',
   },
   {
     href: 'about.html',
     kicker: 'Background',
-    title: 'The longer story',
-    body: 'How the warehouse, branch and writing work connect — the years, the gaps and what I did in between.',
-    go: 'Read about me →',
+    title: 'The years in between',
+    body: 'How the warehouse, the shop and the writing fit together, including the parts that did not go to plan.',
+    go: 'About me →',
   },
   {
     href: 'index.html',
     kicker: 'CV',
     title: 'One-page résumé',
-    body: 'Experience, education, skills and references — the version to send with an application.',
-    go: 'Open the CV →',
+    body: 'Experience, education, skills and references.',
+    go: 'Résumé →',
   },
 ];
 
@@ -70,13 +70,13 @@ export default function Portfolio() {
     <Layout
       active="portfolio"
       title="Kaung Myat Thu — Portfolio"
-      description="Selected work of Kaung Myat Thu — content scripts, social-media reporting, retail operations and systems work."
+      description="Kaung Myat Thu — branch reporting at 321 Ecolife, Burmese product scripts, a car-parts stock system, WordPress sites and a manuscript on prompting."
     >
       <section className="pf-hero">
         <div className="kicker">Portfolio</div>
         <h1>Retail experience. Content writing. <em>Practical digital work.</em></h1>
-        <p>Selected work from retail operations, social-content coordination and script writing, alongside personal web and AI-writing projects. I am interested in marketing roles where customer understanding, clear communication and organised follow-through matter.</p>
-        <p>Each card below opens the full page for that piece of work — the detail lives there, not here.</p>
+        <p>I have worked shop floors, a warehouse and a content desk. What follows is the work I can actually show: the branch records from 321 Ecolife, Burmese scripts for products and a bar, a stock system built for a car-parts shop, a few websites, and a manuscript about prompting that isn't finished yet.</p>
+        <p>I am looking for marketing work where knowing the customer matters as much as the copy.</p>
         <div className="pf-ctas">
           <a className="btn-primary" href="#work">See the work</a>
           <a className="btn-ghost-hero" href="Kaung-Myat-Thu-Portfolio.pdf" download>Download full portfolio (PDF)</a>
@@ -88,9 +88,8 @@ export default function Portfolio() {
         <div className="sec-head">
           <div>
             <div className="sec-kicker"><span className="num">01</span> Selected work</div>
-            <h2>Eight pages, one per piece of work.</h2>
+            <h2>Eight pieces of work.</h2>
           </div>
-          <p className="sub">Click a card to read the full page.</p>
         </div>
 
         <div className="card-grid">
