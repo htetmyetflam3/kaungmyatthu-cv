@@ -839,7 +839,7 @@ class PortfolioPDF(FPDF):
                 self.cell(160, 5.2, ln_, new_x=XPos.LEFT, new_y=YPos.NEXT)
             self.set_xy(18, y + card_h + 5)
         self.ln(2)
-        self.link_line('Download full manuscript · Understanding Prompts (DOCX)',
+        self.link_line('Download the full manuscript',
                       'https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view')
 
     def samples_section(self):
@@ -903,22 +903,21 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 9.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6,
-            'The live pages and the working files, in one list. Each link opens the page or the file it names.')
+            'Every page and every piece of work, one link each.')
         self.ln(1)
         groups = [
             ('Web pages — the whole portfolio', PAGES),
             ('Content scripts', [
-                ('IMB1 · Leave-in conditioner (DOCX)', 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
-                ('IMB2 · Salon-quality home hair care (DOCX)', 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view'),
-                ('IMB3 · Rebonding script (DOCX)', 'https://drive.google.com/file/d/1HkV70oH4de5Q7CB6M0TbvlSc-0fCZKEz/view'),
-                ('Echo Vibe · Full script (DOCX)', 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view'),
-                ('Echo Vibe · Script with title (PDF)', 'https://drive.google.com/file/d/12jsQB682IqyOk9PQvZ3PNDNSb8-e5yb8/view'),
+                ('IMB1 · Leave-in conditioner', 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
+                ('IMB2 · Salon-quality home hair care', 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view'),
+                ('IMB3 · Rebonding script', 'https://drive.google.com/file/d/1HkV70oH4de5Q7CB6M0TbvlSc-0fCZKEz/view'),
+                ('Echo Vibe · The reel', 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view'),
             ]),
             ('Systems, AI & 321 working records', [
-                ('321 working workbook — redacted (XLSX)', 'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view'),
-                ('CSM shelf-map master (XLSX)', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view'),
-                ('Point of Sale (XLSM)', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view'),
-                ('Understanding Prompts · manuscript (DOCX)', 'https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view'),
+                ('321 working workbook, redacted', 'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view'),
+                ('CSM shelf map', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view'),
+                ('Point of sale', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view'),
+                ('Understanding Prompts in AI', 'https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view'),
             ]),
         ]
         for group, items in groups:
@@ -1046,28 +1045,28 @@ class PortfolioPDF(FPDF):
 
     def content_pages(self):
         self.folder_head('Scripts', '03 — Video scripts',
-            'Six scripts for shops that sell on TikTok.',
+            'Scripts for shops that sell on TikTok.',
             'Written to be shot, not read: hook, beat, product truth, call to action, with the spoken line and the '
             'on-screen text kept apart so one hand can hold the phone while the other holds the bottle.',
             'VIDEO SCRIPTS  ·  TIKTOK  ·  PRODUCT REELS', anchor='sec-04')
         self.file_rows([
-            ('imb-1.docx  ·  IMB1, leave-in conditioner',
+            ('IMB1  ·  leave-in conditioner',
              'The first reel of the set. Problem, product, proof, with the claim kept inside what the label allows.',
              'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
-            ('imb2.docx  ·  IMB2, salon-quality home care',
+            ('IMB2  ·  salon-quality home care',
              'Same product family, different buyer: the person doing it at home rather than the salon.',
              'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view'),
-            ('tiktokfriendly_commercial script  ·  IMB3, rebonding',
+            ('IMB3  ·  rebonding, short-cut edit',
              'The rebonding script in the short-cut edit: every line timed to a cut.',
              'https://drive.google.com/file/d/1WiQLXaXaBS4s9FJgDTG8eK0YjnhDXxW2/view'),
-            ('EchoVibe_client&tiktok_friendly.docx',
+            ('EchoVibe  ·  the two versions',
              'The client\'s version and the TikTok version of the same story, side by side so they could approve one '
              'without reading the other.',
              'https://drive.google.com/file/d/191g0xhI_cwpDsuibTViHeo1td47g8DWU/view'),
-            ('echovibe_actual_script.docx',
+            ('EchoVibe  ·  what was shot',
              'What was actually shot, after the client notes and the sound check.',
              'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view'),
-            ('bardailybandpost.docx',
+            ('Bar account  ·  daily posts',
              'A bar account\'s daily post set — the fastest format I have written, and the one that taught me pacing.',
              'https://drive.google.com/file/d/18RpLu2JS0FOW7kMXBcTa6WVclH5XqAiR/view'),
         ])
@@ -1080,49 +1079,28 @@ class PortfolioPDF(FPDF):
             'with.',
             'ADAPTATION  ·  TRANSLATION  ·  ORIGINAL WRITING', anchor='sec-04b')
         self.file_rows([
-            ('Copy of underwater.docx  ·  Canal+ adaptation',
+            ('Underwater  ·  Canal+ adaptation',
              'A scene carried into Burmese without losing what the scene was doing — the dialogue had to sound like people, '
              'not like subtitles.',
              'https://drive.google.com/file/d/17fUwje1APWoVNQE8f0dE60NBx3LbozUJ/view'),
-            ('Copy of ကိုယ်တိုင်ဝယ်လို့ရတဲ့ဆက်ရုပ်.docx  ·  Canal+',
+            ('ကိုယ်တိုင်ဝယ်လို့ရတဲ့ဆက်ရုပ်  ·  Canal+ script',
              'The Burmese script for the same block of work, kept in Burmese because that is the language it was written in.',
              'https://drive.google.com/file/d/1ImVMlhEJzMM0OiGjzybKAHvDjlTnm_wg/view'),
-            ('if I die in combat zone.pdf  ·  translation',
+            ('If I die in combat zone  ·  translation',
              'A first-person piece from a combat zone, translated into Burmese with the voice left intact. This is the '
              'piece people ask about.',
              'https://drive.google.com/file/d/1yjcerZK_73Xzp4PIfg9D73paWCPsmYJj/view'),
-            ('gamelore_adaptation-Carl.docx  ·  adaptation',
+            ('Game lore, Carl  ·  adaptation',
              'Game lore re-written for a Burmese reader who has never played it — names, jokes and stakes all moved.',
              'https://drive.google.com/file/d/1zZE5-kMOlmQjUM9dhNR8iz79tFf9okLO/view'),
-            ('falsepromise  ·  original',
+            ('False Promise  ·  original',
              'A short original piece. The one where I stopped adapting someone else\'s rhythm.',
              'https://docs.google.com/document/d/1jc2aTd6W7sVLOpVXV42COGE2GV50NlUdeP1YZqxW12Q/view'),
-            ('rgb.pdf  ·  creative',
+            ('RGB  ·  creative',
              'A colour-driven piece where the writing follows the palette rather than the other way round.',
              'https://drive.google.com/file/d/1QBxJD2KD4utrLBnypY3S5dckK4IjWBcx/view'),
         ])
 
-        self.ln(6)
-        self.set_font('my', 'B', 7.5)
-        self.set_text_color(*TEAL)
-        self.cell(0, 5, 'THE FIVE FOLDERS IN CONTENT', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.ln(2)
-        folders = [
-            ('canalplus', 'two files — the underwater scene, and the Burmese script for the same block'),
-            ('creative', 'two files — falsepromise and rgb.pdf, the pieces that are only mine'),
-            ('translation related', 'two files — the game-lore adaptation and the combat-zone translation'),
-            ('video scripts for marketing', 'six files — IMB1 to IMB3, both EchoVibe versions, the bar set'),
-            ('it&tech related', 'the prompt book in two editions, and the SVG mark I rebuilt'),
-        ]
-        for name, note in folders:
-            y = self.get_y()
-            self.set_font('my', 'B', 9)
-            self.set_text_color(*INK)
-            self.cell(58, 5.4, name)
-            self.set_font('my', '', 8.6)
-            self.set_text_color(*MUTED)
-            self.multi_cell(0, 5.4, note, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
-            self.ln(1.6)
 
     def tech_page(self):
         self.folder_head('It & tech related', '05 — It & tech',

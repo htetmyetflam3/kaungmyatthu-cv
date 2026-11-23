@@ -114,7 +114,7 @@ class Resume:
         ])
         self.role('Warehouse Supervisor — NPT Group', 'January – November 2024', [
             'Project-based warehouse and logistics operations; kept the stock record by hand where no system existed.',
-            'Signed reference letter on file; available on request.',
+            'I can send the reference letter.',
         ])
         self.role('Senior Logistic Officer — NGO (C.D.A)', '2021 – 2022', [
             'Warehouse and transport operations for project areas.',
@@ -177,7 +177,7 @@ class Resume:
         p.set_font('my', '', 9.5)
         p.set_text_color(*INK)
         p.multi_cell(0, 5.2,
-            'Reference letter available on request. Selected work, the 321 work record and script samples are on the '
+            'I can send the reference letter. Selected work, the 321 work record and script samples are on the '
             'portfolio: htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html',
             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
