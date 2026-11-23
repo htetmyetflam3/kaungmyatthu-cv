@@ -13,7 +13,6 @@ const pages = [
   'ai.html',
   'projects.html',
   'about.html',
-  'cv.html',
   'portfolio.html', // old portfolio — kept, untouched
 ];
 
