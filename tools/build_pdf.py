@@ -355,9 +355,9 @@ class PortfolioPDF(FPDF):
              'Jan 2024 – Jan 2025',
              'Ran one of six shops with no shop manager above me; reported to the sector manager on the board. '
              'Attendance, daily expense, sales and stock records, staff transfer and assignment, and the branch TikTok.'),
-            ('Warehouse Supervisor — NPT Group', '6 Jan – 1 Nov 2024',
-             'Electronics, tools and raw materials. No stock system, so every item registered by hand, every day. '
-             'Co-founder’s letter of recommendation dated 08 Dec 2024.'),
+            ('Warehouse Supervisor — NPT Group, Mawlamyine', '6 Jan – 1 Nov 2024',
+             'The job I took after moving to Mawlamyine. Electronics, tools and raw materials, no stock system, so '
+             'every item registered by hand every day. Co-founder’s letter of recommendation dated 08 Dec 2024.'),
             ('POS setup, shelf map, staff training — car-parts shop (CSM)', 'freelance, about 4.5 months',
              'A shop with no till. Built the import-shaped register, an ID for every part, the shelf map around '
              'shelves the owners would not move, then trained the staff on a till mock-up.'),

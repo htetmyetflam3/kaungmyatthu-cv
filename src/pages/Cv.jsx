@@ -104,7 +104,7 @@ export default function Cv() {
     </div>
     <div className="job">
       <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-        <a className="job-title job-title-link" href="warehouse.html">Warehouse Supervisor — NPT Group</a><span className="badge-date">January – November 2024</span>
+        <a className="job-title job-title-link" href="warehouse.html">Warehouse Supervisor — NPT Group, Mawlamyine</a><span className="badge-date">January – November 2024</span>
       </div>
       <ul className="mb-0 ps-3 mt-2"><li>Handled project-based warehouse and logistics operations.</li></ul>
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
