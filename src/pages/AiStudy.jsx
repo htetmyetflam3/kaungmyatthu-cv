@@ -24,7 +24,7 @@ export default function AiStudy() {
       <span>Self-authored manuscript</span>
       <span>LLM systems thinking</span>
       <span>Layers &amp; zones</span>
-      <span>Unfinished · personal exploration</span>
+      <span>Personal study · three chapters</span>
     </div>
 
     <div className="ai-pf-ex-row">
@@ -183,7 +183,7 @@ export default function AiStudy() {
         <div className="ai-pf-source-kicker">The manuscript</div>
         <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg> Download full manuscript · DOCX</a>
       </div>
-      <p className="ai-pf-note">A self-authored manuscript on how prompts shape LLM responses, in the original wording — unfinished, and presented as a personal exploration, not a published book.</p>
+      <p className="ai-pf-note">My own writing on how prompts shape LLM responses, in the original wording — a personal study, kept as I wrote it.</p>
     </div>
       <div className="dl-row" style={{ marginTop: 20 }}>
         <DetailsButton href="index.html">← Back to home</DetailsButton>
