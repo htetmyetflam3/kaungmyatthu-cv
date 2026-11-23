@@ -474,7 +474,9 @@ export default function WorkRecord() {
         </div>
 
         <div className="panel">
-          <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it through to February, then resigned rather than stay in a role that was still growing underneath me.</p>
+          <p>The job description names two things: handle and check the opening and closing cash flow, and the stock. In the interview I was told the staff would help. Neither of those is what the job turned out to be.</p>
+          <p>The bank transfer slip is the clearest case. Nothing in that description says I am the one who guarantees the slip was sent. Once the deposit is in, the bank already shows which branch it came from. The generator record is the same: nothing in the description says I am the one who guarantees it is written down. Neither does it say so for any other case that came up in the branch, and all of them arrived on the assistant supervisor anyway.</p>
+          <p>So the title was narrow and the responsibility had no edge to it. Whatever the description did not name still landed on me. I carried it through to February, then resigned.</p>
           <p>I left on good terms — the reference letter came from that employer.</p>
         </div>
       </section>
