@@ -62,7 +62,7 @@ export default function About() {
 
           <p>She cheated. I went back home.</p>
 
-          <p>In January 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
+          <p>The 321 interview was arranged before I left Mawlamyine. Two days after I got back to Yangon I sat it, and two days after that I had the job. In November 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
 
                     <p>In that era I wrote the <a href="ai.html">AI prompt book</a>, a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. In 2025 I got a Conversion Optimization Certification from Skillshop, issued 30 Nov 2025 and expiring 30 Nov 2026.</p>
 

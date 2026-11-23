@@ -266,7 +266,7 @@ class PortfolioPDF(FPDF):
         # quick-glance grid card-like rows
         rows = [
             ('00', 'Where I have worked', 'Every role in order — 321, NPT, CSM, the NGO, the writing and the builds', 'page 2', 'sec-00x'),
-            ('01', '321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, sales, TikTok', 'page 4', 'sec-01'),
+            ('01', '321 Ecolife', 'Operation Assistant Supervisor · Nov 2024 – Jan 2025 · reporting, sales, TikTok', 'page 4', 'sec-01'),
             ('02', 'NPT warehouse', 'Item registration, the ID-is-the-barcode label sheet, the reference letter', 'page 6', 'sec-02'),
             ('03', 'Excel & CSM', 'POS from Excel, shelf map, till mock-up, six workbooks merged into one', 'page 7', 'sec-03'),
             ('04', 'Video scripts', 'IMB1 / 2 / 3 · Echo Vibe · bar daily posts — six written scripts', 'page 8', 'sec-04'),
@@ -352,7 +352,7 @@ class PortfolioPDF(FPDF):
 
         rows = [
             ('Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok branch',
-             'Jan 2024 – Jan 2025',
+             'Nov 2024 – Jan 2025',
              'Ran one of six shops with no shop manager above me; reported to the sector manager on the board. '
              'Attendance, daily expense, sales and stock records, staff transfer and assignment, and the branch TikTok.'),
             ('Warehouse Supervisor — NPT Group, Mawlamyine', '6 Jan – 1 Nov 2024',
@@ -422,7 +422,7 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', 'B', 8)
         self.set_text_color(*TEAL)
-        self.cell(0, 5.5, 'OPERATION ASSISTANT SUPERVISOR  ·  321 ECO LIFE, NOK BRANCH  ·  JAN 2024 – JAN 2025',
+        self.cell(0, 5.5, 'OPERATION ASSISTANT SUPERVISOR  ·  321 ECO LIFE, NOK BRANCH  ·  NOV 2024 – JAN 2025',
                   new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.set_font('my', '', 10)
         self.set_text_color(*INK)

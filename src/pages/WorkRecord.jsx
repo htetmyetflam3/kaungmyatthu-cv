@@ -22,7 +22,7 @@ export default function WorkRecord() {
         num="01"
         kicker="Operation Assistant Supervisor · 321 Ecolife"
         title="I ran the Nok branch with no shop manager above me"
-        sub="Nok branch, North Okkalapa · 9 January 2024 – 10 January 2025 · reported to the Ecolife sector manager, who sits on the board"
+        sub="Nok branch, North Okkalapa · November 2024 – January 2025 · reported to the Ecolife sector manager, who sits on the board"
       />
 
       <figure style={{ margin: '0 0 22px' }}>
@@ -75,7 +75,7 @@ export default function WorkRecord() {
           <p>Policy is set by the Director together with the sector managers. The owner is not on the frontline. Nok is one of the six 321 Ecolife shops, and it was being prepared as the head branch — which is the main reason it was expected to run without a shop-level supervisor or manager in place.</p>
           <p>That left the branch reporting straight into the board: my reports went to the Ecolife sector manager, and there was no shop manager between us to absorb or sign off the work.</p>
 
-          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR service letter (17 March 2025) shortens the post to &ldquo;Assistant Supervisor&rdquo; and records 9 January 2024 – 10 January 2025, Retail Shop Department.</p>
+          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR service letter (17 March 2025) shortens the post to &ldquo;Assistant Supervisor&rdquo;, Retail Shop Department.</p>
         </div>
       </section>
 
@@ -413,7 +413,7 @@ export default function WorkRecord() {
         </div>
 
         <div className="panel">
-          <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it for about a year, then resigned to move into marketing and digital work rather than stay in a role that was still growing underneath me.</p>
+          <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it through to January, then resigned rather than stay in a role that was still growing underneath me.</p>
           <p>I left on good terms — the reference letter came from that employer.</p>
         </div>
       </section>
