@@ -155,7 +155,7 @@ class PortfolioPDF(FPDF):
         # logo mark, on a white card so it reads against the navy band
         self.set_fill_color(255, 255, 255)
         self.rect(168, 16, 24, 24, 'F', round_corners=True)
-        self.image('public/logo-mark.png', x=171.5, y=19.5, w=17)
+        self.image('tools/assets/logo-mark.png', x=171.5, y=19.5, w=17)
 
         # kicker
         self.set_font('my', 'B', 8.5)

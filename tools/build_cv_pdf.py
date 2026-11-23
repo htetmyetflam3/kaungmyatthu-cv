@@ -67,7 +67,7 @@ class Resume:
         p.add_page()
 
         # header — logo mark at the top right
-        p.image('public/logo-mark.png', x=176, y=13, w=14)
+        p.image('tools/assets/logo-mark.png', x=176, y=13, w=14)
 
         p.set_font('my', 'B', 22)
         p.set_text_color(*NAVY)
