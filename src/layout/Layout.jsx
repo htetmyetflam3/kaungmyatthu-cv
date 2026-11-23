@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.css';
-import logoMark from '../assets/images/logo.svg';
 
 const NAV = [
   { href: 'index.html', label: 'Resume', key: 'resume' },
@@ -40,7 +39,7 @@ export default function Layout({ active, title, description, bare = false, child
       <header className="topbar">
         <div className="topbar-inner">
           <a className="brand" href="index.html">
-            <img className="brand-logo" src={logoMark} alt="Devnovex logo mark" width="34" height="34" />
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="Devnovex logo mark" width="34" height="34" />
             <span>Kaung Myat Thu<small>Resume · Portfolio</small></span>
           </a>
           <nav className="topnav" aria-label="Primary">
