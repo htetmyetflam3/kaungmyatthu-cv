@@ -208,16 +208,37 @@ export default function CaseStudy() {
         </div>
 
         <div className="panel">
-          <p>My responsibilities were not limited to stock or social media. The daily checklist includes attendance approval, team-leader communication, break records, cashier follow-ups and end-of-day checks. The workbook also retains staff movement, days-off and incentive records.</p>
+          <p>My responsibilities were not limited to stock or social media. The daily checklist includes attendance approval, team-leader communication, break records, cashier follow-ups and end-of-day checks. The workbook keeps the staff side too — and the sheet that matters here is <code>Stuff level up</code>: the record I kept of who was assigned where. Transfers between the shop floor and the online-sale channel, new starters, resignations and terminations all go through it, with the branch headcount carried on the sheet&rsquo;s own header line.</p>
 
           <table className="mini-table" style={{ marginTop: 6 }}>
             <thead><tr><th>Record</th><th>Range</th><th>What it holds</th></tr></thead>
             <tbody>
-              <tr><td>Staff records <span className="muted">(file sheet: <code>Stuff level up</code>)</span></td><td>B2:H10</td><td>Staff roles and movement recorded at branch level.</td></tr>
-              <tr><td>Days off</td><td>A1:C10</td><td>Recorded days off by staff member.</td></tr>
-              <tr><td>Generator usage log</td><td>A1:G10</td><td>Start and end times, with duration derived from the two.</td></tr>
+              <tr><td>Staff transfer and assignment <span className="muted">(sheet: <code>Stuff level up</code>)</span></td><td>B2:H10</td><td>Who moved where: shop floor ↔ online sale, new starters, resignations, terminations, with the headcount line.</td></tr>
+              <tr><td>Days off <span className="muted">(sheet: <code>DAYS -OFF</code>)</span></td><td>A1:C10</td><td>Weekly days-off schedule, 18 staff listed Monday to Saturday.</td></tr>
+              <tr><td>Daily expenses <span className="muted">(sheet: <code>Daily Expenses</code>)</span></td><td>sheet-level</td><td>Expense entries, costs, credits and the cash-control record.</td></tr>
+              <tr><td>Generator usage <span className="muted">(sheet: <code>Generator Usage Log</code>)</span></td><td>A1:G10</td><td>Start and end times, with duration derived from the two.</td></tr>
             </tbody>
           </table>
+
+          <details className="ai-pf-details" style={{ marginTop: 16 }}>
+            <summary>What else is in the workbook (11 sheets)</summary>
+            <div style={{ paddingTop: 10 }}>
+              <p className="muted" style={{ fontSize: '.85rem', margin: '0 0 8px' }}>The workbook opens on its own <code>Contents</code> sheet, which lists what each tab holds:</p>
+              <ul style={{ margin: '0 0 6px', paddingLeft: 18, lineHeight: 1.7 }}>
+                <li><code>daily sale</code> — daily sales by payment method, discounts, returns and net amounts.</li>
+                <li><code>Top &amp; Bottom Sale</code> — best- and lowest-selling product records with item codes and quantities.</li>
+                <li><code>customer feedback</code> — customer comments and feedback records.</li>
+                <li><code>TikTok Performance</code> — month-end followers, monthly change, likes, December daily changes.</li>
+                <li><code>Stuff level up</code> — <b>staff transfers and assignment</b>: movements, new starters, resignations.</li>
+                <li><code>DAYS -OFF</code> — weekly days-off schedule.</li>
+                <li><code>Daily Expenses</code> — expense entries, costs, credits, cash control.</li>
+                <li><code>TikTok &amp; Staff Incentives</code> — incentive calculations, targets and recorded amounts.</li>
+                <li><code>Incentive Sign-off</code> — incentive payment list with space for signatures.</li>
+                <li><code>Generator Usage Log</code> — generator dates, start/end times and duration.</li>
+                <li><em>follower count at end of month</em> — a separate version of the follower figures, kept beside the original.</li>
+              </ul>
+            </div>
+          </details>
 
           <details className="ai-pf-details" style={{ marginTop: 16 }}>
             <summary>Additional administration records</summary>
