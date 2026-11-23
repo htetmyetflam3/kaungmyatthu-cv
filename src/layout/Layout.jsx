@@ -39,7 +39,7 @@ export default function Layout({ active, title, description, bare = false, child
       <header className="topbar">
         <div className="topbar-inner">
           <a className="brand" href="index.html">
-            <span className="brand-mark">K</span>
+            <img className="brand-logo" src="logo-mark.png" alt="Devnovex logo mark" width="34" height="34" />
             <span>Kaung Myat Thu<small>Resume · Portfolio</small></span>
           </a>
           <nav className="topnav" aria-label="Primary">

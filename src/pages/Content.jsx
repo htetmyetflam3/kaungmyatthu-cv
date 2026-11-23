@@ -39,7 +39,7 @@ export default function Content() {
     <Layout
       active="content"
       title="Content & scripts — Kaung Myat Thu"
-      description="Original Burmese writing and client-ready voiceover scripts for brand videos."
+      description="Burmese writing I have done — product scripts, venue stories and voiceover copy for brand videos."
     >
       <SectionHead
         num="03"

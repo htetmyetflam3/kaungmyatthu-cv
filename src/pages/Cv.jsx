@@ -8,7 +8,7 @@ export default function Cv() {
       bare
       active="resume"
       title="Kaung Myat Thu — CV & Résumé"
-      description="CV of Kaung Myat Thu — Operation Assistant Supervisor, content writer and web developer. Experience, education, skills, references and PDF downloads."
+      description="My CV — Operation Assistant Supervisor, content writer and web developer. Experience, education, skills, references and PDF downloads."
     >
 <header className="profile-wrap">
   <img className="avatar" src="avatar.png" alt="Kaung Myat Thu" width="96" height="96" />
@@ -92,7 +92,7 @@ export default function Cv() {
     <div className="sec-head"><div className="kicker">03 — Experience</div><h2>Work Experience</h2></div>
     <div className="job">
       <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-        <a className="job-title job-title-link" href="case-study.html">Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch</a><span className="badge-date">Jan 2024 – Jan 2025</span>
+        <a className="job-title job-title-link" href="work-record.html">Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch</a><span className="badge-date">Jan 2024 – Jan 2025</span>
       </div>
       <ul className="mb-0 ps-3 mt-2">
         <li>Ran the Nok branch as its only internal staff member, with no shop supervisor or manager in place — manager-level responsibility on a supervisor&rsquo;s title: attendance, daily expense, sales and stock records, staff coverage, and promotion and incentive recommendations.</li>
@@ -100,7 +100,7 @@ export default function Cv() {
         <li>Coordinated with voiceover and editing teams for content delivery, and reported social-media performance back to the branch.</li>
         <li>Kept TikTok performance visible month after month — 157,000 → 187,375 → 298,104 month-end followers (Oct → Dec, +89.9%).</li>
       </ul>
-      <p className="job-links"><a href="case-study.html">321 work record →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
+      <p className="job-links"><a href="work-record.html">321 work record →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
     </div>
     <div className="job">
       <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
@@ -117,7 +117,7 @@ export default function Cv() {
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>
     <p className="job-links" style={{marginTop: '16px'}}>
-      <a href="case-study.html">321 work record →</a> <span className="sep">·</span>
+      <a href="work-record.html">321 work record →</a> <span className="sep">·</span>
       <a href="warehouse.html">Warehouse &amp; CSM →</a> <span className="sep">·</span>
       <a href="content.html">Scripts &amp; writing →</a> <span className="sep">·</span>
       <a href="ai.html">Prompt engineering →</a> <span className="sep">·</span>

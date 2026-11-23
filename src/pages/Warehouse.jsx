@@ -21,7 +21,7 @@ export default function Warehouse() {
     <Layout
       active="warehouse"
       title="Warehouse & logistics — Kaung Myat Thu"
-      description="Warehouse Supervisor at NPT Group (6 Jan – 1 Nov 2024) and a later freelance shelf-mapping and POS project for a car-parts shop."
+      description="I was Warehouse Supervisor at NPT Group (6 Jan – 1 Nov 2024), and later set up the POS and shelf map for a car-parts shop as a freelance project."
     >
       <SectionHead
         num="02"

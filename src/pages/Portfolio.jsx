@@ -4,7 +4,7 @@ import '../styles/portfolio.css';
 
 const WORK = [
   {
-    href: 'case-study.html',
+    href: 'work-record.html',
     kicker: 'Operation Assistant Supervisor · Stalker / 321 Ecolife',
     title: 'Running a branch with no manager above me',
     body: 'Nok branch, January 2024 to January 2025 — the only Stalker staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
@@ -44,7 +44,7 @@ const WORK = [
   },
   {
     href: 'myangustis.html',
-    kicker: 'Own project',
+    kicker: 'Case study · own project',
     title: 'Myangustis — Myanmar-language text tooling',
     body: 'A project of mine: pulling text out of documents, keeping it in order, and checking proofreads against it.',
     go: 'Myangustis →',
@@ -70,7 +70,7 @@ export default function Portfolio() {
     <Layout
       active="portfolio"
       title="Kaung Myat Thu — Portfolio"
-      description="Kaung Myat Thu — branch reporting at 321 Ecolife, Burmese product scripts, a car-parts stock system, WordPress sites and a manuscript on prompting."
+      description="I have worked shop floors, a warehouse and a content desk. Here is the work I can show: the 321 branch records, Burmese scripts, a car-parts stock system, websites, and a study of how prompting works."
     >
       <section className="pf-hero">
         <div className="kicker">Portfolio</div>

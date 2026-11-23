@@ -11,12 +11,12 @@ const WORKBOOK_ID = '1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J';
 const WORKBOOK_VIEW = `https://drive.google.com/file/d/${WORKBOOK_ID}/view`;
 const WORKBOOK_DL = `https://drive.google.com/uc?export=download&id=${WORKBOOK_ID}`;
 
-export default function CaseStudy() {
+export default function WorkRecord() {
   return (
     <Layout
-      active="case-study"
+      active="work-record"
       title="Operation Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
-      description="Operation Assistant Supervisor at 321 Ecolife (Stalker Company Limited), Nok branch — running one of six shops with no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
+      description="I ran the Nok branch of 321 Ecolife with no shop manager above me — one of six shops, reporting to the sector manager on the board. What the job actually was, in my own records."
     >
       <SectionHead
         num="01"

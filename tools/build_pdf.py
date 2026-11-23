@@ -35,7 +35,7 @@ CV_URL        = SITE
 PAGES = [
     ('Full portfolio (single page)', PORTFOLIO_URL),
     ('CV / resume',                  SITE),
-    ('321 work record',             SITE + 'case-study.html'),
+    ('321 work record',             SITE + 'work-record.html'),
     ('Warehouse & CSM',              SITE + 'warehouse.html'),
     ('Content & scripts',            SITE + 'content.html'),
     ('Prompt engineering',           SITE + 'ai.html'),
@@ -484,7 +484,7 @@ class PortfolioPDF(FPDF):
         self.multi_cell(160, 4.0,
             'Customer phone numbers redacted. The redacted workbook is linked in this PDF’s links page.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
-        # certification — one compact line so the case study stays on a single page
+        # certification — one compact line so this page stays on a single page
         self.set_xy(18, note_y + 22)
         self.set_font('my', 'B', 7.2)
         self.set_text_color(*NAVY)
