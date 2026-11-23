@@ -213,7 +213,7 @@ export default function Content() {
               <tr><td><code>gamelore_adaptation-Carl.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Invoker’s game lore adapted into Burmese for the character Carl.</td></tr>
               <tr><td><code>if I die in combat zone.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Tim O’Brien’s memoir in Burmese, with the English excerpt kept beside it.</td></tr>
               <tr><td><code>rgb.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>RGB — the piece about a test of colour, written from nothing.</td></tr>
-              <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>A prompt piece, filed with the creative work rather than with the AI study.</td></tr>
+              <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>An essay in Burmese, written back to a friend: a boy brings his report card home, his father promises him whatever he wants if he ranks in the top ten, and the promise keeps sliding to the next exam — until the piece turns on the promise itself and asks what false hope is.</td></tr>
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>The AI study lives in its own folder and has its own page, so it is not listed twice here.</p>
