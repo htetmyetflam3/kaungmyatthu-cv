@@ -965,11 +965,6 @@ class PortfolioPDF(FPDF):
             self.multi_cell(174, 4.8, note, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
             self.ln(5.4)
         self.ln(2)
-        self.set_font('my', 'I', 7.2)
-        self.set_text_color(120, 133, 152)
-        self.multi_cell(0, 4.2,
-            'Each line is the name of the file as it sits on Drive.',
-            align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def folder_head(self, band, kicker, title, deck, tag=None, anchor=None):
         self.add_page()
@@ -1045,8 +1040,7 @@ class PortfolioPDF(FPDF):
         self.file_rows([
             ('CSM - merged workbook.xlsx  (43 tabs)',
              'The one master. The shelf map, the location index, the seven category registers, the shelf sheets, the '
-             'ground count and the Update tabs the POS reads are each a tab inside it. Duplicate copies from the '
-             'alternates were dropped.',
+             'ground count and the Update tabs the POS reads are each a tab inside it.',
              'https://drive.google.com/file/d/1Uvm-vYhTaIyXB3U44bOQtFcOjChUdZHS/view'),
             ('CSM-POS-Portfolio-Demo.xlsm',
              'The till as it ran, with Items, Sales and Ground behind it. Macro-enabled, so it stays its own file.',
@@ -1145,18 +1139,14 @@ class PortfolioPDF(FPDF):
         self.folder_head('It & tech related', '05 — It & tech',
             'The prompt book, the builds, and the tool I am making.',
             'A manuscript on how prompting actually works — layers, zones, and what happens when a model decides it knows '
-            'better than the person asking. The bilingual parts are mine; the merged edition gathers them into one flow '
-            'with the template set carried in from the earlier single-language copy. Around it sit the sites I keep alive '
-            'and Myangustis, the Burmese segmenter and tagger I build in my spare time.',
+            'better than the person asking. Around it sit the sites I keep alive and Myangustis, the Burmese segmenter '
+            'and tagger I build in my spare time.',
             'PROMPT ENGINEERING  ·  WEB BUILDS  ·  MYANGUSTIS', anchor='sec-05')
         self.file_rows([
-            ('Understanding Prompts in AI - merged edition.docx',
-             'The merged book: chapters one to five in one flow, with the template set and the reusable skeletons inside '
-             'chapter two.',
+            ('Understanding Prompts in AI',
+             'Five chapters: what a prompt is and what it is not, the template set and the reusable skeletons, the '
+             'premise alignment layer, where alignment limits a model, and global mode and overriding.',
              'https://drive.google.com/file/d/18g_OL2h_AH0RPK5kVCRbw-rhdMhDs3ea/view'),
-            ('Understanding Prompts in A (1).docx',
-             'The single-language edition the templates came from, kept as it was for comparison.',
-             'https://drive.google.com/file/d/1-88Qn-NpvON7yPux9ohRs1ezFld5MWIc/view'),
             ('Yumeyuki.info',
              'A legal overseas-employment agency: pages, forms and the Burmese copy behind them.',
              'https://yumeyuki.info'),
@@ -1171,27 +1161,6 @@ class PortfolioPDF(FPDF):
              'because nothing off the shelf does it.',
              SITE + 'myangustis.html'),
         ])
-
-        self.ln(6)
-        self.set_font('my', 'B', 7.5)
-        self.set_text_color(*TEAL)
-        self.cell(0, 5, 'INSIDE THE MERGED EDITION', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.ln(2)
-        for n, t in [('Author note', 'why the book reads the model as layers'),
-                     ('Note on sources', 'what the chapters are built from'),
-                     ('1', 'Understanding of AI — what a prompt is, and what it is not'),
-                     ('2', 'The prompt template and the reusable skeletons'),
-                     ('3', 'The premise alignment layer'),
-                     ('4', 'Where alignment limits a model'),
-                     ('5', 'Global mode and overriding')]:
-            y = self.get_y()
-            self.set_font('my', 'B', 8.6)
-            self.set_text_color(*NAVY)
-            self.cell(44, 5.4, n)
-            self.set_font('my', '', 9)
-            self.set_text_color(*INK)
-            self.multi_cell(0, 5.4, t, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
-            self.ln(1.4)
 
     def build(self):
         self.cover()
