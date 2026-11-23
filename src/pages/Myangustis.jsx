@@ -6,60 +6,82 @@ export default function Myangustis() {
     <Layout
       active="myangustis"
       title="Myangustis — Kaung Myat Thu"
-      description="A project of mine — a Burmese text engine for Myanmar documents (Zawgyi / Unicode / legacy fonts), still being built."
+      description="My own Burmese language toolkit: segmentation and part-of-speech tagging without regex tokenising, a grammar pass with no model and no language model, and the parser, scraper and proofreading workflow built around it."
     >
       <SectionHead
         num="04"
-        kicker="Case study · Burmese text toolchain"
-        title="Myangustis — a Myanmar-language text engine."
-        sub="Not NLP — extraction, cleaning and proofreading for Myanmar documents."
+        kicker="Case study · Burmese language tools"
+        title="Myangustis — segmentation, tagging and grammar for Burmese."
+        sub="Hand-written rules. No model, and no language model in the loop."
       />
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>What the engine actually does.</h3>
-        <p>Myangustis is a <b>Myanmar text engine — not NLP</b>. It takes a Myanmar document — <code>.pdf</code> or <code>.docx</code>, Zawgyi or Unicode, old legacy fonts included — and writes it back out as a clean <code>.pdf</code>, <code>.docx</code>, or <code>.txt</code>.</p>
-        <p>The parser runs through three stages: take in (validate, unpack, prepare), parse (detect each page's decoding lane, clean the text, return one marked-up string per page), and write (render the output type the name asks for). The only thing an operator ever calls is <code>convert("input.pdf", "output.docx")</code>.</p>
+        <h3>What it is.</h3>
+        <p>Myangustis is my toolkit for Burmese, built from scratch. It segments Burmese into syllables and words without regex tokenising, and tags each word with its part of speech. The grammar pass — recognising how a sentence is put together, again with no model and no language model — is what I am on now.</p>
+        <p>I build it in my spare time. Freelance is what pays; this is where the spare time goes.</p>
       </div>
 
       <div className="panel">
-        <h4>Architecture — three stages</h4>
+        <h4>What it does</h4>
         <table className="mini-table">
           <thead>
-            <tr><th>Stage</th><th>What it does</th><th>Where it lives</th></tr>
+            <tr><th>Part</th><th>What it does</th></tr>
           </thead>
           <tbody>
             <tr>
-              <td>1 · Take in</td>
-              <td>Checks size, lands a temp file, prepares the file (qpdf expands/decrypts PDFs; DOCX packages are validated). Nothing is held whole in memory.</td>
-              <td>@entry → @init</td>
+              <td>Segment</td>
+              <td>Splits Burmese into syllables and words by rule — no regex tokenising.</td>
             </tr>
             <tr>
-              <td>2 · Parse</td>
-              <td>Reads the prepared file, works out each page's encoding (Unicode / Zawgyi / legacy font), cleans the text, and returns one marked-up string per page (<code>&lt;h1&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>).</td>
-              <td>@parse</td>
+              <td>Tag</td>
+              <td>Gives every word its part of speech.</td>
             </tr>
             <tr>
-              <td>3 · Write</td>
-              <td>Renders the page strings to the file type the output name asks for. Never re-opens the original.</td>
-              <td>@output</td>
+              <td>Grammar</td>
+              <td>Recognises how a sentence is built, with hand-written rules, no model and no language model. In progress now.</td>
+            </tr>
+            <tr>
+              <td>Parse</td>
+              <td>Turns a PDF or a DOCX into readable text — Zawgyi, Unicode, legacy fonts included — with OCR for scanned pages.</td>
+            </tr>
+            <tr>
+              <td>Scrape</td>
+              <td>Collects the PDFs in the first place.</td>
+            </tr>
+            <tr>
+              <td>Proofread</td>
+              <td>An agent workflow that reads Burmese text and flags what the rules already catch.</td>
             </tr>
           </tbody>
         </table>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span><strong>Built-in rules.</strong> One judgement decides each page's decoding lane, once — decoders execute, they never second-guess. The parser is woken per job and exits when idle; only 2 files convert at a time; output writing happens only after parsing returns.</span>
+          <span>The segmenter and the tagger already run. The grammar pass is the piece still being written.</span>
         </div>
       </div>
 
       <div className="panel">
-        <h4>Discipline, not hype — test record</h4>
-        <p style={{ margin: '0 0 14px' }}>Latest full run (2026-11-11 · Node 22.22.3 · clean checkout): <b>320 tests · 303 pass · 0 fail · 17 skipped</b> — per suite: site 99/99, parser 120/120 (17 skipped), engine 42/42, paths 30/30, tools 12/12.</p>
-        <ul className="ai-reader-list" style={{ margin: '0 0 14px' }}>
-          <li>Skipped tests are enumerated and visible — nothing silently dropped.</li>
-          <li>No PDF lane is skipped: real qpdf (or the pikepdf shim) resolves to a runner in all environments.</li>
-          <li>Active development — pushed 2026-11-21. Repo age does not describe the work; the codebase and test record do.</li>
-        </ul>
+        <h4>Why there is a parser and a scraper</h4>
+        <p style={{ margin: '0 0 12px' }}>The grammar rules have to be written by hand, and hand-written rules need sentences to test against. Mine were in PDFs. There was no reliable tool that turns a Burmese PDF into clean text, and nothing to fetch the PDFs with either. So the scraper and the parser came first, built for the grammar work, and stayed in the project.</p>
+        <p style={{ margin: 0 }}>The parser takes a PDF or a DOCX — Zawgyi, Unicode, old legacy fonts included — and returns readable text, one clean string per page. The scraper is what feeds it.</p>
+      </div>
+
+      <div className="panel">
+        <h4>The corpus that came out of it</h4>
+        <p style={{ margin: '0 0 12px' }}>The scraper brought in roughly <b>10,000</b> Burmese PDFs. Clean text comes out of <b>3,000+</b> of them. The other <b>7,000+</b> are scans, so I added OCR to the parser for the individual books I need source text from.</p>
+        <p style={{ margin: 0 }}>That clean text is a corpus of its own, and it is mine to license. If you want it for language-model work, say so and we will work out the terms.</p>
+      </div>
+
+      <div className="panel">
+        <h4>Proofreading, before the grammar pass is finished</h4>
+        <p style={{ margin: 0 }}>A working segmenter and tagger sat in the repo while the grammar pass was still being written, and waiting to use them was waste. So I put them to work in an agent workflow that proofreads Burmese text — reading what is there and flagging what the rules say is wrong, on the parts that already work.</p>
+      </div>
+
+      <div className="panel">
+        <h4>The repository</h4>
+        <p style={{ margin: '0 0 12px' }}>The repo is public so the work can be read and described. It is <b>not open source</b>: the licence is proprietary, and I do not grant the source code for any purpose. What the licence in the repo says is what applies.</p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '0 0 14px' }}>Last clean checkout: 320 tests, 303 passing, 17 skipped, none failing.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://github.com/htetmyetflam3/Myangustis" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
@@ -70,11 +92,11 @@ export default function Myangustis() {
 
       <div className="takeaway">
         <span className="ti">◆</span>
-        <p><span className="label">What this demonstrates</span>Care, range, and discipline on a hard, niche problem — building a working Burmese text toolchain end to end, with tests kept green.</p>
+        <p><span className="label">In short</span>Rules for a language the tools treat badly, and a corpus that only exists because I needed it done properly.</p>
       </div>
 
       <div className="dl-row" style={{ marginTop: 20 }}>
-        <DetailsButton href="index.html">← Back to home</DetailsButton>
+        <DetailsButton href="index.html">← Back to the work</DetailsButton>
       </div>
     </Layout>
   );

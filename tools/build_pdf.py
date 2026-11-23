@@ -373,7 +373,7 @@ class PortfolioPDF(FPDF):
             ('WordPress builds — Yumeyuki.info, TTS-AE.com, Writermorphosis.com', 'current',
              'A legal overseas-employment agency, a UAE company project, and my own build, still going.'),
             ('Myangustis — own project', 'ongoing',
-             'A Burmese text engine: extraction, cleaning and proofreading for Myanmar documents.'),
+             'A Burmese segmenter and part-of-speech tagger built by rule, with the parser, scraper and proofreading workflow around it.'),
         ]
         for title, period, body_text in rows:
             y0 = self.get_y()
@@ -1061,7 +1061,8 @@ class PortfolioPDF(FPDF):
             'register in the shape it eats: code, item ID, category, brand, family, model, package colour, location, '
             'quantity. Three months scoped, four and a half delivered. The shelves stayed where the owners wanted them, '
             'the map described the shop as it actually stood, and their ground count and my mapping ran as separate '
-            'jobs. It ended with a till mock-up and a training session on the staff\'s own sheets.',
+            'jobs. It ended with a till mock-up and a training session on the staff\'s own sheets. CSM is the shop\'s own '
+            'abbreviation for ချစ်စုမ.',
             'POS SETUP  ·  SHELF MAPPING  ·  STAFF TRAINING  ·  CAR PARTS', anchor='sec-03')
         self.file_rows([
             ('CSM - merged workbook.xlsx  (43 tabs)',
@@ -1151,13 +1152,13 @@ class PortfolioPDF(FPDF):
             'A manuscript on how prompting actually works — layers, zones, and what happens when a model decides it knows '
             'better than the person asking. The bilingual parts are mine; the merged edition gathers them into one flow '
             'with the template set carried in from the earlier single-language copy. Around it sit the sites I keep alive '
-            'and Myangustis, the Burmese text toolchain I am building for myself.',
+            'and Myangustis, the Burmese segmenter and tagger I build in my spare time.',
             'PROMPT ENGINEERING  ·  WEB BUILDS  ·  MYANGUSTIS', anchor='sec-05')
         self.file_rows([
             ('Understanding Prompts in AI - merged edition.docx',
              'The merged book: chapters one to five in one flow, with the template set and the reusable skeletons inside '
              'chapter two.',
-             'https://drive.google.com/file/d/1VEwJ9OK9vbQB5l-k5_XYux04YZxB_Dbr/view'),
+             'https://drive.google.com/file/d/18g_OL2h_AH0RPK5kVCRbw-rhdMhDs3ea/view'),
             ('Understanding Prompts in A (1).docx',
              'The single-language edition the templates came from, kept as it was for comparison.',
              'https://drive.google.com/file/d/1-88Qn-NpvON7yPux9ohRs1ezFld5MWIc/view'),
@@ -1171,7 +1172,7 @@ class PortfolioPDF(FPDF):
              'My own build and still going: where the writing and the site work meet.',
              'https://writermorphosis.com'),
             ('Myangustis',
-             'A Burmese text engine — extraction, cleaning and proofreading for Myanmar documents. The one I am building '
+             'Segmentation, tagging and grammar for Burmese, written by rule — no regex tokenising, no model. The one I build '
              'because nothing off the shelf does it.',
              SITE + 'myangustis.html'),
         ])

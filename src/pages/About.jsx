@@ -70,13 +70,13 @@ export default function About() {
 
           <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
 
-          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
+          <p><a href="warehouse.html">CSM</a> — ချစ်စုမ, the car-parts shop — was project-based, not full-time. Four months, freelance. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
 
-          <p>Right now I am on <a href="myangustis.html">Myangustis</a>, a Burmese text engine owned from scratch. It extracts text from documents, organises it and supports proofreading. It is not NLP. Active development, pushed 2026-11-21.</p>
+          <p>Right now I am on <a href="myangustis.html">Myangustis</a>, my own Burmese toolkit, built from scratch: a segmenter and part-of-speech tagger with no regex in the tokenising, a grammar pass with no model and no language model, and around it a PDF parser, a scraper and a proofreading workflow. It is what my spare time goes to, outside freelance.</p>
 
           <p>In November 2026 I took a short-term role, a full-time content writer for one short-term contract. I quit after four days. It was not a good fit.</p>
 
-          <p>That is the story. NPT was in her city, 321 came after I went back home, and everything since has been freelance — some of it for money, all of it mine.</p>
+          <p>That is the story. Everything after 321 has been freelance, CSM included — some of it for money, all of it mine — and whatever spare time is left goes to Myangustis.</p>
         </div>
       </article>
 

@@ -65,7 +65,10 @@ export default function Warehouse() {
       </div>
 
       <div className="panel" id="csm">
-        <h4>CSM · car-parts shop — POS setup, shelf map, staff training <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
+        <h4>CSM · ချစ်စုမ, the car-parts shop — POS setup, shelf map, staff training <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
+        <p className="muted" style={{ fontSize: '.82rem', margin: '0 0 12px' }}>
+          CSM is short for ချစ်စုမ — <a href="https://maps.app.goo.gl/ZC7WVxtcdegZSvyJ8" target="_blank" rel="noopener">the shop on Google Maps ↗</a>
+        </p>
 
         <p style={{ margin: '0 0 12px' }}>
           The shop had no till system of any kind. To know what was in stock you need a POS; to run a POS you need the

@@ -45,8 +45,8 @@ const WORK = [
   {
     href: 'myangustis.html',
     kicker: 'Case study · own project',
-    title: 'Myangustis — Myanmar-language text tooling',
-    body: 'A project of mine: pulling text out of documents, keeping it in order, and checking proofreads against it.',
+    title: 'Myangustis — segmentation, tagging and grammar for Burmese',
+    body: 'My own project, built in my spare time: a Burmese segmenter and part-of-speech tagger with no regex in the tokenising, a grammar pass with no model, and the parser, scraper and proofreading workflow it needed.',
     go: 'Myangustis →',
   },
   {
