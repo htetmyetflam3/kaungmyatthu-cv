@@ -35,6 +35,7 @@ export default function Warehouse() {
         <h3>One employment role, one separate freelance project.</h3>
         <p><b>NPT Group</b> was a job: Warehouse Supervisor, <b>6 January – 1 November 2024</b>. <b>CSM</b> was a separate freelance project of roughly four months, with no confirmed dates — so none are given, and it is not placed inside the NPT timeline.</p>
         <p>They involve the same subject (stock), not the same workflow. At NPT I kept the inventory record by hand. At CSM there was no till system at all, so I registered the stock into a POS-ready Excel register, gave every part a location, mapped the shop and trained the staff on a till mock-up.</p>
+        <p>There is no warehousing certificate behind either one, and no course with a badge at the end of it. Both were learned where the stock was: a floor, a shelf and a count that has to agree with the shelf.</p>
       </div>
 
       <div className="panel">

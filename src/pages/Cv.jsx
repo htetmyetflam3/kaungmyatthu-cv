@@ -188,7 +188,7 @@ export default function Cv() {
     </div>
     <div className="skill-group">
       <div className="skill-group-label">Operations</div>
-      <p>Staff coordination, sales checks, reporting and stock-workflow documentation.</p>
+      <p>Staff coordination, sales checks, reporting and stock-workflow documentation. Warehouse and stock systems learned on the job — no warehousing certificate claimed, and none needed for what the files show.</p>
     </div>
     <div className="skill-group">
       <div className="skill-group-label">Tools and projects</div>
