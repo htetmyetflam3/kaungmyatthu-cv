@@ -213,7 +213,7 @@ export default function Content() {
               <tr><td><code>gamelore_adaptation-Carl.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Invoker’s game lore adapted into Burmese for the character Carl.</td></tr>
               <tr><td><code>if I die in combat zone.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Tim O’Brien’s memoir in Burmese, with the English excerpt kept beside it.</td></tr>
               <tr><td><code>rgb.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>RGB — the piece about a test of colour, written from nothing.</td></tr>
-              <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>An essay in Burmese, written back to a friend: a boy brings his report card home, his father promises him whatever he wants if he ranks in the top ten, and the promise keeps sliding to the next exam — until the piece turns on the promise itself and asks what false hope is.</td></tr>
+              <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>An essay in Burmese. The idea came up in a conversation with a friend — their version had a different story, and the one here is mine. A boy brings his report card home, his father promises him whatever he wants for a top-ten rank, and the promise keeps sliding to the next exam. It ends on what false hope is. The title is Oracle's spell in Dota 2.</td></tr>
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>The AI study lives in its own folder and has its own page, so it is not listed twice here.</p>
