@@ -32,7 +32,7 @@ const WORK = [
     href: 'ai.html',
     kicker: 'Prompt engineering',
     title: 'A study of how prompting works',
-    body: 'Three chapters on how a prompt reaches a model: the layers that negotiate an answer, why a clear request can still come back wrong, and what a good prompt can and cannot do. I wrote it to understand the machinery.',
+    body: 'How a prompt reaches a model: the layers that negotiate an answer, why a clear request can still come back wrong, and what a good prompt can and cannot do. I wrote the chapters to understand the machinery.',
     go: 'Read the study →',
   },
   {

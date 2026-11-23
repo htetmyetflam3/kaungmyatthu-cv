@@ -753,7 +753,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 8.5)
         self.set_text_color(*MUTED)
         self.multi_cell(0, 5.5,
-            'Development paused as AI evolved; the full manuscript is linked below. Excerpts are original wording, lightly excerpted — no author note or source notes included.')
+            'I wrote the chapters on the system and held the rest back: this field moves faster than a book survives publication, so what I have learned since stays with me until it can be written without going stale. The manuscript is linked below, in my original wording.')
         self.ln(2)
 
         self.set_font('my', 'B', 10)
