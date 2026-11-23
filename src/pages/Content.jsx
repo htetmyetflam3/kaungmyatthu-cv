@@ -192,10 +192,9 @@ export default function Content() {
       <section className="sec" id="kept" style={{ scrollMarginTop: 90 }}>
         <div className="sec-head">
           <div>
-            <div className="sec-kicker"><span className="num">02</span> Kept</div>
-            <h2>Two pieces that survived.</h2>
+            <div className="sec-kicker"><span className="num">02</span> Writing</div>
+            <h2>Two essays.</h2>
           </div>
-          <p className="sub">Two files out of everything I wrote in those years. The rest I deleted as it was written.</p>
         </div>
 
         <div className="row g-3 files">
