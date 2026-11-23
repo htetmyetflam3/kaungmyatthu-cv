@@ -69,10 +69,12 @@ export default function Resume() {
             Built my English from Dota 2, then made it pay.
           </p>
           <div className="hero-ctas">
-            <a className="btn-primary" href="about.html">
-              About me — personal blog
-              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            <a className="btn-primary" href="Kaung-Myat-Thu-CV.pdf" download>
+              Download CV (PDF)
+              <svg viewBox="0 0 24 24" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round' }}><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
             </a>
+            <a className="btn-ghost-hero" href="Kaung-Myat-Thu-Portfolio.pdf" download>Download portfolio (PDF)</a>
+            <a className="btn-ghost-hero" href="about.html">About me</a>
             <a className="btn-ghost-hero" href="portfolio.html">Portfolio</a>
           </div>
         </div>
@@ -118,7 +120,13 @@ export default function Resume() {
           {EXPERIENCE.map((j) => (
             <div key={j.title} style={{ marginBottom: 14, borderBottom: '1px dashed var(--line)', paddingBottom: 14 }}>
               <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
-                <a href={j.href} style={{ fontWeight: 700, color: 'var(--navy)', textDecoration: 'none', borderBottom: '1px solid rgba(11,121,131,.35)' }}>{j.title}</a>
+                <a
+                  href={j.href}
+                  style={{ fontWeight: 700, color: '#0b5f6b', textDecoration: 'underline', textDecorationColor: 'rgba(11,121,131,.5)', textUnderlineOffset: 3 }}
+                >
+                  {j.title}
+                  <span aria-hidden="true" style={{ color: 'var(--teal-2)', fontWeight: 700, marginLeft: 6 }}>→</span>
+                </a>
                 <span className="tl-period" style={{ marginLeft: 0 }}>{j.period}</span>
               </div>
               <div className="muted" style={{ fontSize: '.85rem' }}>{j.line}</div>
