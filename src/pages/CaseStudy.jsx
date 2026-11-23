@@ -230,7 +230,7 @@ export default function CaseStudy() {
       <div className="chart-card">
         <h5>Month-end followers</h5>
         <p className="chart-sub">Oct → Dec</p>
-<svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: month-end followers Oct to Dec — Oct 157,000, Nov 187,375, Dec 298,104" fontFamily="system-ui,-apple-system,sans-serif" ariaHidden="false">
+<svg viewBox="0 0 330 198" role="img" aria-label="Bar chart: month-end followers Oct to Dec — Oct 157,000, Nov 187,375, Dec 298,104" fontFamily="system-ui,-apple-system,sans-serif" aria-hidden="false">
 <line x1="0" y1="170" x2="330" y2="170" stroke="#dbe3ec" strokeWidth="1.5"/>
 <rect x="26.0" y="100" width="58" height="70" rx="5" fill="#9fd6d3"><title>OCT: 157,000</title></rect>
 <text x="55.0" y="93" textAnchor="middle" fontSize="11" fontWeight="800" fill="#1b365d">157,000</text>
