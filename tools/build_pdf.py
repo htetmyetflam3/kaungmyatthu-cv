@@ -198,7 +198,7 @@ class PortfolioPDF(FPDF):
         self.set_xy(18, 178)
         self.set_font('my', 'B', 7.5)
         self.set_text_color(140, 190, 180)
-        self.cell(0, 6, 'IN THIS PORTFOLIO', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 6, 'THE WORK, IN ORDER', new_x=XPos.LEFT, new_y=YPos.NEXT)
         index = [
             ('00', 'Where I have worked — every role, in order', 'sec-00x'),
             ('01', '321 Ecolife — work record & daily workflow', 'sec-01'),
@@ -249,18 +249,18 @@ class PortfolioPDF(FPDF):
         self.set_link(name='sec-00', x=18, y=277)
         self.header_band('Overview')
         self.ln(6)
-        self.kicker('Things in this file')
+        self.kicker('The work, in order')
         self.section_title('Selected work at a glance', 20)
         self.rule()
         self.set_font('my', '', 10.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6.5,
-            'The work I can show, in the order the folders on my Drive now hold it: 321, NPT, the Excel and CSM files, the '
-            'content folders, the tech folder, and the writing samples last.')
+            'The work I can show, filed the way it is filed on my own Drive: 321, NPT, the Excel and CSM work, the content '
+            'folders, the tech folder, and the writing samples last.')
         self.ln(4)
         self.set_font('my', 'B', 9)
         self.set_text_color(*TEAL)
-        self.cell(0, 6, 'IN THIS PORTFOLIO', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 6, 'THE SECTIONS', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1)
 
         # quick-glance grid card-like rows
@@ -322,7 +322,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 6.5)
         self.set_text_color(150, 170, 195)
         self.set_xy(24, y + 34)
-        self.cell(150, 4, 'This PDF is a snapshot; the links open the live pages.')
+        self.cell(150, 4, 'Every link opens the live page or file.')
         self.set_xy(18, y + 46.5)
 
         self.kicker('WHAT I WANT NEXT')
@@ -931,7 +931,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 9.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6,
-            'This PDF is a self-contained snapshot of the portfolio. Live materials live on the web and in Google Drive; every link below opens that material in a new tab.')
+            'The live pages and the working files, in one list. Each link opens the page or the file it names.')
         self.ln(1)
         groups = [
             ('Web pages — the whole portfolio', PAGES),
@@ -996,7 +996,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', 'I', 7.2)
         self.set_text_color(120, 133, 152)
         self.multi_cell(0, 4.2,
-            'Names are the file names on Drive, so a link here and a file there are the same thing.',
+            'Each line is the name of the file as it sits on Drive.',
             align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
 
     def folder_head(self, band, kicker, title, deck, tag=None, anchor=None):
@@ -1019,7 +1019,7 @@ class PortfolioPDF(FPDF):
             self.ln(1)
         self.set_font('my', 'B', 7)
         self.set_text_color(*TEAL)
-        self.cell(0, 4.6, 'IN THIS FOLDER', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 4.6, 'THE FILES', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1.6)
 
     def npt_page(self):

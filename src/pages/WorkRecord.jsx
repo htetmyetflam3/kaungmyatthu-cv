@@ -44,7 +44,7 @@ export default function WorkRecord() {
         <div className="overview-kicker">What the job actually was</div>
         <p>My title was Operation Assistant Supervisor. The work underneath the title was a shop manager&rsquo;s work. Stalker had no shop supervisor and no shop manager at Nok, so it landed on me: I was the company&rsquo;s own staff member on that floor, and the only one in the shop. (Stalker runs a separate Sales Assistant Supervisor post; mine was the operations side.)</p>
         <p>There were six 321 Ecolife shops, and mine was being groomed as the head branch — which is why it was expected to hold together without a manager in the building. The next person above me was the Ecolife sector manager, who sits on the board. Everything the branch produced passed through my hands before it reached him: attendance approval and days off, daily expense and cashier follow-up, sales and stock records, staff transfer and assignment records, promotion and incentive recommendations, and the branch TikTok — captions, voiceover, edits, posting checks and the numbers behind them.</p>
-        <p>Nobody handed me a process for that, so I wrote one: a time-based daily list, opening checks to closing controls. It is the first thing below, because it is the plainest evidence of what the job really was.</p>
+        <p>Nobody handed me a process for that, so I wrote one: a time-based daily list, opening checks to closing controls. It is the plainest evidence of what the job really was.</p>
 
         <table className="mini-table" style={{ marginTop: 14 }}>
           <thead><tr><th>On paper</th><th>What I actually carried</th></tr></thead>
@@ -90,7 +90,7 @@ export default function WorkRecord() {
 
         <div className="panel">
           <p>I made this checklist as a personal reminder system for a role with many small, recurring responsibilities. It helped me remember what to check, whom to follow up with and when to return to the same records during the day.</p>
-          <p>The original combines staff administration, cash and sales checks, stock coordination, TikTok follow-up, reporting and closing tasks. The examples below are a readable summary; the original document is shown alongside them.</p>
+          <p>It combines staff administration, cash and sales checks, stock coordination, TikTok follow-up, reporting and closing tasks. I kept it in that order, and the original sits beside the summary.</p>
 
           <h4 style={{ marginTop: 22 }}>Summary of my original checklist</h4>
           <table className="mini-table" style={{ marginTop: 8 }}>
@@ -104,7 +104,7 @@ export default function WorkRecord() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The full list from the original document is reproduced below, in order.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The rest of it, in the order I wrote it.</p>
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
             <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
@@ -153,7 +153,7 @@ export default function WorkRecord() {
               </table>
             </div>
           </div>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Reproduced the way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>The way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
 
           <div className="dl-row" style={{ marginTop: 12 }}>
             <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
@@ -278,7 +278,7 @@ export default function WorkRecord() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Calculated changes — November <b>+30,375</b> · December <b>+110,729</b> · October–December <b>+141,104</b>, approximately <b>+89.9%</b>.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>Source sheet: <code> follower count at the end of m</code> (B1:C6) in the redacted workbook. The sheet’s own “MONTHLY FOLLOWER GAIN” header is misleading for these cumulative values — the table above is therefore labelled “Month-end followers”. The original sheet is kept unedited.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The redacted workbook has this under <code>follower count at the end of m</code> (B1:C6). Its own “MONTHLY FOLLOWER GAIN” header misleads on cumulative figures, so these are month-end followers, and the sheet stays unedited.</p>
 
           <div className="charts-grid" style={{ marginTop: 18 }}>
       <div className="chart-card">
@@ -350,7 +350,7 @@ export default function WorkRecord() {
 </svg>
       </div>
             </div>
-            <p className="muted" style={{ fontSize: '.78rem', margin: '10px 2px 0' }}>Daily entries kept as recorded from the branch performance sheet. They are a separate, partial series — not a complete breakdown of the monthly total above.</p>
+            <p className="muted" style={{ fontSize: '.78rem', margin: '10px 2px 0' }}>Daily entries as recorded in the branch performance sheet — a separate, partial series, not a breakdown of the monthly total.</p>
           </div>
         </details>
 
@@ -414,7 +414,7 @@ export default function WorkRecord() {
 
         <div className="panel">
           <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it for about a year, then resigned to move into marketing and digital work rather than stay in a role that was still growing underneath me.</p>
-          <p>I left on good terms: the reference letter in this page came from that employer.</p>
+          <p>I left on good terms — the reference letter came from that employer.</p>
         </div>
       </section>
 

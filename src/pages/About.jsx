@@ -81,7 +81,7 @@ export default function About() {
       </article>
 
       <div className="blog-related">
-        <span className="b-rel-title">This site</span>
+        <span className="b-rel-title">Keep reading</span>
         <div className="b-rel-links">
           <a href="index.html">Resume <Arrow /></a>
           <a href="portfolio.html">Portfolio <Arrow /></a>

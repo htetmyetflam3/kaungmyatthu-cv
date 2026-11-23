@@ -8,7 +8,7 @@ export default function Cv() {
       bare
       active="resume"
       title="Kaung Myat Thu — CV & Résumé"
-      description="My CV — Operation Assistant Supervisor, content writer and web developer. Experience, education, skills, references and PDF downloads."
+      description="My CV — Operation Assistant Supervisor, content writer and web developer. Experience, education, skills and references."
     >
 <header className="profile-wrap">
   <img className="avatar" src="avatar.png" alt="Kaung Myat Thu" width="96" height="96" />

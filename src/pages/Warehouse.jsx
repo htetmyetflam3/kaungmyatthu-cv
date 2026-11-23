@@ -60,7 +60,7 @@ export default function Warehouse() {
         </figure>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
-          <span>The warehouse records here are my own working notes from the role; the reference letter above is my supporting document from NPT.</span>
+          <span>The working notes are mine; the letter is NPT’s.</span>
         </div>
       </div>
 

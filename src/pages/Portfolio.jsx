@@ -14,7 +14,7 @@ const WORK = [
     href: 'content.html',
     kicker: 'Scripts & writing',
     title: 'Product scripts, venue stories and social copy',
-    body: 'Burmese video scripts for hair-care products and for a bar, plus translation and adaptation work. The wording is on the page, in Burmese wherever the script is Burmese.',
+    body: 'Burmese video scripts for hair-care products and for a bar, plus translation and adaptation work — Burmese wherever the script is Burmese.',
     quote: {
       text: '“ဆံသားက ထူပြီး အကောက်လည်းကောင်းလို့ ဘယ်လိုဖြောင့်ဖြောင့် မဖြောင့်ဖြစ်နေတဲ့သူတွေအတွက် Labbell Professional Vitalist Extra Strong Rebonding System ရောက်လာပါပြီ။”',
       note: 'IMB3 script, Scene 1',
@@ -70,7 +70,7 @@ export default function Portfolio() {
     <Layout
       active="portfolio"
       title="Kaung Myat Thu — Portfolio"
-      description="I have worked shop floors, a warehouse and a content desk. Here is the work I can show: the 321 branch records, Burmese scripts, a car-parts stock system, websites, and a study of how prompting works."
+      description="I have worked shop floors, a warehouse and a content desk. The work I can show: the 321 branch records, Burmese scripts, a car-parts stock system, websites, and a study of how prompting works."
     >
       <section className="pf-hero">
         <div className="kicker">Portfolio</div>
