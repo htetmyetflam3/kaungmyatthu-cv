@@ -50,9 +50,9 @@ export default function Content() {
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>Three approaches to language and storytelling.</h3>
-        <p><b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> — my Burmese translation, presented alongside an English excerpt; <b>Carl</b> — my adaptation of Invoker’s game lore; <b>RGB</b> — my original creative-writing piece about a test of colour.</p>
-        <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. All three are in one PDF.</p>
+        <h3>Three pieces, three different kinds of constraint.</h3>
+        <p>Writing looks like one skill from the outside. It is not — what changes from one job to the next is how much you are allowed to invent. <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> is the strictest of the three: Tim O&rsquo;Brien&rsquo;s memoir in Burmese, where you cannot add a thought of your own, you can only find the Burmese that carries his. There is an English excerpt beside it, so you can see where I landed. <b>Carl</b> is the middle case — Invoker&rsquo;s game lore, adapted, so the world already exists and the voice has to be rebuilt inside it. <b>RGB</b> is the loosest: mine from the first word, a piece about a test of colour, with nothing to answer to but itself.</p>
+        <p>Read them side by side and you are looking at the same writer under three rules: one that forbids invention, one that reshapes something given, one that permits everything. All three are in one PDF.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
