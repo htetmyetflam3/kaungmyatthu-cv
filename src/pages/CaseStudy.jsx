@@ -15,14 +15,14 @@ export default function CaseStudy() {
   return (
     <Layout
       active="case-study"
-      title="321 Ecolife · Case study — Kaung Myat Thu"
-      description="Assistant Supervisor at 321 Ecolife (Nok Branch) — shop floor, staff administration and TikTok growth, 157k → 298k."
+      title="Operations Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
+      description="Operations Assistant Supervisor at 321 Ecolife, Nok branch — one of six shops, no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
     >
       <SectionHead
         num="01"
-        kicker="Case study · 321 Ecolife"
-        title="321 Ecolife — keeping branch work and social-content follow-up connected"
-        sub="Assistant Supervisor · North Okkalapa branch · 2024–2025"
+        kicker="Operations Assistant Supervisor · 321 Ecolife"
+        title="One of six shops, with no shop manager above me"
+        sub="Nok branch, North Okkalapa · 2024–2025 · reported to the Ecolife sector manager, who sits on the board"
       />
 
       <figure style={{ margin: '0 0 22px' }}>
@@ -34,17 +34,45 @@ export default function CaseStudy() {
           />
         </a>
         <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>
-          <b>Team photograph — 321 Ecolife, North Okkalapa.</b> The shop setting, uniform and lanyards give the context the reporting figures sit in. Also repeated in
+          <b>Team photograph — 321 Ecolife, Nok branch, North Okkalapa.</b> I am the one standing beside the man in the white T-shirt: different shirt logo, different uniform, different lanyard colour. That is the visible difference between shop staff and company staff, because I was the only internal staff member on that floor. Also repeated in
           {' '}§06 Workplace context, next to the employer reference.{' '}
           <a href={DRIVE_VIEW(PHOTO_ID)} target="_blank" rel="noopener">Open full size ↗</a>
         </figcaption>
       </figure>
 
       <div className="overview-card">
-        <div className="overview-kicker">Role overview</div>
-        <p>My role covered frontline branch operations and staff administration as well as reporting and social-content support. I checked attendance and staff updates, followed up sales and stock records, coordinated with team leaders and cashiers, and supported TikTok work through captions, voiceover/editing coordination, posting checks and reporting.</p>
-        <p>To keep recurring responsibilities from being missed, I used my own time-based daily to-do list. It connected opening checks, scheduled follow-ups and closing controls in one place.</p>
+        <div className="overview-kicker">The role in one paragraph</div>
+        <p>My title said Operations Assistant Supervisor. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
+        <p>To carry it, I wrote my own time-based daily list: opening checks, scheduled follow-ups, closing controls. That list is the first thing below, because it is the clearest picture of what the job actually was.</p>
       </div>
+
+      <section className="sec" id="where-it-sat" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">01B</span> Company context</div>
+            <h2>Where the role sat in 321</h2>
+          </div>
+          <p className="sub">The structure explains why the branch carried what it did.</p>
+        </div>
+
+        <div className="panel">
+          <p><b>The company is Stalker Company Limited.</b> It runs three sectors. Two of them are retail, under separate names: <b>321 Ecolife</b> — six shops, mine among them — and <b>321 Factory Outlet</b>. The third is the warehouse and wholesale business. Above the three sits a board of five: the Director, the owner, and the manager of each sector.</p>
+          <p>Policy is set by the Director together with the sector managers. The owner is not on the frontline. Nok is one of the six 321 Ecolife shops, and it was being prepared as the head branch — which is the main reason it was expected to run without a shop-level supervisor or manager in place.</p>
+          <p>That left the branch reporting straight into the board. My reports went to the Ecolife sector manager; there was no shop manager between us to absorb or sign off the work.</p>
+
+          <table className="mini-table" style={{ marginTop: 10 }}>
+            <thead><tr><th>What I owned at Nok</th><th>Who it went to</th></tr></thead>
+            <tbody>
+              <tr><td>Attendance, days off, staff movement</td><td>Ecolife sector manager</td></tr>
+              <tr><td>Daily expense and cashier follow-up</td><td>Ecolife sector manager</td></tr>
+              <tr><td>Sales and stock records</td><td>Ecolife sector manager</td></tr>
+              <tr><td>Staff promotion and incentive recommendations</td><td>Ecolife sector manager</td></tr>
+              <tr><td>TikTok follow-up and performance reporting</td><td>Ecolife sector manager</td></tr>
+            </tbody>
+          </table>
+          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The employer reference calls the role Assistant Supervisor. The recorded scope is described here as it was worked.</p>
+        </div>
+      </section>
 
       <section className="sec" id="daily-workflow" style={{ scrollMarginTop: 90 }}>
         <div className="sec-head">
@@ -194,7 +222,7 @@ export default function CaseStudy() {
           <details className="ai-pf-details" style={{ marginTop: 16 }}>
             <summary>Additional administration records</summary>
             <div style={{ paddingTop: 10 }}>
-              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my Assistant Supervisor role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
+              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my own role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
               <p><b>Days off:</b> 18 staff listed across Monday to Saturday in the weekly days-off schedule.</p>
               <p><b>Generator log:</b> seven entries between 24 December 2024 and 15 January 2025, each with start and end times and a derived run time of between 1 and 8 hours.</p>
               <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are retained in the same workbook. The sign-off column is not described here as proof of payment — it is a record template, not a payment confirmation.</p>
@@ -345,8 +373,22 @@ export default function CaseStudy() {
                 style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid var(--line, #dbe3ec)', display: 'block' }}
               />
             </a>
-            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Employer reference confirming my Assistant Supervisor role. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Employer reference confirming my role — it uses the shorter title, Assistant Supervisor. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section className="sec" id="why-i-left" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">07</span> Leaving</div>
+            <h2>Why I left</h2>
+          </div>
+        </div>
+
+        <div className="panel">
+          <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it for about a year, then resigned to move into marketing and digital work rather than stay in a role that was still growing underneath me.</p>
+          <p>I left on good terms: the reference letter in this page came from that employer.</p>
         </div>
       </section>
 

@@ -5,9 +5,9 @@ import '../styles/portfolio.css';
 const WORK = [
   {
     href: 'case-study.html',
-    kicker: 'Case study · 321 Ecolife',
-    title: 'Branch reporting and daily coordination',
-    body: 'Assistant Supervisor at the North Okkalapa shop, 2024–2025. The checklist I wrote for myself, the sales and staff records I kept, the TikTok follow-up, and what customers told the branch.',
+    kicker: 'Operations Assistant Supervisor · Stalker / 321 Ecolife',
+    title: 'One of six shops, with no shop manager above me',
+    body: 'Nok branch of 321 Ecolife, 2024–2025 — the only Stalker internal staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
     go: 'Read the case study →',
   },
   {
