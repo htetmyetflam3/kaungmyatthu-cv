@@ -3,33 +3,38 @@ import Layout, { SectionHead, DetailsButton, ZoomFigure } from '../layout/Layout
 
 const SCRIPTS = [
   {
+    kind: 'Media translation · 2022–2023',
+    title: 'Canal+ Myanmar · Alice Adventure',
+    body: 'Media translation for the Canal+ Myanmar programme Alice Adventure. This is where the writing work started, and it is the only piece on this page done for a broadcaster rather than a brand.',
+  },
+  {
     kind: 'Script · DOCX',
     title: 'IMB3 · Rebonding script',
-    body: 'L’ABBELL Professional — Extra Strong Rebonding System · ~50–60 sec · Burmese + on-screen copy.',
+    body: 'A rebonding system for thick hair that curls and resists straightening. A 50–60 second Burmese reel, one talent, six scenes from the client sitting in the chair to the salon hero shot.',
     href: 'https://drive.google.com/file/d/1HkV70oH4de5Q7CB6M0TbvlSc-0fCZKEz/view',
   },
   {
     kind: 'Script · DOCX',
     title: 'IMB1 · Leave-in conditioner',
-    body: 'L’ABBELL 2 Phase Moisture Leave-in Conditioner · 45 sec · Talent 1 · Burmese voiceover.',
+    body: 'A two-phase leave-in conditioner, for moisture. A 45-second script with one talent and a Burmese voiceover.',
     href: 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view',
   },
   {
     kind: 'Script · DOCX',
     title: 'IMB2 · Salon-quality home hair care',
-    body: 'L’ABBELL Professional — Scalp & Hair Solution · 55–60 sec · Burmese voiceover.',
+    body: 'A scalp and hair solution, written as salon care taken home. A 55–60 second Burmese voiceover script.',
     href: 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view',
   },
   {
     kind: 'Script · DOCX',
     title: 'Echo Vibe · Full script',
-    body: 'The complete story-led after-work reel — scenes 1–4 + outro, dialogue, camera and audio cues.',
+    body: 'Four friends leaving work and working out where to meet. The full reel — four scenes and an outro, with the dialogue, the camera directions and the audio cues.',
     href: 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view',
   },
   {
     kind: 'PDF',
     title: 'Echo Vibe · Script (with title)',
-    body: 'Story-led reel script with a titled title page — for the shoot team and presenter.',
+    body: 'The same reel script as a PDF with a title page, so the shoot team and the presenter can hold one copy.',
     href: 'https://drive.google.com/file/d/12jsQB682IqyOk9PQvZ3PNDNSb8-e5yb8/view',
   },
 ];
@@ -173,10 +178,12 @@ export default function Content() {
               <div className="f-top"><span className="file-kind">{s.kind}</span></div>
               <h4>{s.title}</h4>
               <p>{s.body}</p>
-              <a className="btn-dl" href={s.href} target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
-                Download
-              </a>
+              {s.href && (
+                <a className="btn-dl" href={s.href} target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
+                  Download
+                </a>
+              )}
             </div>
           </div>
         ))}
