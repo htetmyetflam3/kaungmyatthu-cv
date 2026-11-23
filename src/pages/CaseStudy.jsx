@@ -15,12 +15,12 @@ export default function CaseStudy() {
   return (
     <Layout
       active="case-study"
-      title="Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
-      description="Assistant Supervisor at 321 Ecolife (Stalker Company Limited), Nok branch — running one of six shops with no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
+      title="Operation Assistant Supervisor, 321 Ecolife — Kaung Myat Thu"
+      description="Operation Assistant Supervisor at 321 Ecolife (Stalker Company Limited), Nok branch — running one of six shops with no shop manager above me, reporting to the sector manager on the board. 157k → 298k followers."
     >
       <SectionHead
         num="01"
-        kicker="Assistant Supervisor · 321 Ecolife"
+        kicker="Operation Assistant Supervisor · 321 Ecolife"
         title="One of six shops, with no shop manager above me"
         sub="Nok branch, North Okkalapa · 9 January 2024 – 10 January 2025 · reported to the Ecolife sector manager, who sits on the board"
       />
@@ -42,7 +42,7 @@ export default function CaseStudy() {
 
       <div className="overview-card">
         <div className="overview-kicker">The role in one paragraph</div>
-        <p>The title on the letter is Assistant Supervisor. The work was managing a branch. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
+        <p>The title is Operation Assistant Supervisor — Stalker runs a separate Sales Assistant Supervisor post beside it, and mine was the operations side. The work was managing a branch. I was internal staff — Stalker Company Limited&rsquo;s own person on the branch floor, and the only one of those in the shop. Nok had no shop supervisor and no shop manager, so attendance, daily expense, sales and stock records, staff promotion recommendations and every report went through me — straight to the Ecolife sector manager, who is a member of the board. I also ran the branch TikTok follow-up: captions, voiceover and editing, posting checks and the numbers behind them.</p>
         <p>To carry it, I wrote my own time-based daily list: opening checks, scheduled follow-ups, closing controls. That list is the first thing below, because it is the clearest picture of what the job actually was.</p>
       </div>
 
@@ -70,7 +70,7 @@ export default function CaseStudy() {
               <tr><td>TikTok follow-up and performance reporting</td><td>Ecolife sector manager</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR reference (17 March 2025) records the post as Assistant Supervisor, Retail Shop Department, 9 January 2024 – 10 January 2025.</p>
+          <p className="muted" style={{ fontSize: '.82rem', marginTop: 12 }}>The Stalker HR service letter (17 March 2025) shortens the post to &ldquo;Assistant Supervisor&rdquo; and records 9 January 2024 – 10 January 2025, Retail Shop Department.</p>
         </div>
       </section>
 
@@ -368,12 +368,12 @@ export default function CaseStudy() {
             <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">
               <img
                 src={DRIVE_IMG(LETTER_ID, 1200)}
-                alt="Employer reference letter confirming the Assistant Supervisor role"
+                alt="Stalker service letter confirming the branch supervisor role"
                 loading="lazy"
                 style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid var(--line, #dbe3ec)', display: 'block' }}
               />
             </a>
-            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Employer reference confirming my role — it uses the shorter title, Assistant Supervisor. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+            <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>Stalker HR service letter confirming the post and dates. It shortens the title to “Assistant Supervisor”. <a href={DRIVE_VIEW(LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
           </figure>
         </div>
       </section>

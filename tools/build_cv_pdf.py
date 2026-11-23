@@ -65,7 +65,7 @@ class Resume:
         p.cell(0, 10, 'Kaung Myat Thu', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         p.set_font('my', '', 10)
         p.set_text_color(*TEAL)
-        p.cell(0, 6, 'Assistant Supervisor  ·  content writing  ·  practical digital work',
+        p.cell(0, 6, 'Operation Assistant Supervisor  ·  content writing  ·  practical digital work',
                new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         p.set_font('my', '', 8.5)
         p.set_text_color(*MUTED)
@@ -88,7 +88,7 @@ class Resume:
             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
         self.heading('Experience')
-        self.role('Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch', 'Jan 2024 – Jan 2025', [
+        self.role('Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch', 'Jan 2024 – Jan 2025', [
             'Ran the Nok branch as its only internal staff member, with no shop supervisor or manager in place — '
             'manager-level responsibility: attendance, daily expense, '
             'sales and stock records, staff coverage, and promotion and incentive recommendations.',
