@@ -8,34 +8,28 @@ const SCRIPTS = [
     body: 'Two Burmese segments written for the Alice programme. One is on the robots built to work underwater — the autonomous kind against the ROV, down to Stanford’s Ocean One. The other is on the robots you can buy yourself. Both are written to be spoken by Alice, in her voice, to the show’s audience.',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB3 · Rebonding script',
     body: 'A rebonding system for thick hair that curls and resists straightening. A 50–60 second Burmese reel, one talent, six scenes from the client sitting in the chair to the salon hero shot.',
     href: 'https://drive.google.com/file/d/1HkV70oH4de5Q7CB6M0TbvlSc-0fCZKEz/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB1 · Leave-in conditioner',
     body: 'A two-phase leave-in conditioner, for moisture. A 45-second script with one talent and a Burmese voiceover.',
     href: 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB2 · Salon-quality home hair care',
     body: 'A scalp and hair solution, written as salon care taken home. A 55–60 second Burmese voiceover script.',
     href: 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Venue reel · four scenes',
     title: 'Echo Vibe · Full script',
     body: 'Four friends leaving work and working out where to meet. The full reel — four scenes and an outro, with the dialogue, the camera directions and the audio cues.',
     href: 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view',
-  },
-  {
-    kind: 'PDF',
-    title: 'Echo Vibe · Script (with title)',
-    body: 'The same reel script as a PDF with a title page, so the shoot team and the presenter can hold one copy.',
-    href: 'https://drive.google.com/file/d/12jsQB682IqyOk9PQvZ3PNDNSb8-e5yb8/view',
   },
 ];
 
@@ -57,7 +51,7 @@ export default function Content() {
         <div className="overview-kicker">Overview</div>
         <h3>Three pieces, three different kinds of constraint.</h3>
         <p>Writing looks like one skill from the outside. It is not; what changes from one job to the next is how much invention the job allows. <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> is the strictest of the three: Tim O&rsquo;Brien&rsquo;s memoir in Burmese, where I could not add a thought of my own, only find the Burmese that carries his. An English excerpt sits beside it, so the two can be compared. <b>Carl</b> is the middle case — Invoker&rsquo;s game lore, adapted, so the world already existed and I had to rebuild the voice inside it. <b>RGB</b> is the loosest: mine from the first word, a piece about a test of colour, with nothing to answer to but itself.</p>
-        <p>Read together they are the same writer under three rules: one that forbids invention, one that reshapes something given, one that permits everything. All three are in one PDF.</p>
+        <p>Read together they are the same writer under three rules: one that forbids invention, one that reshapes something given, one that permits everything.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
@@ -209,7 +203,7 @@ export default function Content() {
             <div className="file-card">
               <div className="f-top"><span className="file-kind">Essay · Burmese</span></div>
               <h4>RGB</h4>
-              <p>Someone walking the road they always walk meets a person by chance, and is handed a set of colour plates. It is the loosest of the three pieces in the PDF — nothing to answer to but itself.</p>
+              <p>Someone walking the road they always walk meets a person by chance, and is handed a set of colour plates. It is the loosest of the three — nothing to answer to but itself.</p>
             </div>
           </div>
         </div>
