@@ -1039,20 +1039,9 @@ class PortfolioPDF(FPDF):
         self.ln(1.6)
         self.file_rows([
             ('CSM - merged workbook.xlsx  (43 tabs)',
-             'The one master. The shelf map, the location index, the seven category registers, the shelf sheets, the '
-             'ground count and the Update tabs the POS reads are each a tab inside it.',
+             'The whole job in one workbook: the shelf map, the location index, the seven category registers, the shelf '
+             'sheets, the ground count, and the Update tabs the POS reads.',
              'https://drive.google.com/file/d/1Uvm-vYhTaIyXB3U44bOQtFcOjChUdZHS/view'),
-            ('CSM-POS-Portfolio-Demo.xlsm',
-             'The till as it ran, with Items, Sales and Ground behind it. Macro-enabled, so it stays its own file.',
-             'https://drive.google.com/file/d/1gvdPV9ZSIcRrEmkzuLp4Lqzx6Wxwnt1D/view'),
-            ('epos4excel_v1.8.1.xlsm',
-             'The software the shop runs. I set up the import so its item list could come out of my sheets instead of '
-             'being typed in by hand.',
-             'https://drive.google.com/file/d/1xQUBBr-q7M7suxD_SrB-YXsZ2fO8cH4k/view'),
-            ('Npt way -inventory.docx',
-             'How stock ran at NPT, written the way I would hand it to a successor: receiving, location, counting, and '
-             'why the count happens daily.',
-             'https://drive.google.com/file/d/12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY/view'),
         ])
 
     def content_pages(self):
