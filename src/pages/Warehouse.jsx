@@ -104,6 +104,12 @@ export default function Warehouse() {
           shapes under fifty-one labels: D-2252 takes eight of them, D-2239 seven, D-2222 five. Some of those eight are
           the same brand written twice, jet and JET, and kevlar appears twice in the same block.
         </p>
+        <p style={{ margin: '0 0 16px' }}>
+          One code is one shape, not one part. D-2212 carries three labels in this sheet: Sun rise, sure, Golden Star.
+          Other codes carry a family, the variant written as a suffix on the parent — D-2183 and D-2183-M, D-1250 and
+          D-1250-M — and the same shape turns up again on the clutch sheet under a different category. So the number
+          says what the pad fits, the letters after it say which variant, and the brand says who sells it.
+        </p>
 
         <div style={{ margin: '0 0 16px', border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
           <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>
