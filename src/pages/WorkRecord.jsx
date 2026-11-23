@@ -44,7 +44,7 @@ export default function WorkRecord() {
         <div className="overview-kicker">What the job actually was</div>
         <p>My title was Operation Assistant Supervisor. The work underneath the title was a shop manager&rsquo;s work. Stalker had no shop supervisor and no shop manager at Nok, so it landed on me: I was the company&rsquo;s own staff member on that floor, and the only one in the shop. (Stalker runs a separate Sales Assistant Supervisor post; mine was the operations side.)</p>
         <p>There were six 321 Ecolife shops, and mine was being groomed as the head branch — which is why it was expected to hold together without a manager in the building. The next person above me was the Ecolife sector manager, who sits on the board. Everything the branch produced passed through my hands before it reached him: attendance approval and days off, daily expense and cashier follow-up, sales and stock records, staff transfer and assignment records, promotion and incentive recommendations, and the branch TikTok — captions, voiceover, edits, posting checks and the numbers behind them.</p>
-        <p>Nobody handed me a process for that, so I wrote one: a time-based daily list, opening checks to closing controls. It is the plainest evidence of what the job really was.</p>
+        <p>They gave me two hours of training on their POS, because that was the thing they were worried I could not use. It was the one part of the job I did not need. What I needed came later, in a group chat, with my name on it: the Nok branch was not sending the bank deposit receipt, and the staff had already been told to send it. The day I missed it was the day I was mentioned in that group, with the reminders stacked up under my name. So I wrote the day out hour by hour, opening checks to closing controls, and kept the list beside me. Nothing else I have shows what that branch needed every hour as plainly as that list does.</p>
 
         <table className="mini-table" style={{ marginTop: 14 }}>
           <thead><tr><th>On paper</th><th>What I actually carried</th></tr></thead>
@@ -103,11 +103,11 @@ export default function WorkRecord() {
               <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, generator-log, returns and stock checks across the evening; 5:55 checkout approval.</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in the order I wrote it. The generator checks sit where the power could change during the day.</p>
           
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
-            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
+            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>The daily checklist, in order</div>
             <div style={{ maxHeight: 460, overflowY: 'auto', padding: '6px 14px' }}>
               <table className="mini-table" style={{ marginTop: 6 }}>
                 <tbody>
@@ -177,25 +177,84 @@ export default function WorkRecord() {
           <table className="mini-table" style={{ marginTop: 6 }}>
             <thead><tr><th>Sheet in the workbook</th><th>Recorded range</th><th>What it shows</th></tr></thead>
             <tbody>
-              <tr><td><code>daily sale </code></td><td>A1:Q10 · full sheet in the workbook</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit. The trailing space in the sheet name is part of the file.</td></tr>
-              <tr><td>Top &amp; Bottom Sale</td><td>B2:K13</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. In the order the sheet keeps them, not a ranking.</td></tr>
+              <tr><td><code>daily sale </code></td><td>December</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit.</td></tr>
+              <tr><td>Top &amp; Bottom Sale</td><td>Recorded</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. In the order the sheet keeps them, not a ranking.</td></tr>
               <tr><td>Daily Expenses</td><td>A1:J12</td><td>Day-level branch expenses as entered.</td></tr>
             </tbody>
           </table>
-          <h4 style={{ marginTop: 22 }}>December 2024 as recorded</h4>
+          <h4 style={{ marginTop: 22 }}>The daily sale sheet, December 2024</h4>
           <table className="mini-table" style={{ marginTop: 8 }}>
-            <thead><tr><th>Recorded line</th><th style={{ textAlign: 'right' }}>Amount (MMK)</th></tr></thead>
+            <thead><tr><th>Channel in the sheet</th><th style={{ textAlign: 'right' }}>December total (MMK)</th></tr></thead>
             <tbody>
-              <tr><td>Sale revenue (top-line)</td><td style={{ textAlign: 'right' }}>148,356,500</td></tr>
-              <tr><td>Discount</td><td style={{ textAlign: 'right' }}>1,068,495</td></tr>
-              <tr><td>Net amount</td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
+              <tr><td>Cash</td><td style={{ textAlign: 'right' }}>110,756,880</td></tr>
+              <tr><td>Yoma (6578)</td><td style={{ textAlign: 'right' }}>1,430,925</td></tr>
+              <tr><td>Kpay</td><td style={{ textAlign: 'right' }}>32,322,775</td></tr>
+              <tr><td>Wave</td><td style={{ textAlign: 'right' }}>1,742,500</td></tr>
+              <tr><td>Yoma (5173)</td><td style={{ textAlign: 'right' }}>426,825</td></tr>
+              <tr><td>AyA-4676828</td><td style={{ textAlign: 'right' }}>608,100</td></tr>
+              <tr><td><b>Inbound total</b></td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
+              <tr><td>Online · Kpay</td><td style={{ textAlign: 'right' }}>325,000</td></tr>
+              <tr><td>Online · YOMA Bank (5173)</td><td style={{ textAlign: 'right' }}>236,500</td></tr>
+              <tr><td>Online · Wave</td><td style={{ textAlign: 'right' }}>18,000</td></tr>
+              <tr><td>Online total</td><td style={{ textAlign: 'right' }}>579,500</td></tr>
+              <tr><td>Sale revenue (top line)</td><td style={{ textAlign: 'right' }}>148,356,500</td></tr>
+              <tr><td>Discount</td><td style={{ textAlign: 'right' }}>−1,068,495</td></tr>
+              <tr><td><b>Net amount</b></td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
               <tr><td>Return amount</td><td style={{ textAlign: 'right' }}>1,081,500</td></tr>
-              <tr><td>Online-channel total</td><td style={{ textAlign: 'right' }}>579,500</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '10px 0 0' }}>Thirty-one daily rows, 1–31 December 2024, summed by the sheet’s own TOTAL row. These are recorded sales, discounts and returns — not profit, and not a measure of marketing performance.</p>
 
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Source: <code>321/321NOk/321NOK-Master-Redacted.xlsx</code>. Previews preserve the source order and blank fields; they do not establish a sales period or campaign attribution beyond what each sheet records.</p>
+          <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
+            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>
+              daily sale — every day of December, in the sheet's own order
+            </div>
+            <div style={{ maxHeight: 340, overflowY: 'auto' }}>
+              <table className="mini-table" style={{ margin: 0 }}>
+                <thead><tr><th>Day</th><th style={{ textAlign: 'right' }}>Inbound</th><th style={{ textAlign: 'right' }}>Online</th><th style={{ textAlign: 'right' }}>Net</th></tr></thead>
+                <tbody>
+                <tr><td>1</td><td style={{ textAlign: 'right' }}>3,267,400</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>3,267,400</td></tr>
+                <tr><td>2</td><td style={{ textAlign: 'right' }}>1,691,150</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,691,150</td></tr>
+                <tr><td>3</td><td style={{ textAlign: 'right' }}>1,516,550</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,516,550</td></tr>
+                <tr><td>4</td><td style={{ textAlign: 'right' }}>1,972,025</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,972,025</td></tr>
+                <tr><td>5</td><td style={{ textAlign: 'right' }}>1,442,450</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,442,450</td></tr>
+                <tr><td>6</td><td style={{ textAlign: 'right' }}>1,829,125</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,829,125</td></tr>
+                <tr><td>7</td><td style={{ textAlign: 'right' }}>2,492,925</td><td style={{ textAlign: 'right' }}>30,000</td><td style={{ textAlign: 'right' }}>2,492,925</td></tr>
+                <tr><td>8</td><td style={{ textAlign: 'right' }}>3,773,475</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>3,773,475</td></tr>
+                <tr><td>9</td><td style={{ textAlign: 'right' }}>1,085,675</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,085,675</td></tr>
+                <tr><td>10</td><td style={{ textAlign: 'right' }}>1,247,050</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,247,050</td></tr>
+                <tr><td>11</td><td style={{ textAlign: 'right' }}>1,561,950</td><td style={{ textAlign: 'right' }}>81,000</td><td style={{ textAlign: 'right' }}>1,561,950</td></tr>
+                <tr><td>12</td><td style={{ textAlign: 'right' }}>698,500</td><td style={{ textAlign: 'right' }}>10,000</td><td style={{ textAlign: 'right' }}>698,500</td></tr>
+                <tr><td>13</td><td style={{ textAlign: 'right' }}>1,174,775</td><td style={{ textAlign: 'right' }}>37,000</td><td style={{ textAlign: 'right' }}>1,174,775</td></tr>
+                <tr><td>14</td><td style={{ textAlign: 'right' }}>1,938,625</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,938,625</td></tr>
+                <tr><td>15</td><td style={{ textAlign: 'right' }}>3,114,370</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>3,114,370</td></tr>
+                <tr><td>16</td><td style={{ textAlign: 'right' }}>1,145,250</td><td style={{ textAlign: 'right' }}>37,000</td><td style={{ textAlign: 'right' }}>1,145,250</td></tr>
+                <tr><td>17</td><td style={{ textAlign: 'right' }}>1,584,125</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,584,125</td></tr>
+                <tr><td>18</td><td style={{ textAlign: 'right' }}>1,457,875</td><td style={{ textAlign: 'right' }}>58,500</td><td style={{ textAlign: 'right' }}>1,457,875</td></tr>
+                <tr><td>19</td><td style={{ textAlign: 'right' }}>1,069,675</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>1,069,675</td></tr>
+                <tr><td>20</td><td style={{ textAlign: 'right' }}>10,346,050</td><td style={{ textAlign: 'right' }}>10,000</td><td style={{ textAlign: 'right' }}>10,346,050</td></tr>
+                <tr><td>21</td><td style={{ textAlign: 'right' }}>13,894,343</td><td style={{ textAlign: 'right' }}>48,500</td><td style={{ textAlign: 'right' }}>13,894,343</td></tr>
+                <tr><td>22</td><td style={{ textAlign: 'right' }}>13,829,925</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>13,829,925</td></tr>
+                <tr><td>23</td><td style={{ textAlign: 'right' }}>7,589,025</td><td style={{ textAlign: 'right' }}>67,000</td><td style={{ textAlign: 'right' }}>7,589,025</td></tr>
+                <tr><td>24</td><td style={{ textAlign: 'right' }}>7,353,450</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>7,353,450</td></tr>
+                <tr><td>25</td><td style={{ textAlign: 'right' }}>18,496,925</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>18,496,925</td></tr>
+                <tr><td>26</td><td style={{ textAlign: 'right' }}>4,957,600</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>4,957,600</td></tr>
+                <tr><td>27</td><td style={{ textAlign: 'right' }}>5,066,779</td><td style={{ textAlign: 'right' }}>37,000</td><td style={{ textAlign: 'right' }}>5,066,779</td></tr>
+                <tr><td>28</td><td style={{ textAlign: 'right' }}>7,246,075</td><td style={{ textAlign: 'right' }}>18,000</td><td style={{ textAlign: 'right' }}>7,246,075</td></tr>
+                <tr><td>29</td><td style={{ textAlign: 'right' }}>10,335,209</td><td style={{ textAlign: 'right' }}>145,500</td><td style={{ textAlign: 'right' }}>10,335,209</td></tr>
+                <tr><td>30</td><td style={{ textAlign: 'right' }}>6,505,345</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>6,505,345</td></tr>
+                <tr><td>31</td><td style={{ textAlign: 'right' }}>7,604,309</td><td style={{ textAlign: 'right' }}>—</td><td style={{ textAlign: 'right' }}>7,604,309</td></tr>
+                <tr><td><b>Total</b></td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td><td style={{ textAlign: 'right' }}><b>579,500</b></td><td style={{ textAlign: 'right' }}><b>147,288,005</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="muted" style={{ fontSize: '.78rem', margin: '10px 14px 12px' }}>
+              Thirty-one rows, copied in order. A dash is a blank cell in the source, not a zero I calculated. The month splits
+              in two: twenty days running between 0.7 and 3.8 million, then eleven days from 4.9 to 18.5 million. The sheet
+              records the figures and the totals; it does not say why the last third of the month moved.
+            </p>
+          </div>
+
+          <p className="muted" style={{ fontSize: '.8rem', margin: '10px 0 0' }}>These are recorded sales, discounts and returns — not profit, and not a measure of marketing performance.</p>
 
           <div className="dl-row" style={{ marginTop: 16 }}>
             <a className="btn-dl btn-dark" href={WORKBOOK_VIEW} target="_blank" rel="noopener">Open working workbook</a>
@@ -248,10 +307,10 @@ export default function WorkRecord() {
           <details className="ai-pf-details" style={{ marginTop: 16 }}>
             <summary>Additional administration records</summary>
             <div style={{ paddingTop: 10 }}>
-              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my own role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
+              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my own role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20.</p>
               <p><b>Days off:</b> 18 staff listed across Monday to Saturday in the weekly days-off schedule.</p>
               <p><b>Generator log:</b> seven entries between 24 December 2024 and 15 January 2025, each with start and end times and a derived run time of between 1 and 8 hours.</p>
-              <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are retained in the same workbook. The sign-off column is not described here as proof of payment — it is a record template, not a payment confirmation.</p>
+              <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are in the same workbook. The sign-off column is a record template, not a payment confirmation.</p>
             </div>
           </details>
         </div>
@@ -278,7 +337,7 @@ export default function WorkRecord() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Calculated changes — November <b>+30,375</b> · December <b>+110,729</b> · October–December <b>+141,104</b>, approximately <b>+89.9%</b>.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The redacted workbook has this under <code>follower count at the end of m</code> (B1:C6). Its own “MONTHLY FOLLOWER GAIN” header misleads on cumulative figures, so these are month-end followers, and the sheet stays unedited.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>Month-end followers. The sheet's own “monthly follower gain” header overstates it — these are cumulative totals, not monthly gains.</p>
 
           <div className="charts-grid" style={{ marginTop: 18 }}>
       <div className="chart-card">
@@ -366,7 +425,7 @@ export default function WorkRecord() {
           <div className="quote col-md-4"><p>“Excellent service”</p></div>
           <div className="quote col-md-4"><p lang="my">“Service အရမ်းကောင်းပါတယ် ။ Size စုံစေချင်တယ်။”</p></div>
         </div>
-        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>Praise rows from the branch feedback sheet, kept as received; the third entry is shown with its request for more sizes so the mixed meaning is preserved. The sheet’s cramped-shop complaint is not presented as praise. Phone numbers are redacted.</p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>The third one is a compliment and a request for more sizes in the same breath.</p>
       </div>
 
       <section className="sec" id="workplace" style={{ scrollMarginTop: 90 }}>
@@ -413,7 +472,9 @@ export default function WorkRecord() {
         </div>
 
         <div className="panel">
-          <p>The volume was the reason, not the people. A branch with six shops above it, a board to report to and no supervisor or manager in the building is a manager&rsquo;s load on a supervisor&rsquo;s title. I carried it through to February, then resigned rather than stay in a role that was still growing underneath me.</p>
+          <p>The job description names two things: handle and check the opening and closing cash flow, and the stock. In the interview I was told the staff would help. Neither of those is what the job turned out to be.</p>
+          <p>The bank transfer slip is the clearest case. Nothing in that description says I am the one who guarantees the slip was sent. Once the deposit is in, the bank already shows which branch it came from. The generator record is the same: nothing in the description says I am the one who guarantees it is written down. Neither does it say so for any other case that came up in the branch, and all of them arrived on the assistant supervisor anyway.</p>
+          <p>So the title was narrow and the responsibility had no edge to it. Whatever the description did not name still landed on me. I carried it through to February, then resigned.</p>
           <p>I left on good terms — the reference letter came from that employer.</p>
         </div>
       </section>

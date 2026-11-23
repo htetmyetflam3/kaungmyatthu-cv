@@ -70,7 +70,7 @@ export default function Myangustis() {
       <div className="panel">
         <h4>The corpus that came out of it</h4>
         <p style={{ margin: '0 0 12px' }}>I scraped roughly <b>10,000</b> Burmese PDFs and got clean text out of <b>3,000+</b> of them. The other <b>7,000+</b> are scans, so I added OCR to the parser for the individual books I need source text from.</p>
-        <p style={{ margin: 0 }}>That clean text is a corpus of its own, and it is mine to license. If you want it for language-model work, say so and we will work out the terms.</p>
+        <p style={{ margin: 0 }}>That clean text is a corpus of its own, and it is mine to license. Anyone who wants it for language-model work can come and ask, and we will work out the terms.</p>
       </div>
 
       <div className="panel">

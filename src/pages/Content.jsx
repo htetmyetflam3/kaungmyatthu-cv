@@ -3,34 +3,33 @@ import Layout, { SectionHead, DetailsButton, ZoomFigure } from '../layout/Layout
 
 const SCRIPTS = [
   {
-    kind: 'Script · DOCX',
+    kind: 'Programme script · 2022–2023',
+    title: 'Canal+ Myanmar · Alice',
+    body: 'Two Burmese segments written for the Alice programme. One is on the robots built to work underwater — the autonomous kind against the ROV, down to Stanford’s Ocean One. The other is on the robots you can buy yourself. Both are written to be spoken by Alice, in her voice, to the show’s audience.',
+  },
+  {
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB3 · Rebonding script',
-    body: 'L’ABBELL Professional — Extra Strong Rebonding System · ~50–60 sec · Burmese + on-screen copy.',
+    body: 'A rebonding system for thick hair that curls and resists straightening. A 50–60 second Burmese reel, one talent, six scenes from the client sitting in the chair to the salon hero shot.',
     href: 'https://drive.google.com/file/d/1HkV70oH4de5Q7CB6M0TbvlSc-0fCZKEz/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB1 · Leave-in conditioner',
-    body: 'L’ABBELL 2 Phase Moisture Leave-in Conditioner · 45 sec · Talent 1 · Burmese voiceover.',
+    body: 'A two-phase leave-in conditioner, for moisture. A 45-second script with one talent and a Burmese voiceover.',
     href: 'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Commercial script · Burmese voiceover',
     title: 'IMB2 · Salon-quality home hair care',
-    body: 'L’ABBELL Professional — Scalp & Hair Solution · 55–60 sec · Burmese voiceover.',
+    body: 'A scalp and hair solution, written as salon care taken home. A 55–60 second Burmese voiceover script.',
     href: 'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view',
   },
   {
-    kind: 'Script · DOCX',
+    kind: 'Venue reel · four scenes',
     title: 'Echo Vibe · Full script',
-    body: 'The complete story-led after-work reel — scenes 1–4 + outro, dialogue, camera and audio cues.',
+    body: 'Four friends leaving work and working out where to meet. The full reel — four scenes and an outro, with the dialogue, the camera directions and the audio cues.',
     href: 'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view',
-  },
-  {
-    kind: 'PDF',
-    title: 'Echo Vibe · Script (with title)',
-    body: 'Story-led reel script with a titled title page — for the shoot team and presenter.',
-    href: 'https://drive.google.com/file/d/12jsQB682IqyOk9PQvZ3PNDNSb8-e5yb8/view',
   },
 ];
 
@@ -50,9 +49,9 @@ export default function Content() {
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>Three approaches to language and storytelling.</h3>
-        <p><b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> — my Burmese translation, presented alongside an English excerpt; <b>Carl</b> — my adaptation of Invoker’s game lore; <b>RGB</b> — my original creative-writing piece about a test of colour.</p>
-        <p>Read together they show my range as a writer — translation, adaptation and original prose, close and plain and rhythmic. All three are in one PDF.</p>
+        <h3>Three pieces, three different kinds of constraint.</h3>
+        <p>Writing looks like one skill from the outside. It is not; what changes from one job to the next is how much invention the job allows. <b>If I Die in a Combat Zone, Box Me Up and Ship Me Home</b> is the strictest of the three: Tim O&rsquo;Brien&rsquo;s memoir in Burmese, where I could not add a thought of my own, only find the Burmese that carries his. An English excerpt sits beside it, so the two can be compared. <b>Carl</b> is the middle case — Invoker&rsquo;s game lore, adapted, so the world already existed and I had to rebuild the voice inside it. <b>RGB</b> is the loosest: mine from the first word, a piece about a test of colour, with nothing to answer to but itself.</p>
+        <p>Read together they are the same writer under three rules: one that forbids invention, one that reshapes something given, one that permits everything.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1yc12JaJ2-mb8omqWepDsJ2mRBG7vkjVc/view" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
@@ -73,7 +72,7 @@ export default function Content() {
             <div className="sec-kicker"><span className="num">01</span> The scripts</div>
             <h2>မိတ်ဆက် · ဇာတ်ကွက် အလိုက်</h2>
           </div>
-          <p className="sub">The scripts as I wrote them — Burmese where the script is Burmese, English on-screen copy kept as it reads on screen. The source document sits at the end of each script.</p>
+          <p className="sub">The scripts as I wrote them — Burmese where the script is Burmese, English where the copy is on-screen.</p>
         </div>
 
         <div className="panel" lang="my">
@@ -173,14 +172,42 @@ export default function Content() {
               <div className="f-top"><span className="file-kind">{s.kind}</span></div>
               <h4>{s.title}</h4>
               <p>{s.body}</p>
-              <a className="btn-dl" href={s.href} target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
-                Download
-              </a>
+              {s.href && (
+                <a className="btn-dl" href={s.href} target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>
+                  Download
+                </a>
+              )}
             </div>
           </div>
         ))}
       </div>
+
+      <section className="sec" id="kept" style={{ scrollMarginTop: 90 }}>
+        <div className="sec-head">
+          <div>
+            <div className="sec-kicker"><span className="num">02</span> Writing</div>
+            <h2>Two essays.</h2>
+          </div>
+        </div>
+
+        <div className="row g-3 files">
+          <div className="col-md-6">
+            <div className="file-card">
+              <div className="f-top"><span className="file-kind">Essay · Burmese</span></div>
+              <h4>False Promise</h4>
+              <p>A boy brings his report card home. His father promised him whatever he wants for a top-ten rank, and the promise keeps sliding to the next exam — bicycle, football, next year. The concept came from a friend, and the credit for the idea is theirs. The title is Oracle’s spell in Dota 2.</p>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="file-card">
+              <div className="f-top"><span className="file-kind">Essay · Burmese</span></div>
+              <h4>RGB</h4>
+              <p>Someone walking the road they always walk meets a person by chance, and is handed a set of colour plates. It is the loosest of the three — nothing to answer to but itself.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="dl-row" style={{ marginTop: 20 }}>
         <DetailsButton href="index.html">← Back to home</DetailsButton>

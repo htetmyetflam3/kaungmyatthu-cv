@@ -71,57 +71,110 @@ export default function Warehouse() {
         </p>
 
         <p style={{ margin: '0 0 12px' }}>
-          The shop had no till system of any kind. To know what was in stock you need a POS; to run a POS you need the
-          stock registered — and the shop was stuck on both sides of that circle. I heard about it through a friend whose
-          family knew the shop, went in to look, and stayed for what turned into four and a half months.
+          The shop had no till system. To know what was in stock I needed a POS, and to run a POS I needed the stock
+          registered. Neither existed, and neither could be built without the other. I heard about it through a friend
+          whose family knew the shop, went in to look, and stayed four and a half months.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          Setting up a till here does not start inside the software. Almost every local POS imports from Excel, so the
-          register has to be built in exactly that shape: one row per item, its code, its ID, and the columns that
-          separate one part from the next. I did not know car parts when I walked in. I asked them how the parts differ
-          — brand, vehicle family, model, the packaging — and built the columns out of their answers: category, code,
-          short name, brand, family, model, package colour, description, shelf location and quantity, one tab per
-          category of part. That is the setup work nobody walks in and notices: the shop&rsquo;s own knowledge turned into a table a till
-          can take.
+          The setup does not start inside the software. Almost every local POS imports from Excel, so I built the
+          register in that shape: one row per item, with its code, its ID and the columns that separate one part from
+          the next. I did not know car parts. I asked the owners how the parts differ — brand, vehicle family, model,
+          the packaging — and built the columns from their answers: category, code, short name, brand, family, model,
+          package colour, description, shelf location, quantity, one tab per category of part. Most of the work sat
+          there, taking what the shop knew and writing it as a table the POS could import.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          The number printed on the box is not an identity, either. Sometimes it is the manufacturer&rsquo;s number,
-          sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing or wrong. So every item gets
-          an ID of its own — <code>BP</code> for brake pads, <code>WP</code> for water pumps, <code>P-F</code> for fuel
-          pumps — and the vendor number sits beside it as a reference, never as the key. The ID is also the barcode: the
-          same string, set in a barcode font, prints as the label, so one string serves the shelf, the sheet and the
-          scanner.
+          The number printed on the box does not identify the part. Sometimes it is the manufacturer&rsquo;s number,
+          sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing or wrong. So I gave every
+          item an ID of its own — <code>BP</code> for brake pads, <code>WP</code> for water pumps, <code>P-F</code> for
+          fuel pumps — and kept the vendor number beside it as a reference, never as the key. The same ID set in a
+          barcode font prints as the label, so the shelf, the sheet and the scanner carry one value.
         </p>
         <p style={{ margin: '0 0 12px' }}>
           The owners are older men, careful with what they know, and they did not want their stock relocated: when a
-          customer asked for a part they needed to walk straight to it, and a map that moved their shelves took that
-          away from them. So the map had to describe the shop as it stood — the relocation was something to earn, not to
-          impose.
+          customer asks for a part they walk straight to it. So I mapped the shop as it stood, and left moving the
+          shelves for them to ask for.
         </p>
+        <p style={{ margin: '0 0 12px' }}>
+          The space is the part that is hard to put on a page. The brake pads live on four standing shelf runs. A row is
+          no longer than five feet, no wider than a foot and a half, and there is under two feet of clearance to the
+          shelf above. The shelf itself does not divide that neatly. Where a run has a leg at mid-span, the leg blocks
+          the middle of the shelf, so the run is written as two rows, one either side of it. A row in the sheet is a
+          stretch of shelf, not a shelf. The brake pads alone are 389 numbered rows in the stock file. The first
+          fifty-one of them carry eighteen part shapes under fifty-one labels: D-2252 takes eight, D-2239 seven,
+          D-2222 five. Some of those eight are
+          the same brand written twice, jet and JET, and kevlar appears twice in the same block.
+        </p>
+        <p style={{ margin: '0 0 16px' }}>
+          One code is one shape, not one part. D-2212 carries three labels in this sheet: Sun rise, sure, Golden
+          Star. The stock file has a Family column, sitting between Brand and Model, for the group a row belongs to.
+          The brake-pad sheet does not have that column — it runs from Brand straight to Description — so the family
+          rides in the code instead: D-2183 and D-2183-M, D-1250 and D-1250-M, D-2198 and D-2198-M. The number says
+          what the pad fits, the letters after it say which variant, and the brand says who sells it.
+        </p>
+        <p style={{ margin: '0 0 16px' }}>
+          The Family column is where that join was meant to happen. It holds the other brand's code for the same part.
+          A Paraut water pump sells as S3-024 and carries Gws-34 beside it, Genteq's Gwp-50117 carries Gwho-47, and on
+          the filter sheet a KYIOI filter sells as 23303-54071 with BF-113 in the family cell, a DMAX one as MD-069782
+          with C-1008. Two codes, one filter, and nothing else on the row saying so. The brake-pad sheet has no such
+          column, so its variants sat unjoined.
+        </p>
+
+        <div style={{ margin: '0 0 16px', border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
+          <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>
+            Break-pad sheet — D-2239 and D-2252, as the shop wrote them
+          </div>
+          <div style={{ maxHeight: 300, overflowY: 'auto' }}>
+            <table className="mini-table" style={{ margin: 0 }}>
+              <thead><tr><th style={{ width: '45%' }}>Shorthand</th><th>Brand</th></tr></thead>
+              <tbody>
+                <tr><td>D-2239</td><td>kevelar</td></tr>
+                <tr><td>D-2239</td><td>JNBK</td></tr>
+                <tr><td>D-2239</td><td>MK</td></tr>
+                <tr><td>D-2239</td><td>JNBK</td></tr>
+                <tr><td>D-2239</td><td>Hoku</td></tr>
+                <tr><td>D-2239</td><td>WKT</td></tr>
+                <tr><td>D-2239</td><td>Paraut</td></tr>
+                <tr><td>D-2252</td><td>jnbk</td></tr>
+                <tr><td>D-2252</td><td>kevlar</td></tr>
+                <tr><td>D-2252</td><td>jet</td></tr>
+                <tr><td>D-2252</td><td>paraut</td></tr>
+                <tr><td>D-2252</td><td>JET</td></tr>
+                <tr><td>D-2252</td><td>kevlar</td></tr>
+                <tr><td>D-2252</td><td></td></tr>
+                <tr><td>D-2252</td><td>nibk</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="muted" style={{ fontSize: '.78rem', margin: '10px 14px 12px' }}>
+            Fifteen lines from that sheet, copied as written. Two shapes, five brands each way, and one blank the shop
+            had not filled. Those fifteen had to land on four runs, split at each leg, and the map had to hold while the
+            stock moved.
+          </p>
+        </div>
         <p style={{ margin: '0 0 12px' }}>
           I was on a time-based arrangement, not fixed hours: no check-in, no check-out. The one rule was to tell them
-          when I wasn&rsquo;t coming, so they wouldn&rsquo;t count me for lunch. That also meant the shop was never the
-          same twice. Some days I arrived at ten, some days at one, and by then new stock had come in, items I had
-          registered had sold, and the codes I had prepared for them no longer matched the shelf. A middle-sized
-          warehouse turns over: most lines carry thirty pieces at most, and the shelf changes all day. Re-registering the
-          same shelf would have eaten the project.
+          when I was not coming, so they would not count me for lunch. The stock turned over between my visits. Some
+          days I arrived at ten, some days at one, and by then new stock had come in, items I had registered had sold,
+          and the codes I had prepared for them no longer matched the shelf. A warehouse this size changes all day, and
+          most lines carry thirty pieces at most. Registering the same shelf a second time would have taken the whole
+          project.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          So I split it. They would do the ground stock count themselves once registration was complete, and I would do
-          the mapping and the codes — explain it, share it, walk them through it — so that when new stock landed they
-          could find where it had been placed without me re-walking the aisle. Their count and my map met in the middle.
-          They scoped it at three months; I delivered in four and a half.
+          So I split it. They would do the ground stock count themselves once registration was complete, and I kept the
+          mapping and the codes, explained them and walked the staff through them, so that new stock could be placed
+          without me walking the aisle again. They scoped it at three months. I delivered in four and a half.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          When the register was done the mapping went over it — position codes, a searchable index, a written guide to
-          picking and replenishment — and then the till mock-up: item codes, scanning, receipt, the stock line moving on
-          the sale, with a training session for the store staff so they could see what the register does once it is
-          inside a till. What the shop has to add is the ground count in the sheet. After that it is one import.
+          When the register was finished I built the map over it: position codes, a searchable index, a written guide to
+          picking and replenishment. Then the till mock-up: item codes, scanning, a receipt, the stock line moving when
+          a sale goes through, and a training session with the store staff. What the shop still has to add is the
+          ground count in the sheet. After that it is one import.
         </p>
         <p style={{ margin: '0 0 14px' }}>
-          So the setup is mine: the register, the codes, the IDs, the columns the POS reads and the map underneath them.
-          The only step I did not take was pressing import — that had to wait for their count, and it is the shop&rsquo;s
-          software, not mine.
+          The setup is mine: the register, the codes, the IDs, the columns the POS reads and the map underneath them. The
+          one step I did not take was pressing import, which had to wait for their count, and the software is the
+          shop&rsquo;s, not mine.
         </p>
 
         <table className="mini-table" style={{ margin: '4px 0 16px' }}>
