@@ -40,7 +40,7 @@ export default function About() {
 
           <p>At first my aunt did not know. Instead of joining as a repeater in the third year, I went to KMD. Later she found out, and broke the support, so I worked some random jobs — a sales promoter, mobile sim-card selling, a move elsewhere. Then I re-rolled into the first year again. That had nothing to do with the support — I was already good in English, so I did not need to study much. Thanks to Dota 2, which is part of the reason I failed in civil.</p>
 
-          <p>In 2015 I was at KMD Institute for Practical A+ and Basic Network Engineering. The real English never came from any certificate. It came from <span class="hl">Dota 2</span>, SEA-server IT, playing against international players.</p>
+          <p>In 2015 I was at KMD Institute for Practical A+ and Basic Network Engineering. The real English never came from any certificate. It came from <span className="hl">Dota 2</span>, SEA-server IT, playing against international players.</p>
 
           <p>In 2020, final year before COVID, I worked at BAR, writing articles and posts for lifestyle and marketing, and collaborating with the marketing team to keep brand consistency.</p>
 
@@ -60,7 +60,7 @@ export default function About() {
 
           <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved. Even though I had quit for the things I want to do, I needed a safety net again, and <a href="warehouse.html">NPT</a> was the place. She cheated. I went back home.</p>
 
-          <p>In April 2024 I started at <a href="case-study.html">321 Ecolife</a> as Assistant Supervisor. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span class="hl">298,104</span>, a <span class="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span class="hl">coding and digital marketing</span>.</p>
+          <p>In April 2024 I started at <a href="case-study.html">321 Ecolife</a> as Assistant Supervisor. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
 
           <p>From 2024 to 2025 I was the Warehouse Supervisor at <a href="warehouse.html">NPT Group</a>. Family-shared distributor. Electronics and tools, plus raw material. No software, no shelf maps, and nobody owned the stock. I registered every item every day.</p>
 
@@ -70,7 +70,7 @@ export default function About() {
 
           <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
 
-          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span class="hl">best part of my life</span>.</p>
+          <p><a href="warehouse.html">CSM</a>, the car-parts shop, was project-based, not full-time. Four months. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
 
           <p>Right now I am on <a href="myangustis.html">Myangustis</a>, a Burmese text engine owned from scratch. It extracts text from documents, organises it and supports proofreading. It is not NLP. Active development, pushed 2026-11-21.</p>
 
