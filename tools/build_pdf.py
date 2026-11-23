@@ -254,7 +254,7 @@ class PortfolioPDF(FPDF):
 
         # quick-glance grid card-like rows
         rows = [
-            ('01', 'Case study — 321 Ecolife', 'Operations Assistant Supervisor · 2024–2025 · reporting, followers, sales', 'page 3', 'sec-01'),
+            ('01', 'Case study — 321 Ecolife', 'Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 3', 'sec-01'),
             ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 4', 'sec-02'),
             ('03', 'CSM systems + NPT warehouse', 'Shelf mapping, POS demo and the warehouse role', 'page 5', 'sec-03'),
             ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 6', 'sec-04'),
