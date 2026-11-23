@@ -1128,7 +1128,7 @@ class PortfolioPDF(FPDF):
              'A scene carried into Burmese without losing what the scene was doing — the dialogue had to sound like people, '
              'not like subtitles.',
              'https://drive.google.com/file/d/17fUwje1APWoVNQE8f0dE60NBx3LbozUJ/view'),
-            ('Copy of ကိယ်တိုင်ဝယ်လို့ရတဲ့စက်ရုပ်.docx  ·  Canal+',
+            ('Copy of ကိုယ်တိုင်ဝယ်လို့ရတဲ့ဆက်ရုပ်.docx  ·  Canal+',
              'The Burmese script for the same block of work, kept in Burmese because that is the language it was written in.',
              'https://drive.google.com/file/d/1ImVMlhEJzMM0OiGjzybKAHvDjlTnm_wg/view'),
             ('if I die in combat zone.pdf  ·  translation',
@@ -1145,6 +1145,28 @@ class PortfolioPDF(FPDF):
              'A colour-driven piece where the writing follows the palette rather than the other way round.',
              'https://drive.google.com/file/d/1QBxJD2KD4utrLBnypY3S5dckK4IjWBcx/view'),
         ])
+
+        self.ln(6)
+        self.set_font('my', 'B', 7.5)
+        self.set_text_color(*TEAL)
+        self.cell(0, 5, 'THE FIVE FOLDERS IN CONTENT', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2)
+        folders = [
+            ('canalplus', 'two files — the underwater scene, and the Burmese script for the same block'),
+            ('creative', 'two files — falsepromise and rgb.pdf, the pieces that are only mine'),
+            ('translation related', 'two files — the game-lore adaptation and the combat-zone translation'),
+            ('video scripts for marketing', 'six files — IMB1 to IMB3, both EchoVibe versions, the bar set'),
+            ('it&tech related', 'the prompt book in two editions, and the SVG mark I rebuilt'),
+        ]
+        for name, note in folders:
+            y = self.get_y()
+            self.set_font('my', 'B', 9)
+            self.set_text_color(*INK)
+            self.cell(58, 5.4, name)
+            self.set_font('my', '', 8.6)
+            self.set_text_color(*MUTED)
+            self.multi_cell(0, 5.4, note, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.ln(1.6)
 
     def tech_page(self):
         self.folder_head('It & tech related', '06 — It & tech',
@@ -1176,6 +1198,27 @@ class PortfolioPDF(FPDF):
              'because nothing off the shelf does it.',
              SITE + 'myangustis.html'),
         ])
+
+        self.ln(6)
+        self.set_font('my', 'B', 7.5)
+        self.set_text_color(*TEAL)
+        self.cell(0, 5, 'INSIDE THE MERGED EDITION', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2)
+        for n, t in [('Author note', 'why the book reads the model as layers'),
+                     ('Note on sources', 'what the chapters are built from'),
+                     ('1', 'Understanding of AI — what a prompt is, and what it is not'),
+                     ('2', 'The prompt template and the reusable skeletons'),
+                     ('3', 'The premise alignment layer'),
+                     ('4', 'Where alignment limits a model'),
+                     ('5', 'Global mode and overriding')]:
+            y = self.get_y()
+            self.set_font('my', 'B', 8.6)
+            self.set_text_color(*NAVY)
+            self.cell(44, 5.4, n)
+            self.set_font('my', '', 9)
+            self.set_text_color(*INK)
+            self.multi_cell(0, 5.4, t, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.ln(1.4)
 
     def build(self):
         self.cover()

@@ -63,24 +63,24 @@ export default function Myangustis() {
 
       <div className="panel">
         <h4>Why there is a parser and a scraper</h4>
-        <p style={{ margin: '0 0 12px' }}>The grammar rules have to be written by hand, and hand-written rules need sentences to test against. Mine were in PDFs. There was no reliable tool that turns a Burmese PDF into clean text, and nothing to fetch the PDFs with either. So the scraper and the parser came first, built for the grammar work, and stayed in the project.</p>
+        <p style={{ margin: '0 0 12px' }}>I have to write the grammar rules by hand, and hand-written rules need sentences to test against. My sentences were in PDFs, and I had no reliable way to turn a Burmese PDF into clean text, nor anything to fetch the PDFs with. So the scraper and the parser came first, built for the grammar work, and stayed in the project.</p>
         <p style={{ margin: 0 }}>The parser takes a PDF or a DOCX — Zawgyi, Unicode, old legacy fonts included — and returns readable text, one clean string per page. The scraper is what feeds it.</p>
       </div>
 
       <div className="panel">
         <h4>The corpus that came out of it</h4>
-        <p style={{ margin: '0 0 12px' }}>The scraper brought in roughly <b>10,000</b> Burmese PDFs. Clean text comes out of <b>3,000+</b> of them. The other <b>7,000+</b> are scans, so I added OCR to the parser for the individual books I need source text from.</p>
+        <p style={{ margin: '0 0 12px' }}>I scraped roughly <b>10,000</b> Burmese PDFs and got clean text out of <b>3,000+</b> of them. The other <b>7,000+</b> are scans, so I added OCR to the parser for the individual books I need source text from.</p>
         <p style={{ margin: 0 }}>That clean text is a corpus of its own, and it is mine to license. If you want it for language-model work, say so and we will work out the terms.</p>
       </div>
 
       <div className="panel">
         <h4>Proofreading, before the grammar pass is finished</h4>
-        <p style={{ margin: 0 }}>A working segmenter and tagger sat in the repo while the grammar pass was still being written, and waiting to use them was waste. So I put them to work in an agent workflow that proofreads Burmese text — reading what is there and flagging what the rules say is wrong, on the parts that already work.</p>
+        <p style={{ margin: 0 }}>I had a working segmenter and tagger in the repo while I was still writing the grammar pass, and leaving them idle was waste. So I put them to work in an agent workflow that proofreads Burmese text — it reads what is there and flags what my rules say is wrong, on the parts that already work.</p>
       </div>
 
       <div className="panel">
         <h4>The repository</h4>
-        <p style={{ margin: '0 0 12px' }}>The repo is public so the work can be read and described. It is <b>not open source</b>: the licence is proprietary, and I do not grant the source code for any purpose. What the licence in the repo says is what applies.</p>
+        <p style={{ margin: '0 0 12px' }}>I keep the repo public so the work can be read and described. It is <b>not open source</b>: the licence is proprietary, and I do not grant the source code for any purpose. What the licence in the repo says is what applies.</p>
         <p className="muted" style={{ fontSize: '.8rem', margin: '0 0 14px' }}>Last clean checkout: 320 tests, 303 passing, 17 skipped, none failing.</p>
         <div className="dl-row">
           <a className="btn-dl btn-dark" href="https://github.com/htetmyetflam3/Myangustis" target="_blank" rel="noopener">

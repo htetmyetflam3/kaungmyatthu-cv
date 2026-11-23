@@ -5,22 +5,20 @@ const PROJECTS = [
   {
     kicker: 'alive',
     title: 'Yumeyuki.info',
-    body: 'Myanmar legal overseas employment agency. Still alive — and the most-used web stack of the three. Built it and kept it running.',
+    body: 'Myanmar legal overseas employment agency. Still alive — and the most-used web stack of the three. I built it and I keep it running.',
     badge: 'alive',
   },
   {
     kicker: 'alive',
     title: 'TTS-AE.com',
-    body: 'Built it for his company. The mail is alive — they keep using it.',
+    body: 'I built it for his company. The mail is alive — they still use it.',
     badge: 'mail in use',
   },
   {
     kicker: 'current',
     title: 'Writermorphosis.com',
-    body: "A blog and book app — current — a friend helping me hire for it; he doesn\u2019t need it — built for my survival.",
+    body: "A blog and book app I keep alive. A friend is helping me hire for it \u2014 he does not need it; I built it to keep myself afloat.",
     badge: 'current app',
-    href: 'https://github.com/htetmyetflam3/writermorphosis',
-    hrefLabel: 'Repo — uploading back to git… (placeholder)',
   },
 ];
 

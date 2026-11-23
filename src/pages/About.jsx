@@ -36,7 +36,7 @@ export default function About() {
 
           <p>At Hmaw Bi Technology University, civil engineering. I failed in the <b>third year</b> — as it became harder, and I played <b>Dota 2</b>. I regret it — not because I was stupid, but because I was not interested in that college. If I had gone to a computer college — which was below engineering university — I would not have failed. But I wrote the college form top down to bottom, so I did not get the computer college.</p>
 
-          <p>A student who failed in the third year got an AGTI certificate. That system changed during my second year — even though I passed, it became a full 6-year program, not a batch like the first two years AGTI and then two years BTech. Engineering, medical college, and Marine university students who failed can continue from the failed year if they move to distance education — as an example, if I moved to distance education and took physics or chemistry, my education would start from the third year and I would only have the third and fourth years left — graduated. If I take math, I can also continue from the failed year like that. Yangon University and YUFL are language colleges, not like the science-branch colleges, and YUFL English is a higher-level English college — so they don't roll to the first year. Engineering and medical colleges don't have English as a major subject, so they roll to the first year unless they take math, physics, chemistry and IC.</p>
+          <p>Failing that third year gave me an AGTI certificate. That system changed during my second year — even though I passed, it became a full 6-year program, not a batch like the first two years AGTI and then two years BTech. Engineering, medical college, and Marine university students who failed can continue from the failed year if they move to distance education — as an example, if I moved to distance education and took physics or chemistry, my education would start from the third year and I would only have the third and fourth years left — graduated. If I take math, I can also continue from the failed year like that. Yangon University and YUFL are language colleges, not like the science-branch colleges, and YUFL English is a higher-level English college — so they don't roll to the first year. Engineering and medical colleges don't have English as a major subject, so they roll to the first year unless they take math, physics, chemistry and IC.</p>
 
           <p>At first my aunt did not know. Instead of joining as a repeater in the third year, I went to KMD. Later she found out, and broke the support, so I worked some random jobs — a sales promoter, mobile sim-card selling, a move elsewhere. Then I re-rolled into the first year again. That had nothing to do with the support — I was already good in English, so I did not need to study much. Thanks to Dota 2, which is part of the reason I failed in civil.</p>
 
@@ -46,15 +46,15 @@ export default function About() {
 
           <p>In 2021–2022 I was Senior Logistic Officer at the NGO, C.D.A. My aunt backed me into the job. Many people had wanted it. I stayed home for one project and went to the field with the other two, one week or two between cities.</p>
 
-          <p>Then the rotation came. A rural state, too far, too poor, undeveloped. I quit. Not fired. I quit directly. It was not a bad job. The pay was good, the role genuine. But the gap between the role they wanted me to take and the one I was willing to take could not be bridged by any pay.<br/><br/>I came back home, bought a <b>Persian cat</b> and decided to spend my life on the things I want to do. The relation with my aunt turned bad after that, and home turned into the opposite of what I imagined.</p>
+          <p>Then the rotation came. A rural state, too far, too poor, undeveloped. I quit. Not fired. I quit directly. It was not a bad job. The pay was fair and the work was real, but the role they wanted me to take was not the role I was willing to take, and no pay could bridge that.<br/><br/>I came back home, bought a <b>Persian cat</b> and decided to spend my life on the things I want to do. The relation with my aunt turned bad after that, and home turned into the opposite of what I imagined.</p>
 
           <p>The same time, I was a part-time Script Writer at Program.base, writing Burmese scripts for travel, infotainment and educational content.</p>
 
-          <p>For eight months in 2022 there was no job. Everyone was the same. It was the coup.</p>
+          <p>For eight months in 2022 I had no job. Nobody did. It was the coup.</p>
 
           <p>In 2022 I also started freelance translation work, literary and digital content.</p>
 
-          <p>Canal+ Myanmar adapted media translations for the <i>Alice Adventure</i> program. That was the first project. It was low-paid. The second came in 2023. The third project never came back. The friend who shared it died. He joined some organization for revolution.</p>
+          <p>My first project was media translation on Canal+ Myanmar's <i>Alice Adventure</i> programme. It paid little. The second came in 2023. The third project never came back. The friend who shared it died. He joined some organization for revolution.</p>
 
           <p>I met a girl. She was from a different city, and I fell in love. I did not want to stay home, so I left the cat with my aunt, who takes care of him, and I moved to Mawlamyine — her city.</p>
 
@@ -62,13 +62,13 @@ export default function About() {
 
           <p>She cheated. I went back home.</p>
 
-          <p>The 321 interview was arranged before I left Mawlamyine. Two days after I got back to Yangon I sat it, and two days after that I had the job. In November 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
+          <p>I had the 321 interview lined up before I left Mawlamyine. Two days after I got back to Yangon I sat it, and two days after that I had the job. In November 2024 I started at <a href="work-record.html">321 Ecolife</a> as Operation Assistant Supervisor, running the shop with no manager above me. Shop-floor operations, staff and TikTok. Followers went from 157,000 to 187,375 to <span className="hl">298,104</span>, a <span className="hl">90% jump</span> from October to December. 321 liked my stock management. I kept the floor running, then I quit. Not for any grudge. I wanted out of the operations loop and expand into <span className="hl">coding and digital marketing</span>.</p>
 
                     <p>In that era I wrote the <a href="ai.html">AI prompt book</a>, a self-authored manuscript on how prompts shape LLM responses and how to read AI as a layered system. In 2025 I got a Conversion Optimization Certification from Skillshop, issued 30 Nov 2025 and expiring 30 Nov 2026.</p>
 
           <p>Everything after 321 was freelance, for survival and to help my finances. <b>Yumeyuki</b>, a Myanmar legal overseas employment agency, still alive. <b>TTS-AE</b>, built for his company. The friend works as an Airbnb co-host, and his boss gave him the portfolio-site task: a site and business mail for a bank, per their regulations. I followed his explanation as best I could. The mail is alive, and they keep using it.</p>
 
-          <p><b>Writermorphosis</b>, a blog and book app, is intentionally down on the site. A friend helping me hire for it. He does not need it. It is for me. I am drowning in Myangustis without income and taking the risk.</p>
+          <p><b>Writermorphosis</b>, a blog and book app, is deliberately down on the site. A friend is helping me hire for it; he does not need it. It is for me — I am drowning in Myangustis without income, and I am taking the risk.</p>
 
           <p><a href="warehouse.html">CSM</a> — ချစ်စုမ, the car-parts shop — was project-based, not full-time. Four months, freelance. I go when I wake up and go home whenever I want. The one rule is that they don't like extra food, so no lunch at the shop. Shelf mapping, stock lists and POS in Excel. That Excel part is the <span className="hl">best part of my life</span>.</p>
 

@@ -27,14 +27,14 @@ export default function Warehouse() {
         num="02"
         kicker="Warehouse · NPT Group + freelance CSM"
         title="Keeping stock visible — and right."
-        sub="Two separate engagements, on different timelines: Warehouse Supervisor at NPT Group (2024), and later a POS setup and shelf map for a car-parts shop (CSM)."
+        sub="Two things I did on different timelines — Warehouse Supervisor at NPT Group through 2024, then a POS and shelf map for a car-parts shop."
       />
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
-        <h3>One employment role, one separate freelance project.</h3>
-        <p><b>NPT Group</b> was a job: Warehouse Supervisor, <b>6 January – 1 November 2024</b>. <b>CSM</b> was a separate freelance project of roughly four months, with no confirmed dates — so none are given, and it is not placed inside the NPT timeline.</p>
-        <p>They involve the same subject (stock), not the same workflow. At NPT I kept the inventory record by hand. At CSM there was no till system at all, so I registered the stock into a POS-ready Excel register, gave every part a location, mapped the shop and trained the staff on a till mock-up.</p>
+        <h3>One job, and one freelance project after it.</h3>
+        <p><b>NPT Group</b> was a job I held: Warehouse Supervisor, <b>6 January – 1 November 2024</b>. <b>CSM</b> came after it, a freelance project of about four and a half months. I never had fixed dates for that one, so I do not give any.</p>
+        <p>Both are about stock; the work underneath was not the same. At NPT I kept the inventory record by hand. At CSM there was no till system at all, so I registered the stock into a POS-ready Excel register, gave every part a location, mapped the shop and trained the staff on a till mock-up.</p>
       </div>
 
       <div className="panel">
@@ -56,7 +56,7 @@ export default function Warehouse() {
               style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid #dbe3ec', display: 'block' }}
             />
           </a>
-          <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>NPT Group reference letter — the co-founder letter of recommendation dated 08 Dec 2024. <a href={driveView(NPT_LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
+          <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>My reference letter from NPT Group's co-founder, dated 08 Dec 2024. <a href={driveView(NPT_LETTER_ID)} target="_blank" rel="noopener">Open full size ↗</a></figcaption>
         </figure>
         <div className="note-box">
           <svg viewBox="0 0 24 24"><path d="M12 9v5m0 4h.01m10-5a10 10 0 10-20 0 10 10 0 0020 0z"/></svg>
@@ -81,7 +81,7 @@ export default function Warehouse() {
           separate one part from the next. I did not know car parts when I walked in. I asked them how the parts differ
           — brand, vehicle family, model, the packaging — and built the columns out of their answers: category, code,
           short name, brand, family, model, package colour, description, shelf location and quantity, one tab per
-          category of part. That is the setup work nobody sees: the shop&rsquo;s own knowledge turned into a table a till
+          category of part. That is the setup work nobody walks in and notices: the shop&rsquo;s own knowledge turned into a table a till
           can take.
         </p>
         <p style={{ margin: '0 0 12px' }}>
@@ -110,7 +110,7 @@ export default function Warehouse() {
           So I split it. They would do the ground stock count themselves once registration was complete, and I would do
           the mapping and the codes — explain it, share it, walk them through it — so that when new stock landed they
           could find where it had been placed without me re-walking the aisle. Their count and my map met in the middle.
-          It was scoped at three months and took four and a half.
+          They scoped it at three months; I delivered in four and a half.
         </p>
         <p style={{ margin: '0 0 12px' }}>
           When the register was done the mapping went over it — position codes, a searchable index, a written guide to

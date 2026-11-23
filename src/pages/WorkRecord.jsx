@@ -104,7 +104,7 @@ export default function WorkRecord() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The rest of it, in the order I wrote it.</p>
+          
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
             <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
@@ -153,7 +153,7 @@ export default function WorkRecord() {
               </table>
             </div>
           </div>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>The way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. The original is in Burmese and English, so each entry is summarised in English here; the untouched DOCX is below.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>The way I wrote it — same order, same timings, nothing tidied up. The generator checks appear several times because the electricity here is not on all day: it comes in shifts, and in summer it can go and come back during the day, so each check and each log entry was a separate task. I wrote it in Burmese and English, so each entry is summarised in English; the untouched DOCX is there to open.</p>
 
           <div className="dl-row" style={{ marginTop: 12 }}>
             <a className="btn-dl btn-dark" href={DRIVE_VIEW(CHECKLIST_ID)} target="_blank" rel="noopener">Read full checklist</a>
@@ -171,14 +171,14 @@ export default function WorkRecord() {
         </div>
 
         <div className="panel">
-          <p>The workbook on hand shows how branch information was recorded across payment channels, product sales, expenses and staff administration. My checklist also shows the follow-up behind the records: comparing salesperson totals with net sales, checking deposit slips and late-sale entries, and following up pivot reports with the relevant staff.</p>
+          <p>I kept the branch record in one workbook — payment channels, product sales, expenses, staff administration. My checklist also shows the follow-up behind the records: comparing salesperson totals with net sales, checking deposit slips and late-sale entries, and following up pivot reports with the relevant staff.</p>
           <p>These are working records, not a claim that every figure represents a result caused by my marketing work.</p>
 
           <table className="mini-table" style={{ marginTop: 6 }}>
             <thead><tr><th>Sheet in the workbook</th><th>Recorded range</th><th>What it shows</th></tr></thead>
             <tbody>
               <tr><td><code>daily sale </code></td><td>A1:Q10 · full sheet in the workbook</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit. The trailing space in the sheet name is part of the file.</td></tr>
-              <tr><td>Top &amp; Bottom Sale</td><td>B2:K13</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. Shown in source order — the rows are not a sorted ranking.</td></tr>
+              <tr><td>Top &amp; Bottom Sale</td><td>B2:K13</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. In the order the sheet keeps them, not a ranking.</td></tr>
               <tr><td>Daily Expenses</td><td>A1:J12</td><td>Day-level branch expenses as entered.</td></tr>
             </tbody>
           </table>
