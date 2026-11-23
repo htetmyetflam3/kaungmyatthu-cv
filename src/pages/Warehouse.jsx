@@ -71,12 +71,10 @@ export default function Warehouse() {
         </p>
 
         <p style={{ margin: '0 0 12px' }}>
-          Here is a question worth sitting with. How do you know what is inside a shop? Not roughly — exactly, item by
-          item, in a form a machine can read. Most shops answer that with a till. This one had no till of any kind, and
-          a till would not have fixed it on its own: to know what is in stock you need a POS, to run a POS you need the
-          stock registered, and the shop was stuck on both sides of that circle at once. Nobody had written the stock
-          down, so there was nothing for a till to read; and with no till, nobody was going to spend a week writing it
-          down.
+          The shop had no till system of any kind, and a till on its own would not have fixed it. The problem is a
+          circle: to know what is in stock you need a POS, to run a POS you need the stock registered, and the shop sat
+          on both sides of that circle at once. Nobody had written the stock down, so there was nothing for a till to
+          read; and with no till, nobody was going to spend a week writing it down. That is the state I walked into.
         </p>
         <p style={{ margin: '0 0 12px' }}>
           I heard about it from a friend whose family knew the shop. I went in to look, and stayed four and a half
@@ -92,9 +90,9 @@ export default function Warehouse() {
           nobody walks in and notices: the shop&rsquo;s own knowledge, turned into a table a till can swallow.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          Then there is the number printed on the box. You would think it identifies the part. It does not. Sometimes it
-          is the manufacturer&rsquo;s number, sometimes the distributor&rsquo;s tag, and on repackaged stock it can be
-          missing or simply wrong. So every item gets an ID of its own — <code>BP</code> for brake pads,
+          Then there is the number printed on the box, which does not identify the part. Sometimes it is the
+          manufacturer&rsquo;s number, sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing
+          or simply wrong. So every item gets an ID of its own — <code>BP</code> for brake pads,
           <code>WP</code> for water pumps, <code>P-F</code> for fuel pumps — and the vendor number sits beside it as a
           reference, never as the key. Because an ID is only a string, the same string set in a barcode font prints as
           the label: one value serving the shelf, the sheet and the scanner, instead of three that have to agree.
@@ -107,9 +105,9 @@ export default function Warehouse() {
         </p>
         <p style={{ margin: '0 0 12px' }}>
           I was on a time-based arrangement, not fixed hours: no check-in, no check-out. The one rule was to tell them
-          when I was not coming, so they would not count me for lunch. Think about what that does to a plan. Some days
-          I arrived at ten, some days at one, and by then new stock had come in, items I had registered had sold, and
-          the codes I had prepared for them no longer matched the shelf. A warehouse this size turns over constantly —
+          when I was not coming, so they would not count me for lunch. That changes what a plan can be. Some days I
+          arrived at ten, some days at one, and by then new stock had come in, items I had registered had sold, and the
+          codes I had prepared for them no longer matched the shelf. A warehouse this size turns over constantly —
           most lines carry thirty pieces at most, and the shelf changes all day. Re-registering the same shelf a second
           time would have eaten the whole project.
         </p>
