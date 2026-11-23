@@ -3,9 +3,9 @@ import Layout, { SectionHead, DetailsButton, ZoomFigure } from '../layout/Layout
 
 const SCRIPTS = [
   {
-    kind: 'Media translation · 2022–2023',
-    title: 'Canal+ Myanmar · Alice Adventure',
-    body: 'Media translation for the Canal+ Myanmar programme Alice Adventure. This is where the writing work started, and it is the only piece on this page done for a broadcaster rather than a brand.',
+    kind: 'Programme script · 2022–2023',
+    title: 'Canal+ Myanmar · Alice',
+    body: 'Two Burmese segments written for the Alice programme. One is on the robots built to work underwater — the autonomous kind against the ROV, down to Stanford’s Ocean One. The other is on the robots you can buy yourself. Both are written to be spoken by Alice, in her voice, to the show’s audience.',
   },
   {
     kind: 'Script · DOCX',
