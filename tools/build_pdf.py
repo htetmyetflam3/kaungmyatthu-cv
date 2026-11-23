@@ -63,6 +63,9 @@ class PortfolioPDF(FPDF):
         self.alias_nb_pages()
         for style in ['', 'B', 'I', 'BI']:
             self.add_font('my', style, FONT_MY)
+        # Noto Sans Myanmar needs real OpenType shaping, otherwise Burmese stacks
+        # render out of order and every syllable sits on a dotted circle.
+        self.set_text_shaping(True)
         self.set_margins(18, 20, 18)  # generous top margin for header band
         self.set_auto_page_break(auto=True, margin=20)
 
@@ -174,7 +177,7 @@ class PortfolioPDF(FPDF):
 
         # role chips — clickable, same destinations as the index
         chip_dests = ['sec-01', 'sec-02', 'sec-03', 'sec-04', 'sec-05']
-        chips = ['Work record', 'Content scripts', 'CSM systems', 'AI study', 'Writing samples']
+        chips = ['321 work record', 'NPT warehouse', 'Excel & CSM', 'Content', 'It & tech']
         x, y = 18, 150
         for ch, dest in zip(chips, chip_dests):
             self.set_font('my', 'B', 8)
@@ -192,17 +195,19 @@ class PortfolioPDF(FPDF):
             x += w + 4
 
         # index of contents — clickable internal destinations
-        self.set_xy(18, 190)
+        self.set_xy(18, 178)
         self.set_font('my', 'B', 7.5)
         self.set_text_color(140, 190, 180)
         self.cell(0, 6, 'IN THIS PORTFOLIO', new_x=XPos.LEFT, new_y=YPos.NEXT)
         index = [
             ('00', 'Where I have worked — every role, in order', 'sec-00x'),
-            ('01', 'Work record — 321 Ecolife', 'sec-01'),
-            ('02', 'Content scripts & reels', 'sec-02'),
-            ('03', 'CSM systems — parts shelf mapping', 'sec-03'),
-            ('04', 'AI study — Understanding Prompts in AI', 'sec-04'),
-            ('05', 'Writing & translation samples', 'sec-05'),
+            ('01', '321 Ecolife — work record & daily workflow', 'sec-01'),
+            ('02', 'NPT — warehouse, item IDs, barcode labels', 'sec-02'),
+            ('03', 'Excel & CSM — POS, shelf map, staff training', 'sec-03'),
+            ('04', 'Video scripts for marketing', 'sec-04'),
+            ('05', 'Canal+, translation & creative', 'sec-04b'),
+            ('06', 'It & tech — prompt book, builds, Myangustis', 'sec-05'),
+            ('07', 'Writing samples — Burmese and English', 'sec-06'),
         ]
         for num, label, dest in index:
             y = self.get_y()
@@ -215,7 +220,7 @@ class PortfolioPDF(FPDF):
             self.set_font('my', 'B', 9.5)
             self.set_text_color(230, 238, 246)
             self.cell(150, 7, label, link=d)
-            self.set_xy(18, y + 9.5)
+            self.set_xy(18, y + 8.3)
 
         # footer info
         self.set_xy(18, 250)
@@ -250,8 +255,8 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 10.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6.5,
-            'This is the work I can show, in one file: where I have worked, the 321 branch and what the job actually was, the '
-            'scripts I wrote, the CSM setup, the AI study, and the writing samples. The full files sit behind the links inside.')
+            'The work I can show, in the order the folders on my Drive now hold it: 321, NPT, the Excel and CSM files, the '
+            'content folders, the tech folder, and the writing samples last.')
         self.ln(4)
         self.set_font('my', 'B', 9)
         self.set_text_color(*TEAL)
@@ -261,57 +266,35 @@ class PortfolioPDF(FPDF):
         # quick-glance grid card-like rows
         rows = [
             ('00', 'Where I have worked', 'Every role in order — 321, NPT, CSM, the NGO, the writing and the builds', 'page 2', 'sec-00x'),
-            ('01', 'Work record — 321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, followers, sales', 'page 4', 'sec-01'),
-            ('02', 'Content scripts', 'IMB1 / 2 / 3 — L\'ABBELL reels · Echo Vibe story-led reel', 'page 6', 'sec-02'),
-            ('03', 'CSM systems + NPT warehouse', 'POS setup, shelf map, till mock-up and the warehouse role', 'page 7', 'sec-03'),
-            ('04', 'AI study', 'Prompt engineering — author manuscript (Layers & Zones)', 'page 8', 'sec-04'),
-            ('05', 'Writing samples', 'Translation · adaptation · original writing', 'page 9', 'sec-05'),
+            ('01', '321 Ecolife', 'Operation Assistant Supervisor · Jan 2024 – Jan 2025 · reporting, sales, TikTok', 'page 4', 'sec-01'),
+            ('02', 'NPT warehouse', 'Item registration, the ID-is-the-barcode label sheet, the reference letter', 'page 6', 'sec-02'),
+            ('03', 'Excel & CSM', 'POS from Excel, shelf map, till mock-up, six workbooks merged into one', 'page 7', 'sec-03'),
+            ('04', 'Video scripts', 'IMB1 / 2 / 3 · Echo Vibe · bar daily posts — six written scripts', 'page 8', 'sec-04'),
+            ('05', 'Canal+ & translation', 'Adaptation, the combat-zone translation, original pieces', 'page 9', 'sec-04b'),
+            ('06', 'It & tech', 'The prompt book, the three sites, Myangustis', 'page 10', 'sec-05'),
+            ('07', 'Writing samples', 'Burmese and English excerpts, read as they were written', 'page 11', 'sec-06'),
         ]
         for num, t, d, page, dest in rows:
             y = self.get_y()
-            self.card_top(18, y, 174, 15, CARD, LINE)
+            self.card_top(18, y, 174, 14, CARD, LINE)
             self.set_fill_color(*NAVY)
-            self.rect(18, y, 1.4, 15, 'F')
+            self.rect(18, y, 1.4, 14, 'F')
             self.set_font('my', 'B', 9.5)
             self.set_text_color(*NAVY)
             self.set_xy(25, y + 3)
             self.cell(0, 6, f'{num}  ·  {t}', link=dest, new_x=XPos.LEFT, new_y=YPos.NEXT)
             self.set_font('my', '', 8.5)
             self.set_text_color(*MUTED)
-            self.set_xy(25, y + 9.5)
+            self.set_xy(25, y + 8.9)
             self.cell(140, 5, d, new_x=XPos.LEFT, new_y=YPos.NEXT)
             self.set_font('my', 'B', 7)
             self.set_text_color(*TEAL)
-            self.set_xy(160, y + 9.5)
+            self.set_xy(160, y + 8.9)
             self.cell(28, 5, page, align='R')
-            self.set_xy(18, y + 18.1)
+            self.set_xy(18, y + 16.6)
         self.ln(2)
 
-        # the rest of the portfolio lives on the site — listed so the PDF covers it too
-        self.set_font('my', 'B', 8)
-        self.set_text_color(*TEAL)
-        self.cell(0, 6, 'ALSO IN THE PORTFOLIO (LIVE PAGES)', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.ln(0.5)
-        self.set_font('my', '', 8.5)
-        self.set_text_color(*INK)
-        extra = [('Warehouse & CSM', SITE + 'warehouse.html'),
-                 ('Projects — web work', SITE + 'projects.html'),
-                 ('About me', SITE + 'about.html'),
-                 ('Myangustis', SITE + 'myangustis.html')]
-        x = 18
-        for label, url in extra:
-            w = self.get_string_width(label) + 10
-            if x + w > 192:
-                x = 18
-                self.ln(7)
-            self.set_fill_color(*TEAL_SOFT)
-            self.rect(x, self.get_y(), w, 6.2, 'F')
-            self.set_font('my', 'B', 7.5)
-            self.set_text_color(23, 73, 79)
-            self.set_xy(x + 4, self.get_y() + 1.2)
-            self.cell(w - 6, 4, label, link=url)
-            x += w + 4
-        self.ln(9)
+        # the live pages are all listed on the index page, so the overview stays a clean eight
 
         # contact strip — pinned to the bottom of the page
         y = 210
@@ -897,7 +880,7 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', '', 9)
         self.set_text_color(*MUTED)
-        self.multi_cell(0, 5.5, 'Three selected pieces showing Burmese translation, adaptation and creative-writing work.')
+        self.multi_cell(0, 5.5, 'Three pieces I keep coming back to: a combat-zone monologue I translated, a Burmese adaptation from Canal+, and an original short.', align='L')
         self.ln(4)
 
         for i, s in enumerate(SAMPLES):
@@ -922,18 +905,18 @@ class PortfolioPDF(FPDF):
                     self.set_font('my', 'B', 10.5)
                     self.set_text_color(*NAVY)
                     self.ln(2)
-                    self.multi_cell(0, 7, it['text'], new_x=XPos.LEFT, new_y=YPos.NEXT)
+                    self.multi_cell(0, 7, it['text'], align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
                     self.ln(1)
                     continue
                 if it.get('lang') == 'my':
                     self.set_font('my', '', 10)
                     self.set_text_color(40, 55, 75)
-                    self.multi_cell(0, 10.5, it['text'], new_x=XPos.LEFT, new_y=YPos.NEXT)
+                    self.multi_cell(0, 10.5, it['text'], align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
                     self.ln(2.2)
                 else:
                     self.set_font('my', 'I', 8.5)
                     self.set_text_color(83, 99, 122)
-                    self.multi_cell(0, 7.5, it['text'], new_x=XPos.LEFT, new_y=YPos.NEXT)
+                    self.multi_cell(0, 7.5, it['text'], align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
                     self.ln(2.5)
             self.ln(3)
 
@@ -990,15 +973,220 @@ class PortfolioPDF(FPDF):
         self.cell(0, 5, '+959955400017   ·   North Okkalapa, Myanmar')
         self.ln(0)
 
+    # ---------- drive-folder pages ----------
+    def file_rows(self, rows):
+        for name, note, url in rows:
+            y = self.get_y()
+            if y > 250:
+                self.add_page()
+                y = self.get_y()
+            self.set_draw_color(*LINE)
+            self.set_line_width(0.2)
+            self.line(18, y - 1.6, 192, y - 1.6)
+            self.set_font('my', 'B', 9.4)
+            self.set_text_color(*NAVY)
+            self.set_xy(18, y)
+            self.cell(150, 5.2, name, link=url)
+            self.set_font('my', '', 8.3)
+            self.set_text_color(60, 74, 96)
+            self.set_xy(18, y + 5.2)
+            self.multi_cell(174, 4.8, note, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.ln(5.4)
+        self.ln(2)
+        self.set_font('my', 'I', 7.2)
+        self.set_text_color(120, 133, 152)
+        self.multi_cell(0, 4.2,
+            'Names are the file names on Drive, so a link here and a file there are the same thing.',
+            align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+
+    def folder_head(self, band, kicker, title, deck, tag=None, anchor=None):
+        self.add_page()
+        if anchor:
+            self.set_link(name=anchor, x=18, y=277)
+        self.header_band(band)
+        self.ln(5)
+        self.kicker(kicker)
+        self.section_title(title, 16.5)
+        self.rule()
+        self.set_font('my', '', 9.2)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 5.6, deck, align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2)
+        if tag:
+            self.set_font('my', 'B', 7)
+            self.set_text_color(*TEAL)
+            self.cell(0, 4.6, tag, new_x=XPos.LEFT, new_y=YPos.NEXT)
+            self.ln(1)
+        self.set_font('my', 'B', 7)
+        self.set_text_color(*TEAL)
+        self.cell(0, 4.6, 'IN THIS FOLDER', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.6)
+
+    def npt_page(self):
+        self.folder_head('NPT warehouse', '02 — NPT warehouse',
+            'Thirty thousand parts, and not one of them labelled twice.',
+            'Six January to one November 2024. Electronics, tools and raw materials, and no stock system in place when I '
+            'started, so I registered every item by hand and kept registering it every day. Each item got its own ID '
+            '— BP, WP, P-F — and the ID is the barcode: the same string in a barcode font renders the label. TAG is a '
+            'convenience, sometimes OEM, sometimes the distributor\'s, sometimes repackaged and wrong, so the TAG never '
+            'decides anything.',
+            'WAREHOUSE OPERATIONS  ·  ITEM REGISTRATION  ·  BARCODE LABELS', anchor='sec-02')
+        self.file_rows([
+            ('Npt way -inventory.docx',
+             'How stock ran at NPT, written the way I would hand it to a successor: receiving, location, counting, and '
+             'why the count happens daily.',
+             'https://drive.google.com/file/d/12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY/view'),
+            ('way inventory-1.docx',
+             'The second pass on the same method, with the barcode step spelled out end to end.',
+             'https://drive.google.com/file/d/1q4xWXhL7ZxIaR5THYUmYTAsfvGOOyDgs/view'),
+            ('barcode.docx',
+             'The label sheet. One ID per item, the same string drawn in a barcode font — the BP, WP and P-F series.',
+             'https://drive.google.com/file/d/1X__jBAT7IeVw1BStZ1v5sm5MPw2Fb2Kb/view'),
+            ('Reference letter — NPT co-founder',
+             'Dated 08 December 2024, on the company head. It is the closest thing to a third-party verdict on the '
+             'warehouse work.',
+             'https://drive.google.com/file/d/1QdqLp4riClyC4h7HTQwxoch-Bj31Fa2D/view'),
+            ('Branch addresses and QR',
+             'The office addresses and the code the branches scan, kept in one place so a delivery never waits on me.',
+             'https://drive.google.com/file/d/1l3GRF05Z1LY__sMvfCss097ESGkDW6bl/view'),
+            ('Your paragraph text (9).pdf',
+             'The inventory method on one page, for the people who will not open a DOCX.',
+             'https://drive.google.com/file/d/1QlecOi1c1bBX6aTpuG_9vDDHp7AtCtgz/view'),
+        ])
+
+    def excel_page(self):
+        self.folder_head('Excel / CSM', '03 — Excel & CSM',
+            'The shop had no till, so the till came out of Excel.',
+            'A car-parts shop that had never had a point of sale. The local software imports from Excel, so I built the '
+            'register in the shape it eats: code, item ID, category, brand, family, model, package colour, location, '
+            'quantity. Three months scoped, four and a half delivered. The shelves stayed where the owners wanted them, '
+            'the map described the shop as it actually stood, and their ground count and my mapping ran as separate '
+            'jobs. It ended with a till mock-up and a training session on the staff\'s own sheets.',
+            'POS SETUP  ·  SHELF MAPPING  ·  STAFF TRAINING  ·  CAR PARTS', anchor='sec-03')
+        self.file_rows([
+            ('CSM - merged workbook.xlsx  (43 tabs)',
+             'Every CSM workbook in one file: the shelf map, the registers, the ground count, the shelf-sheet layout and '
+             'the POS tabs. Duplicate copies from the alternates were dropped.',
+             'https://drive.google.com/file/d/1Uvm-vYhTaIyXB3U44bOQtFcOjChUdZHS/view'),
+            ('CSM-Master-Shelf-Mapping.xlsx',
+             'The master: 37 tabs. Contents, location index, seven category registers, the KMT sheets, the shelf sheets '
+             'and the Update tabs the POS reads.',
+             'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view'),
+            ('CSM-POS-Portfolio-Demo.xlsm',
+             'The till as it ran, with Items, Sales and Ground behind it. Macro-enabled, so it stays its own file.',
+             'https://drive.google.com/file/d/1gvdPV9ZSIcRrEmkzuLp4Lqzx6Wxwnt1D/view'),
+            ('Point_Of_Sale.xlsm',
+             'The earlier build of the same till, before the item list filled out.',
+             'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view'),
+            ('epos4excel_v1.8.1.xlsm',
+             'The software the shop runs. I set up the import so its item list could come out of my sheets instead of '
+             'being typed in by hand.',
+             'https://drive.google.com/file/d/1xQUBBr-q7M7suxD_SrB-YXsZ2fO8cH4k/view'),
+            ('GROUND.xlsx',
+             'Their ground count, kept apart from my mapping on purpose — two jobs, two sets of numbers.',
+             'https://drive.google.com/file/d/1e9Buwq5YusMqhR8fJxs7soOwcM66iOaW/view'),
+        ])
+
+    def content_pages(self):
+        self.folder_head('Scripts', '04 — Video scripts',
+            'Six scripts for shops that sell on TikTok.',
+            'Written to be shot, not read: hook, beat, product truth, call to action, with the spoken line and the '
+            'on-screen text kept apart so one hand can hold the phone while the other holds the bottle.',
+            'VIDEO SCRIPTS  ·  TIKTOK  ·  PRODUCT REELS', anchor='sec-04')
+        self.file_rows([
+            ('imb-1.docx  ·  IMB1, leave-in conditioner',
+             'The first reel of the set. Problem, product, proof, with the claim kept inside what the label allows.',
+             'https://drive.google.com/file/d/1uh-ZL2w9SlO8I97ThPEwokKKPGsBw-VA/view'),
+            ('imb2.docx  ·  IMB2, salon-quality home care',
+             'Same product family, different buyer: the person doing it at home rather than the salon.',
+             'https://drive.google.com/file/d/1aNmsMVi89BviE6aRM59Aptb9wZ1oZi96/view'),
+            ('tiktokfriendly_commercial script  ·  IMB3, rebonding',
+             'The rebonding script in the short-cut edit: every line timed to a cut.',
+             'https://drive.google.com/file/d/1WiQLXaXaBS4s9FJgDTG8eK0YjnhDXxW2/view'),
+            ('EchoVibe_client&tiktok_friendly.docx',
+             'The client\'s version and the TikTok version of the same story, side by side so they could approve one '
+             'without reading the other.',
+             'https://drive.google.com/file/d/191g0xhI_cwpDsuibTViHeo1td47g8DWU/view'),
+            ('echovibe_actual_script.docx',
+             'What was actually shot, after the client notes and the sound check.',
+             'https://drive.google.com/file/d/1VZDnBgFtuVXeNgMC2tQ2sr0zSv033WdG/view'),
+            ('bardailybandpost.docx',
+             'A bar account\'s daily post set — the fastest format I have written, and the one that taught me pacing.',
+             'https://drive.google.com/file/d/18RpLu2JS0FOW7kMXBcTa6WVclH5XqAiR/view'),
+        ])
+
+    def content_more_pages(self):
+        self.folder_head('Content', '05 — Canal+, translation, creative',
+            'Adaptation is a different job from translation.',
+            'Three kinds of writing that look alike on a shelf and are not. An adaptation keeps the beat and changes the '
+            'culture. A translation keeps the meaning and changes nothing else. An original keeps only the idea I started '
+            'with.',
+            'ADAPTATION  ·  TRANSLATION  ·  ORIGINAL WRITING', anchor='sec-04b')
+        self.file_rows([
+            ('Copy of underwater.docx  ·  Canal+ adaptation',
+             'A scene carried into Burmese without losing what the scene was doing — the dialogue had to sound like people, '
+             'not like subtitles.',
+             'https://drive.google.com/file/d/17fUwje1APWoVNQE8f0dE60NBx3LbozUJ/view'),
+            ('Copy of ကိယ်တိုင်ဝယ်လို့ရတဲ့စက်ရုပ်.docx  ·  Canal+',
+             'The Burmese script for the same block of work, kept in Burmese because that is the language it was written in.',
+             'https://drive.google.com/file/d/1ImVMlhEJzMM0OiGjzybKAHvDjlTnm_wg/view'),
+            ('if I die in combat zone.pdf  ·  translation',
+             'A first-person piece from a combat zone, translated into Burmese with the voice left intact. This is the '
+             'piece people ask about.',
+             'https://drive.google.com/file/d/1yjcerZK_73Xzp4PIfg9D73paWCPsmYJj/view'),
+            ('gamelore_adaptation-Carl.docx  ·  adaptation',
+             'Game lore re-written for a Burmese reader who has never played it — names, jokes and stakes all moved.',
+             'https://drive.google.com/file/d/1zZE5-kMOlmQjUM9dhNR8iz79tFf9okLO/view'),
+            ('falsepromise  ·  original',
+             'A short original piece. The one where I stopped adapting someone else\'s rhythm.',
+             'https://docs.google.com/document/d/1jc2aTd6W7sVLOpVXV42COGE2GV50NlUdeP1YZqxW12Q/view'),
+            ('rgb.pdf  ·  creative',
+             'A colour-driven piece where the writing follows the palette rather than the other way round.',
+             'https://drive.google.com/file/d/1QBxJD2KD4utrLBnypY3S5dckK4IjWBcx/view'),
+        ])
+
+    def tech_page(self):
+        self.folder_head('It & tech related', '06 — It & tech',
+            'The prompt book, the builds, and the tool I am making.',
+            'A manuscript on how prompting actually works — layers, zones, and what happens when a model decides it knows '
+            'better than the person asking. The bilingual parts are mine; the merged edition gathers them into one flow '
+            'with the template set carried in from the earlier single-language copy. Around it sit the sites I keep alive '
+            'and Myangustis, the Burmese text toolchain I am building for myself.',
+            'PROMPT ENGINEERING  ·  WEB BUILDS  ·  MYANGUSTIS', anchor='sec-05')
+        self.file_rows([
+            ('Understanding Prompts in AI - merged edition.docx',
+             'The merged book: chapters one to five in one flow, with the template set and the reusable skeletons inside '
+             'chapter two.',
+             'https://drive.google.com/file/d/1VEwJ9OK9vbQB5l-k5_XYux04YZxB_Dbr/view'),
+            ('Understanding Prompts in A (1).docx',
+             'The single-language edition the templates came from, kept as it was for comparison.',
+             'https://drive.google.com/file/d/1-88Qn-NpvON7yPux9ohRs1ezFld5MWIc/view'),
+            ('Yumeyuki.info',
+             'A legal overseas-employment agency: pages, forms and the Burmese copy behind them.',
+             'https://yumeyuki.info'),
+            ('TTS-AE.com',
+             'A company site for a UAE project, built and handed over.',
+             'https://tts-ae.com'),
+            ('Writermorphosis.com',
+             'My own build and still going: where the writing and the site work meet.',
+             'https://writermorphosis.com'),
+            ('Myangustis',
+             'A Burmese text engine — extraction, cleaning and proofreading for Myanmar documents. The one I am building '
+             'because nothing off the shelf does it.',
+             SITE + 'myangustis.html'),
+        ])
+
     def build(self):
         self.cover()
         self.experience_page()
         self.overview_page()
         self.case_study()
         self.workflow_section()
-        self.scripts_section()
-        self.csm_section()
-        self.ai_section()
+        self.npt_page()
+        self.excel_page()
+        self.content_pages()
+        self.content_more_pages()
+        self.tech_page()
         self.samples_section()
         self.links_page()
         self.set_author('Kaung Myat Thu')
