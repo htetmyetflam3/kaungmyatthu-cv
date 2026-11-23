@@ -8,7 +8,7 @@ const WORK = [
     kicker: 'Operation Assistant Supervisor · Stalker / 321 Ecolife',
     title: 'Running a branch with no manager above me',
     body: 'Nok branch, January 2024 to January 2025 — the only Stalker staff member on that shop floor. Attendance, daily expense, sales and stock, staff promotion recommendations and TikTok follow-up, reported straight to the sector manager on the board.',
-    go: 'Read the case study →',
+    go: 'Read the work record →',
   },
   {
     href: 'content.html',

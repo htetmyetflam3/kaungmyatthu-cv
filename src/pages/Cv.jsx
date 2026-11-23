@@ -100,7 +100,7 @@ export default function Cv() {
         <li>Coordinated with voiceover and editing teams for content delivery, and reported social-media performance back to the branch.</li>
         <li>Kept TikTok performance visible month after month — 157,000 → 187,375 → 298,104 month-end followers (Oct → Dec, +89.9%).</li>
       </ul>
-      <p className="job-links"><a href="case-study.html">321 case study →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
+      <p className="job-links"><a href="case-study.html">321 work record →</a> <span className="sep">·</span> <a href="content.html">Scripts &amp; writing →</a></p>
     </div>
     <div className="job">
       <div className="d-flex flex-wrap justify-content-between gap-2 align-items-center">
@@ -117,7 +117,7 @@ export default function Cv() {
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>
     <p className="job-links" style={{marginTop: '16px'}}>
-      <a href="case-study.html">321 case study →</a> <span className="sep">·</span>
+      <a href="case-study.html">321 work record →</a> <span className="sep">·</span>
       <a href="warehouse.html">Warehouse &amp; CSM →</a> <span className="sep">·</span>
       <a href="content.html">Scripts &amp; writing →</a> <span className="sep">·</span>
       <a href="ai.html">Prompt engineering →</a> <span className="sep">·</span>

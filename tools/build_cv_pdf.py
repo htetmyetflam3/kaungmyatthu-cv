@@ -158,7 +158,7 @@ class Resume:
         p.set_font('my', '', 9.5)
         p.set_text_color(*INK)
         p.multi_cell(0, 5.2,
-            'Reference letter available on request. Selected work, the 321 case study and script samples are on the '
+            'Reference letter available on request. Selected work, the 321 work record and script samples are on the '
             'portfolio: htetmyetflam3.github.io/kaungmyatthu-cv/portfolio.html',
             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
