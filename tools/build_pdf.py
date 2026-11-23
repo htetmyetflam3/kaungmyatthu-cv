@@ -179,8 +179,8 @@ class PortfolioPDF(FPDF):
         self.multi_cell(174, 7, 'Content, retail ops & systems — one working profile.', new_x=XPos.LEFT, new_y=YPos.NEXT)
 
         # role chips — clickable, same destinations as the index
-        chip_dests = ['sec-01', 'sec-02', 'sec-03', 'sec-04', 'sec-05']
-        chips = ['321 work record', 'NPT warehouse', 'Excel & CSM', 'Content', 'It & tech']
+        chip_dests = ['sec-01', 'sec-02', 'sec-04', 'sec-05']
+        chips = ['321 work record', 'Operations', 'Content', 'It & tech']
         x, y = 18, 150
         for ch, dest in zip(chips, chip_dests):
             self.set_font('my', 'B', 8)
@@ -205,12 +205,11 @@ class PortfolioPDF(FPDF):
         index = [
             ('00', 'Where I have worked — every role, in order', 'sec-00x'),
             ('01', '321 Ecolife — work record & daily workflow', 'sec-01'),
-            ('02', 'NPT — warehouse, item IDs, barcode labels', 'sec-02'),
-            ('03', 'Excel & CSM — POS, shelf map, staff training', 'sec-03'),
-            ('04', 'Video scripts for marketing', 'sec-04'),
-            ('05', 'Canal+, translation & creative', 'sec-04b'),
-            ('06', 'It & tech — prompt book, builds, Myangustis', 'sec-05'),
-            ('07', 'Writing samples — Burmese and English', 'sec-06'),
+            ('02', 'Warehouse & POS — item IDs, barcode labels, the till', 'sec-02'),
+            ('03', 'Video scripts for marketing', 'sec-04'),
+            ('04', 'Canal+, translation & creative', 'sec-04b'),
+            ('05', 'It & tech — prompt book, builds, Myangustis', 'sec-05'),
+            ('06', 'Writing samples — Burmese and English', 'sec-06'),
         ]
         for num, label, dest in index:
             y = self.get_y()
@@ -270,12 +269,11 @@ class PortfolioPDF(FPDF):
         rows = [
             ('00', 'Where I have worked', 'Every role in order — 321, NPT, CSM, the NGO, the writing and the builds', 'page 2', 'sec-00x'),
             ('01', '321 Ecolife', 'Operation Assistant Supervisor · Nov 2024 – Feb 2025 · reporting, sales, TikTok', 'page 4', 'sec-01'),
-            ('02', 'NPT warehouse', 'Item registration, the ID-is-the-barcode label sheet, the reference letter', 'page 6', 'sec-02'),
-            ('03', 'Excel & CSM', 'POS from Excel, shelf map, till mock-up, six workbooks merged into one', 'page 7', 'sec-03'),
-            ('04', 'Video scripts', 'IMB1 / 2 / 3 · Echo Vibe · bar daily posts — six written scripts', 'page 8', 'sec-04'),
-            ('05', 'Canal+ & translation', 'Adaptation, the combat-zone translation, original pieces', 'page 9', 'sec-04b'),
-            ('06', 'It & tech', 'The prompt book, the three sites, Myangustis', 'page 10', 'sec-05'),
-            ('07', 'Writing samples', 'Burmese and English excerpts, read as they were written', 'page 11', 'sec-06'),
+            ('02', 'Warehouse & POS', 'Item IDs and barcode labels at NPT; the till, shelf map and training at CSM', 'page 6', 'sec-02'),
+            ('03', 'Video scripts', 'IMB1 / 2 / 3 · Echo Vibe · bar daily posts — six written scripts', 'page 7', 'sec-04'),
+            ('04', 'Canal+ & translation', 'Adaptation, the combat-zone translation, original pieces', 'page 8', 'sec-04b'),
+            ('05', 'It & tech', 'The prompt book, the three sites, Myangustis', 'page 9', 'sec-05'),
+            ('06', 'Writing samples', 'Burmese and English excerpts, read as they were written', 'page 10', 'sec-06'),
         ]
         for num, t, d, page, dest in rows:
             y = self.get_y()
@@ -532,51 +530,22 @@ class PortfolioPDF(FPDF):
             self.set_xy(18, y + 6.3)
         self.ln(2)
 
-        # feedback quotes
+        # what the job was, read off the workbook's own tabs
         self.set_font('my', 'B', 10)
         self.set_text_color(*NAVY)
-        self.cell(0, 6.4, 'Customer feedback', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.ln(0.6)
-        quotes = [('"Good Service"', 'my'),
-                  ('"Excellent service"', 'my'),
-                  ('"Service အရမ်းကောင်းပါတယ်။ Size စုံစေချင်တယ်။"', 'my')]
-        for text, lang in quotes:
-            self.card_top(18, self.get_y(), 174, 11.5, TEAL_SOFT, (205, 227, 225))
-            self.set_fill_color(*TEAL)
-            self.rect(18, self.get_y(), 1.4, 11.5, 'F')
-            y = self.get_y()
-            self.set_xy(25, y + 1.9)
-            self.set_font('my', '', 8)
-            self.set_text_color(23, 73, 79)
-            self.cell(0, 4, text, new_x=XPos.LEFT, new_y=YPos.NEXT)
-            self.set_xy(18, y + 13.2)
-        self.ln(0.5)
-
-        # reference note — the full workbook is available on request
-        note_y = self.get_y()
-        self.card_top(18, note_y, 174, 20, (255, 247, 236), (252, 220, 168))
-        self.set_font('my', 'B', 8.5)
-        self.set_text_color(180, 83, 9)
-        self.set_xy(25, self.get_y() + 2.6)
-        self.cell(0, 4.2, 'The full workbook', new_x=XPos.LEFT, new_y=YPos.NEXT)
-        self.set_font('my', '', 7.5)
-        self.set_text_color(110, 64, 10)
-        self.set_xy(25, self.get_y() + 0.5)
-        self.multi_cell(160, 4.0,
-            'Customer phone numbers redacted. The redacted workbook is linked in this PDF’s links page.',
+        self.cell(0, 6.4, 'The job, as the workbook has it', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(0.8)
+        self.set_font('my', '', 8.6)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 4.9,
+            'Eleven tabs: daily sales by payment method with discounts and returns, top and bottom sellers, customer '
+            'feedback, TikTok performance, the incentives and their sign-off, staff movements, days off, daily '
+            'expenses and cash control, and the generator log.',
             new_x=XPos.LEFT, new_y=YPos.NEXT)
-        # certification — one compact line so this page stays on a single page
-        self.set_xy(18, note_y + 22)
-        self.set_font('my', 'B', 7.2)
-        self.set_text_color(*NAVY)
-        label = 'Certification · '
-        self.cell(self.get_string_width(label) + 0.6, 4, label)
-        self.set_font('my', '', 7.2)
-        self.set_text_color(*MUTED)
-        self.cell(0, 4,
-            'Conversion Optimization Certification Exam — Skillshop · issued 30 Nov 2025 · expires 30 Nov 2026 · ID 167907950',
-            link='https://skillshop.credential.net/b20838ac-849b-4194-9437-c52f49d9ff46',
-            new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.6)
+        self.link_line('321NOK-Master-Redacted.xlsx',
+                       'https://drive.google.com/file/d/1w9JDMM0OM9vBKksnJO-1iJoqpJECOq3J/view')
+        self.ln(1)
 
     def workflow_section(self):
         self.add_page()
@@ -878,7 +847,7 @@ class PortfolioPDF(FPDF):
         self.set_link(name='sec-05', x=18, y=277)
         self.header_band('Writing samples')
         self.ln(2)
-        self.kicker('05 — Writing samples')
+        self.kicker('06 — Writing samples')
         self.section_title('Translation, adaptation & original writing', 17)
         self.rule()
         self.set_font('my', '', 9)
@@ -1025,74 +994,75 @@ class PortfolioPDF(FPDF):
         self.cell(0, 4.6, 'THE FILES', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1.6)
 
-    def npt_page(self):
-        self.folder_head('NPT warehouse', '02 — NPT warehouse',
-            'Thirty thousand parts, and not one of them labelled twice.',
+    def ops_page(self):
+        self.add_page()
+        self.set_link(name='sec-02', x=18, y=277)
+        self.header_band('Operations')
+        self.ln(4)
+        self.kicker('02 — Operations')
+        self.section_title('Warehouse and point of sale.', 16.5)
+        self.rule()
+
+        self.set_font('my', 'B', 7.6)
+        self.set_text_color(*TEAL)
+        self.cell(0, 5, 'NPT WAREHOUSE  ·  JANUARY – NOVEMBER 2024', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.set_font('my', '', 8.8)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 4.9,
             'Six January to one November 2024. Electronics, tools and raw materials, and no stock system in place when I '
             'started, so I registered every item by hand and kept registering it every day. Each item got its own ID '
             '— BP, WP, P-F — and the ID is the barcode: the same string in a barcode font renders the label. TAG is a '
             'convenience, sometimes OEM, sometimes the distributor\'s, sometimes repackaged and wrong, so the TAG never '
             'decides anything.',
-            'WAREHOUSE OPERATIONS  ·  ITEM REGISTRATION  ·  BARCODE LABELS', anchor='sec-02')
-        self.file_rows([
-            ('Npt way -inventory.docx',
-             'How stock ran at NPT, written the way I would hand it to a successor: receiving, location, counting, and '
-             'why the count happens daily.',
-             'https://drive.google.com/file/d/12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY/view'),
-            ('way inventory-1.docx',
-             'The second pass on the same method, with the barcode step spelled out end to end.',
-             'https://drive.google.com/file/d/1q4xWXhL7ZxIaR5THYUmYTAsfvGOOyDgs/view'),
-            ('barcode.docx',
-             'The label sheet. One ID per item, the same string drawn in a barcode font — the BP, WP and P-F series.',
-             'https://drive.google.com/file/d/1X__jBAT7IeVw1BStZ1v5sm5MPw2Fb2Kb/view'),
-            ('Reference letter — NPT co-founder',
-             'Dated 08 December 2024, on the company head. It is the closest thing to a third-party verdict on the '
-             'warehouse work.',
-             'https://drive.google.com/file/d/1QdqLp4riClyC4h7HTQwxoch-Bj31Fa2D/view'),
-            ('Branch addresses and QR',
-             'The office addresses and the code the branches scan, kept in one place so a delivery never waits on me.',
-             'https://drive.google.com/file/d/1l3GRF05Z1LY__sMvfCss097ESGkDW6bl/view'),
-            ('Your paragraph text (9).pdf',
-             'The inventory method on one page, for the people who will not open a DOCX.',
-             'https://drive.google.com/file/d/1QlecOi1c1bBX6aTpuG_9vDDHp7AtCtgz/view'),
-        ])
+            align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2.8)
 
-    def excel_page(self):
-        self.folder_head('Excel / CSM', '03 — Excel & CSM',
-            'The shop had no till, so the till came out of Excel.',
+        self.set_font('my', 'B', 7.6)
+        self.set_text_color(*TEAL)
+        self.cell(0, 5, 'CSM, 321 ECOLIFE  ·  NOVEMBER 2024 – FEBRUARY 2025', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.set_font('my', '', 8.8)
+        self.set_text_color(*INK)
+        self.multi_cell(0, 4.9,
             'A car-parts shop that had never had a point of sale. The local software imports from Excel, so I built the '
             'register in the shape it eats: code, item ID, category, brand, family, model, package colour, location, '
             'quantity. Three months scoped, four and a half delivered. The shelves stayed where the owners wanted them, '
             'the map described the shop as it actually stood, and their ground count and my mapping ran as separate '
             'jobs. It ended with a till mock-up and a training session on the staff\'s own sheets. CSM is the shop\'s own '
             'abbreviation for ချစ်စုမ.',
-            'POS SETUP  ·  SHELF MAPPING  ·  STAFF TRAINING  ·  CAR PARTS', anchor='sec-03')
+            align='L', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(2.6)
+
+        self.set_font('my', 'B', 7)
+        self.set_text_color(*TEAL)
+        self.cell(0, 4.6,
+                  'WAREHOUSE  ·  ITEM REGISTRATION  ·  BARCODE LABELS  ·  POS SETUP  ·  SHELF MAP  ·  STAFF TRAINING',
+                  new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.4)
+        self.set_font('my', 'B', 7)
+        self.set_text_color(*TEAL)
+        self.cell(0, 4.6, 'THE FILES', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.ln(1.6)
         self.file_rows([
             ('CSM - merged workbook.xlsx  (43 tabs)',
-             'Every CSM workbook in one file: the shelf map, the registers, the ground count, the shelf-sheet layout and '
-             'the POS tabs. Duplicate copies from the alternates were dropped.',
+             'The one master. The shelf map, the location index, the seven category registers, the shelf sheets, the '
+             'ground count and the Update tabs the POS reads are each a tab inside it. Duplicate copies from the '
+             'alternates were dropped.',
              'https://drive.google.com/file/d/1Uvm-vYhTaIyXB3U44bOQtFcOjChUdZHS/view'),
-            ('CSM-Master-Shelf-Mapping.xlsx',
-             'The master: 37 tabs. Contents, location index, seven category registers, the KMT sheets, the shelf sheets '
-             'and the Update tabs the POS reads.',
-             'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view'),
             ('CSM-POS-Portfolio-Demo.xlsm',
              'The till as it ran, with Items, Sales and Ground behind it. Macro-enabled, so it stays its own file.',
              'https://drive.google.com/file/d/1gvdPV9ZSIcRrEmkzuLp4Lqzx6Wxwnt1D/view'),
-            ('Point_Of_Sale.xlsm',
-             'The earlier build of the same till, before the item list filled out.',
-             'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view'),
             ('epos4excel_v1.8.1.xlsm',
              'The software the shop runs. I set up the import so its item list could come out of my sheets instead of '
              'being typed in by hand.',
              'https://drive.google.com/file/d/1xQUBBr-q7M7suxD_SrB-YXsZ2fO8cH4k/view'),
-            ('GROUND.xlsx',
-             'Their ground count, kept apart from my mapping on purpose — two jobs, two sets of numbers.',
-             'https://drive.google.com/file/d/1e9Buwq5YusMqhR8fJxs7soOwcM66iOaW/view'),
+            ('Npt way -inventory.docx',
+             'How stock ran at NPT, written the way I would hand it to a successor: receiving, location, counting, and '
+             'why the count happens daily.',
+             'https://drive.google.com/file/d/12gt0TeY9PUD9fotBlqQiN3VKM4xF6jEY/view'),
         ])
 
     def content_pages(self):
-        self.folder_head('Scripts', '04 — Video scripts',
+        self.folder_head('Scripts', '03 — Video scripts',
             'Six scripts for shops that sell on TikTok.',
             'Written to be shot, not read: hook, beat, product truth, call to action, with the spoken line and the '
             'on-screen text kept apart so one hand can hold the phone while the other holds the bottle.',
@@ -1120,7 +1090,7 @@ class PortfolioPDF(FPDF):
         ])
 
     def content_more_pages(self):
-        self.folder_head('Content', '05 — Canal+, translation, creative',
+        self.folder_head('Content', '04 — Canal+, translation, creative',
             'Adaptation is a different job from translation.',
             'Three kinds of writing that look alike on a shelf and are not. An adaptation keeps the beat and changes the '
             'culture. A translation keeps the meaning and changes nothing else. An original keeps only the idea I started '
@@ -1172,7 +1142,7 @@ class PortfolioPDF(FPDF):
             self.ln(1.6)
 
     def tech_page(self):
-        self.folder_head('It & tech related', '06 — It & tech',
+        self.folder_head('It & tech related', '05 — It & tech',
             'The prompt book, the builds, and the tool I am making.',
             'A manuscript on how prompting actually works — layers, zones, and what happens when a model decides it knows '
             'better than the person asking. The bilingual parts are mine; the merged edition gathers them into one flow '
@@ -1229,8 +1199,7 @@ class PortfolioPDF(FPDF):
         self.overview_page()
         self.case_study()
         self.workflow_section()
-        self.npt_page()
-        self.excel_page()
+        self.ops_page()
         self.content_pages()
         self.content_more_pages()
         self.tech_page()
