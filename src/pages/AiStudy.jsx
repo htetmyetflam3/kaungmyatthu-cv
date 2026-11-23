@@ -18,7 +18,7 @@ export default function AiStudy() {
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
         <h3>The tech insight.</h3>
-    <p>Most prompt-engineering guides say the job is writing perfect instructions. This manuscript — a self-authored book in three chapters — shows the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
+    <p>Most prompt-engineering guides say the job is writing perfect instructions. This study — three chapters, written by me — shows the opposite. An LLM responds as a layered system: the gate reads what you mean, and the premise, tone, safety and completion-control layers negotiate what gets said and how. A prompt changes the odds of a good answer — it does not guarantee it.</p>
     <p>And the tech is moving fast. As the old template approach becomes mostly irrelevant, I work from the current picture: prompts are the input to a living system — I write with the layers in mind, not with canned templates, and stay honest about what a good prompt can and cannot do.</p>
     <div className="ai-pf-tags">
       <span>Self-authored manuscript</span>
