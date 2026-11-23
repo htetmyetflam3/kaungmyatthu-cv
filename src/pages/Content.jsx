@@ -216,37 +216,6 @@ export default function Content() {
         </div>
       </section>
 
-      <section className="sec" id="files" style={{ scrollMarginTop: 90 }}>
-        <div className="sec-head">
-          <div>
-            <div className="sec-kicker"><span className="num">03</span> The folder</div>
-            <h2>Every file, by the name it has</h2>
-          </div>
-          <p className="sub">The working folder behind this page, listed as the files are named. Nothing is renamed here, so a title on this page and a file in the folder can be matched.</p>
-        </div>
-
-        <div className="panel">
-          <table className="mini-table">
-            <thead><tr><th>File</th><th>Folder</th><th>What it is</th></tr></thead>
-            <tbody>
-              <tr><td><code>underwater.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>canalplus</td><td>Alice segment on the robots built to work underwater — autonomous ones against the ROV, down to Stanford’s Ocean One.</td></tr>
-              <tr><td><code>ကိုယ်တိုင်ဝယ်လို့ရတဲ့စက်ရုပ်ပ.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>canalplus</td><td>The second Alice segment: robots you can buy yourself.</td></tr>
-              <tr><td><code>bardailybandpost.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>A week of daily posts for Echo Vibe, one per night: the band, the hours, the address, the booking numbers and the hashtags.</td></tr>
-              <tr><td><code>echovibe_actual_script.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>The Echo Vibe reel as the shoot used it — four scenes and an outro, with dialogue, camera and audio.</td></tr>
-              <tr><td><code>EchoVibe_client&tiktok_friendly.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>The same shoot laid out two ways: one copy for the client, one cut for TikTok.</td></tr>
-              <tr><td><code>tiktokfriendly_commercial script.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>A commercial script written for TikTok rather than for broadcast length.</td></tr>
-              <tr><td><code>imb-1.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>IMB1 — the leave-in conditioner script.</td></tr>
-              <tr><td><code>imb2.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>video scripts</td><td>IMB2 — the scalp and hair solution script.</td></tr>
-              <tr><td><code>gamelore_adaptation-Carl.docx</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Invoker’s game lore adapted into Burmese for the character Carl.</td></tr>
-              <tr><td><code>if I die in combat zone.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>translation</td><td>Tim O’Brien’s memoir in Burmese, with the English excerpt kept beside it.</td></tr>
-              <tr><td><code>rgb.pdf</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>A Burmese essay that opens with a chance meeting and a set of colour plates.</td></tr>
-              <tr><td><code>falsepromise</code></td><td className="muted" style={{ fontSize: '.78rem' }}>creative</td><td>An essay in Burmese, written from a concept a friend once talked about, with the idea credited to them. A boy brings his report card home, his father promises him whatever he wants for a top-ten rank, and the promise keeps sliding to the next exam, until the piece turns on what false hope is. The title is Oracle's spell in Dota 2.</td></tr>
-            </tbody>
-          </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>The AI study lives in its own folder and has its own page, so it is not listed twice here.</p>
-        </div>
-      </section>
-
       <div className="dl-row" style={{ marginTop: 20 }}>
         <DetailsButton href="index.html">← Back to home</DetailsButton>
       </div>
