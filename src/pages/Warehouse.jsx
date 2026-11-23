@@ -98,10 +98,11 @@ export default function Warehouse() {
         <p style={{ margin: '0 0 12px' }}>
           The space is the part that is hard to put on a page. The brake pads live on four standing shelf runs. A row is
           no longer than five feet, no wider than a foot and a half, and there is under two feet of clearance to the
-          shelf above. That is the whole floor area for the brake range, and the range is not one row per part. The
-          first fifty-one rows of the Break-pad sheet hold eighteen part shapes and fifty-one labels: D-2252 fills eight
-          of them, D-2239 seven, D-2222 five. Some of those eight are the same brand written twice, jet and JET, and
-          kevlar appears twice in the same block.
+          shelf above. The shelf itself does not divide that neatly. Where a run has a leg at mid-span, the leg blocks
+          the middle of the shelf, so the run is written as two rows, one either side of it. A row in the sheet is a
+          stretch of shelf, not a shelf. The first fifty-one lines of the Break-pad sheet alone carry eighteen part
+          shapes under fifty-one labels: D-2252 takes eight of them, D-2239 seven, D-2222 five. Some of those eight are
+          the same brand written twice, jet and JET, and kevlar appears twice in the same block.
         </p>
 
         <div style={{ margin: '0 0 16px', border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
@@ -131,8 +132,9 @@ export default function Warehouse() {
             </table>
           </div>
           <p className="muted" style={{ fontSize: '.78rem', margin: '10px 14px 12px' }}>
-            Fifteen of those fifty-one rows, copied as written. Two shapes, five brands each way, and a blank line the
-            shop had not filled. The shelf map had to place this inside four runs, then hold still while the stock moved.
+            Fifteen lines from that sheet, copied as written. Two shapes, five brands each way, and one blank the shop
+            had not filled. Those fifteen had to land on four runs, split at each leg, and the map had to hold while the
+            stock moved.
           </p>
         </div>
         <p style={{ margin: '0 0 12px' }}>
