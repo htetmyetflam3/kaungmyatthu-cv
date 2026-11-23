@@ -25,7 +25,7 @@ const WORK = [
     href: 'warehouse.html',
     kicker: 'Warehouse & systems',
     title: 'Stock records and a shelf-location system',
-    body: 'Warehouse Supervisor at NPT Group, January to November 2024, keeping the stock record by hand. Later, four months on a car-parts shop\u2019s shelf-location map and EPOS \u2014 a position code and a till entry for every part.',
+    body: 'Warehouse Supervisor at NPT Group, January to November 2024, keeping the stock record by hand. Later, four and a half months at a car-parts shop with no till system: registering the stock, mapping the shelves, building a till mock-up and training the staff on it.',
     go: 'Warehouse and CSM →',
   },
   {

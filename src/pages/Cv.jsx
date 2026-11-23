@@ -142,9 +142,9 @@ export default function Cv() {
     <div className="job">
       <div className="job-title">Shelf mapping &amp; POS build — car-parts shop (CSM)</div>
       <ul className="mb-0 ps-3 mt-2">
-        <li>Freelance project of roughly four months: built the shelf-location map for a densely stocked car-parts shop, giving every part a position code (MR-1-SH-1, MR-2-SH-1, SH-3) across 11 category records, with an index to search by item code, brand or part and a guide recording the picking and replenishment workflow.</li>
-        <li>Set up the EPOS on the same item codes — scanning pulls the record and price, the sale writes the receipt and moves the stock line — and linked every till item back to its shelf-map tab and row.</li>
-        <li>Handed the map and the system over to the shop staff, who made the physical count.</li>
+        <li>Registered a car-parts shop's stock from nothing: no till system existed, so every item was given an ID and a shelf position (MR-1-SH-1, MR-2-SH-1, SH-3) across 11 category records, with a searchable index and a written guide to the picking and replenishment workflow.</li>
+        <li>Worked with owners who would not have their shelves moved, and with stock that turned over daily — new arrivals, sold items and dead codes. Split the ground count (theirs) from the mapping (mine) so no shelf had to be registered twice; scoped at three months, delivered in four and a half.</li>
+        <li>Built an Excel till mock-up — item codes, scanning, receipt, the stock line moving on the sale — and trained the store staff on it ahead of the shop buying POS software.</li>
       </ul>
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>

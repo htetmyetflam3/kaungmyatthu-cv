@@ -649,14 +649,15 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', 'B', 7.5)
         self.set_text_color(*TEAL)
-        self.cell(0, 5, 'AUTOMOTIVE PARTS · EPOS + EXCEL SHELF MAPPING + IN-STORE POS DEMO', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'AUTOMOTIVE PARTS · STOCK REGISTER + SHELF MAPPING + TILL MOCK-UP', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
         self.set_font('my', '', 9.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6,
-            'In a densely stocked automotive-parts shop, one shelf row can hold 30+ variants among 100+ pieces; similar-looking parts fit different vehicles, '
-            'and the same part fits many vehicles. A missing item gets assumed out of stock › replacements arrive › the original reappears › '
-            'duplicates take scarce shelf space › the cycle repeats.')
+            'The shop had no till system — and without a register, a till is useless. I registered every part, gave each one a '
+            'shelf position, and mapped the shop without moving shelves the owners relied on. Stock turned over daily, so their '
+            'ground count and my mapping ran as separate jobs: three months scoped, four and a half delivered. Then a till '
+            'mock-up and a training session for the store staff.')
         self.ln(2)
 
         steps = [('STEP 1', 'Identify the code', 'Look up the code in the shelf-location map.'),
@@ -686,7 +687,7 @@ class PortfolioPDF(FPDF):
         self.cell(0, 6, 'Files', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(1)
         self.link_line('CSM shelf-map master · XLSX', 'https://drive.google.com/file/d/10XOAv-I7ROVnqFqA8jomVxnuDPe1q93F/view')
-        self.link_line('Point of Sale · XLSM', 'https://drive.google.com/file/d/1eBNVITMSUjBNzgKOq48TjG386SGfyaJF/view')
+        self.link_line('Till mock-up · XLSM', 'https://drive.google.com/file/d/1gvdPV9ZSIcRrEmkzuLp4Lqzx6Wxwnt1D/view')
         self.ln(4)
 
         # the same discipline, before the shelf map: the warehouse role
