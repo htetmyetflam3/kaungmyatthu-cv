@@ -27,14 +27,14 @@ export default function Warehouse() {
         num="02"
         kicker="Warehouse · NPT Group + freelance CSM"
         title="Keeping stock visible — and right."
-        sub="Two separate engagements, on different timelines: Warehouse Supervisor at NPT Group (2024), and later a stock register, shelf map and till mock-up for a car-parts shop (CSM)."
+        sub="Two separate engagements, on different timelines: Warehouse Supervisor at NPT Group (2024), and later a POS setup and shelf map for a car-parts shop (CSM)."
       />
 
       <div className="overview-card">
         <div className="overview-kicker">Overview</div>
         <h3>One employment role, one separate freelance project.</h3>
         <p><b>NPT Group</b> was a job: Warehouse Supervisor, <b>6 January – 1 November 2024</b>. <b>CSM</b> was a separate freelance project of roughly four months, with no confirmed dates — so none are given, and it is not placed inside the NPT timeline.</p>
-        <p>They involve the same subject (stock), not the same workflow. At NPT I kept the inventory record by hand. At CSM there was no till system at all, so I registered the stock, gave every part a location, mapped the shop, built a till mock-up and trained the staff on it.</p>
+        <p>They involve the same subject (stock), not the same workflow. At NPT I kept the inventory record by hand. At CSM there was no till system at all, so I registered the stock into a POS-ready Excel register, gave every part a location, mapped the shop and trained the staff on a till mock-up.</p>
       </div>
 
       <div className="panel">
@@ -65,7 +65,7 @@ export default function Warehouse() {
       </div>
 
       <div className="panel" id="csm">
-        <h4>CSM · car-parts shop — stock register, shelf map, till mock-up <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
+        <h4>CSM · car-parts shop — POS setup, shelf map, staff training <span className="muted" style={{ fontWeight: 400 }}>(freelance, about four and a half months)</span></h4>
 
         <p style={{ margin: '0 0 12px' }}>
           The shop had no till system of any kind. To know what was in stock you need a POS; to run a POS you need the
@@ -73,11 +73,19 @@ export default function Warehouse() {
           family knew the shop, went in to look, and stayed for what turned into four and a half months.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          The job was to register every item with an ID and give each one a location, so a part could be found by code
-          instead of by memory. The owners are older men, careful with what they know, and they did not want their stock
-          relocated: when a customer asked for a part they needed to walk straight to it, and a map that moved their
-          shelves took that away from them. So the map had to describe the shop as it stood — the relocation was
-          something to earn, not to impose.
+          Setting up a till here does not start inside the software. Almost every local POS imports from Excel, so the
+          register has to be built in exactly that shape: one row per item, its code, its ID, and the columns that
+          separate one part from the next. I did not know car parts when I walked in. I asked them how the parts differ
+          — brand, vehicle family, model, the packaging — and built the columns out of their answers: category, code,
+          short name, brand, family, model, package colour, description, shelf location and quantity, one tab per
+          category of part. That is the setup work nobody sees: the shop&rsquo;s own knowledge turned into a table a till
+          can take.
+        </p>
+        <p style={{ margin: '0 0 12px' }}>
+          The owners are older men, careful with what they know, and they did not want their stock relocated: when a
+          customer asked for a part they needed to walk straight to it, and a map that moved their shelves took that
+          away from them. So the map had to describe the shop as it stood — the relocation was something to earn, not to
+          impose.
         </p>
         <p style={{ margin: '0 0 12px' }}>
           I was on a time-based arrangement, not fixed hours: no check-in, no check-out. The one rule was to tell them
@@ -93,11 +101,16 @@ export default function Warehouse() {
           could find where it had been placed without me re-walking the aisle. Their count and my map met in the middle.
           It was scoped at three months and took four and a half.
         </p>
+        <p style={{ margin: '0 0 12px' }}>
+          When the register was done the mapping went over it — position codes, a searchable index, a written guide to
+          picking and replenishment — and then the till mock-up: item codes, scanning, receipt, the stock line moving on
+          the sale, with a training session for the store staff so they could see what the register does once it is
+          inside a till. What the shop has to add is the ground count in the sheet. After that it is one import.
+        </p>
         <p style={{ margin: '0 0 14px' }}>
-          When the mapping was finished I built a till mock-up in Excel — item codes, scanning, receipt, the stock line
-          moving on the sale — and gave the store staff a training session on it. The shop had not bought POS software
-          yet; when they do, the vendor will teach their own screens. What I left behind is the register, the codes, the
-          map underneath them, and a staff team that knows what a till is meant to do with all three.
+          So the setup is mine: the register, the codes, the IDs, the columns the POS reads and the map underneath them.
+          The only step I did not take was pressing import — that had to wait for their count, and it is the shop&rsquo;s
+          software, not mine.
         </p>
 
         <table className="mini-table" style={{ margin: '4px 0 16px' }}>
@@ -129,7 +142,7 @@ export default function Warehouse() {
 
       <div className="takeaway">
         <span className="ti">◆</span>
-        <p><span className="label">What this demonstrates</span>Breaking a shop out of the no-till/no-stock circle: registering the stock, mapping it without moving the owners\u2019 shelves, training the staff on a mock-up, and delivering four and a half months of work against a three-month scope.</p>
+        <p><span className="label">What this demonstrates</span>Breaking a shop out of the no-till/no-stock circle: building the POS-ready register and the shelf map around shelves the owners would not move, training the staff, and delivering four and a half months of work against a three-month scope.</p>
       </div>
 
       <div className="dl-row" style={{ marginTop: 20 }}>

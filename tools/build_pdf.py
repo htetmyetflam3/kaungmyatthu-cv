@@ -649,15 +649,16 @@ class PortfolioPDF(FPDF):
         self.rule()
         self.set_font('my', 'B', 7.5)
         self.set_text_color(*TEAL)
-        self.cell(0, 5, 'AUTOMOTIVE PARTS · STOCK REGISTER + SHELF MAPPING + TILL MOCK-UP', new_x=XPos.LEFT, new_y=YPos.NEXT)
+        self.cell(0, 5, 'AUTOMOTIVE PARTS · POS SETUP + SHELF MAPPING + STAFF TRAINING', new_x=XPos.LEFT, new_y=YPos.NEXT)
         self.ln(2)
         self.set_font('my', '', 9.5)
         self.set_text_color(*INK)
         self.multi_cell(0, 6,
-            'The shop had no till system — and without a register, a till is useless. I registered every part, gave each one a '
-            'shelf position, and mapped the shop without moving shelves the owners relied on. Stock turned over daily, so their '
-            'ground count and my mapping ran as separate jobs: three months scoped, four and a half delivered. Then a till '
-            'mock-up and a training session for the store staff.')
+            'The shop had no till. Local POS software imports from Excel, so I built the register in that shape — code, item ID, '
+            'category, brand, family, model, package colour, location, quantity — after learning the parts by asking the owners how '
+            'they differ. Shelves stayed where the owners wanted them; the map described the shop as it stood. Their ground count '
+            'and my mapping ran as separate jobs: three months scoped, four and a half delivered. Then a till mock-up and a staff '
+            'training session.')
         self.ln(2)
 
         steps = [('STEP 1', 'Identify the code', 'Look up the code in the shelf-location map.'),

@@ -142,9 +142,9 @@ export default function Cv() {
     <div className="job">
       <div className="job-title">Shelf mapping &amp; POS build — car-parts shop (CSM)</div>
       <ul className="mb-0 ps-3 mt-2">
-        <li>Registered a car-parts shop's stock from nothing: no till system existed, so every item was given an ID and a shelf position (MR-1-SH-1, MR-2-SH-1, SH-3) across 11 category records, with a searchable index and a written guide to the picking and replenishment workflow.</li>
-        <li>Worked with owners who would not have their shelves moved, and with stock that turned over daily — new arrivals, sold items and dead codes. Split the ground count (theirs) from the mapping (mine) so no shelf had to be registered twice; scoped at three months, delivered in four and a half.</li>
-        <li>Built an Excel till mock-up — item codes, scanning, receipt, the stock line moving on the sale — and trained the store staff on it ahead of the shop buying POS software.</li>
+        <li>Built the POS setup for a car-parts shop that had no till: every item registered with a code, a POS item ID and the columns a local POS imports from Excel (category, brand, family, model, package colour, shelf location, quantity) across 11 category records — a register they only had to fill with a ground count and import.</li>
+        <li>Learned the parts from the owners' own answers, not from cars: asked how the stock differs and built the categories from it. Owners would not have their shelves moved, so the map described the shop as it stood rather than relocating it.</li>
+        <li>Split the ground count (theirs) from the mapping (mine) so a moving shelf never had to be registered twice; scoped at three months, delivered in four and a half. Then a till mock-up and a staff training session.</li>
       </ul>
       <p className="job-links"><a href="warehouse.html">Warehouse &amp; CSM detail →</a></p>
     </div>
