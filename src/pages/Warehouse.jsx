@@ -71,62 +71,52 @@ export default function Warehouse() {
         </p>
 
         <p style={{ margin: '0 0 12px' }}>
-          The shop had no till system of any kind, and a till on its own would not have fixed it. The problem is a
-          circle: to know what is in stock you need a POS, to run a POS you need the stock registered, and the shop sat
-          on both sides of that circle at once. Nobody had written the stock down, so there was nothing for a till to
-          read; and with no till, nobody was going to spend a week writing it down. That is the state I walked into.
+          The shop had no till system. To know what was in stock I needed a POS, and to run a POS I needed the stock
+          registered. Neither existed, and neither could be built without the other. I heard about it through a friend
+          whose family knew the shop, went in to look, and stayed four and a half months.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          I heard about it from a friend whose family knew the shop. I went in to look, and stayed four and a half
-          months.
+          The setup does not start inside the software. Almost every local POS imports from Excel, so I built the
+          register in that shape: one row per item, with its code, its ID and the columns that separate one part from
+          the next. I did not know car parts. I asked the owners how the parts differ — brand, vehicle family, model,
+          the packaging — and built the columns from their answers: category, code, short name, brand, family, model,
+          package colour, description, shelf location, quantity, one tab per category of part. Most of the work sat
+          there, taking what the shop knew and writing it as a table the POS could import.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          The part that surprised me is where the work starts — not inside the software. Almost every POS in this market
-          imports from Excel, so the register has to be born in exactly that shape: one row per item, its code, its ID,
-          and the columns that tell one part from another. And I did not know car parts. I had never bought a brake pad
-          in my life. So I asked them how the parts differ from each other, and their answers became the columns:
-          brand, vehicle family, model, the packaging. Out of that came category, code, short name, brand, family,
-          model, package colour, description, shelf location, quantity — one tab per category of part. That is the work
-          nobody walks in and notices: the shop&rsquo;s own knowledge, turned into a table a till can swallow.
+          The number printed on the box does not identify the part. Sometimes it is the manufacturer&rsquo;s number,
+          sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing or wrong. So I gave every
+          item an ID of its own — <code>BP</code> for brake pads, <code>WP</code> for water pumps, <code>P-F</code> for
+          fuel pumps — and kept the vendor number beside it as a reference, never as the key. The same ID set in a
+          barcode font prints as the label, so the shelf, the sheet and the scanner carry one value.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          Then there is the number printed on the box, which does not identify the part. Sometimes it is the
-          manufacturer&rsquo;s number, sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing
-          or simply wrong. So every item gets an ID of its own — <code>BP</code> for brake pads,
-          <code>WP</code> for water pumps, <code>P-F</code> for fuel pumps — and the vendor number sits beside it as a
-          reference, never as the key. Because an ID is only a string, the same string set in a barcode font prints as
-          the label: one value serving the shelf, the sheet and the scanner, instead of three that have to agree.
-        </p>
-        <p style={{ margin: '0 0 12px' }}>
-          The owners are older men, and they know their shop in a way no map does. They did not want their stock
-          relocated — a customer asks for a part and they walk straight to it, and a map that moves their shelves takes
-          that away from them. So the map had to describe the shop as it already stood. Moving the shelves is something
-          you earn, not something you arrive with.
+          The owners are older men, careful with what they know, and they did not want their stock relocated: when a
+          customer asks for a part they walk straight to it. So I mapped the shop as it stood, and left moving the
+          shelves for them to ask for.
         </p>
         <p style={{ margin: '0 0 12px' }}>
           I was on a time-based arrangement, not fixed hours: no check-in, no check-out. The one rule was to tell them
-          when I was not coming, so they would not count me for lunch. That changes what a plan can be. Some days I
-          arrived at ten, some days at one, and by then new stock had come in, items I had registered had sold, and the
-          codes I had prepared for them no longer matched the shelf. A warehouse this size turns over constantly —
-          most lines carry thirty pieces at most, and the shelf changes all day. Re-registering the same shelf a second
-          time would have eaten the whole project.
+          when I was not coming, so they would not count me for lunch. The stock turned over between my visits. Some
+          days I arrived at ten, some days at one, and by then new stock had come in, items I had registered had sold,
+          and the codes I had prepared for them no longer matched the shelf. A warehouse this size changes all day, and
+          most lines carry thirty pieces at most. Registering the same shelf a second time would have taken the whole
+          project.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          So I split the work where the seam already was. Once registration was done, they would do the ground count
-          themselves; the mapping and the codes stayed with me, explained and shared and walked through, so that when
-          new stock landed they could place it without me re-walking the aisle behind them. Their count and my map met
-          in the middle. They scoped it at three months. It took four and a half.
+          So I split it. They would do the ground stock count themselves once registration was complete, and I kept the
+          mapping and the codes, explained them and walked the staff through them, so that new stock could be placed
+          without me walking the aisle again. They scoped it at three months. I delivered in four and a half.
         </p>
         <p style={{ margin: '0 0 12px' }}>
-          With the register finished, the map went over the top of it — position codes, a searchable index, a written
-          guide to picking and replenishment — and then the till mock-up: item codes, scanning, a receipt, the stock
-          line moving when a sale goes through, and a training session with the staff so they could see what the
-          register does once it is inside a till. All the shop has to add is the ground count in the sheet. After that
-          it is one import.
+          When the register was finished I built the map over it: position codes, a searchable index, a written guide to
+          picking and replenishment. Then the till mock-up: item codes, scanning, a receipt, the stock line moving when
+          a sale goes through, and a training session with the store staff. What the shop still has to add is the
+          ground count in the sheet. After that it is one import.
         </p>
         <p style={{ margin: '0 0 14px' }}>
-          So the setup is mine: the register, the codes, the IDs, the columns the POS reads and the map underneath them.
-          The one step I did not take was pressing import — that had to wait for their count, and the software is the
+          The setup is mine: the register, the codes, the IDs, the columns the POS reads and the map underneath them. The
+          one step I did not take was pressing import, which had to wait for their count, and the software is the
           shop&rsquo;s, not mine.
         </p>
 
