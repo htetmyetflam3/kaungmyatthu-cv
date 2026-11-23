@@ -78,7 +78,7 @@ export default function Content() {
             <div className="sec-kicker"><span className="num">01</span> The scripts</div>
             <h2>မိတ်ဆက် · ဇာတ်ကွက် အလိုက်</h2>
           </div>
-          <p className="sub">The scripts as I wrote them — Burmese where the script is Burmese, English on-screen copy kept as it reads on screen. The source document sits at the end of each script.</p>
+          <p className="sub">The scripts as I wrote them — Burmese where the script is Burmese, English where the copy is on-screen.</p>
         </div>
 
         <div className="panel" lang="my">

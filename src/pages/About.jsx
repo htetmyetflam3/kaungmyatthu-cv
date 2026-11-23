@@ -16,7 +16,7 @@ export default function About() {
         <header className="blog-hero">
           <span className="blog-hero-eyebrow">✦ Personal blog</span>
           <h1>About <span className="grad">me.</span></h1>
-          <p className="blog-hero-sub">My own story, unedited — operations, content and systems, from a third-year civil failure to the AI book.</p>
+          <p className="blog-hero-sub">My own story — operations, content and systems, from a third-year civil failure to the AI book.</p>
           <div className="blog-hero-meta">
             <span>North Okkalapa</span><span className="dot"></span>
             <span>Operations · Content · Systems</span><span className="dot"></span>

@@ -71,7 +71,7 @@ export default function AiStudy() {
       <summary><span className="chapter-no">Ch. 3</span> Layers &amp; Zones — full chapter</summary>
       <div className="ai-reader" lang="en" tabIndex="0">
 <div className="ai-chapter">
-        <p className="ai-chapter-kicker">Full chapter · source DOCX unchanged</p>
+        <p className="ai-chapter-kicker">Full chapter</p>
         <h4 className="ai-reader-h ai-reader-h-chapter">Chapter 3 — Layers &amp; Zones: Why a Good Prompt Alone Isn’t Enough</h4>
 <p className="ai-chapter-p">If Chapter 2 taught you how to write clear prompts, this chapter shows why a good prompt is only part of the story. Even the clearest instructions must pass through the AI’s internal layers, each acting like an invisible moderator — shaping, nudging, or sometimes restraining the output.</p>
 <p className="ai-chapter-p">Think of it this way: any system that learns from patterns will naturally develop patterns of its own. AI is no exception. Its training data and accumulated knowledge create predictable behaviors, and those behaviors interact with one another in ways that affect what you see.</p>
@@ -183,7 +183,7 @@ export default function AiStudy() {
         <div className="ai-pf-source-kicker">The manuscript</div>
         <a className="btn-dl btn-dark" href="https://drive.google.com/file/d/1gRYE5s4LfUS3DKCGbgPhP20mz122mK-h/view" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg> Download full manuscript · DOCX</a>
       </div>
-      <p className="ai-pf-note">My own writing on how prompts shape LLM responses, in the original wording — a personal study, kept as I wrote it.</p>
+      <p className="ai-pf-note">My own writing on how prompts shape LLM responses, — a personal study.</p>
     </div>
       <div className="dl-row" style={{ marginTop: 20 }}>
         <DetailsButton href="index.html">← Back to home</DetailsButton>

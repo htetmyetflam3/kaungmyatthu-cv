@@ -103,11 +103,11 @@ export default function WorkRecord() {
               <tr><td>End-of-day controls</td><td>4:00 sales-total and pivot checks; 4:20 captions/corrections; 4:45 daily-note review; closing, generator-log, returns and stock checks across the evening; 5:55 checkout approval.</td></tr>
             </tbody>
           </table>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in its original Burmese/English wording and order. The timings are as I wrote them, and the generator checks sit where the power could change during the day.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>My personal working checklist, in the order I wrote it. The generator checks sit where the power could change during the day.</p>
           
 
           <div style={{ marginTop: 16, border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
-            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>Daily To Do List.docx — full checklist, in order</div>
+            <div style={{ padding: '10px 14px', background: '#f7f9fb', borderBottom: '1px solid #dbe3ec', fontSize: '.72rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8b96a6' }}>The daily checklist, in order</div>
             <div style={{ maxHeight: 460, overflowY: 'auto', padding: '6px 14px' }}>
               <table className="mini-table" style={{ marginTop: 6 }}>
                 <tbody>
@@ -177,8 +177,8 @@ export default function WorkRecord() {
           <table className="mini-table" style={{ marginTop: 6 }}>
             <thead><tr><th>Sheet in the workbook</th><th>Recorded range</th><th>What it shows</th></tr></thead>
             <tbody>
-              <tr><td><code>daily sale </code></td><td>A1:Q10 · full sheet in the workbook</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit. The trailing space in the sheet name is part of the file.</td></tr>
-              <tr><td>Top &amp; Bottom Sale</td><td>B2:K13</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. In the order the sheet keeps them, not a ranking.</td></tr>
+              <tr><td><code>daily sale </code></td><td>December</td><td>Payment channels, revenue, discount, net sales and returns. Recorded sales figures, not profit.</td></tr>
+              <tr><td>Top &amp; Bottom Sale</td><td>Recorded</td><td>Recorded product codes, descriptions, prices and quantities, with a separate bottom-item list. In the order the sheet keeps them, not a ranking.</td></tr>
               <tr><td>Daily Expenses</td><td>A1:J12</td><td>Day-level branch expenses as entered.</td></tr>
             </tbody>
           </table>
@@ -256,8 +256,6 @@ export default function WorkRecord() {
 
           <p className="muted" style={{ fontSize: '.8rem', margin: '10px 0 0' }}>These are recorded sales, discounts and returns — not profit, and not a measure of marketing performance.</p>
 
-          <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Source: <code>321/321NOk/321NOK-Master-Redacted.xlsx</code>. Previews preserve the source order and blank fields; they do not establish a sales period or campaign attribution beyond what each sheet records.</p>
-
           <div className="dl-row" style={{ marginTop: 16 }}>
             <a className="btn-dl btn-dark" href={WORKBOOK_VIEW} target="_blank" rel="noopener">Open working workbook</a>
             <a className="btn-dl" href={WORKBOOK_DL} target="_blank" rel="noopener">Download working workbook (XLSX)</a>
@@ -309,10 +307,10 @@ export default function WorkRecord() {
           <details className="ai-pf-details" style={{ marginTop: 16 }}>
             <summary>Additional administration records</summary>
             <div style={{ paddingTop: 10 }}>
-              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my own role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20; it is reproduced as recorded, not recalculated here.</p>
+              <p><b>Staff movement recorded in the sheet:</b> three new starters listed (my own role among them), one transfer between shop and online sale, one resignation and three terminations. The sheet’s own header line shows a total-staff figure of −20.</p>
               <p><b>Days off:</b> 18 staff listed across Monday to Saturday in the weekly days-off schedule.</p>
               <p><b>Generator log:</b> seven entries between 24 December 2024 and 15 January 2025, each with start and end times and a derived run time of between 1 and 8 hours.</p>
-              <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are retained in the same workbook. The sign-off column is not described here as proof of payment — it is a record template, not a payment confirmation.</p>
+              <p className="muted" style={{ fontSize: '.85rem' }}><code>TikTok &amp; Staff Incentives</code> and <code>Incentive Sign-off</code> are in the same workbook. The sign-off column is a record template, not a payment confirmation.</p>
             </div>
           </details>
         </div>
@@ -339,7 +337,7 @@ export default function WorkRecord() {
             </tbody>
           </table>
           <p className="muted" style={{ fontSize: '.8rem', margin: '12px 0 0' }}>Calculated changes — November <b>+30,375</b> · December <b>+110,729</b> · October–December <b>+141,104</b>, approximately <b>+89.9%</b>.</p>
-          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>The redacted workbook has this under <code>follower count at the end of m</code> (B1:C6). Its own “MONTHLY FOLLOWER GAIN” header misleads on cumulative figures, so these are month-end followers, and the sheet stays unedited.</p>
+          <p className="muted" style={{ fontSize: '.8rem', margin: '6px 0 0' }}>Month-end followers. The sheet's own “monthly follower gain” header overstates it — these are cumulative totals, not monthly gains.</p>
 
           <div className="charts-grid" style={{ marginTop: 18 }}>
       <div className="chart-card">
@@ -427,7 +425,7 @@ export default function WorkRecord() {
           <div className="quote col-md-4"><p>“Excellent service”</p></div>
           <div className="quote col-md-4"><p lang="my">“Service အရမ်းကောင်းပါတယ် ။ Size စုံစေချင်တယ်။”</p></div>
         </div>
-        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>Praise rows from the branch feedback sheet, kept as received; the third entry is shown with its request for more sizes so the mixed meaning is preserved. The sheet’s cramped-shop complaint is not presented as praise. Phone numbers are redacted.</p>
+        <p className="muted" style={{ fontSize: '.8rem', margin: '14px 0 0' }}>The third one is a compliment and a request for more sizes in the same breath.</p>
       </div>
 
       <section className="sec" id="workplace" style={{ scrollMarginTop: 90 }}>
