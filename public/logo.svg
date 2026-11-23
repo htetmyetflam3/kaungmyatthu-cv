@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Devnovex mark. D: hexagon symmetric about y=1024, right corners r=250, uniform 185 ink ring,
      corner cut by a r=121.6 circle that the red disc shows through. -->
+
+<!-- sign: KMT-E8B03667 · sha256 e8b03667a823189f464982950887d95e3bd4245bcc38bb07aba9328d76770eb7 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="14 374 2019 1299" width="2019" height="1299">
   <g id="d">
     <path id="d-red" fill="#AD2831" fill-rule="evenodd" d="M26 1024L477 386L825.3 386A250 250 0 0 1 1075.3 636L1075.3 1412A250 250 0 0 1 825.3 1662L477 1662ZM252.56 1024L572.78 571L825.3 571A65 65 0 0 1 890.3 636L890.3 1412A65 65 0 0 1 825.3 1477L572.78 1477ZM965.05 609.75A17.75 17.75 0 0 1 1000.55 609.75L1000.55 1438.25A17.75 17.75 0 0 1 965.05 1438.25Z"/>

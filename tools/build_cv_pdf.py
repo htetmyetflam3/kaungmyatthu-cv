@@ -5,8 +5,11 @@ English-only, core fonts, no external assets. Run: python tools/build_cv_pdf.py
 from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 
+import mark_sign
+
 OUT = 'public/Kaung-Myat-Thu-CV.pdf'
 FONT = 'src/assets/fonts/PortfolioMyanmar.ttf'
+LOGO = 'public/logo.svg'
 NAVY = (15, 45, 74)
 TEAL = (11, 121, 131)
 INK = (40, 55, 75)
@@ -19,7 +22,10 @@ class CV(FPDF):
         self.set_y(-16)
         self.set_draw_color(*LINE)
         self.line(20, self.get_y(), 190, self.get_y())
-        self.set_font('my', '', 7)
+        self.set_font('my', '', 6)
+        self.set_text_color(*MUTED)
+        self.set_xy(20, self.get_y() + 1)
+        self.cell(170, 4, mark_sign.sign(), align='R')
 
 
 class Resume:
@@ -67,7 +73,7 @@ class Resume:
         p.add_page()
 
         # header — logo mark at the top right
-        p.image('tools/assets/logo-mark.png', x=176, y=13, w=14)
+        p.image(LOGO, x=176, y=13, w=14)
 
         p.set_font('my', 'B', 22)
         p.set_text_color(*NAVY)

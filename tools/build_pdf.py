@@ -16,8 +16,11 @@ import sys
 from fpdf import FPDF
 from fpdf.enums import XPos, YPos
 
+import mark_sign
+
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'public/Kaung-Myat-Thu-Portfolio.pdf'
 FONT_MY = 'src/assets/fonts/PortfolioMyanmar.ttf'
+LOGO = 'public/logo.svg'
 
 NAVY   = (27, 54, 93)
 NAVY2  = (14, 31, 54)
@@ -79,7 +82,7 @@ class PortfolioPDF(FPDF):
         self.set_font('my', '', 7.5)
         self.set_text_color(*MUTED)
         self.set_xy(18, 290)
-        self.cell(100, 5, 'Kaung Myat Thu  ·  Portfolio')
+        self.cell(100, 5, f'Kaung Myat Thu  ·  Portfolio  ·  {mark_sign.sign()}')
         self.set_xy(18, 290)
         self.cell(174, 5, f'Page {self.page_no()} / {{nb}}', align='R')
 
@@ -155,7 +158,7 @@ class PortfolioPDF(FPDF):
         # logo mark, on a white card so it reads against the navy band
         self.set_fill_color(255, 255, 255)
         self.rect(168, 16, 24, 24, 'F', round_corners=True)
-        self.image('tools/assets/logo-mark.png', x=171.5, y=19.5, w=17)
+        self.image(LOGO, x=172, y=22.9, w=16)
 
         # kicker
         self.set_font('my', 'B', 8.5)
