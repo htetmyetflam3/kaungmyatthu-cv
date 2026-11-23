@@ -82,6 +82,14 @@ export default function Warehouse() {
           can take.
         </p>
         <p style={{ margin: '0 0 12px' }}>
+          The number printed on the box is not an identity, either. Sometimes it is the manufacturer&rsquo;s number,
+          sometimes the distributor&rsquo;s tag, and on repackaged stock it can be missing or wrong. So every item gets
+          an ID of its own — <code>BP</code> for brake pads, <code>WP</code> for water pumps, <code>P-F</code> for fuel
+          pumps — and the vendor number sits beside it as a reference, never as the key. The ID is also the barcode: the
+          same string, set in a barcode font, prints as the label, so one string serves the shelf, the sheet and the
+          scanner.
+        </p>
+        <p style={{ margin: '0 0 12px' }}>
           The owners are older men, careful with what they know, and they did not want their stock relocated: when a
           customer asked for a part they needed to walk straight to it, and a map that moved their shelves took that
           away from them. So the map had to describe the shop as it stood — the relocation was something to earn, not to
