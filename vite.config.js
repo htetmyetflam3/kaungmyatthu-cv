@@ -13,7 +13,7 @@ const pages = [
   'ai.html',
   'projects.html',
   'about.html',
-  'portfolio.html', // old portfolio — kept, untouched
+  'portfolio.html',
 ];
 
 export default defineConfig({

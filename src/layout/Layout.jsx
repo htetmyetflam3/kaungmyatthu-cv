@@ -8,7 +8,7 @@ const NAV = [
   { href: 'portfolio.html', label: 'Portfolio', key: 'portfolio' },
 ];
 
-export default function Layout({ active, title, description, children }) {
+export default function Layout({ active, title, description, bare = false, children }) {
   const [toTop, setToTop] = useState(false);
 
   useEffect(() => {
@@ -52,7 +52,11 @@ export default function Layout({ active, title, description, children }) {
         </div>
       </header>
 
-      <main className="wrap"><section className="sec">{children}</section></main>
+      {bare ? (
+        <main>{children}</main>
+      ) : (
+        <main className="wrap"><section className="sec">{children}</section></main>
+      )}
 
       <footer className="site">
         <p>© 2026 Kaung Myat Thu · North Okkalapa · <a href="tel:+959955400017">+959955400017</a></p>
