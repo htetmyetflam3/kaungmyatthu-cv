@@ -42,12 +42,19 @@ class Resume:
         self.pdf.set_text_color(*INK)
 
     def role(self, title, period, lines):
-        self.pdf.set_font('my', 'B', 10.5)
-        self.pdf.set_text_color(*NAVY)
-        self.pdf.cell(130, 5.5, title)
-        self.pdf.set_font('my', '', 8.5)
-        self.pdf.set_text_color(*MUTED)
-        self.pdf.cell(0, 5.5, period, align='R', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        p = self.pdf
+        x0, y0 = p.l_margin, p.get_y()
+        p.set_font('my', 'B', 10.5)
+        p.set_text_color(*NAVY)
+        wrapped = p.multi_cell(126, 5.2, title, dry_run=True, output='LINES')
+        for ln in wrapped:
+            p.set_xy(x0, p.get_y())
+            p.cell(126, 5.2, ln, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        p.set_font('my', '', 8.5)
+        p.set_text_color(*MUTED)
+        p.set_xy(x0 + 128, y0)
+        p.cell(42, 5.2, period, align='R')
+        p.set_y(y0 + max(len(wrapped), 1) * 5.2)
         self.pdf.set_font('my', '', 9)
         self.pdf.set_text_color(*INK)
         for line in lines:
@@ -59,7 +66,9 @@ class Resume:
         p = self.pdf
         p.add_page()
 
-        # header
+        # header — logo mark at the top right
+        p.image('public/logo-mark.png', x=176, y=13, w=14)
+
         p.set_font('my', 'B', 22)
         p.set_text_color(*NAVY)
         p.cell(0, 10, 'Kaung Myat Thu', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -110,10 +119,14 @@ class Resume:
             'Yumeyuki.info (Myanmar legal overseas employment agency) · TTS-AE.com (UAE company project) · '
             'Writermorphosis.com (current build).',
         ])
-        self.role('Shelf mapping & EPOS — car-parts shop (CSM)', 'roughly four months', [
-            'Separate freelance project; exact dates not confirmed.',
-            'Set up the EPOS/stock system and designed the shelf-location map, then handed it over; '
-            'staff performed the physical counts.',
+        self.role('POS setup & shelf map — car-parts shop (CSM)', 'about 4.5 months', [
+            'Built the POS-ready register for a shop with no till: item ID, code and the columns a local POS '
+            'imports from Excel (category, brand, family, model, package colour, location, quantity).',
+            'Each item carries its own ID; the vendor tag sits beside it as a reference. The ID set in a barcode '
+            'font is the label.',
+            'Mapped the shelves around stock the owners would not move; their ground count and my mapping ran as '
+            'separate jobs. Three months scoped, four and a half delivered.',
+            'Till mock-up and a training session for the store staff.',
         ])
         self.role('Content Writer — Country BAR (North-Dagon)', '2020', [
             'Articles and lifestyle / marketing posts; kept brand consistency with the marketing team.',
