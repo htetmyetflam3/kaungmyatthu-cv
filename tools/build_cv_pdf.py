@@ -93,8 +93,8 @@ class Resume:
             'alongside staff administration and reporting.',
             'Coordinated with voiceover and editing teams for content delivery, and reported social-media '
             'performance back to the branch.',
-            'Kept TikTok performance visible month after month — 157,000 → 187,375 → 298,104 month-end followers '
-            '(Oct → Dec, +89.9%).',
+            'Kept TikTok performance visible month after month — 157,000 · 187,375 · 298,104 month-end followers '
+            '(Oct to Dec, +89.9%).',
         ])
         self.role('Warehouse Supervisor — NPT Group', 'January – November 2024', [
             'Project-based warehouse and logistics operations; kept the stock record by hand where no system existed.',
@@ -122,7 +122,7 @@ class Resume:
             'Adapted media translations for Canal+ Myanmar (Alice Adventure), 2022 – 2023.',
         ])
         self.role('Translator (Freelance)', '2022 – 2023', [
-            'English ↔ Burmese literary and digital content; U.S. (Texas) life insurance policies into Burmese.',
+            'English to Burmese literary and digital content; U.S. (Texas) life insurance policies into Burmese.',
         ])
 
         p.add_page()
