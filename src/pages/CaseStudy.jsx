@@ -25,6 +25,21 @@ export default function CaseStudy() {
         sub="Assistant Supervisor · North Okkalapa branch · 2024–2025"
       />
 
+      <figure style={{ margin: '0 0 22px' }}>
+        <a href={DRIVE_VIEW(PHOTO_ID)} target="_blank" rel="noopener">
+          <img
+            src={DRIVE_IMG(PHOTO_ID, 1600)}
+            alt="Team photograph at the 321 Ecolife shop, North Okkalapa"
+            style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
+          />
+        </a>
+        <figcaption className="muted" style={{ fontSize: '.8rem', margin: '8px 0 0' }}>
+          <b>Team photograph — 321 Ecolife, North Okkalapa.</b> The shop setting, uniform and lanyards give the context the reporting figures sit in. Also repeated in
+          {' '}§06 Workplace context, next to the employer reference.{' '}
+          <a href={DRIVE_VIEW(PHOTO_ID)} target="_blank" rel="noopener">Open full size ↗</a>
+        </figcaption>
+      </figure>
+
       <div className="overview-card">
         <div className="overview-kicker">Role overview</div>
         <p>My role covered frontline branch operations and staff administration as well as reporting and social-content support. I checked attendance and staff updates, followed up sales and stock records, coordinated with team leaders and cashiers, and supported TikTok work through captions, voiceover/editing coordination, posting checks and reporting.</p>

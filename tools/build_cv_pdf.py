@@ -71,7 +71,7 @@ class Resume:
         p.set_text_color(*MUTED)
         p.cell(0, 5, 'North Okkalapa, Yangon  ·  +959 955 400 017  ·  htetmyet157@gmail.com',
                new_x=XPos.LMARGIN, new_y=YPos.NEXT)
-        p.cell(0, 5, 'Portfolio: htetmyetflam3.github.io/kaungmyatthu-cv/cv.html',
+        p.cell(0, 5, 'Portfolio: htetmyetflam3.github.io/kaungmyatthu-cv/',
                new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         p.set_draw_color(*LINE)
         p.ln(2)

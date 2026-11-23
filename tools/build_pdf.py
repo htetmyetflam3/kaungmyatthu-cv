@@ -34,7 +34,7 @@ PORTFOLIO_URL = SITE + 'portfolio.html'
 CV_URL        = SITE
 PAGES = [
     ('Full portfolio (single page)', PORTFOLIO_URL),
-    ('CV / resume',                  SITE + 'cv.html'),
+    ('CV / resume',                  SITE),
     ('321 case study',               SITE + 'case-study.html'),
     ('Warehouse & CSM',              SITE + 'warehouse.html'),
     ('Content & scripts',            SITE + 'content.html'),
