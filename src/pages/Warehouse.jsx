@@ -100,15 +100,17 @@ export default function Warehouse() {
           no longer than five feet, no wider than a foot and a half, and there is under two feet of clearance to the
           shelf above. The shelf itself does not divide that neatly. Where a run has a leg at mid-span, the leg blocks
           the middle of the shelf, so the run is written as two rows, one either side of it. A row in the sheet is a
-          stretch of shelf, not a shelf. The first fifty-one lines of the Break-pad sheet alone carry eighteen part
-          shapes under fifty-one labels: D-2252 takes eight of them, D-2239 seven, D-2222 five. Some of those eight are
+          stretch of shelf, not a shelf. The brake pads alone are 389 numbered rows in the stock file. The first
+          fifty-one of them carry eighteen part shapes under fifty-one labels: D-2252 takes eight, D-2239 seven,
+          D-2222 five. Some of those eight are
           the same brand written twice, jet and JET, and kevlar appears twice in the same block.
         </p>
         <p style={{ margin: '0 0 16px' }}>
-          One code is one shape, not one part. D-2212 carries three labels in this sheet: Sun rise, sure, Golden Star.
-          Other codes carry a family, the variant written as a suffix on the parent — D-2183 and D-2183-M, D-1250 and
-          D-1250-M — and the same shape turns up again on the clutch sheet under a different category. So the number
-          says what the pad fits, the letters after it say which variant, and the brand says who sells it.
+          One code is one shape, not one part. D-2212 carries three labels in this sheet: Sun rise, sure, Golden
+          Star. The stock file has a Family column, sitting between Brand and Model, for the group a row belongs to.
+          The brake-pad sheet does not have that column — it runs from Brand straight to Description — so the family
+          rides in the code instead: D-2183 and D-2183-M, D-1250 and D-1250-M, D-2198 and D-2198-M. The number says
+          what the pad fits, the letters after it say which variant, and the brand says who sells it.
         </p>
 
         <div style={{ margin: '0 0 16px', border: '1px solid #dbe3ec', borderRadius: 12, overflow: 'hidden' }}>
