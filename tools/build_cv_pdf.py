@@ -97,7 +97,7 @@ class Resume:
             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
         self.heading('Experience')
-        self.role('Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch', 'Nov 2024 – Jan 2025', [
+        self.role('Operation Assistant Supervisor — 321 Ecolife (Stalker Company Limited), Nok Branch', 'Nov 2024 – Feb 2025', [
             'Ran the Nok branch as its only internal staff member, with no shop supervisor or manager in place — '
             'manager-level responsibility: attendance, daily expense, '
             'sales and stock records, staff coverage, and promotion and incentive recommendations.',
