@@ -86,13 +86,7 @@ defined('ABSPATH') || exit;
             <?php dynamic_sidebar('top-nav'); ?>
           <?php endif; ?>
 
-          <?php
-          if (class_exists('WooCommerce')) :
-            get_template_part('template-parts/header/actions', 'woocommerce');
-          else :
-            get_template_part('template-parts/header/actions');
-          endif;
-          ?>
+          <?php get_template_part('template-parts/header/actions'); ?>
 
           <!-- Navbar Toggler -->
           <button class="<?= esc_attr(apply_filters('bootscore/class/header/button', 'btn btn-outline-secondary', 'nav-toggler')); ?> <?= esc_attr(apply_filters('bootscore/class/header/navbar/toggler/breakpoint', 'd-lg-none')); ?> <?= esc_attr(apply_filters('bootscore/class/header/action/spacer', 'ms-1 ms-md-2', 'nav-toggler')); ?> nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar" aria-label="<?php esc_attr_e( 'Toggle main menu', 'bootscore' ); ?>">
@@ -107,20 +101,8 @@ defined('ABSPATH') || exit;
 
     </nav><!-- .navbar -->
 
-    <?php
-    if (class_exists('WooCommerce')) :
-      get_template_part('template-parts/header/collapse-search', 'woocommerce');
-    else :
-      get_template_part('template-parts/header/collapse-search');
-    endif;
-    ?>
+    <?php get_template_part('template-parts/header/collapse-search'); ?>
 
-    <!-- Offcanvas User and Cart -->
-    <?php
-    if (class_exists('WooCommerce')) :
-      get_template_part('template-parts/header/offcanvas', 'woocommerce');
-    endif;
-    ?>
 
     <?php do_action( 'bootscore_before_masthead_close' ); ?>
     
