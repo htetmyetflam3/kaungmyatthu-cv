@@ -108,3 +108,119 @@ function kmt_theme_setup() {
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
 }
+
+
+/**
+ * Portfolio widget areas — replace the WooCommerce shop widgets
+ * (product categories / filters / recent products) that shipped with Bootscore.
+ */
+add_action('widgets_init', 'kmt_portfolio_widgets_init');
+function kmt_portfolio_widgets_init() {
+  // Sidebar on portfolio index / single project
+  register_sidebar(array(
+    'name'          => esc_html__('Portfolio Sidebar', 'bootscore'),
+    'id'            => 'portfolio-sidebar',
+    'description'   => esc_html__('Widgets shown next to the portfolio grid.', 'bootscore'),
+    'before_widget' => '<section id="%1$s" class="widget mb-4">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title h5">',
+    'after_title'   => '</h2>',
+  ));
+
+  // Footer strip under the portfolio grid
+  register_sidebar(array(
+    'name'          => esc_html__('Portfolio Footer', 'bootscore'),
+    'id'            => 'portfolio-footer',
+    'description'   => esc_html__('Widgets shown below the portfolio grid.', 'bootscore'),
+    'before_widget' => '<div class="widget footer_widget mb-3">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widget-title h5">',
+    'after_title'   => '</h2>',
+  ));
+}
+
+
+/**
+ * KMT Portfolio Projects widget — lists recent work (successor to
+ * WooCommerce's "Recent Products" / "Product Categories" widgets).
+ */
+add_action('widgets_init', 'kmt_register_portfolio_widget');
+function kmt_register_portfolio_widget() {
+  register_widget('KMT_Portfolio_Widget');
+}
+
+class KMT_Portfolio_Widget extends WP_Widget {
+
+  public function __construct() {
+    parent::__construct(
+      'kmt_portfolio_projects',
+      esc_html__('KMT Portfolio Projects', 'bootscore'),
+      array(
+        'description' => esc_html__('Show recent portfolio projects as a compact list.', 'bootscore'),
+        'classname'   => 'kmt-portfolio-widget',
+      )
+    );
+  }
+
+  public function widget($args, $instance) {
+    $title  = !empty($instance['title']) ? $instance['title'] : esc_html__('Selected Work', 'bootscore');
+    $count  = !empty($instance['count']) ? (int) $instance['count'] : 5;
+    $query  = new WP_Query(array(
+      'post_type'      => 'portfolio',
+      'posts_per_page' => $count,
+      'post_status'    => 'publish',
+    ));
+
+    if (!$query->have_posts()) {
+      return;
+    }
+
+    echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput
+    if ($title) {
+      echo $args['before_title'] . esc_html($title) . $args['after_title']; // phpcs:ignore
+    }
+    ?>
+    <ul class="list-unstyled mb-0 kmt-portfolio-widget-list">
+      <?php while ($query->have_posts()) : $query->the_post(); ?>
+        <li class="mb-2">
+          <a href="<?php the_permalink(); ?>" class="fw-semibold text-decoration-none">
+            <?php the_title(); ?>
+          </a>
+          <?php $kicker = get_post_meta(get_the_ID(), '_kmt_kicker', true); ?>
+          <?php if ($kicker) : ?>
+            <div class="small text-muted"><?= esc_html($kicker); ?></div>
+          <?php endif; ?>
+        </li>
+      <?php endwhile; ?>
+    </ul>
+    <?php
+    echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput
+    wp_reset_postdata();
+  }
+
+  public function form($instance) {
+    $title = !empty($instance['title']) ? $instance['title'] : esc_html__('Selected Work', 'bootscore');
+    $count = !empty($instance['count']) ? (int) $instance['count'] : 5;
+    ?>
+    <p>
+      <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title', 'bootscore'); ?></label>
+      <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>"
+             name="<?php echo esc_attr($this->get_field_name('title')); ?>"
+             type="text" value="<?php echo esc_attr($title); ?>">
+    </p>
+    <p>
+      <label for="<?php echo esc_attr($this->get_field_id('count')); ?>"><?php esc_html_e('Number of projects', 'bootscore'); ?></label>
+      <input class="widefat" id="<?php echo esc_attr($this->get_field_id('count')); ?>"
+             name="<?php echo esc_attr($this->get_field_name('count')); ?>"
+             type="number" min="1" max="20" value="<?php echo esc_attr($count); ?>">
+    </p>
+    <?php
+  }
+
+  public function update($new_instance, $old_instance) {
+    return array(
+      'title' => sanitize_text_field($new_instance['title'] ?? ''),
+      'count' => max(1, min(20, (int) ($new_instance['count'] ?? 5))),
+    );
+  }
+}
