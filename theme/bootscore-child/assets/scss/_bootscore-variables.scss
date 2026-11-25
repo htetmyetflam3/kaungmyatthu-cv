@@ -1,2 +1,114 @@
 // In this file you can override the default variables of Bootstrap
-// Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
+// Do you want primary to be green? Just add "$primary: #00FF00;" to this file
+// and the theme will automatically compile the scss for you.
+
+// -----------------------------------------------------------------------------
+// KMT design tokens — taken from the JS version of the CV site
+// -----------------------------------------------------------------------------
+
+// Color system
+$white:  #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:  #000;
+
+// Site palette (mirrors :root in the JS build)
+$navy:    #1b365d;
+$navy-2:  #122a4a;
+$teal:    #0e9aa7;
+$teal-dk: #0b7983;
+$blue:    #2f6bff;
+$purple:  #7b2ff7;
+$ink:     #1e293b;
+$muted:   #64748b;
+$line:    #e5e7eb;
+$bg:      #f7f8fa;
+
+// Semantic colors
+$primary:   $navy;
+$secondary: $muted;
+$success:   #198754;
+$info:      $teal;
+$warning:   #fd7e14;
+$danger:    #dc3545;
+$light:     $bg;
+$dark:      $ink;
+
+// Settings for the `<body>` element.
+$body-bg:    $bg;
+$body-color: $ink;
+
+$body-tertiary-color: rgba($body-color, .55);
+$body-tertiary-bg:    $gray-100;
+
+// Links
+$link-color:      $teal-dk;
+$link-hover-color: darken($teal-dk, 8%);
+$link-decoration:  none;
+$link-hover-decoration: underline;
+
+// Headings
+$headings-color:    $navy;
+$headings-font-weight: 800;
+$headings-line-height: 1.15;
+
+// Fonts — system stack first (same as the JS site), Burmese webfonts as
+// per-glyph fallbacks so မြန်မာစာ renders even without system fonts.
+$font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "KMT Cherry Unicode", "KMT Myanmar Sagar";
+
+$font-family-sans-serif: $font-family-base;
+
+// Border radius
+$border-radius:    .625rem; // 10px — buttons
+$border-radius-sm: .375rem;
+$border-radius-lg: .75rem;
+$border-radius-xl: 1rem;
+$border-radius-2xl: 1.25rem;
+$border-radius-pill: 50rem;
+
+// Cards
+$card-border-color:   $line;
+$card-border-radius:  1rem; // 16px — matches .cv-section / .work-card
+$card-cap-bg:         rgba($black, .03);
+$card-bg:             $white;
+
+// Buttons
+$btn-padding-x: 1.4rem;
+$btn-padding-y: .65rem;
+$btn-font-weight: 700;
+$btn-border-radius: .625rem;
+$btn-primary-bg: $navy;
+$btn-primary-border-color: $navy;
+$btn-primary-hover-bg: $navy-2;
+$btn-primary-hover-border-color: $navy-2;
+$btn-secondary-color: $navy;
+$btn-secondary-border-color: #cbd5e1;
+$btn-secondary-hover-bg: #eef2f7;
+$btn-secondary-hover-border-color: $navy;
+
+// Navbar
+$navbar-padding-y: .5rem;
+$navbar-brand-padding-y: 0;
+$navbar-light-color: rgba($black, .65);
+$navbar-light-hover-color: $navy;
+$navbar-light-active-color: $navy;
+$navbar-nav-link-padding-x: .9rem;
+
+// Forms
+$input-bg: $white;
+$input-border-color: #cbd5e1;
+$input-focus-border-color: $teal;
+$input-focus-box-shadow: 0 0 0 .2rem rgba($teal, .15);
+
+// Pagination
+$link-pagination-color: $navy;
+
+// Body
+$body-text-align: left;
