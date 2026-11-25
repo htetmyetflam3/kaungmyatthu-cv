@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node --require ./tools/net-shim.cjs ./node_modules/vite/bin/vite.js",
     "build": "vite build",
-    "preview": "node --require ./tools/net-shim.cjs ./node_modules/vite/bin/vite.js preview"
+    "preview": "node --require ./tools/net-shim.cjs ./node_modules/vite/bin/vite.js preview",
+    "wp": "npx -y @wp-playground/cli@latest start --mount=./theme/:/wordpress/wp-content/themes/"
   },
   "dependencies": {
     "bootstrap": "^5.3.9",
